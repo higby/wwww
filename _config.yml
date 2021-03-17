@@ -1,0 +1,24 @@
+# Me
+firstName: Branden
+lastName: Higby
+
+email: contact@brandenhigby.com
+
+twitter_username: higby_
+github_username:  higby
+instagram_username: higby_
+
+# Site
+description: A collection of Branden Higby's ramblings.
+
+collections:
+  internal:
+    output: true
+    permalink: /:path.html
+  external:
+    output: false
+
+collections_dir: pages
+
+plugins:
+  - jekyll-redirect-from

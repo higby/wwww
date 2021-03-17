@@ -1,0 +1,33 @@
+body {
+	transition: color .5s, background 1.5s;
+}
+
+.particles-js-canvas-el {
+	position: fixed;
+	top: 0;
+	left: 0;
+  z-index: -1;
+}
+
+.space {
+  color: white;
+  background: #222;
+  position: relative;
+  z-index: 100;
+}
+
+h1, h2, h3, h3 a, blockquote, tr:nth-child(even) {
+	transition: all 1.5s;
+}
+
+.space header a, .space footer a, .space .head h1, .space .head time, .space .post {
+	color: white;
+}
+
+.space h3 a:hover {
+  color: var(--coral);
+}
+
+.space tr:nth-child(even) {
+  background-color:rgba(66, 66, 66,.8);
+}

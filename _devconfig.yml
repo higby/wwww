@@ -1,0 +1,7 @@
+# Site
+collections:
+  drafts:
+    output: true
+    permalink: secret/:path.html
+
+dev: true
