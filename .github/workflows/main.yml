@@ -1,15 +1,29 @@
-name: Jekyll Deploy
+name: Build and deploy jekyll site
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
-  build_and_deploy:
+  jekyll:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Build & Deploy to GitHub Pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.ETHERIA }}
-          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
-          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
-        uses: higby/jekyll-deploy-gh-pages@master
+      - name: setup
+        uses: actions/checkout@v2
+
+      - name: ruby setup
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0 # can change this to 2.7 or whatever version you prefer
+
+      - name: install dependencies & build site
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
+
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ETHERIA }}
+          publish_dir: ./_site
