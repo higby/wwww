@@ -12,4 +12,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.ETHERIA }}
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
-        uses: BryanSchuetz/jekyll-deploy-gh-pages@master
+        uses: higby/jekyll-deploy-gh-pages@master
