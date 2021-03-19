@@ -11,6 +11,8 @@ GEM
     eventmachine (1.2.7)
     ffi (1.15.0)
     forwardable-extended (2.6.0)
+    htmlbeautifier (1.3.1)
+    htmlcompressor (0.4.0)
     http_parser.rb (0.6.0)
     i18n (1.8.9)
       concurrent-ruby (~> 1.0)
@@ -33,6 +35,10 @@ GEM
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (2.1.0)
       sassc (> 2.0.1, < 3.0)
+    jekyll-tidy (0.2.2)
+      htmlbeautifier
+      htmlcompressor
+      jekyll
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.3.1)
@@ -66,6 +72,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.1.1)
   jekyll-redirect-from
+  jekyll-tidy
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)

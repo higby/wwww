@@ -38,3 +38,4 @@ defaults:
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-tidy
