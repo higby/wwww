@@ -1,16 +1,11 @@
 ---
-layout: post
+layout: page
 title: humans.txt
-noTable: true
-noDate: true
-hidden: true
 redirect_from:
   - /humans.txt/
-style: indent
-permalink: /humans.html
 ---
 
-**/* ME */**
+### /* ME */
 
 Email: {{ site.email }}
 
@@ -29,7 +24,7 @@ Favorite TV Shows:
 - Gravity Falls
 - Adventure Time
 
-**/* THANKS */**
+### /* THANKS */
 
 [w3schools](https://www.w3schools.com/) - the best reference in the world
 
@@ -37,7 +32,7 @@ Favorite TV Shows:
 
 [Spotify](https://open.spotify.com/playlist/1u6D5NJ3MOzLeXZU3B6MU1?si=8ef03bee2c48407b) - ~99,342 minutes listened (updated 12/1/2020)
 
-**/* SITE */**
+### /* SITE */
 
 Inital Commit: 2020-04-10, 17:57:00 PDT
 

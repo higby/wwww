@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Paleontology, Jobs, and Other Rambling Thoughts"
 date: 2020-04-12 00:05:00 -0800
 ---

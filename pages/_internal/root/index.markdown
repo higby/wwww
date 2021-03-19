@@ -1,8 +1,6 @@
 ---
-permalink: /index.html
 layout: default
 title: Branden Higby
-hidden: true
 ---
 
 <h2>Writing</h2>
@@ -23,7 +21,7 @@ hidden: true
   {%- for post in site.internal -%}
     {% if post.hidden %}
       <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time>
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
       </li>
     {% endif %}
   {%- endfor -%}
@@ -34,7 +32,7 @@ hidden: true
 <ul class="posts">
   {%- for post in site.drafts -%}
       <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time>
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
       </li>
   {%- endfor -%}
 </ul>
@@ -44,7 +42,7 @@ hidden: true
 <ul class="posts">
   {%- for post in site.external -%}
       <li>
-        <a href="{{ post.link }}">{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time>
+        <a href="{{ post.link }}">{{ post.title | escape }}</a>
       </li>
   {%- endfor -%}
 </ul>

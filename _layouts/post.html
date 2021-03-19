@@ -3,9 +3,9 @@ layout: default
 ---
 <div class="head">
   <h1>{{ page.title | escape }}</h1>
-  {% unless page.noDate %}<b><time datetime="{{ page.date | date_to_xmlschema }}">{%- assign date_format = "%b %-d, %Y" -%} {{ page.date | date: date_format }}</time></b>{% endunless %}
-  {% unless page.noTable %}{% include toc.html html=content class="toc" %}{% if count > 1 %}<script type="text/javascript" src="../assets/js/toc.js"></script>
-{% endif %}{% endunless %}</div>
+  <b><time datetime="{{ page.date | date_to_xmlschema }}">{%- assign date_format = "%b %-d, %Y" -%} {{ page.date | date: date_format }}</time></b>
+  {% include toc.html html=content class="toc" %}{% if count > 1 %}<script type="text/javascript" src="../assets/js/toc.js"></script>
+{% endif %}</div>
 
 <div class="post">
   {{ content }}

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "The Definition of OCD"
 date: 2020-04-22 00:05:00 -0800
 ---

@@ -6,9 +6,9 @@
     <meta name="robots" content="noindex">{% endif %}
     <link type="text/plain" rel="author" href="/humans.txt"/>
     <link rel="icon" type="image/ico" href="/assets/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    {% if page.style %}{% include {{ page.style }}.html %}{% endif %}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">{% unless page.theme.override %}
+    <link rel="stylesheet" href="/assets/css/main.css">{% endunless %}
+    {% if page.theme.style %}{% include {{ page.theme.style }}.html %}{% endif %}
     <title>{{ page.title }}</title>
   </head>
 
