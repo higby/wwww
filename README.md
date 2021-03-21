@@ -11,4 +11,5 @@ Example Page Setup:
   style: ninties
   override: true
 redirect_from:
-  - /example_page.html/```
+  - /example_page.html/
+```
