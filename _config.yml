@@ -22,7 +22,7 @@ collections_dir: pages
 
 defaults:
   - scope:
-      path: ""       #Everything
+      path: ""
     values:
       layout: "post" #Asssume post layout if not specififed
 

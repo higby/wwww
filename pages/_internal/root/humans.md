@@ -1,5 +1,4 @@
 ---
-layout: post
 title: humans.txt
 setup:
   table: hidden
