@@ -22,21 +22,25 @@ collections_dir: pages
 
 defaults:
   - scope:
-      path: ""
+      path: ""       #Everything
     values:
       layout: "post" #Asssume post layout if not specififed
+
+  - scope:
+      path: "_internal/"
+    values:
+      permalink: "/:title.html"
+
   - scope:
       path: "_internal/hidden/"
     values:
-      hidden: "true"
-      permalink: "/:title.html"
+      hidden: true
+
   - scope:
       path: "_internal/root/"
     values:
-      hidden: "true"
-      permalink: "/:title.html"
+      hidden: true
 
 plugins:
   - jekyll-redirect-from
   - jekyll-tidy
-  - jekyll-tagories

@@ -2,7 +2,7 @@
 layout: post
 title:  "Oscana - Player's Guide"
 date: 2020-10-28 00:05:00 -0800
-theme:
+setup:
   style: dnd
 tags: dnd poop
 ---

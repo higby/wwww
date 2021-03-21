@@ -1,6 +1,9 @@
 ---
-layout: page
+layout: post
 title: humans.txt
+setup:
+  table: hidden
+  date: hidden
 redirect_from:
   - /humans.txt/
 ---
@@ -9,7 +12,7 @@ redirect_from:
 
 Email: {{ site.email }}
 
-Location: 🌧️Oregon️
+Location: 🌧 ️Oregon️
 
 Favorite Pokemon: Metroid, my shiny Araquanid
 

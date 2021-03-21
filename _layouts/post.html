@@ -1,11 +1,19 @@
 ---
 layout: default
 ---
+
 <div class="head">
   <h1>{{ page.title | escape }}</h1>
-  <b><time datetime="{{ page.date | date_to_xmlschema }}">{%- assign date_format = "%b %-d, %Y" -%} {{ page.date | date: date_format }}</time></b>
-  {% include toc.html html=content class="toc" %}{% if count > 1 %}<script type="text/javascript" src="../assets/js/toc.js"></script>
-{% endif %}</div>
+  {% unless page.setup.date == "hidden" %}
+    <b><time datetime="{{ page.date | date_to_xmlschema }}">{%- assign date_format = "%b %-d, %Y" -%} {{ page.date | date: date_format }}</time></b>
+  {% endunless %}
+  {% unless page.setup.table == "hidden" %}
+    {% include toc.html html=content class="toc" %}
+    {% if count > 1 %}
+      <script type="text/javascript" src="../assets/js/toc.js"></script>
+    {% endif %}
+  {% endunless %}
+</div>
 
 <div class="post">
   {{ content }}
