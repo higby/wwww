@@ -1,6 +1,8 @@
 ---
 title: humans.txt
+date: 2021-03-17 11:44:00 -0800
 setup:
+  style: indent
   table: hidden
   date: hidden
 redirect_from:

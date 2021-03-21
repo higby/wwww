@@ -1,43 +1,29 @@
-# Me
 firstName: Branden
 lastName: Higby
-
 email: contact@brandenhigby.com
-
 twitter_username: higby_
 github_username:  higby
 instagram_username: higby_
 
-# Site
 description: A collection of Branden Higby's ramblings.
 
 collections:
-  internal:
+  writing:
+    output: true
+    permalink: /:path.html
+  root:
     output: true
     permalink: /:path.html
   external:
     output: false
-
-collections_dir: pages
-
+collections_dir: site
 defaults:
   - scope:
       path: ""
     values:
-      layout: "post" #Asssume post layout if not specififed
-
+      layout: "post"
   - scope:
-      path: "_internal/"
-    values:
-      permalink: "/:title.html"
-
-  - scope:
-      path: "_internal/hidden/"
-    values:
-      hidden: true
-
-  - scope:
-      path: "_internal/root/"
+      path: "_writing/hidden/"
     values:
       hidden: true
 

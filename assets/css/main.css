@@ -1,5 +1,5 @@
 :root {
-  --coral: #7e57c2;
+  --space: #7e57c2;
 }
 
 html {
@@ -25,7 +25,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--coral);
+  color: var(--space);
   transition:color .5s;
 }
 
@@ -43,13 +43,13 @@ header a, footer a, .posts a {
 }
 
 header a:hover, footer a:hover, .posts a:hover {
-  color: var(--coral);
+  color: var(--space);
   text-decoration: none;
 }
 
 header i {
   font-style: normal;
-  color: var(--coral);
+  color: var(--space);
 }
 
 h1,h2,h3 {
@@ -101,7 +101,7 @@ footer {
 }
 
 .posts {
-  border-left: 4px var(--coral) solid;
+  border-left: 4px var(--space) solid;
   padding-left: 20px;
   list-style-type: none;
 }
@@ -152,7 +152,7 @@ li:last-of-type {
 }
 
 .toc {
-  border-left:4px var(--coral) solid;
+  border-left:4px var(--space) solid;
   text-align: left;
 }
 
@@ -161,7 +161,7 @@ li:last-of-type {
 }
 
 .toc a:hover {
-  color:var(--coral);
+  color:var(--space);
   text-decoration:none;
 }
 
