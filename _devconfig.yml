@@ -2,6 +2,6 @@
 collections:
   drafts:
     output: true
-    permalink: secret/:path.html
+    permalink: secret/:title.html
 
 dev: true

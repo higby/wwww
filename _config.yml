@@ -8,25 +8,90 @@ instagram_username: higby_
 description: A collection of Branden Higby's ramblings.
 
 collections:
-  writing:
+  internal:
     output: true
-    permalink: /:path.html
-  root:
-    output: true
-    permalink: /:path.html
+    permalink: /:title.html
   external:
     output: false
+
 collections_dir: site
+
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-tidy
+  - jekyll-tagories
+
 defaults:
   - scope:
       path: ""
     values:
       layout: "post"
   - scope:
-      path: "_writing/hidden/"
+      path: "_internal/hidden/"
     values:
       hidden: true
-
-plugins:
-  - jekyll-redirect-from
-  - jekyll-tidy
+  - scope:
+      path: "_internal/root/"
+    values:
+      root: true
+  - scope:
+      path: "_drafts"
+    values:
+      draft: true
+  - scope:
+      path: "_internal/writing/collections"
+    values:
+      tag: collections
+  - scope:
+      path: "_internal/writing/comics"
+    values:
+      tag: comics
+  - scope:
+      path: "_internal/writing/essays"
+    values:
+      tag: essays
+  - scope:
+      path: "_internal/writing/misc"
+    values:
+      tag: misc
+  - scope:
+      path: "_internal/writing/poetry"
+    values:
+      tag: poetry
+  - scope:
+      path: "_internal/writing/programming"
+    values:
+      tag: programming
+  - scope:
+      path: "_internal/writing/stories"
+    values:
+      tag: stories
+  - scope:
+      path: "_drafts/writing/collections"
+    values:
+      tag: collections
+  - scope:
+      path: "_drafts/writing/comics"
+    values:
+      tag: comics
+  - scope:
+      path: "_drafts/writing/essays"
+    values:
+      tag: essays
+  - scope:
+      path: "_drafts/writing/misc"
+    values:
+      tag: misc
+  - scope:
+      path: "_drafts/writing/poetry"
+    values:
+      tag: poetry
+  - scope:
+      path: "_drafts/writing/programming"
+    values:
+      tag: programming
+  - scope:
+      path: "_drafts/writing/stories"
+    values:
+      tag: stories

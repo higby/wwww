@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "jekyll", "~> 4.1.1"
 gem 'jekyll-redirect-from'
+gem 'jekyll-tagories'
 
 group :jekyll_plugins do
   gem "jekyll-tidy"
