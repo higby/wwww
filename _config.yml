@@ -29,7 +29,6 @@ defaults:
 
 exclude:
   - README.md
-  - CNAME
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
