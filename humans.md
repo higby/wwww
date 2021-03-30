@@ -1,10 +1,11 @@
 ---
 title: humans.txt
-date: 2021-03-17 11:44:00 -0800
+permalink: /humans.html
 setup:
   style: indent
   table: hidden
   date: hidden
+  noindex: true
 redirect_from:
   - /humans.txt/
 ---

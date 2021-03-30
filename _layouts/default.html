@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if page.root %}
-      <meta name="description" content="{{ site.description }}">
-    {% endif %}
-    {% if page.hidden %}
+    <meta name="description" content="{{ site.description }}">
+    {% if page.setup.noindex %}
       <meta name="robots" content="noindex">
     {% endif %}
     <link type="text/plain" rel="author" href="/humans.txt"/>
@@ -22,7 +21,7 @@
 
   <body>
     <header>
-      <h1><a href="/">{{ site.firstName }} <i>{{ site.lastName }}</i>{% if site.dev %} <code class="language-plaintext highlighter-rouge">Dev Mode</code>{% endif %}</a></h1>
+      <h1><a href="/">Branden <i>Higby</i></a></h1>
     </header>
   {{content}}
     <footer>

@@ -1,7 +1,0 @@
-# Site
-collections:
-  drafts:
-    output: true
-    permalink: secret/:title.html
-
-dev: true

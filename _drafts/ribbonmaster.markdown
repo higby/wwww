@@ -3,6 +3,7 @@ layout: post
 date: 2021-01-22 00:05:00 -0800
 setup:
   style: ribbons
+tag: essays
 ---
 
 Within the world of Pokemon there is a highly coveted position. A title which can only be earned by those with the most determination, the most intense focus, and too much money to waste.

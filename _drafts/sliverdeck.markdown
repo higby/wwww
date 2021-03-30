@@ -4,6 +4,7 @@ date: 2021-02-26 00:05:00 -0800
 setup:
   style: magic
   deck: sliver
+tag: collections
 ---
 
 This is my sliver deck, I made it for fun and for reasons and shit. Fuck off stop asking me questions.
