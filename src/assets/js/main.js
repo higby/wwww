@@ -1,10 +1,9 @@
 
 $(document).on( "click", ".pageUpdate", function() {
   var addressValue = $(this).attr("href");
-  $(".content").slideUp( "normal", function() {
+  $(".content").fadeOut( "fast", function() {
     $( ".content" ).load( addressValue + " .content" );
-    $(".content").slideDown("normal");  });
-
+    $(".content").fadeIn("fast");  });
 
   window.history.pushState({urlPath:addressValue},"",addressValue);
         event.preventDefault(); // cancel the event
