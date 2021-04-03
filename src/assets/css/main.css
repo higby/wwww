@@ -195,7 +195,6 @@ li:last-of-type {
 
 .toc ul {
   overflow:hidden;
-  max-height: 0;
   list-style-type:none;
   margin-left: 0;
 }
