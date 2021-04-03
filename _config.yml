@@ -8,6 +8,8 @@ twitter_username: higby_
 github_username:  higby
 instagram_username: higby_
 
+source: src
+
 plugins:
   - jekyll-redirect-from
   - jekyll-tidy
@@ -17,7 +19,7 @@ plugins:
   - jekyll-loading-lazy
 
 collections:
-  work:
+  works:
     output: true
     permalink: /:title.html
 
