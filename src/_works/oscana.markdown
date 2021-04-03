@@ -1,8 +1,6 @@
 ---
 title:  "Oscana - Player's Guide"
 date: 2020-10-28 00:05:00 -0800
-setup:
-  style: dnd
 tag: misc
 ---
 
