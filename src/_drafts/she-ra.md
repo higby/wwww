@@ -1,5 +1,0 @@
----
-title:  "Meaningful Diversity in She-Ra"
-date: 2020-04-22 00:05:00 -0800
-tag: video
----

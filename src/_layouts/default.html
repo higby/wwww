@@ -17,14 +17,19 @@
     {% if page.setup.style %}
       {% include {{ page.setup.style }}.html %}
     {% endif %}
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/main.js" defer></script>
+
     <title>{{ page.title }}</title>
   </head>
 
   <body>
     <header>
-      <h1><a href="/">Branden <i>Higby</i></a></h1>
+      <h1><a class="pageUpdate" href="/">Branden <i>Higby</i></a></h1>
     </header>
-  {{content}}
+    <div class="content">
+      {{content}}
+    </div>
     <footer>
       <a href="https://instagram.com/{{ site.instagram_username }}">instagram</a><br/>
       <a href="https://twitter.com/{{ site.twitter_username }}">twitter</a><br/>

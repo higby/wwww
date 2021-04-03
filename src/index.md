@@ -10,7 +10,7 @@ permalink: /index.html
     {% for post in tag[1] %}
       {% unless post.hidden %}
         <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time>
+          <a class="pageUpdate" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time>
         </li>
       {% endunless %}
     {% endfor %}
