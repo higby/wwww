@@ -42,6 +42,16 @@ $(document).on( "click", ".pageUpdate", function() {
   event.preventDefault(); // cancel the event
 });
 
+window.addEventListener('popstate', (event) => {
+  var addressValue = window.location.pathname;
+  $(".content").fadeOut( "fast", function() {
+    $( ".content" ).load( addressValue + " .content", function() {
+      $(".toc li ul").hide();
+    } );
+    $(".content").fadeIn("fast");
+  });
+});
+
 $(document).on( "click", ".toc li span", function() {
   if($(this).next().next().is(":hidden")) {
     $(this).next().next().slideDown("fast");
