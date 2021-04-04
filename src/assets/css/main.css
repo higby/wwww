@@ -52,7 +52,7 @@ header a:hover, footer a:hover, .posts a:hover {
   text-decoration: none;
 }
 
-#header:hover {
+.animating:hover {
   color:RGBA(0,0,0,.8);
 }
 header i {

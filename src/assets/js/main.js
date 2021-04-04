@@ -2,10 +2,11 @@ $( document ).ready(function() {
 
   $(".toc li ul").hide();
   $("header i").css("color", "RGBA(0,0,0,.8)");
+  $("header a").attr("class", "animating pageUpdate");
   const header = new Letterize({
-        targets: "#header"
+        targets: "header a"
       });
-     $("#header span:lt(7)").attr('id', 'branden');
+     $("header a span:lt(7)").attr('id', 'branden');
     var purple = anime.timeline({
        targets: header.listAll,
        duration: '1000',
@@ -28,7 +29,7 @@ $( document ).ready(function() {
       complete: function() {
         $("header i").removeAttr("style");
         header.deletterize();
-        $("header a").removeAttr("id");
+        $("header a").attr("class", "pageUpdate");
   }
     });
 
