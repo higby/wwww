@@ -1,5 +1,29 @@
 $( document ).ready(function() {
   $(".toc li ul").hide();
+  const header = new Letterize({
+        targets: "#header"
+      });
+     $("#header span:lt(7)").attr('id', 'branden');
+    var purple = anime.timeline({
+       targets: header.listAll,
+       duration: '1000',
+       delay: anime.stagger(45),
+       easing: 'easeInOutQuad'
+     });
+
+    purple
+    .add({
+        color: [
+        { value: 'RGBA(0,0,0,.8)' },
+        { value: '#7e57c2'}
+      ]
+    })
+    .add({
+      targets: "#branden",
+        color: [
+        { value: 'RGBA(0,0,0,.8)' }
+      ]
+    });
 });
 
 $(document).on( "click", ".pageUpdate", function() {
@@ -10,7 +34,11 @@ $(document).on( "click", ".pageUpdate", function() {
     } );
     $(".content").fadeIn("fast");
   });
-  window.history.pushState({urlPath:addressValue},"",addressValue);
+  var droppedValue = addressValue.split(".");
+  if (droppedValue.length > 1) {
+    droppedValue.pop();
+  }
+  window.history.pushState({urlPath:droppedValue},"",droppedValue);
   event.preventDefault(); // cancel the event
 });
 
