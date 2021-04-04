@@ -15,7 +15,7 @@ $( document ).ready(function() {
     .add({
         color: [
         { value: 'RGBA(0,0,0,.8)' },
-        { value: '#7e57c2'}
+        { value: '#965ee5'}
       ]
     })
     .add({
