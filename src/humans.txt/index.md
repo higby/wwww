@@ -1,13 +1,10 @@
 ---
 title: humans.txt
-permalink: /humans.html
 setup:
   style: indent
   table: hidden
   date: hidden
   noindex: true
-redirect_from:
-  - /humans.txt/
 ---
 
 ### /* ME */

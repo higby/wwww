@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.1.1"
-gem 'jekyll-redirect-from'
 gem 'jekyll-tagories'
 gem 'jekyll-sitemap'
 gem 'jekyll-target-blank'
