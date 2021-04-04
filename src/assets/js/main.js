@@ -1,5 +1,7 @@
 $( document ).ready(function() {
+
   $(".toc li ul").hide();
+  $("header i").css("color", "RGBA(0,0,0,.8)");
   const header = new Letterize({
         targets: "#header"
       });
@@ -22,9 +24,17 @@ $( document ).ready(function() {
       targets: "#branden",
         color: [
         { value: 'RGBA(0,0,0,.8)' }
-      ]
+      ],
+      complete: function() {
+        $("header i").removeAttr("style");
+        header.deletterize();
+        $("header a").removeAttr("id");
+  }
     });
+
+
 });
+
 
 $(document).on( "click", ".pageUpdate", function() {
   var addressValue = $(this).attr("href");

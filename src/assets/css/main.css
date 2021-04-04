@@ -52,8 +52,12 @@ header a:hover, footer a:hover, .posts a:hover {
   text-decoration: none;
 }
 
+#header:hover {
+  color:RGBA(0,0,0,.8);
+}
 header i {
   font-style: normal;
+  color: var(--space);
 }
 
 h1,h2,h3 {
