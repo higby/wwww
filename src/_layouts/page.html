@@ -15,3 +15,8 @@ layout: default
 <div class="post">
   {{ content }}
 </div>
+<div class="scripts">
+  {% if page.setup.style %}
+    {% include {{ page.setup.style }}.html %}
+  {% endif %}
+</div>

@@ -30,12 +30,12 @@ $( document ).ready(function() {
         $("header i").removeAttr("style");
         header.deletterize();
         $("header a").attr("class", "pageUpdate");
-  }
+      }
     });
-
+    var addressValue = window.location.pathname;
+    oldValue = addressValue.split(".");
 
 });
-
 
 $(document).on( "click", ".pageUpdate", function() {
   var addressValue = $(this).attr("href");
@@ -50,17 +50,22 @@ $(document).on( "click", ".pageUpdate", function() {
     droppedValue.pop();
   }
   window.history.pushState({urlPath:droppedValue},"",droppedValue);
+  oldValue = droppedValue;
   event.preventDefault(); // cancel the event
 });
 
 window.addEventListener('popstate', (event) => {
   var addressValue = window.location.pathname;
-  $(".content").fadeOut( "fast", function() {
-    $( ".content" ).load( addressValue + " .content", function() {
-      $(".toc li ul").hide();
-    } );
-    $(".content").fadeIn("fast");
-  });
+  if ( addressValue != oldValue ) {
+    $(".content").fadeOut( "fast", function() {
+      $( ".content" ).load( addressValue + " .content", function() {
+        $(".toc li ul").hide();
+      } );
+      $(".content").fadeIn("fast");
+      oldValue = addressValue.split(".");
+    });
+  	}
+
 });
 
 $(document).on( "click", ".toc li span", function() {

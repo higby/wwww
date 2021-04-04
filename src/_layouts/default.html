@@ -14,9 +14,7 @@
     {% unless page.setup.override %}
       <link rel="stylesheet" href="/assets/css/main.css">
     {% endunless %}
-    {% if page.setup.style %}
-      {% include {{ page.setup.style }}.html %}
-    {% endif %}
+
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="/assets/js/letterize.min.js"></script>
