@@ -67,7 +67,7 @@ header a:hover, h3 a:hover {
 }
 
 header a:hover, h3 a:hover {
-  color:var(--coral);
+  color:var(--space);
 }
 
 p:first-of-type {
@@ -90,8 +90,6 @@ blockquote {
   border-width: 11px;
   color: RGBA(0,0,0,.7);
 }
-
-
 
 table {
 	font-family: "Scala Sans";
