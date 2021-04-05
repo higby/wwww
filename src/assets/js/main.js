@@ -40,9 +40,17 @@ $( document ).ready(function() {
 $(document).on( "click", ".pageUpdate", function() {
   var addressValue = $(this).attr("href");
   $(".content").fadeOut( "fast", function() {
-    $( ".content" ).load( addressValue + " .content", function() {
+    $( ".content" ).load( addressValue + " .content", function( response, status, xhr ) {
+
+      if (status == "error") {
+  		$( ".content" ).load( "404.html .content", function() {
+              $(".toc li ul").hide();
+      } );
+    } else {
       $(".toc li ul").hide();
-    } );
+
+    }
+  } );
     $(".content").fadeIn("fast");
   });
   var droppedValue = addressValue.split(".");
@@ -51,6 +59,7 @@ $(document).on( "click", ".pageUpdate", function() {
   }
   window.history.pushState({urlPath:droppedValue},"",droppedValue);
   oldValue = droppedValue;
+  console.log("test1");
   event.preventDefault(); // cancel the event
 });
 
@@ -58,14 +67,21 @@ window.addEventListener('popstate', (event) => {
   var addressValue = window.location.pathname;
   if ( addressValue != oldValue ) {
     $(".content").fadeOut( "fast", function() {
-      $( ".content" ).load( addressValue + " .content", function() {
-        $(".toc li ul").hide();
+      $( ".content" ).load( addressValue + " .content", function( response, status, xhr ) {
+        if (status == "error") {
+      		$( ".content" ).load( "404.html .content", function() {
+                  $(".toc li ul").hide();
+          } );
+        } else {
+          $(".toc li ul").hide();
+
+        }
       } );
       $(".content").fadeIn("fast");
       oldValue = addressValue.split(".");
     });
   	}
-
+console.log("test12");
 });
 
 $(document).on( "click", ".toc li span", function() {
