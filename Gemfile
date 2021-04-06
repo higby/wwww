@@ -4,7 +4,6 @@ gem "jekyll", "~> 4.1.1"
 gem 'jekyll-tagories'
 gem 'jekyll-sitemap'
 gem 'jekyll-target-blank'
-gem 'jekyll-loading-lazy'
 
 group :jekyll_plugins do
   gem "jekyll-tidy"
