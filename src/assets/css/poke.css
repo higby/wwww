@@ -49,6 +49,8 @@
   left: 5px;
   display: block;
   margin-bottom: -32px;
+  z-index: 1;
+  position: relative;
 }
 
 @keyframes pokehop {

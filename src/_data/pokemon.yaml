@@ -58,5 +58,20 @@
   nature: [FILL IN]
   catch_date: 01-22-2021
   shiny: True
+- name: Lemon Boy
+  species: Bayleef
+  caught_as: Chikorita
+  ot: [FILL IN]
+  id_umber: [FILL IN]
+  level: 11
+  ball: regular
+  gender: male
+  original_game: Crystal
+  type_1: Grass
+  type_2: na
+  ability: [FILL IN]
+  nature: [FILL IN]
+  catch_date: 11-25-2020
+  shiny: True
 
 # background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
