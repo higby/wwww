@@ -1,0 +1,57 @@
+.card  {
+  width: 180px;
+  margin: 0 30px 5px 0;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 700px) {
+  .card {
+    width: calc(50% - 15px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card:nth-child(2n) {
+    margin: 0 0 5px 0;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .card:nth-child(3n) {
+    margin: 0 0 5px 0;
+  }
+}
+
+.cardList {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.imgHolder {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.poke:hover {
+  animation: 250ms cubic-bezier(0.5, 1, 0.89, 1) infinite alternate pokehop;
+
+}
+.up {
+  transform: translateY(-5px);
+}
+
+.ball {
+  height: 32px;
+  width: 32px;
+  top: 5px;
+  left: 5px;
+  display: block;
+  margin-bottom: -32px;
+}
+
+@keyframes pokehop {
+  from {transform: translateY(0)}
+  to {transform: translateY(-10px)}
+}
