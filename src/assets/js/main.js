@@ -83,3 +83,35 @@ $(document).on("click", ".toc li span", function() {
 		$(this).children().replaceWith('<svg height="24" viewBox="0 -5 24 24" width="24" aria-hidden="true" fill="RGBA(0,0,0,.6)"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg>');
 	}
 });
+
+list = $(".imgHolder .poke");
+list2 = $(".imgHolder .poke");
+loop = $(".imgHolder .poke");
+test = [];
+
+for (var i = 0; i < list.length; i++) {
+   var poke = list[i];
+   list[i] = anime({
+    targets: poke,
+    easing: 'easeOutQuad',
+    duration: "250",
+    autoplay: false,
+    direction: 'alternate',
+    translateY: "-10",
+    complete: function(anim) {
+      b = anim.id;
+      if (loop[b] == true)
+{    anim.play();
+}  }
+  });
+  list2[i] = $('#.imgHolder .poke')[i].id;
+}
+
+$( ".imgHolder .poke" ).hover(function() {
+  var hovered = $(this).attr("id");
+  a = $.inArray( hovered, list2 );
+  list[a].play();
+  loop[a] = true;
+}, function() {
+  loop[a] = false;
+});
