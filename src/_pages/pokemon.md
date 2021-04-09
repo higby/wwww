@@ -5,7 +5,6 @@ setup:
   style: poke
   date: hidden
 tags: collections
-hidden: true
 ---
 <div class="cardList">
 {% for pokemon in site.data.pokemon %}
@@ -16,7 +15,6 @@ hidden: true
     </div>
     <span>{{pokemon.name}} - <i>{{pokemon.species}}</i></span>
     <span>Caught: <i>{{pokemon.original_game}}</i></span>
-
   </div>
 {% endfor %}
 </div>
