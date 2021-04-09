@@ -10,6 +10,4 @@ Example Page Setup:
   date: hidden
   style: ninties
   override: true
-redirect_from:
-  - /example_page.html/
 ```

@@ -11,11 +11,8 @@
     <link rel="icon" type="image/ico" href="/assets/favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    {% unless page.setup.override %}
-      <link rel="stylesheet" href="/assets/css/main.css">
-    {% endunless %}
-
-    <script src="/assets/js/core.js"></script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="/assets/js/core.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
     <title>{{ page.title }}</title>
   </head>
@@ -25,7 +22,9 @@
       <h1><a href="/" class="pageUpdate">Branden <i>Higby</i></a></h1>
     </header>
     <div class="content">
+
       {{content}}
+
     </div>
     <footer>
       <a href="https://instagram.com/{{ site.instagram_username }}">instagram</a><br/>

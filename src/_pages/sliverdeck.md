@@ -7,10 +7,14 @@ setup:
 tags: collections
 ---
 
+{% capture typeOrder %}Creature,Planeswalker,Artifact,Sorcery,Instant,Enchantment,Land{% endcapture %}
+{% assign typeOrder = typeOrder | split: "," %}
 {% capture allTypes %}{% for card in site.data.slivers %}{{ card.type }},{% endfor %}{% endcapture %}
 {% assign types = allTypes | split: "," | uniq %}
 
+{% for place in typeOrder %}
 {% for type in types %}
+{% if type == place %}
 ## {{type}}
   <div id="{{type | downcase}}list" class="cardList">
     {% for card in site.data.slivers %}
@@ -31,4 +35,6 @@ tags: collections
     {% endif %}
     {% endfor %}
   </div>
+  {% endif %}
+{% endfor %}
 {% endfor %}

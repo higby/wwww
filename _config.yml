@@ -1,31 +1,32 @@
+# Personal
 title: Branden Higby
 email: contact@brandenhigby.com
-description: >- # this means to ignore newlines until "baseurl:"
-  A collection of Branden Higby's ramblings.
-baseurl: ""
-url: "https://higby.io"
 twitter_username: higby_
 github_username:  higby
 instagram_username: higby_
 
+# Site
 source: src
+description: >-
+  A collection of Branden Higby's ramblings.
+url: "https://higby.io"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "page" # All pages use page layout unless otherwise told
+
+collections:
+  pages:
+    output: true
+    permalink: /:title.html
 
 plugins:
   - jekyll-tidy
   - jekyll-tagories
   - jekyll-sitemap
   - jekyll-target-blank
-
-collections:
-  works:
-    output: true
-    permalink: /:title.html
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "page"
 
 sass:
     style: expanded
@@ -39,7 +40,6 @@ exclude:
   - gemfiles/
   - Gemfile
   - Gemfile.lock
-  - node_modules/
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
