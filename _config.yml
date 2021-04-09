@@ -27,6 +27,11 @@ defaults:
     values:
       layout: "page"
 
+sass:
+    style: expanded
+    sourcemap: never
+    sass_dir: assets/css/_sass
+
 exclude:
   - README.md
   - .sass-cache/
