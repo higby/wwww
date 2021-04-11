@@ -2,7 +2,6 @@
 title:  "Pokemon"
 date: 2021-04-06 00:18:46 -0800
 setup:
-  style: poke
   date: hidden
 tags: collections
 ---
