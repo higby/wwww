@@ -1,6 +1,6 @@
 
 $( document ).ready(function() {
-  active = "0";
+  active = "0"; 
 
   freakout = anime({
    targets: 'img',
