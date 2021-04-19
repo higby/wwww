@@ -47,9 +47,19 @@ footer {
 			text-decoration: none;
 		}
 	}
+	.pgp {
+		a {
+			color: RGBA(0,0,0,.265);
+			&:hover {
+				color: $space;
+				text-decoration: none;
+			}
+		}
+}
 	font-size: 20px;
 	margin: 20px 0;
 }
+
 .posts {
 	a {
 		color: RGBA(0,0,0,.8);
@@ -138,6 +148,9 @@ blockquote {
 	p {
 		text-indent: 0;
 	}
+}
+code {
+	font-family: 'Source Code Pro', monospace;
 }
 .highlighter-rouge {
 	background-color: #EEE;
