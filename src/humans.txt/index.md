@@ -13,7 +13,7 @@ Email: {{ site.email }}
 
 Location: 🌧 ️Oregon️
 
-Favorite Pokemon: Metroid, my shiny Araquanid
+Favorite Pokemon: <a class="pageUpdate" href="/pokemon">Metroid</a>, my shiny Araquanid
 
 Favorite Book: Dune by Frank Herbert
 
@@ -28,7 +28,9 @@ Favorite TV Shows:
 
 ### /* THANKS */
 
-[w3schools](https://www.w3schools.com/) - the best reference in the world
+[MDN Web Docs](https://developer.mozilla.org/en-US/) - the best reference
+
+[w3schools](https://www.w3schools.com/) - for helping a kid get started
 
 [JSFiddle](https://jsfiddle.net/) - perfect for on the fly testing
 
@@ -44,18 +46,27 @@ Built with [Jekyll](https://github.com/jekyll/jekyll) and hosted on [Github](htt
 
 Fonts:
 - [Open Sans](https://fonts.google.com/specimen/Open+Sans) -  hosted via Google Fonts
+- [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) -  hosted via Google Fonts
 - [Solbera's DND5e fonts](https://github.com/jonathonf/solbera-dnd-fonts)
 
 Images:
 - [Scryfall](https://scryfall.com/) - Magic: The Gathering Cards
 - [PokéSprite](https://github.com/msikma/pokesprite) - Pokemon Ribbons
+- [Pokémon Image rips by TehPerson](https://bulbapedia.bulbagarden.net/wiki/User:TehPerson)
 
 Libraries:
 - [particles.js](https://github.com/VincentGarreau/particles.js/)
+- [jQuery](https://github.com/jquery/jquery/)
+- [jQuery UI](https://github.com/jquery/jquery-ui/) - only the effects core
+- [anime.js](https://github.com/juliangarnier/anime/)
+- [Letterize.js](https://github.com/WojciechKrakowiak/letterize/)
 
 Jekyll Plugins:
 - [Jekyll TOC](https://github.com/allejo/jekyll-toc)
-- [JekyllRedirectFrom](https://github.com/jekyll/jekyll-redirect-from)
+- [jekyll Tidy](https://github.com/apsislabs/jekyll-tidy/)
+- [Jekyll Tagories](https://github.com/ashmaroli/jekyll-tagories/)
+- [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap/)
+- [Jekyll Target Blank](https://github.com/keithmifsud/jekyll-target-blank/)
 
 Software:
 - Atom
