@@ -5,6 +5,7 @@ setup:
   table: hidden
   date: hidden
   noindex: true
+tag: misc
 ---
 
 ### /* ME */
