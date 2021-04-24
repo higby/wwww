@@ -4,8 +4,7 @@ setup:
   style: indent
   table: hidden
   date: hidden
-  noindex: true
-tag: misc
+tag: programming
 ---
 
 ### /* ME */
