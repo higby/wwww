@@ -1,8 +1,9 @@
 # higby.github.io
+[![Visits Badge](https://badges.pufler.dev/visits/higby/higby)](https://badges.pufler.dev)
+
 I made this for me because I like making things
 
 Feel free to fork, copy, learn from, steal, tear, and rip it up
-[![Visits Badge](https://badges.pufler.dev/visits/higby/higby)](https://badges.pufler.dev)
 
 ## Config
 Site is built from /src folder for organizations sake
