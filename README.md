@@ -1,4 +1,4 @@
-# higby.github.io
+# hgb `version 2`
 [![Visits Badge](https://badges.pufler.dev/visits/higby/higby)](https://badges.pufler.dev)
 
 I made this for me because I like making things
@@ -24,7 +24,7 @@ setup: # used  to begin the page setup section
 
 tag(s): tag # if a page doesn't have a tag specified it won't be displayed on the index page
 
-sitemap: false # used to remove a page from the generated sitemap 
+sitemap: false # used to remove a page from the generated sitemap
 ```
 ## Build
 Output HTML is tidied via `jekyll-tidy`
