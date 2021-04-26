@@ -43,7 +43,7 @@ $(document).ready(function () {
         },
       });
   }
-  oldValue = window.location.pathname.split(".html");
+  oldValue = window.location.pathname.split(".");
   if (oldValue[0].length > 1) {
     oldValue.pop();
   }
@@ -55,7 +55,7 @@ function onReload() {
 }
 
 function contentUpdate() {
-  newValue = window.location.pathname.split(".html");
+  newValue = window.location.pathname.split(".");
   if (newValue[0].length > 1) {
     newValue.pop();
   }
@@ -116,7 +116,7 @@ function pokeHop() {
 }
 
 $(document).on("click", ".pageUpdate", function () {
-  var a = $(this).attr("href").split(".html");
+  var a = $(this).attr("href").split(".");
   if (a.length > 1) {
     a.pop();
   }
