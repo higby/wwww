@@ -4,7 +4,8 @@ setup:
   style: indent
   table: hidden
   date: hidden
-tag: programming
+tag: misc
+permalink: humans.txt/
 ---
 
 ### /* ME */

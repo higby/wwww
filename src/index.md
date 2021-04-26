@@ -4,7 +4,13 @@ title: Branden Higby
 permalink: /index.html
 ---
 
+{% capture order %}essays,poetry,collections,programming,misc{% endcapture %}
+{% assign order = order | split: "," %}
+
+{% for heading in order %}
 {% for tag in site.tags %}
+{% if tag[0] == heading %}
+
   <h2 class="postTitle">{{ tag[0] | capitalize }}</h2>
   <ul class="posts">
     {% for post in tag[1] %}
@@ -15,4 +21,6 @@ permalink: /index.html
       {% endunless %}
     {% endfor %}
   </ul>
+  {% endif %}
+{% endfor %}
 {% endfor %}
