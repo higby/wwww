@@ -1,5 +1,5 @@
 # hgb `version 2`
-[![Visits Badge](https://badges.pufler.dev/visits/higby/higby)](https://badges.pufler.dev)
+[![Visits Badge](https://badges.pufler.dev/visits/higby/hgb)](https://badges.pufler.dev)
 
 I made this for me because I like making things
 
