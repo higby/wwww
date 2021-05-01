@@ -31,4 +31,5 @@ Output HTML is tidied via `jekyll-tidy`
 
 CSS is bundled vis SASS with the expanded style
 
-As opposed to using the default Github Pages, this uses [Jekyll Deploy Action](https://github.com/jeffreytse/jekyll-deploy-action) made by [jeffreytse](https://github.com/jeffreytse) in order to use the plugins I would like to.
+Hosted on Netlify.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/62f8586d-7d71-442d-bf29-b8ce86c7155a/deploy-status)](https://app.netlify.com/sites/gifted-montalcini-5624ec/deploys)
