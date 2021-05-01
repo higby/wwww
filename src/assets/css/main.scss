@@ -182,6 +182,9 @@ li {
 	&:last-of-type {
 		margin-bottom: 0;
 	}
+	span {
+		color: RGBA(0,0,0,.6);
+	}
 }
 .toc {
 	border-left: 4px $space solid;

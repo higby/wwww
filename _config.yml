@@ -17,10 +17,13 @@ defaults:
     values:
       layout: "page" # All pages use page layout unless otherwise told
 
+collections_dir: pages
 collections:
-  pages:
+  internal:
     output: true
     permalink: /:title.html
+  external:
+    output: false
 
 plugins:
   - jekyll-tidy

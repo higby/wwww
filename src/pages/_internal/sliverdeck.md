@@ -2,7 +2,6 @@
 title:  "Sliver Deck"
 date: 2021-02-26 00:05:00 -0800
 setup:
-  style: magic
   date: hidden
 tags: collections
 ---
