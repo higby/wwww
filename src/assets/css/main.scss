@@ -168,7 +168,7 @@ time {
 }
 ul {
 	padding-inline-start: 1em;
-	transition: all .5s cubic-bezier(0,1,0,1);
+	transition: display .5s cubic-bezier(0,1,0,1);
 	margin-left: 50px;
 	ul {
 		margin-left: 0;
