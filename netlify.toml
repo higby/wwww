@@ -1,4 +1,0 @@
-[[headers]]
-  for = "/ilikeslivers"
-  [headers.values]
-    Basic-Auth = "test":"1234"
