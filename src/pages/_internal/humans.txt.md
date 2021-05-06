@@ -42,7 +42,7 @@ Inital Commit: 2020-04-10, 17:57:00 PDT
 
 Last updated: {%- assign generation_date = " %F, %T %Z" -%}{{ site.time | date: generation_date }}
 
-Built with [Jekyll](https://github.com/jekyll/jekyll) and hosted on [Github](https://github.com/)
+Built with [Jekyll](https://github.com/jekyll/jekyll) and hosted on [Netlify](https://www.netlify.com/)
 
 Fonts:
 - [Open Sans](https://fonts.google.com/specimen/Open+Sans) -  hosted via Google Fonts
