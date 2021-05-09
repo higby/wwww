@@ -21,7 +21,7 @@ collections_dir: pages
 collections:
   internal:
     output: true
-    permalink: /:title.html
+    permalink: /:path.html
   external:
     output: false
 

@@ -79,6 +79,36 @@ footer {
 		padding-right: 20px;
 	}
 }
+
+.subtitle {
+	color: RGBA(0,0,0,.8);
+	transition: color .5s;
+	&:hover {
+		color: $space;
+		text-decoration: none;
+	}
+}
+
+.subposts {
+	a {
+		color: RGBA(0,0,0,.8);
+		&:hover {
+			color: $space;
+			text-decoration: none;
+		}
+	}
+	border-left: 4px $space solid;
+	padding-left: 20px;
+	list-style-type: none;
+	margin-left: 0;
+	&:nth-of-type(even) {
+		border-left: none;
+		text-align: right;
+		border-right: 4px $space solid;
+		padding-right: 20px;
+	}
+}
+
 .animating {
 	&:hover {
 		color: RGBA(0,0,0,.8);
@@ -175,6 +205,9 @@ ul {
 	}
 	p {
 		text-indent: 0;
+	}
+	span {
+		cursor: pointer;
 	}
 }
 li {
