@@ -47,6 +47,11 @@ $(document).ready(function () {
   if (oldValue[0].length > 1) {
     oldValue.pop();
   }
+  tinykeys(window, {
+    "ArrowUp ArrowUp ArrowDown ArrowDown ArrowLeft ArrowRight ArrowLeft ArrowRight B A": () => {
+      window.open('https://www.youtube.com/watch?v=KBjhAqXg8MY', '_blank');
+  }
+})
 });
 
 function onReload() {
