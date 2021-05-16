@@ -49,7 +49,7 @@ $(document).ready(function () {
   }
   tinykeys(window, {
     "ArrowUp ArrowUp ArrowDown ArrowDown ArrowLeft ArrowRight ArrowLeft ArrowRight B A": () => {
-      window.open('https://www.youtube.com/watch?v=KBjhAqXg8MY', '_blank');
+      location="https://www.youtube.com/watch?v=KBjhAqXg8MY";
   }
 })
 });
