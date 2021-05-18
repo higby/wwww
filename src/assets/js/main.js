@@ -1,3 +1,4 @@
+oldValue = "";
 $(document).ready(function () {
   onReload();
   fancyName();
@@ -44,9 +45,8 @@ $(document).ready(function () {
       });
   }
   oldValue = window.location.pathname.split(".html");
-  if (oldValue[0].length > 1) {
-    oldValue.pop();
-  }
+
+  console.log(oldValue);
   tinykeys(window, {
     "ArrowUp ArrowUp ArrowDown ArrowDown ArrowLeft ArrowRight ArrowLeft ArrowRight B A": () => {
       location="https://www.youtube.com/watch?v=KBjhAqXg8MY";
@@ -61,21 +61,19 @@ function onReload() {
 }
 
 function contentUpdate() {
+
   newValue = window.location.pathname.split(".html");
-  if (newValue.length > 1) {
-    newValue.pop();
-  }
   if (newValue[0] != oldValue[0]) {
     var location = window.location.pathname;
     h = true;
     g = true;
-    $(".content").fadeOut("fast", function () {
+    $("main").fadeOut("fast", function () {
       if (h == true) {
         h = false;
-        $(".content").load(location + " .content", function () {
+        $("main").load(location + " main", function () {
           if (g == true) {
             g = false;
-            $(".content").fadeIn("fast");
+            $("main").fadeIn("fast");
             onReload();
           }
         });

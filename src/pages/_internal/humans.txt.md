@@ -1,7 +1,6 @@
 ---
 title: humans.txt
 setup:
-  style: indent
   table: hidden
   date: hidden
 tag: programming

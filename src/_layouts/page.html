@@ -1,20 +1,19 @@
 ---
 layout: default
 ---
-
 <div class="head">
-  <h1>{{ page.title | escape }}</h1>
+    <h1>{{ page.title | escape }}</h1>
   {% unless page.setup.date == "hidden" %}
-    <b><time datetime="{{ page.date | date_to_xmlschema }}">{%- assign date_format = "%b %-d, %Y" -%} {{ page.date | date: date_format }}</time></b>
+    <time datetime="{{ page.date | date_to_xmlschema }}">{%- assign date_format = "%b %-d, %Y" -%} {{ page.date | date: date_format }}</time>
   {% endunless %}
+</div>
+
   {% unless page.setup.table == "hidden" %}
     {% include toc.html html=content class="toc" %}
   {% endunless %}
-</div>
-
-<div class="post">
+<article>
   {{ content }}
-</div>
+</article>
 <div class="scripts">
   {% if page.setup.style %}
     <link rel="stylesheet" href="/assets/css/{{ page.setup.style }}.css">
