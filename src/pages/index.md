@@ -16,7 +16,7 @@ permalink: /index.html
     {% for post in tag[1] %}
       {% unless post.category %}
         <li>
-          <a class="pageUpdate" href="{{ post.url | relative_url | remove: ".html" }}">{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time>
+          <a href="{{ post.url | relative_url | remove: ".html" }}">{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time>
         </li>
       {% endunless %}
     {% endfor %}
@@ -30,7 +30,7 @@ permalink: /index.html
           <ul class="subposts">
           {% for post in subposts %}
             <li>
-              <a class="pageUpdate" href="{{ post.url | relative_url | remove: ".html" }}">{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time>
+              <a href="{{ post.url | relative_url | remove: ".html" }}">{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time>
             </li>
           {% endfor %}
           </ul>

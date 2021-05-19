@@ -125,4 +125,4 @@
 {{ closingSpace }}{:.{{ include.submenu_class | replace: '%level%', lvl }}}{% endcapture %}
         {% endfor %}
     {% endif %}
-{% endcapture %}{% assign tocWorkspace = '' %}{{ my_toc | markdownify | strip }}
+{% endcapture %}{% assign tocWorkspace = '' %}{% if my_toc.size < 1 %}{{ my_toc | markdownify | strip }}{% else %}<nav>{{ my_toc | markdownify | strip }}</nav>{% endif %}

@@ -1,6 +1,7 @@
-oldValue = "";
 $(document).ready(function () {
-  onReload();
+  $("nav ul li ul").hide();
+  $(".subposts").hide();
+  pokeHop();
   fancyName();
   function fancyName() {
     // Secret css values (so that the header still has the correct colors in non-js environments)
@@ -44,44 +45,13 @@ $(document).ready(function () {
         },
       });
   }
-  oldValue = window.location.pathname.split(".html");
 
-  console.log(oldValue);
   tinykeys(window, {
     "ArrowUp ArrowUp ArrowDown ArrowDown ArrowLeft ArrowRight ArrowLeft ArrowRight B A": () => {
       location="https://www.youtube.com/watch?v=KBjhAqXg8MY";
   }
 })
 });
-
-function onReload() {
-  $(".toc li ul").hide();
-  $(".subposts").hide();
-  pokeHop();
-}
-
-function contentUpdate() {
-
-  newValue = window.location.pathname.split(".html");
-  if (newValue[0] != oldValue[0]) {
-    var location = window.location.pathname;
-    h = true;
-    g = true;
-    $("main").fadeOut("fast", function () {
-      if (h == true) {
-        h = false;
-        $("main").load(location + " main", function () {
-          if (g == true) {
-            g = false;
-            $("main").fadeIn("fast");
-            onReload();
-          }
-        });
-      }
-    });
-  }
-  oldValue[0] = newValue[0];
-}
 
 function pokeHop() {
   list = $(".imgHolder .poke");
@@ -119,21 +89,7 @@ function pokeHop() {
   );
 }
 
-$(document).on("click", ".pageUpdate", function () {
-  var a = $(this).attr("href").split(".html");
-  if (a.length > 1) {
-    a.pop();
-  }
-  history.pushState({}, "", a);
-  event.preventDefault();
-  contentUpdate();
-});
-
-window.addEventListener("popstate", (event) => {
-  contentUpdate();
-});
-
-$(document).on("click", ".toc li span", function () {
+$(document).on("click", "nav ul li span", function () {
   if ($(this).next().next().is(":hidden")) {
     $(this).next().next().slideDown("fast", "easeOutQuad");
     $(this)
