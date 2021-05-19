@@ -59,6 +59,7 @@ Libraries:
 - [jQuery UI](https://github.com/jquery/jquery-ui/) - only the effects core
 - [anime.js](https://github.com/juliangarnier/anime/)
 - [Letterize.js](https://github.com/WojciechKrakowiak/letterize/)
+- [tinykeys](https://github.com/jamiebuilds/tinykeys/)
 
 Jekyll Plugins:
 - [Jekyll TOC](https://github.com/allejo/jekyll-toc)
