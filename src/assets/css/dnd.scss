@@ -119,23 +119,23 @@ tr:nth-child(even) {
   background-color: #e0e5c1;
 }
 
-.toc {
+nav ul {
   border-left: 4px #58180d solid;
 }
 
-.toc + p {
+nav ul + p {
   padding-top: 19.2px;
 }
 
-.toc a:hover {
+nav ul a:hover {
   color: #58180d;
 }
 
-.toc li ul {
+nav ul li ul {
   border-left: 2px solid #c9ad6a;
 }
 
-.post > p:first-of-type:first-letter {
+article > p:first-of-type:first-letter {
   float: left;
   font-family: "Solbera Imitation";
   font-size: 10em;
