@@ -4,14 +4,14 @@ $(document).ready(function () {
   pokeHop();
   fancyName();
   function fancyName() {
-    // Secret css values (so that the header still has the correct colors in non-js environments)
-    $("header i").css("color", "RGBA(0,0,0,.8)");
-    $("header a").attr("class", "animating pageUpdate");
-    // Turn header into a fuck ton of spans
+    // Secret css values (so that the header h1 still has the correct colors in non-js environments)
+    $("header h1 i").css("color", "RGBA(0,0,0,.8)");
+    $("header h1 a").attr("class", "animating pageUpdate");
+    // Turn header h1 into a fuck ton of spans
     const header = new Letterize({
-      targets: "header a",
+      targets: "header h1 a",
     });
-    $("header a span:lt(7)").attr("id", "branden"); // Give the first seven spans a specific id
+    $("header h1 a span:lt(7)").attr("id", "branden"); // Give the first seven spans a specific id
 
     // Setup animation
     var purple = anime.timeline({
@@ -39,9 +39,9 @@ $(document).ready(function () {
           },
         ],
         complete: function () {
-          $("header i").removeAttr("style");
+          $("header h1 i").removeAttr("style");
           header.deletterize();
-          $("header a").attr("class", "pageUpdate");
+          $("header h1 a").attr("class", "pageUpdate");
         },
       });
   }

@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   text-align: center;
 }
-header {
+header h1 {
 	a {
   color: RGBA(0,0,0,.8);
   line-height: 90px;
@@ -39,6 +39,16 @@ header {
 	}
 }
 
+header {
+	a {
+  color: RGBA(0,0,0,.8);
+  line-height: 3em;
+  		&:hover {
+			color: $space;
+			text-decoration: none;
+		}
+	}
+}
 header {
   text-align: center;
 }
@@ -118,6 +128,7 @@ ol, ul {
   margin-left: 0;
 }
 pre {
+  white-space: pre-wrap;  
   background-color: #EEE;
   border-radius: 4px;
   line-height: 2;

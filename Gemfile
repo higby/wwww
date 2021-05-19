@@ -5,6 +5,7 @@ gem 'jekyll-tagories'
 gem 'jekyll-sitemap'
 gem 'jekyll-target-blank'
 gem "jekyll-tidy"
+gem 'jekyll-gist'
 
 gem "webrick", "~> 1.7"
 

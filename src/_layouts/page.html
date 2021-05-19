@@ -5,6 +5,9 @@ layout: default
 {% unless page.setup.date == "hidden" %}
 <time datetime="{{ page.date | date_to_xmlschema }}">{%- assign date_format = "%b %-d, %Y" -%} {{ page.date | date: date_format }}</time>
 {% endunless %}
+{% if page.repo %}
+{% include github_repo.html %}
+{% endif %}
 </header>
 {% unless page.setup.table == "hidden" %}
 {% include toc.html html=content %}
