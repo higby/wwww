@@ -24,9 +24,10 @@ h1 {
   text-align: center;
 }
 header {
-	line-height: 90px;
 	a {
   color: RGBA(0,0,0,.8);
+  line-height: 90px;
+
   		&:hover {
 			color: $space;
 			text-decoration: none;
@@ -38,13 +39,13 @@ header {
 	}
 }
 
-.head {
+header {
   text-align: center;
 }
-.head time {
+header time {
   font-weight: bold;
 }
-.posts, .toc {
+.posts, nav ul {
 	border-left: 4px $space solid;
 	list-style-type: none;
 	margin-left: 0;

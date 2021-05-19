@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    {% include head.html %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="{{ site.description }}"/>
+    <meta name="robots" content="noindex"/>
+    <link type="text/plain" rel="author" href="/humans.txt"/>
+    <link rel="icon" type="image/ico" href="/assets/favicon.ico"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <script src="/assets/js/core.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
+    <title>{{ page.title }}</title>
   </head>
   <body>
     <header>
       <h1><a href="/" class="pageUpdate">Branden <i>Higby</i></a></h1>
-    {{content}}
+
+      ----------------------------SPLIT HERE--------------------------------------------------
+
+      <h1>{{ page.title | escape }}</h1>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{%- assign date_format = "%b %-d, %Y" -%} {{ page.date | date: date_format }}</time>
+    </header>
+    <nav>
+      {% include toc.html html=content class="toc" %}
+    </nav>
+    <article>
+      {{ content }}
+    </article>
+
+      ----------------------------SPLIT HERE--------------------------------------------------
+
     <footer>
-      {% include footer.html %}
+      <a href="https://instagram.com/{{ site.instagram_username }}">instagram</a><br/>
+      <a href="https://github.com/{{ site.github_username }}">github</a><br/>
+      <address><a href="https://github.com/higby/pgp">9668 ECE1 5152 8A07</a></address>
     </footer>
   </body>
   <!--
