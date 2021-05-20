@@ -128,12 +128,14 @@ ol, ul {
   margin-left: 0;
 }
 pre {
-  white-space: pre-wrap;  
+  white-space: pre-wrap;
   background-color: #EEE;
   border-radius: 4px;
   line-height: 2;
   padding: 15px 1.5em;
   vertical-align: middle;
+  box-shadow: 0 2px 4px 0 hsla(198, 45%, 10%, 0.12);
+
 }
 p code {
   padding: .2em .4em;
@@ -175,6 +177,7 @@ time {
 
 img {
   width: 100%;
+
 }
 
 table {
@@ -205,4 +208,10 @@ tr {
 		margin-left: 2em;
 		margin-right: 2em;
 	}
+}
+
+.gist .gist-file {
+  border: none !important;
+    box-shadow: 0 2px 4px 0 hsla(198, 45%, 10%, 0.12);
+    border-radius: 4px !important;
 }
