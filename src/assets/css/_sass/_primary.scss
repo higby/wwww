@@ -1,0 +1,214 @@
+@import "normalize";
+@import "colors";
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $background-color;
+  color: $primary-text;
+  font-family: $primary-font;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $header-text;
+}
+h1 {
+  text-align: center;
+}
+header h1 {
+	a {
+  color: $header-text;
+  line-height: 90px;
+
+  		&:hover {
+			color: $space;
+			text-decoration: none;
+		}
+	}
+	i {
+		color: $space;
+		font-style: normal;
+	}
+}
+
+header {
+	a {
+  color: $header-text;
+  line-height: 3em;
+  		&:hover {
+			color: $space;
+			text-decoration: none;
+		}
+	}
+}
+header {
+  text-align: center;
+}
+header time {
+  font-weight: bold;
+}
+.posts, nav ul {
+	border-left: 4px $space solid;
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 20px;
+	a {
+		color: $header-text;
+		&:hover {
+			color: $space;
+			text-decoration: none;
+		}
+	}
+	&:nth-of-type(even) {
+		border-left: none;
+		border-right: 4px $space solid;
+		padding-right: 20px;
+		text-align: right;
+	}
+  li {
+		list-style-type: none;
+		margin-bottom: 5px;
+		ul {
+			border-left: 4px solid $mediumGrey;
+			padding-left: 1em;
+		}
+	}
+	ul {
+		list-style-type: none;
+		margin-left: 0;
+		overflow: hidden;
+	}
+}
+.postTitle {
+	&:nth-of-type(even) {
+		text-align: right;
+	}
+}
+.animating {
+	&:hover {
+		color: $header-text;
+	}
+}
+
+footer {
+	font-size: 20px;
+	margin: 20px 0;
+	a {
+		color: $header-text;
+		&:hover {
+			color: $space;
+			text-decoration: none;
+		}
+	}
+	address {
+    font-style: normal;
+		a {
+			color: $address-text;
+			&:hover {
+				color: $space;
+				text-decoration: none;
+			}
+		}
+}
+}
+
+p {
+  text-indent: 1.5em;
+}
+
+ol, ul {
+  margin-left: 0;
+}
+pre {
+  white-space: pre-wrap;
+  background-color: $lightGrey;
+  border-radius: 4px;
+  line-height: 2;
+  padding: 15px 1.5em;
+  vertical-align: middle;
+}
+p code {
+  padding: .2em .4em;
+
+}
+code {
+  background-color: $lightGrey;
+  color: $code-text;
+  border-radius: 4px;
+
+  font-family: $mono-font;
+  font-size: 85%;
+}
+
+blockquote {
+	border-left: 4px solid $mediumGrey;
+	color: $quote-text;
+	margin: 18px 0;
+	padding: 0 0 0 1em;
+	p {
+		text-indent: 0;
+	}
+}
+hr {
+  border: 1px solid $darkGrey;
+}
+a {
+  color: $space;
+  text-decoration: none;
+  transition: color .5s;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+time {
+  color: $code-text;
+}
+
+img {
+  width: 100%;
+
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+td {
+	padding: 5px;
+	text-align: center;
+}
+td~td {
+	border-left: 4px $darkGrey solid;
+}
+th~th {
+	border-left: 4px $darkGrey solid;
+}
+th {
+	border-bottom: 4px $darkGrey solid;
+	padding: 5px;
+}
+tr {
+	&:nth-child(even) {
+		background-color: $lightGrey;
+	}
+}
+@media screen and (max-width: 700px) {
+	body {
+		margin-left: 2em;
+		margin-right: 2em;
+	}
+}
+
+.gist .gist-file {
+  border: none !important;
+  border-radius: 4px !important;
+}
+
+.gist .gist-meta {
+  background-color: $lightGrey !important;
+}
