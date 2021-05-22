@@ -1,6 +1,7 @@
 ---
 ---
 @import "primary";
+@import "parchment";
 
 @font-face {
   font-family: "Bookinsanity";
@@ -40,28 +41,23 @@
   font-weight: normal;
 }
 
-body {
-  background-color: #eee5ce;
-  font-family: "Bookinsanity";
-}
-
 a {
-  color: #58180d;
+  color: $velvet;
 }
 
 a:hover {
-  color: #58180d;
+  color: $velvet;
 }
 
 h1,
 h2,
 h3 {
-  color: #58180d;
+  color: $velvet;
   font-family: "Mr Eaves Small Caps";
 }
 
 h3 {
-  border-bottom: 2px solid #c9ad6a;
+  border-bottom: 2px solid $gold;
 }
 
 header a:hover,
@@ -87,7 +83,8 @@ strong {
 }
 
 blockquote {
-  background-color: #e0e5c1;
+  background-color: $tea;
+  color: $tealeaf;
   border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAMAAADG+c2+AAAANlBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHL6OuAAAAEXRSTlMABAwYJDRIXHSLo7fL2+fz+6go4VUAAAB6SURBVHgB7dg5DsJQAANRZ9+Xuf9lQUKKEHT5LlL4HWB6W5d61m1zrT/dhm5j6/RjPCkJco761ixQFoSl0aXfKQ+y9/qoJnAEYar01q64gqytNBz4ghyDMPMHnyYiIiIiIgIzYeYfj/Z56x3g7ovAf2L4bxb/EWS/ql7LZCDx/Ry3RwAAAABJRU5ErkJggg==)
     11;
   border-image-outset: 9px 0;
@@ -110,11 +107,11 @@ th {
 }
 
 tr:nth-child(even) {
-  background-color: #e0e5c1;
+  background-color: $tea;
 }
 
 nav ul {
-  border-left: 4px #58180d solid;
+  border-left: 4px $velvet solid;
 }
 
 nav ul + p {
@@ -122,11 +119,11 @@ nav ul + p {
 }
 
 nav ul a:hover {
-  color: #58180d;
+  color: $velvet;
 }
 
 nav ul li ul {
-  border-left: 2px solid #c9ad6a;
+  border-left: 4px solid $gold;
 }
 
 article > p:first-of-type:first-letter {
@@ -143,7 +140,62 @@ b {
 
 footer address a {
   font-family: "Bookinsanity";
-  color: #c9ad6a;
+  color: $gold;
 }
 
-@import "parchment";
+.card {
+  padding-top: 15px;
+  width: 180px;
+  margin: 0 30px 5px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .card {
+    width: calc(50% - 15px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card:nth-child(2n) {
+    margin: 0 0 5px 0;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .card:nth-child(3n) {
+    margin: 0 0 5px 0;
+  }
+}
+
+.cardList {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.imgHolder {
+  background-color: $lightGrey;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.up {
+  transform: translateY(-5px);
+}
+
+.ball {
+  height: 32px;
+  width: 32px;
+  top: 5px;
+  left: 5px;
+  display: block;
+  margin-bottom: -32px;
+  z-index: 1;
+  position: relative;
+}
+
+body {
+  background-color: #eee5ce;
+  font-family: "Bookinsanity";
+  background-image: $parchment;
+}

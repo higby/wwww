@@ -13,7 +13,7 @@ tags: collections
     <img class="ball" src="../assets/images/pokemon/balls/{{pokemon.ball | slugify }}.png">
       <img class="poke" id="{{ pokemon.name | slugify }}" src="../assets/images/pokemon/{{pokemon.name | slugify }}.png">
     </div>
-    <span>{{pokemon.name}} - <i>{{pokemon.species}}</i></span>
+    <span><b>{{pokemon.name}}</b> - <i>{{pokemon.species}}</i></span>
     <span>Caught: <i>{{pokemon.original_game}}</i></span>
   </div>
 {% endfor %}

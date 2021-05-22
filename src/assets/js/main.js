@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  $("nav ul li ul").hide();
-  $(".subposts").hide();
   pokeHop();
   fancyName();
   function fancyName() {
