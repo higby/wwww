@@ -42,7 +42,7 @@
 
 body {
   background-color: #eee5ce;
-  font-family: "Bookinsanity" !important;
+  font-family: "Bookinsanity";
 }
 
 a {
@@ -145,6 +145,10 @@ article > p:first-of-type:first-letter {
 
 b {
   font-family: "Bookinsanity Bold";
+}
+
+footer address {
+  font-family: "Bookinsanity";
 }
 
 @import "parchment";
