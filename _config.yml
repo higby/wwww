@@ -33,7 +33,7 @@ plugins:
   - jekyll-gist
 
 sass:
-    style: expanded
+    style: compressed
     sourcemap: never
     sass_dir: assets/css/_sass
 

@@ -24,7 +24,7 @@
       {% assign nodeNext = nodeNext | replace: '"', '' | slice: 0, 1 | times: 1 %}
       {% assign nodeNow = node | replace: '"', '' | slice: 0, 1 | times: 1 %}
       {% if  nodeNext > nodeNow %}
-          {% assign listModifier = listModifier | append: ' <span><svg height="24" viewBox="0 -5 24 24" width="24" aria-hidden="true" fill="RGBA(0,0,0,.6)"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></span>' %}
+          {% assign listModifier = listModifier | append: ' <span><svg height="24" viewBox="0 -5 24 24" width="24" aria-hidden="true" fill="#4b4b4b"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></span>' %}
       {% endif %}
 
         {% assign headerLevel = node | replace: '"', '' | slice: 0, 1 | times: 1 %}

@@ -1,5 +1,12 @@
 @import "normalize";
 @import "colors";
+
+/*!
+--------------------------------
+Site CSS
+--------------------------------
+*/
+
 html {
   scroll-behavior: smooth;
 }
@@ -12,7 +19,6 @@ body {
   margin: 0 auto;
   max-width: 600px;
 }
-
 h1, h2, h3, h4, h5, h6 {
   color: $header-text;
 }
@@ -51,7 +57,7 @@ header {
 header time {
   font-weight: bold;
 }
-.posts, nav ul {
+nav ul {
 	border-left: 4px $space solid;
 	list-style-type: none;
 	margin-left: 0;
@@ -216,3 +222,4 @@ tr {
 .gist .gist-meta {
   background-color: $lightGrey !important;
 }
+@import "syntax";

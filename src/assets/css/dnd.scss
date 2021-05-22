@@ -3,6 +3,12 @@
 @import "primary";
 @import "parchment";
 
+/*!
+--------------------------------
+DnD CSS
+--------------------------------
+*/
+
 @font-face {
   font-family: "Bookinsanity";
   src: url("../fonts/Bookinsanity/Bookinsanity.otf") format("opentype");
@@ -197,7 +203,12 @@ border-radius: 4.75% / 3.5%;
   z-index: 1;
   position: relative;
 }
-
+/*!
+--------------------------------
+The terrifying beast of a background
+Source: https://github.com/naturalcrit/homebrewery/
+--------------------------------
+*/
 body {
   background-color: #eee5ce;
   font-family: "Bookinsanity";
