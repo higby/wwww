@@ -64,11 +64,6 @@ h3 {
   border-bottom: 2px solid #c9ad6a;
 }
 
-header a,
-h3 a {
-  color: RGBA(0, 0, 0, 0.8);
-}
-
 header a:hover,
 h3 a:hover {
   text-decoration: none;
@@ -76,7 +71,7 @@ h3 a:hover {
 
 header a:hover,
 h3 a:hover {
-  color: var(--space);
+  color: $space;
 }
 
 p:first-of-type {
@@ -98,7 +93,6 @@ blockquote {
   border-image-outset: 9px 0;
   border-style: solid;
   border-width: 11px;
-  color: RGBA(0, 0, 0, 0.7);
 }
 
 table {
@@ -149,6 +143,7 @@ b {
 
 footer address {
   font-family: "Bookinsanity";
+  color: #58180d;
 }
 
 @import "parchment";
