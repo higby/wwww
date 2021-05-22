@@ -106,6 +106,7 @@ footer {
 	}
 	address {
     font-style: normal;
+    font-family: $mono-font;
 		a {
 			color: $address-text;
 			&:hover {
@@ -142,7 +143,6 @@ code {
   background-color: $lightGrey;
   color: $code-text;
   border-radius: 4px;
-
   font-family: $mono-font;
   font-size: 85%;
 }
