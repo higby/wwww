@@ -41,14 +41,14 @@ Thankfully Netlify provides the very helpful ability to specify HTTP redirects v
 
 Normally Jekyll ignores any files with a leading underscore so be sure to add this to your config to make sure the file is rendered in the build:
 
-```
+```yaml
 include:
   - _redirects
 ```
 
 To fix the issue of the polluted build site I created a collection for each of the files:
 
-```
+```yaml
 collections:
   directory:
     output: false
@@ -77,7 +77,7 @@ Where the left is the link that gets forwarded to the right.
 
 Here's my working redirect file
 
-```{% raw %}
+```md
 ---
 ---
 {% for post in site.directory %}
@@ -85,11 +85,11 @@ Here's my working redirect file
 /{{ post.title | downcase }}     {{ post.redirect_to }}
 
 {% endfor %}
-{% endraw %}```
+```
 
 This will generate a working `_redirects` file when the files in the Jekyll site specify a redirect_to in the YAML header, and the title in my config being the files name ie:
 
-```
+```yaml
 ---
 title: '404'
 redirect_to: https://www.higby.io/404
@@ -100,7 +100,7 @@ redirect_to: https://www.higby.io/404
 
 One last piece I needed was to add this to the bottom:
 
-```
+```md
 {% raw %}/     {% for post in site.directory %}{% if post.title == 'index' %}{{ post.redirect_to }}{% endif %}{% endfor %}
 
 /*     {% for post in site.directory %}{% if post.title == '404' %}{{ post.redirect_to }}{% endif %}{% endfor %}{% endraw %}
