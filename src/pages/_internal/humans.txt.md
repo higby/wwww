@@ -68,5 +68,8 @@ Jekyll Plugins:
 - [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap/)
 - [Jekyll Target Blank](https://github.com/keithmifsud/jekyll-target-blank/)
 
+Various Snippets of Code:
+- [Homebrewery](https://github.com/naturalcrit/homebrewery/) - DnD background & colors
+
 Software:
 - Atom

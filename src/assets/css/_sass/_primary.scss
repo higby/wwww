@@ -121,6 +121,9 @@ p {
 }
 
 ol, ul {
+  margin-left: 1.5em;
+}
+ol ol, ul ul {
   margin-left: 0;
 }
 pre {
