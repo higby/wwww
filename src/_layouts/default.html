@@ -5,11 +5,14 @@
   </head>
   <body>
     <header>
-      <h1><a href="/">Branden <i>Higby</i></a></h1>
-    {{content}}
-    <footer>
-      {% include footer.html %}
-    </footer>
+      <h1><a {% unless page.setup.style%}class="pageUpdate" {% endunless %}href="/">Branden <i>Higby</i></a></h1>
+    </header>
+    <main>
+      {{content}}
+      <footer>
+        {% include footer.html %}
+      </footer>
+    </main>
     <noscript><style>
       nav ul li ul,.subposts {
         display: block;

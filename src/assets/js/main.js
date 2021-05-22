@@ -1,15 +1,21 @@
+oldValue = "";
 $(document).ready(function () {
-  pokeHop();
+  onReload();
   fancyName();
   function fancyName() {
-    // Secret css values (so that the header h1 still has the correct colors in non-js environments)
-    $("header h1 i").css("color", "RGBA(0,0,0,.8)");
-    $("header h1 a").attr("class", "animating pageUpdate");
-    // Turn header h1 into a fuck ton of spans
+    // Secret css values (so that the header still has the correct colors in non-js environments)
+    var headerClass = $("header a").attr("class");
+    $("header i").css("color", "#323232");
+    if ($.type( headerClass ) === "undefined") {
+      $("header a").attr("class", "animating");
+    } else {
+      $("header a").attr("class", "animating pageUpdate");
+    }
+    // Turn header into a fuck ton of spans
     const header = new Letterize({
-      targets: "header h1 a",
+      targets: "header a",
     });
-    $("header h1 a span:lt(7)").attr("id", "branden"); // Give the first seven spans a specific id
+    $("header a span:lt(7)").attr("id", "branden"); // Give the first seven spans a specific id
 
     // Setup animation
     var purple = anime.timeline({
@@ -22,7 +28,7 @@ $(document).ready(function () {
       .add({
         color: [
           {
-            value: "RGBA(0,0,0,.8)",
+            value: "#323232",
           },
           {
             value: "#965ee5",
@@ -33,23 +39,60 @@ $(document).ready(function () {
         targets: "#branden",
         color: [
           {
-            value: "RGBA(0,0,0,.8)",
+            value: "#323232",
           },
         ],
         complete: function () {
-          $("header h1 i").removeAttr("style");
+          $("header i").removeAttr("style");
           header.deletterize();
-          $("header h1 a").attr("class", "pageUpdate");
+          if ($.type( headerClass ) !== "undefined") {
+            $("header a").attr("class", "pageUpdate");
+          } else {
+            $("header a").removeAttr("class");
+          }
         },
       });
   }
+  oldValue = window.location.pathname.split(".html");
 
+  console.log(oldValue);
   tinykeys(window, {
     "ArrowUp ArrowUp ArrowDown ArrowDown ArrowLeft ArrowRight ArrowLeft ArrowRight B A": () => {
       location="https://www.youtube.com/watch?v=KBjhAqXg8MY";
   }
 })
 });
+
+function onReload() {
+  $("nav ul li ul").hide();
+  $(".subposts").hide();
+  pokeHop();
+}
+
+function contentUpdate() {
+
+  newValue = window.location.pathname.split(".html");
+  if (newValue[0] != oldValue[0]) {
+    var location = window.location.pathname;
+    h = true;
+    g = true;
+    $("main").fadeOut("fast", function () {
+      if (h == true) {
+        h = false;
+        $("main").load(location + " main", function () {
+          if (g == true) {
+            g = false;
+            $("main").fadeIn("fast");
+            onReload();
+          }
+          $("main main").unwrap();
+
+        });
+      }
+    });
+  }
+  oldValue[0] = newValue[0];
+}
 
 function pokeHop() {
   list = $(".imgHolder .poke");
@@ -86,6 +129,20 @@ function pokeHop() {
     }
   );
 }
+
+$(document).on("click", ".pageUpdate", function () {
+  var a = $(this).attr("href").split(".html");
+  if (a.length > 1) {
+    a.pop();
+  }
+  history.pushState({}, "", a);
+  event.preventDefault();
+  contentUpdate();
+});
+
+window.addEventListener("popstate", (event) => {
+  contentUpdate();
+});
 
 $(document).on("click", "nav ul li span", function () {
   if ($(this).next().next().is(":hidden")) {

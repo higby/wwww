@@ -3,7 +3,6 @@ title:  "Pokemon"
 date: 2021-04-06 00:18:46 -0800
 setup:
   date: hidden
-  style: poke
 tags: collections
 ---
 <div class="cardList">

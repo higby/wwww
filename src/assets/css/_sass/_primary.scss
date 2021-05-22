@@ -1,12 +1,14 @@
 @import "normalize";
-@import "colors";
+@import "darktheme";
 
 /*!
 --------------------------------
 Site CSS
 --------------------------------
 */
-
+*::-webkit-scrollbar {
+  display: none;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -223,3 +225,4 @@ tr {
   background-color: $lightGrey !important;
 }
 @import "syntax";
+@import "collections";
