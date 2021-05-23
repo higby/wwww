@@ -25,7 +25,7 @@ Favorite TV Shows:
 - Gravity Falls
 - Adventure Time
 
-Favorite Number: <span style="color:#965ee5">65</span>
+Favorite Number: <span style="color:#965ee5;font-weight:bold;">65</span>
 
 ### /* THANKS */
 
