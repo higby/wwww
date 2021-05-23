@@ -76,16 +76,18 @@ function contentUpdate() {
     var location = window.location.pathname;
     h = true;
     g = true;
-    $("main").fadeOut("fast", function () {
+    $("main").fadeOut("300", function () {
       if (h == true) {
         h = false;
         $("main").load(location + " main", function () {
           if (g == true) {
             g = false;
-            $("main").fadeIn("fast");
+            $("main main").hide();
+            $("main main").unwrap();
+            $("main").fadeIn("300");
             onReload();
           }
-          $("main main").unwrap();
+
 
         });
       }
