@@ -4,40 +4,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="{{ site.description }}"/>
+    {% if page.setup.noindex %}
     <meta name="robots" content="noindex"/>
+    {% endif %}
     <link type="text/plain" rel="author" href="/humans.txt"/>
     <link rel="icon" type="image/ico" href="/assets/favicon.ico"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    {% if page.setup.style %}
+    <link rel="stylesheet" href="/assets/css/{{page.setup.style}}.css"/>
+    {% else %}
     <link rel="stylesheet" href="/assets/css/main.css"/>
+    {% endif %}
     <script src="/assets/js/core.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
     <title>{{ page.title }}</title>
+
   </head>
   <body>
     <header>
-      <h1><a href="/" class="pageUpdate">Branden <i>Higby</i></a></h1>
-
-      ----------------------------SPLIT HERE--------------------------------------------------
-
-      <h1>{{ page.title | escape }}</h1>
-      <time datetime="{{ page.date | date_to_xmlschema }}">{%- assign date_format = "%b %-d, %Y" -%} {{ page.date | date: date_format }}</time>
+      <h1><a {% unless page.setup.style%}class="pageUpdate" {% endunless %}href="/">Branden <i>Higby</i></a></h1>
     </header>
-    <nav>
-      {% include toc.html html=content class="toc" %}
-    </nav>
-    <article>
-      {{ content }}
-    </article>
+    <main>
+      {{content}}
+      <footer>
+        <a href="https://instagram.com/{{ site.instagram_username }}">instagram</a><br/>
+        <a href="https://github.com/{{ site.github_username }}">github</a><br/>
+        <address><a href="https://github.com/higby/pgp">9668 ECE1 5152 8A07</a></address>
 
-      ----------------------------SPLIT HERE--------------------------------------------------
-
-    <footer>
-      <a href="https://instagram.com/{{ site.instagram_username }}">instagram</a><br/>
-      <a href="https://github.com/{{ site.github_username }}">github</a><br/>
-      <address><a href="https://github.com/higby/pgp">9668 ECE1 5152 8A07</a></address>
-    </footer>
+      </footer>
+    </main>
+    <noscript><style>
+      nav ul li ul,.subposts {
+        display: block;
+      }
+    </style></noscript>
   </body>
   <!--
                                                                                        @C5%@mg
@@ -52,7 +54,7 @@
                                                                    ,,s#MM"7^,     #C
                                                            ,,e##M57|`            #\
   ,                                                 ,,e#W%T^,                   ]#
-  @##                                        ,sm#W"7^~                    ,##m, @b
+@##                                        ,sm#W"7^~                    ,##m, @b
   "#,,,,,,                        ,;am#M77||                           @#######m
           |5MJ            ,,am##77|`                                  ############b
              '%w  ,,e#M#7^~    ^"@w                                  ############"

@@ -54,8 +54,6 @@ $(document).ready(function () {
       });
   }
   oldValue = window.location.pathname.split(".html");
-
-  console.log(oldValue);
   tinykeys(window, {
     "ArrowUp ArrowUp ArrowDown ArrowDown ArrowLeft ArrowRight ArrowLeft ArrowRight B A": () => {
       location="https://www.youtube.com/watch?v=KBjhAqXg8MY";
@@ -76,7 +74,7 @@ function contentUpdate() {
     var location = window.location.pathname;
     h = true;
     g = true;
-    $("main").fadeOut("300", function () {
+    $("main").fadeOut("fast", function () {
       if (h == true) {
         h = false;
         $("main").load(location + " main", function () {
@@ -84,7 +82,10 @@ function contentUpdate() {
             g = false;
             $("main main").hide();
             $("main main").unwrap();
-            $("main").fadeIn("300");
+            $("main").fadeIn("fast");
+            $("title").load(location + " title", function() {
+              $("title title").unwrap();
+            });
             onReload();
           }
 

@@ -27,6 +27,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   text-align: center;
 }
+h3 {
+  padding-bottom: 10px;
+  border-bottom: 2px solid $darkGrey;
+}
 header h1 {
 	a {
   color: $header-text;
