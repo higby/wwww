@@ -85,11 +85,11 @@ function contentUpdate() {
                 $("main main").hide();
                 $("main main").unwrap();
                 $("main").fadeIn("fast");
-                $("title").load("/404" + " title", function() {
-                  $("title title").unwrap();
-                });
                 onReload();
               }
+            });
+            $("title").load("/404" + " title", function() {
+              $("title title").unwrap();
             });
           }
           else if (g == true) {
@@ -97,11 +97,11 @@ function contentUpdate() {
               $("main main").hide();
               $("main main").unwrap();
               $("main").fadeIn("fast");
-              $("title").load(location + " title", function() {
-                $("title title").unwrap();
-              });
               onReload();
             }
+        });
+        $("title").load(location + " title", function() {
+          $("title title").unwrap();
         });
       }
     });
