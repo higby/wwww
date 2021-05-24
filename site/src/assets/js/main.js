@@ -77,19 +77,31 @@ function contentUpdate() {
     $("main").fadeOut("fast", function () {
       if (h == true) {
         h = false;
-        $("main").load(location + " main", function () {
-          if (g == true) {
-            g = false;
-            $("main main").hide();
-            $("main main").unwrap();
-            $("main").fadeIn("fast");
-            $("title").load(location + " title", function() {
-              $("title title").unwrap();
+        $("main").load(location + " main", function (response, status, xhr) {
+          if ( status == "error" ) {
+            $("main").load("/404" + " main", function () {
+              if (g == true) {
+                g = false;
+                $("main main").hide();
+                $("main main").unwrap();
+                $("main").fadeIn("fast");
+                $("title").load("/404" + " title", function() {
+                  $("title title").unwrap();
+                });
+                onReload();
+              }
             });
-            onReload();
           }
-
-
+          else if (g == true) {
+              g = false;
+              $("main main").hide();
+              $("main main").unwrap();
+              $("main").fadeIn("fast");
+              $("title").load(location + " title", function() {
+                $("title title").unwrap();
+              });
+              onReload();
+            }
         });
       }
     });
