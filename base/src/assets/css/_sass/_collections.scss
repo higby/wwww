@@ -10,7 +10,9 @@ Collections CSS
   margin: 0 30px 5px 0;
   text-align: center;
 }
-
+.card img {
+border-radius: 4.75% / 3.5%;
+}
 @media screen and (max-width: 700px) {
   .card {
     width: calc(50% - 15px);
@@ -35,7 +37,7 @@ Collections CSS
 }
 
 .imgHolder {
-  background-color: $lightGrey;
+  background-color: $darkGrey;
   padding: 10px;
   border-radius: 4px;
 }

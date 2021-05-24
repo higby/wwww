@@ -4,18 +4,18 @@ $(document).ready(function () {
   fancyName();
   function fancyName() {
     // Secret css values (so that the header still has the correct colors in non-js environments)
-    var headerClass = $("header a").attr("class");
-    $("header i").css("color", "#323232");
+    var headerClass = $("header h1 a").attr("class");
+    $("header h1 i").css("color", "#CDCDCD");
     if ($.type( headerClass ) === "undefined") {
-      $("header a").attr("class", "animating");
+      $("header h1 a").attr("class", "animating");
     } else {
-      $("header a").attr("class", "animating pageUpdate");
+      $("header h1 a").attr("class", "animating pageUpdate");
     }
     // Turn header into a fuck ton of spans
     const header = new Letterize({
-      targets: "header a",
+      targets: "header h1 a",
     });
-    $("header a span:lt(7)").attr("id", "branden"); // Give the first seven spans a specific id
+    $("header h1 a span:lt(7)").attr("id", "branden"); // Give the first seven spans a specific id
 
     // Setup animation
     var purple = anime.timeline({
@@ -28,7 +28,7 @@ $(document).ready(function () {
       .add({
         color: [
           {
-            value: "#323232",
+            value: "#CDCDCD",
           },
           {
             value: "#965ee5",
@@ -39,16 +39,16 @@ $(document).ready(function () {
         targets: "#branden",
         color: [
           {
-            value: "#323232",
+            value: "#CDCDCD",
           },
         ],
         complete: function () {
-          $("header i").removeAttr("style");
+          $("header h1 i").removeAttr("style");
           header.deletterize();
           if ($.type( headerClass ) !== "undefined") {
-            $("header a").attr("class", "pageUpdate");
+            $("header h1 a").attr("class", "pageUpdate");
           } else {
-            $("header a").removeAttr("class");
+            $("header h1 a").removeAttr("class");
           }
         },
       });

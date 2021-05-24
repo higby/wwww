@@ -122,6 +122,4 @@ First of all the github repository linked above (and also [here](https://github.
 
 That header's kinda redundant, huh.
 
-For anyone that might be using [Script Kit](https://github.com/johnlindquist/kit) then you might find some use in this script I made to automate making a new shortlink:
-
-{% gist 1c5c226bd6ad5311fd13166fdbeee1eb %}
+For anyone that might be using [Script Kit](https://github.com/johnlindquist/kit) then you might find some use in this script that automates making a new shortlink: [higby/short-url.js](https://gist.github.com/higby/1c5c226bd6ad5311fd13166fdbeee1eb).

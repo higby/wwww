@@ -30,7 +30,6 @@ plugins:
   - jekyll-tagories
   - jekyll-sitemap
   - jekyll-target-blank
-  - jekyll-gist
 
 sass:
     style: compressed
