@@ -5,7 +5,6 @@ $(document).ready(function () {
   function fancyName() {
     // Secret css values (so that the header still has the correct colors in non-js environments)
     var headerClass = $("header h1 a").attr("class");
-    $("header h1 i").css("color", "#CDCDCD");
     if ($.type( headerClass ) === "undefined") {
       $("header h1 a").attr("class", "animating");
     } else {
@@ -43,7 +42,7 @@ $(document).ready(function () {
           },
         ],
         complete: function () {
-          $("header h1 i").removeAttr("style");
+          $("header h1 i").css("color", "#965ee5"); 
           header.deletterize();
           if ($.type( headerClass ) !== "undefined") {
             $("header h1 a").attr("class", "pageUpdate");
@@ -62,8 +61,6 @@ $(document).ready(function () {
 });
 
 function onReload() {
-  $("nav ul li ul").hide();
-  $(".subposts").hide();
   pokeHop();
 }
 
