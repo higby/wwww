@@ -106,7 +106,7 @@ One last piece I needed was to add this to the bottom:
 /*     {% for post in site.directory %}{% if post.title == '404' %}{{ post.redirect_to }}{% endif %}{% endfor %}{% endraw %}
 ```
 
-Because just specifying `/index` and `/404` in the `_redirects` doesn't actually redirect the user should they go to a link taht doesn't exist or head to `/`.
+Because just specifying `/index` and `/404` in the `_redirects` doesn't actually redirect the user should they go to a link that doesn't exist, or if they head to `/`.
 
 So I create two new records, one that matches the index and maps it to `/` and one that matches the 404 and maps it to `/*` which is a wildcard.
 
