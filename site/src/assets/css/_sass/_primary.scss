@@ -1,11 +1,13 @@
 @import "normalize";
-@import "colors";
 
-/*!
---------------------------------
-Site CSS
---------------------------------
-*/
+$space: #965ee5;
+
+$primary-font: "Open Sans", sans-serif;
+$mono-font: "Source Code Pro", monospace;
+/*--------------------------------
+  Site
+--------------------------------*/
+
 *::-webkit-scrollbar {
   display: none;
 }
@@ -222,6 +224,75 @@ tr {
     text-indent: 0;
   }
 }
+/*--------------------------------
+  Syntax Highlighting
+--------------------------------*/
+
+.n, .na, .nb, .nc, .no, .nd, .ni, .ne, .nf, .nl, .nn, .nx, .py, .nt, .nv, .vc, .vg, .vi, .bp {
+  color: $space;
+}
+.c, .cm, .cp, .c1, .cs {
+    font-style: italic;
+}
+.k, .kc, .kd, .kn, .kp, .kr, .kt {
+    font-weight: bold;
+}
+/*--------------------------------
+  Collections
+--------------------------------*/
+
+.card {
+  padding-top: 15px;
+  width: 180px;
+  margin: 0 30px 5px 0;
+  text-align: center;
+}
+.card img {
+border-radius: 4.75% / 3.5%;
+}
+@media screen and (max-width: 700px) {
+  .card {
+    width: calc(50% - 15px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card:nth-child(2n) {
+    margin: 0 0 5px 0;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .card:nth-child(3n) {
+    margin: 0 0 5px 0;
+  }
+}
+
+.cardList {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.imgHolder {
+  background-color: $darkGrey;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.up {
+  transform: translateY(-5px);
+}
+
+.ball {
+  height: 32px;
+  width: 32px;
+  top: 5px;
+  left: 5px;
+  display: block;
+  margin-bottom: -32px;
+  z-index: 1;
+  position: relative;
+}
 
 .gist .gist-file {
   border: none !important;
@@ -231,5 +302,3 @@ tr {
 .gist .gist-meta {
   background-color: $lightGrey !important;
 }
-@import "syntax";
-@import "collections";

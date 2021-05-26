@@ -1,5 +1,15 @@
 ---
 ---
+@import "light";
+$velvet: #9d0a0e;
+$gold: #c9ad6a;
+$tea: #e0e5c1;
+$tealeaf: #43443a;
+
+$primary-text: #302e29;
+$header-text: #302e29;
+$address-text: $gold;
+$dnd-background-color: #eee5ce;
 @import "primary";
 @import "parchment";
 
@@ -146,7 +156,6 @@ b {
 
 footer address a {
   font-family: "Bookinsanity";
-  color: $gold;
 }
 
 .card img {
