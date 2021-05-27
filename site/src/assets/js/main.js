@@ -1,67 +1,74 @@
-oldValue = "";
 $(document).ready(function () {
   onReload();
-  fancyName();
-  function fancyName() {
-    // Secret css values (so that the header still has the correct colors in non-js environments)
-    var headerClass = $("header h1 a").attr("class");
-    if ($.type( headerClass ) === "undefined") {
-      $("header h1 a").attr("class", "animating");
-    } else {
-      $("header h1 a").attr("class", "animating pageUpdate");
-    }
-    // Turn header into a fuck ton of spans
-    const header = new Letterize({
-      targets: "header h1 a",
-    });
-    $("header h1 a span:lt(7)").attr("id", "branden"); // Give the first seven spans a specific id
-
-    // Setup animation
-    var purple = anime.timeline({
-      targets: header.listAll,
-      duration: "1000",
-      delay: anime.stagger(45),
-      easing: "easeInOutQuad",
-    });
-    purple
-      .add({
-        color: [
-          {
-            value: "#CDCDCD",
-          },
-          {
-            value: "#965ee5",
-          },
-        ],
-      })
-      .add({
-        targets: "#branden",
-        color: [
-          {
-            value: "#CDCDCD",
-          },
-        ],
-        complete: function () {
-          $("header h1 i").css("color", "#965ee5"); 
-          header.deletterize();
-          if ($.type( headerClass ) !== "undefined") {
-            $("header h1 a").attr("class", "pageUpdate");
-          } else {
-            $("header h1 a").removeAttr("class");
-          }
-        },
-      });
-  }
+  oldValue = "";
   oldValue = window.location.pathname.split(".html");
   tinykeys(window, {
     "ArrowUp ArrowUp ArrowDown ArrowDown ArrowLeft ArrowRight ArrowLeft ArrowRight B A": () => {
       location="https://www.youtube.com/watch?v=KBjhAqXg8MY";
+  },
+  "h i g b y": () => {
+    fancyName();
   }
 })
 });
 
+$("header h1 a").ready(function() {
+  fancyName();
+})
+
 function onReload() {
   pokeHop();
+}
+
+function fancyName() {
+  // Secret css values (so that the header still has the correct colors in non-js environments)
+  var headerClass = $("header h1 a").attr("class");
+  if ($.type( headerClass ) === "undefined") {
+    $("header h1 a").attr("class", "animating");
+  } else {
+    $("header h1 a").attr("class", "animating pageUpdate");
+  }
+  // Turn header into a fuck ton of spans323232
+  const header = new Letterize({
+    targets: "header h1 a",
+  });
+  $("header h1 a span:lt(7)").attr("id", "branden"); // Give the first seven spans a specific id
+
+  // Setup animation
+  var purple = anime.timeline({
+    targets: header.listAll,
+    duration: "1000",
+    delay: anime.stagger(45),
+    easing: "easeInOutQuad",
+  });
+  purple
+    .add({
+      color: [
+        {
+          value: "#323232",
+        },
+        {
+          value: "#965ee5",
+        },
+      ],
+    })
+    .add({
+      targets: "#branden",
+      color: [
+        {
+          value: "#323232",
+        },
+      ],
+      complete: function () {
+        $("header h1 i").css("color", "#965ee5");
+        header.deletterize();
+        if ($.type( headerClass ) !== "undefined") {
+          $("header h1 a").attr("class", "pageUpdate");
+        } else {
+          $("header h1 a").removeAttr("class");
+        }
+      },
+    });
 }
 
 function contentUpdate() {
@@ -142,6 +149,10 @@ function pokeHop() {
   );
 }
 
+window.addEventListener("popstate", (event) => {
+  contentUpdate();
+});
+
 $(document).on("click", ".pageUpdate", function () {
   var a = $(this).attr("href").split(".html");
   if (a.length > 1) {
@@ -149,10 +160,6 @@ $(document).on("click", ".pageUpdate", function () {
   }
   history.pushState({}, "", a);
   event.preventDefault();
-  contentUpdate();
-});
-
-window.addEventListener("popstate", (event) => {
   contentUpdate();
 });
 

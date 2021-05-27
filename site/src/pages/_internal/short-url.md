@@ -77,7 +77,7 @@ Where the left is the link that gets forwarded to the right.
 
 Here's my working redirect file
 
-```md
+```md{% raw %}
 ---
 ---
 {% for post in site.directory %}
@@ -85,7 +85,7 @@ Here's my working redirect file
 /{{ post.title | downcase }}     {{ post.redirect_to }}
 
 {% endfor %}
-```
+{% endraw %}```
 
 This will generate a working `_redirects` file when the files in the Jekyll site specify a redirect_to in the YAML header, and the title in my config being the files name ie:
 
