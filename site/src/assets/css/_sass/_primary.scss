@@ -1,5 +1,13 @@
 @import "normalize";
+@import "colors";
 
+<<<<<<< Updated upstream:src/assets/css/_sass/_primary.scss
+/*!
+--------------------------------
+Site CSS
+--------------------------------
+*/
+=======
 $space: #965ee5;
 
 $primary-font: "Open Sans", sans-serif;
@@ -8,31 +16,29 @@ $mono-font: "Source Code Pro", monospace;
   Site
 --------------------------------*/
 
-*::-webkit-scrollbar {
-  display: none;
-}
+>>>>>>> Stashed changes:site/src/assets/css/_sass/_primary.scss
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background-color: $background-color;
   color: $primary-text;
-  font-family: $primary-font;
+  font-family: "Open Sans",sans-serif;
   font-size: 18px;
   line-height: 1.5;
   margin: 0 auto;
   max-width: 600px;
 }
+
 h1, h2, h3, h4, h5, h6 {
   color: $header-text;
 }
+
 h1 {
   text-align: center;
 }
-h3 {
-  padding-bottom: 10px;
-  border-bottom: 2px solid $darkGrey;
-}
+<<<<<<< Updated upstream:src/assets/css/_sass/_primary.scss
 header h1 {
 	a {
   color: $header-text;
@@ -44,92 +50,126 @@ header h1 {
 		}
 	}
 	i {
-		color: #CDCDCD;
+		color: $space;
 		font-style: normal;
 	}
+=======
+
+h3 {
+  padding-bottom: 10px;
+  border-bottom: 2px solid $darkGrey;
+>>>>>>> Stashed changes:site/src/assets/css/_sass/_primary.scss
 }
 
 header {
-	a {
-  color: $header-text;
-  line-height: 3em;
-  		&:hover {
-			color: $space;
-			text-decoration: none;
-		}
-	}
-}
-header {
+  h1 {
+    a {
+      color: $header-text;
+      line-height: 90px;
+
+      &:hover {
+        color: $space;
+        text-decoration: none;
+      }
+    }
+
+    i {
+      color: $header-text;
+      font-style: normal;
+    }
+  }
+
+  a {
+    color: $header-text;
+    line-height: 3em;
+
+    &:hover {
+      color: $space;
+      text-decoration: none;
+    }
+  }
+
   text-align: center;
+
+  time {
+    font-weight: bold;
+  }
 }
-header time {
-  font-weight: bold;
-}
+
 nav ul {
-	border-left: 4px $space solid;
-	list-style-type: none;
-	margin-left: 0;
-	padding-left: 20px;
-	a {
-		color: $header-text;
-		&:hover {
-			color: $space;
-			text-decoration: none;
-		}
-	}
-	&:nth-of-type(even) {
-		border-left: none;
-		border-right: 4px $space solid;
-		padding-right: 20px;
-		text-align: right;
-	}
+  border-left: 4px $space solid;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 20px;
+
+  a {
+    color: $primary-text;
+
+    &:hover {
+      color: $space;
+      text-decoration: none;
+    }
+  }
+
+  &:nth-of-type(even) {
+    border-left: none;
+    border-right: 4px $space solid;
+    padding-right: 20px;
+    text-align: right;
+  }
+
   li {
-		list-style-type: none;
-		margin-bottom: 5px;
-		ul {
-			border-left: 4px solid $mediumGrey;
-			padding-left: 1em;
+    list-style-type: none;
+    margin-bottom: 5px;
+
+    ul {
+      border-left: 4px solid $mediumGrey;
+      padding-left: 1em;
       display: none;
-		}
-	}
-	ul {
-		list-style-type: none;
-		margin-left: 0;
-		overflow: hidden;
-	}
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+    overflow: hidden;
+  }
 }
-.postTitle {
-	&:nth-of-type(even) {
-		text-align: right;
-	}
+
+.postTitle:nth-of-type(even) {
+  text-align: right;
 }
-.animating {
-	&:hover {
-		color: $header-text;
-	}
+
+.animating:hover {
+  color: $primary-text;
 }
 
 footer {
-	font-size: 20px;
-	margin: 20px 0;
-	a {
-		color: $header-text;
-		&:hover {
-			color: $space;
-			text-decoration: none;
-		}
-	}
-	address {
+  font-size: 20px;
+  margin: 20px 0;
+
+  a {
+    color: $primary-text;
+
+    &:hover {
+      color: $space;
+      text-decoration: none;
+    }
+  }
+
+  address {
     font-style: normal;
-    font-family: $mono-font;
-		a {
-			color: $address-text;
-			&:hover {
-				color: $space;
-				text-decoration: none;
-			}
-		}
-}
+    font-family: "Source Code Pro",monospace;
+
+    a {
+      color: $quote-text;
+
+      &:hover {
+        color: $space;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 p {
@@ -139,48 +179,55 @@ p {
 ol, ul {
   margin-left: 1.5em;
 }
+
 ol ol, ul ul {
   margin-left: 0;
 }
+
 pre {
-  white-space: pre-wrap;
   background-color: $lightGrey;
   border-radius: 4px;
   line-height: 2;
   padding: 15px 1.5em;
   vertical-align: middle;
+  overflow-x: auto;
 }
+
 p code {
   padding: .2em .4em;
-
 }
+
 code {
   background-color: $lightGrey;
   color: $code-text;
   border-radius: 4px;
-  font-family: $mono-font;
+  font-family: "Source Code Pro",monospace;
   font-size: 85%;
 }
 
 blockquote {
-	border-left: 4px solid $mediumGrey;
-	color: $quote-text;
-	margin: 18px 0;
-	padding: 0 0 0 1em;
-	p {
-		text-indent: 0;
-	}
+  border-left: 4px solid $mediumGrey;
+  color: $quote-text;
+  margin: 18px 0;
+  padding: 0 0 0 1em;
+
+  p {
+    text-indent: 0;
+  }
 }
+
 hr {
   border: 1px solid $darkGrey;
 }
+
 a {
   color: $space;
   text-decoration: none;
   transition: color .5s;
-}
-a:hover {
-  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 time {
@@ -189,67 +236,78 @@ time {
 
 img {
   width: 100%;
-
 }
 
 table {
-	border-collapse: collapse;
-	width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
+
 td {
-	padding: 5px;
-	text-align: center;
+  padding: 5px;
+  text-align: center;
+
+  ~ td {
+    border-left: 4px $darkGrey
+ solid;
+  }
 }
-td~td {
-	border-left: 4px $darkGrey solid;
-}
-th~th {
-	border-left: 4px $darkGrey solid;
-}
+
 th {
-	border-bottom: 4px $darkGrey solid;
-	padding: 5px;
+  ~ th {
+    border-left: 4px $darkGrey
+ solid;
+  }
+
+  border-bottom: 4px $darkGrey
+ solid;
+  padding: 5px;
 }
-tr {
-	&:nth-child(even) {
-		background-color: $lightGrey;
-	}
+
+tr:nth-child(even) {
+  background-color: $lightGrey;
 }
+
 @media screen and (max-width: 700px) {
+<<<<<<< Updated upstream:src/assets/css/_sass/_primary.scss
 	body {
 		margin-left: 2em;
 		margin-right: 2em;
 	}
+=======
+  body {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
   p {
     text-indent: 0;
   }
 }
-/*--------------------------------
-  Syntax Highlighting
---------------------------------*/
 
 .n, .na, .nb, .nc, .no, .nd, .ni, .ne, .nf, .nl, .nn, .nx, .py, .nt, .nv, .vc, .vg, .vi, .bp {
   color: $space;
 }
+
 .c, .cm, .cp, .c1, .cs {
-    font-style: italic;
+  font-style: italic;
 }
+
 .k, .kc, .kd, .kn, .kp, .kr, .kt {
-    font-weight: bold;
+  font-weight: bold;
 }
-/*--------------------------------
-  Collections
---------------------------------*/
 
 .card {
   padding-top: 15px;
   width: 180px;
   margin: 0 30px 5px 0;
   text-align: center;
+
+  img {
+    border-radius: 4.75% / 3.5%;
+  }
 }
-.card img {
-border-radius: 4.75% / 3.5%;
-}
+
 @media screen and (max-width: 700px) {
   .card {
     width: calc(50% - 15px);
@@ -292,13 +350,18 @@ border-radius: 4.75% / 3.5%;
   margin-bottom: -32px;
   z-index: 1;
   position: relative;
+>>>>>>> Stashed changes:site/src/assets/css/_sass/_primary.scss
 }
 
-.gist .gist-file {
-  border: none !important;
-  border-radius: 4px !important;
-}
+.gist {
+  .gist-file {
+    border: none !important;
+    border-radius: 4px !important;
+  }
 
-.gist .gist-meta {
-  background-color: $lightGrey !important;
+  .gist-meta {
+    background-color: $lightGrey !important;
+  }
 }
+@import "syntax";
+@import "collections";
