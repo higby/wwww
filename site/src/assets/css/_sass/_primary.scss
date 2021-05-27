@@ -1,13 +1,5 @@
 @import "normalize";
-@import "colors";
 
-<<<<<<< Updated upstream:src/assets/css/_sass/_primary.scss
-/*!
---------------------------------
-Site CSS
---------------------------------
-*/
-=======
 $space: #965ee5;
 
 $primary-font: "Open Sans", sans-serif;
@@ -16,7 +8,6 @@ $mono-font: "Source Code Pro", monospace;
   Site
 --------------------------------*/
 
->>>>>>> Stashed changes:site/src/assets/css/_sass/_primary.scss
 html {
   scroll-behavior: smooth;
 }
@@ -38,27 +29,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   text-align: center;
 }
-<<<<<<< Updated upstream:src/assets/css/_sass/_primary.scss
-header h1 {
-	a {
-  color: $header-text;
-  line-height: 90px;
-
-  		&:hover {
-			color: $space;
-			text-decoration: none;
-		}
-	}
-	i {
-		color: $space;
-		font-style: normal;
-	}
-=======
 
 h3 {
   padding-bottom: 10px;
   border-bottom: 2px solid $darkGrey;
->>>>>>> Stashed changes:site/src/assets/css/_sass/_primary.scss
 }
 
 header {
@@ -269,12 +243,6 @@ tr:nth-child(even) {
 }
 
 @media screen and (max-width: 700px) {
-<<<<<<< Updated upstream:src/assets/css/_sass/_primary.scss
-	body {
-		margin-left: 2em;
-		margin-right: 2em;
-	}
-=======
   body {
     margin-left: 2em;
     margin-right: 2em;
@@ -350,7 +318,6 @@ tr:nth-child(even) {
   margin-bottom: -32px;
   z-index: 1;
   position: relative;
->>>>>>> Stashed changes:site/src/assets/css/_sass/_primary.scss
 }
 
 .gist {
@@ -363,5 +330,3 @@ tr:nth-child(even) {
     background-color: $lightGrey !important;
   }
 }
-@import "syntax";
-@import "collections";
