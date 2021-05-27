@@ -8,7 +8,6 @@ $tealeaf: #43443a;
 
 $primary-text: #302e29;
 $header-text: #302e29;
-$address-text: $gold;
 $dnd-background-color: #eee5ce;
 @import "primary";
 @import "parchment";
@@ -158,8 +157,12 @@ footer address a {
   font-family: "Bookinsanity";
 }
 
-.card img {
-border-radius: 4.75% / 3.5%;
+footer {
+  address {
+    a {
+      color: $gold;
+    }
+  }
 }
 /*!
 --------------------------------
