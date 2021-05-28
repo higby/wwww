@@ -227,31 +227,33 @@ Specific Use
 .animating:hover {
   color: $primary-text;
 }
-.card {
+.card,.box {
   margin: 0 30px 5px 0;
   padding-top: 15px;
   text-align: center;
   width: 180px;
+}
+.card {
   img {
     border-radius: 4.75% / 3.5%;
   }
 }
 @media screen and (max-width: 700px) {
-  .card {
+  .card,.box {
     width: calc(50% - 15px);
   }
 }
 @media screen and (max-width: 700px) {
-  .card:nth-child(2n) {
+  .card:nth-child(2n),.box:nth-child(2n) {
     margin: 0 0 5px 0;
   }
 }
 @media only screen and (min-width: 700px) {
-  .card:nth-child(3n) {
+  .card:nth-child(3n),.box:nth-child(3n) {
     margin: 0 0 5px 0;
   }
 }
-.cardList {
+.cardList,.boxList {
   display: flex;
   flex-flow: row wrap;
 }

@@ -1,6 +1,7 @@
 ---
 title: Short URL Service With Jekyll & Netlify
 date: 2021-05-19 02:25:58
+description: "Making A Short URL Service With Jekyll & Netlify"
 tag: programming
 repo: short-url
 ---

@@ -1,6 +1,7 @@
 ---
 title:  "Sliver Deck"
 date: 2021-02-26 00:05:00 -0800
+description: "Branden Higby's MTG Sliver Deck"
 setup:
   date: hidden
 tags: collections

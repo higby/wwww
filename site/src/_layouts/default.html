@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="{{ site.description }}"/>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
     {% if page.setup.noindex %}
     <meta name="robots" content="noindex"/>
     {% endif %}
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <link type="text/plain" rel="author" href="/humans.txt"/>
     <link rel="icon" type="image/ico" href="/assets/favicon.ico"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -17,6 +18,7 @@
     {% else %}
     <link rel="stylesheet" href="/assets/css/main.css"/>
     {% endif %}
+    <noscript><link rel="stylesheet" href="/assets/css/noscript.css"/></noscript>
     <script src="/assets/js/core.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
     <title>{{ page.title }}</title>
@@ -35,14 +37,6 @@
 
       </footer>
     </main>
-    <noscript><style>
-      header h1 i {
-        color: #965ee5;
-      }
-      nav ul li ul,.subposts {
-        display: block;
-      }
-    </style></noscript>
   </body>
   <!--
                                                                                        @C5%@mg

@@ -1,5 +1,6 @@
 ---
 title: humans.txt
+description: "The Many Tools That Helped Me Make This"
 setup:
   table: hidden
   date: hidden

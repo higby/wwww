@@ -89,6 +89,10 @@ p:first-of-type {
   text-indent: 0;
 }
 
+p:first-of-type img {
+  margin-left: 0;
+}
+
 p strong:first-of-type {
   margin-left: -50px;
 }
@@ -164,7 +168,7 @@ footer {
     }
   }
 }
-/*!
+/*
 --------------------------------
 The terrifying beast of a background
 Source: https://github.com/naturalcrit/homebrewery/

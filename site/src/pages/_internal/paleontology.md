@@ -1,6 +1,7 @@
 ---
 title:  "Paleontology, Jobs, and Other Rambling Thoughts"
 date: 2020-04-12 00:05:00 -0800
+description: "An Essay Concerned With The Future"
 tag: essays
 ---
 
