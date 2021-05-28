@@ -12,7 +12,7 @@ $dnd-background-color: #eee5ce;
 @import "primary";
 @import "parchment";
 
-/*!
+/*
 --------------------------------
 DnD CSS
 --------------------------------
@@ -158,7 +158,7 @@ footer address a {
 }
 
 footer {
-  address {
+  code {
     a {
       color: $gold;
     }

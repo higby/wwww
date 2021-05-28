@@ -1,32 +1,46 @@
 @import "normalize";
-
 $space: #965ee5;
 $space-highlighter: #965ee573;
-
 $primary-font: "Open Sans", sans-serif;
 $mono-font: "Source Code Pro", monospace;
-/*--------------------------------
-  Site
---------------------------------*/
 
+/*
+--------------------------------
+Site Theme
+--------------------------------
+*/
 html {
   scroll-behavior: smooth;
 }
-
 body {
   background-color: $background-color;
   color: $primary-text;
-  font-family: "Open Sans",sans-serif;
+  font-family: $primary-font;
   font-size: 18px;
   line-height: 1.5;
   margin: 0 auto;
   max-width: 600px;
 }
-
 h1, h2, h3, h4, h5, h6 {
   color: $header-text;
 }
-
+a {
+  color: $space;
+  text-decoration: none;
+  transition: color .5s;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+p {
+  text-indent: 1.5em;
+}
+ol, ul {
+  margin-left: 1.5em;
+}
+ol ol, ul ul {
+  margin-left: 0;
+}
 header {
   text-align: center;
   h1 {
@@ -89,12 +103,6 @@ nav ul, details {
     overflow: hidden;
   }
 }
-.postTitle:nth-of-type(even) {
-  text-align: right;
-}
-.animating:hover {
-  color: $primary-text;
-}
 footer {
   font-size: 20px;
   margin: 20px 0;
@@ -108,7 +116,7 @@ footer {
   code {
     background-color: inherit;
     color: $code-text;
-    font-family: "Source Code Pro",monospace;
+    font-family: $mono-font;
     font-size: 100%;
     a {
       color: $quote-text;
@@ -122,19 +130,28 @@ footer {
       color: $code-text;
     }
 }
-p {
-  text-indent: 1.5em;
+hr {
+  border: 1px solid $darkGrey;
 }
-ol, ul {
-  margin-left: 1.5em;
+kbd {
+  border: 1px solid $mediumGrey;
+  border-radius: 4px;
+  box-shadow: inset 0 -1px 0 $mediumGrey;
+  color: $code-text;
+  font-family: $mono-font;
+  font-size: 85%;
+  padding: 3px 5px;
+  vertical-align: middle;
 }
-ol ol, ul ul {
-  margin-left: 0;
+mark {
+  background-color: $space-highlighter;
+  margin: 0 -2.5px;
+  padding: 0 2.5px;
 }
 pre {
   background-color: $lightGrey;
   border-radius: 4px;
-  font-family: "Source Code Pro",monospace;
+  font-family: $mono-font;
   line-height: 2;
   overflow-x: auto;
   padding: 15px 1.5em;
@@ -147,7 +164,7 @@ code {
   background-color: $lightGrey;
   border-radius: 4px;
   color: $code-text;
-  font-family: "Source Code Pro",monospace;
+  font-family: $mono-font;
   font-size: 85%;
 }
 blockquote {
@@ -157,17 +174,6 @@ blockquote {
   padding: 0 0 0 1em;
   p {
     text-indent: 0;
-  }
-}
-hr {
-  border: 1px solid $darkGrey;
-}
-a {
-  color: $space;
-  text-decoration: none;
-  transition: color .5s;
-  &:hover {
-    text-decoration: underline;
   }
 }
 img {
@@ -211,14 +217,16 @@ tfoot th {
     text-indent: 0;
   }
 }
-.n, .na, .nb, .nc, .no, .nd, .ni, .ne, .nf, .nl, .nn, .nx, .py, .nt, .nv, .vc, .vg, .vi, .bp {
-  color: $space;
+/*
+--------------------------------
+Specific Use
+--------------------------------
+*/
+.postTitle:nth-of-type(even) {
+  text-align: right;
 }
-.c, .cm, .cp, .c1, .cs {
-  font-style: italic;
-}
-.k, .kc, .kd, .kn, .kp, .kr, .kt {
-  font-weight: bold;
+.animating:hover {
+  color: $primary-text;
 }
 .card {
   margin: 0 30px 5px 0;
@@ -266,29 +274,17 @@ tfoot th {
   width: 32px;
   z-index: 1;
 }
-.gist {
-  .gist-file {
-    border: none !important;
-    border-radius: 4px !important;
-  }
-  .gist-meta {
-    background-color: $lightGrey !important;
-  }
+/*
+--------------------------------
+Syntax Highlighting
+--------------------------------
+*/
+.n, .na, .nb, .nc, .no, .nd, .ni, .ne, .nf, .nl, .nn, .nx, .py, .nt, .nv, .vc, .vg, .vi, .bp {
+  color: $space;
 }
-mark {
-  background-color: $space-highlighter;
-  margin: 0 -2.5px;
-  padding: 0 2.5px;
+.c, .cm, .cp, .c1, .cs {
+  font-style: italic;
 }
-kbd {
-  background-color: #fafbfc;
-  border: 1px solid #d1d5da;
-  border-radius: 4px;
-  border-radius: 4px;
-  box-shadow: inset 0 -1px 0 #d1d5da;
-  color: $code-text;
-  font-family: "Source Code Pro",monospace;
-  font-size: 85%;
-  padding: 3px 5px;
-  vertical-align: middle;
+.k, .kc, .kd, .kn, .kp, .kr, .kt {
+  font-weight: bold;
 }

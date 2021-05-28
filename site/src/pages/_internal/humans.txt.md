@@ -5,12 +5,12 @@ setup:
   date: hidden
 tag: programming
 ---
-
+{%- assign generation_date = "%F, %T %Z" -%}
 ### /* ME */
 
 Email: {{ site.email }}
 
-Location: 🌧 ️Oregon️
+Location: 🌧 ️Oregon
 
 Favorite Pokemon: <a class="pageUpdate" href="/pokemon">Metroid</a>, my shiny Araquanid
 
@@ -39,9 +39,9 @@ Favorite Number: <span style="color:#965ee5;font-weight:bold;">65</span>
 
 ### /* SITE */
 
-Inital Commit: 2020-04-10, 17:57:00 PDT
+Inital Commit: `2020-04-10, 17:57:00 PDT`
 
-Last updated: {%- assign generation_date = " %F, %T %Z" -%}{{ site.time | date: generation_date }}
+Last updated: `{{ site.time | date: generation_date }}`
 
 Built with [Jekyll](https://github.com/jekyll/jekyll) and hosted on [Netlify](https://www.netlify.com/)
 
