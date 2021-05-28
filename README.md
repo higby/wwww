@@ -31,6 +31,9 @@ sitemap: false # used to remove a page from the generated sitemap
 ## Build
 Output HTML is tidied via `jekyll-tidy`
 
-CSS is bundled vis SASS with the expanded style
+CSS is bundled vis SASS with the compact style
 
 Hosted via Netlify
+
+## Thanks To
+See [humans.txt](https://www.higby.io/humans.txt) for full credits.
