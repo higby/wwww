@@ -13,7 +13,10 @@ $(document).ready(function () {
 });
 
 $("header h1 a").ready(function() {
-  fancyName();
+  setTimeout(
+    function() {
+      fancyName();
+    }, 250);
 })
 
 function onReload() {
@@ -21,7 +24,6 @@ function onReload() {
 }
 
 function fancyName() {
-  // Secret css values (so that the header still has the correct colors in non-js environments)
   var headerClass = $("header h1 a").attr("class");
   if ($.type( headerClass ) === "undefined") {
     $("header h1 a").attr("class", "animating");

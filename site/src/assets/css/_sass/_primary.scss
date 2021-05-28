@@ -114,11 +114,10 @@ footer {
   }
   code {
     background-color: inherit;
-    color: $code-text;
     font-family: $mono-font;
     font-size: 100%;
     a {
-      color: $quote-text;
+      color: $pgp-text;
       &:hover {
         color: $space;
         text-decoration: none;
