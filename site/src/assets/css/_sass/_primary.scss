@@ -27,117 +27,91 @@ h1, h2, h3, h4, h5, h6 {
   color: $header-text;
 }
 
-h1 {
-}
-
-
 header {
   text-align: center;
-
   h1 {
     a {
       color: $header-text;
       line-height: 90px;
-
       &:hover {
         color: $space;
         text-decoration: none;
       }
     }
-
     i {
       color: $header-text;
       font-style: normal;
     }
   }
-
   a {
     color: $header-text;
     line-height: 3em;
-
     &:hover {
       color: $space;
       text-decoration: none;
     }
   }
-
-  text-align: center;
-
   time {
-    font-weight: bold;
     color: $code-text;
-
+    font-weight: bold;
   }
 }
-
 nav ul, details {
   border-left: 4px $space solid;
   list-style-type: none;
   margin-left: 0;
   padding-left: 20px;
-
   a {
     color: $primary-text;
-
     &:hover {
       color: $space;
       text-decoration: none;
     }
   }
-
   &:nth-of-type(even) {
     border-left: none;
     border-right: 4px $space solid;
     padding-right: 20px;
     text-align: right;
   }
-
   li {
     list-style-type: none;
     margin-bottom: 5px;
-
     ul {
       border-left: 4px solid $mediumGrey;
-      padding-left: 1em;
       display: none;
+      padding-left: 1em;
     }
   }
-
   ul {
     list-style-type: none;
     margin-left: 0;
     overflow: hidden;
   }
 }
-
 .postTitle:nth-of-type(even) {
   text-align: right;
 }
-
 .animating:hover {
   color: $primary-text;
 }
-
 footer {
   font-size: 20px;
   margin: 20px 0;
-
   a {
     color: $primary-text;
-
     &:hover {
       color: $space;
       text-decoration: none;
     }
   }
-
-  address {
-    font-style: normal;
+  code {
+    background-color: inherit;
+    color: $code-text;
     font-family: "Source Code Pro",monospace;
-
+    font-size: 100%;
     a {
       color: $quote-text;
-
       &:hover {
         color: $space;
         text-decoration: none;
@@ -147,72 +121,57 @@ footer {
     time {
       color: $code-text;
     }
-
 }
-
 p {
   text-indent: 1.5em;
 }
-
 ol, ul {
   margin-left: 1.5em;
 }
-
 ol ol, ul ul {
   margin-left: 0;
 }
-
 pre {
   background-color: $lightGrey;
   border-radius: 4px;
+  font-family: "Source Code Pro",monospace;
   line-height: 2;
+  overflow-x: auto;
   padding: 15px 1.5em;
   vertical-align: middle;
-  font-family: "Source Code Pro",monospace;
-  overflow-x: auto;
 }
-
 p code {
   padding: .2em .4em;
 }
-
 code {
   background-color: $lightGrey;
-  color: $code-text;
   border-radius: 4px;
+  color: $code-text;
+  font-family: "Source Code Pro",monospace;
   font-size: 85%;
 }
-
 blockquote {
   border-left: 4px solid $mediumGrey;
   color: $quote-text;
   margin: 18px 0;
   padding: 0 0 0 1em;
-
   p {
     text-indent: 0;
   }
 }
-
 hr {
   border: 1px solid $darkGrey;
 }
-
 a {
   color: $space;
   text-decoration: none;
   transition: color .5s;
-
   &:hover {
     text-decoration: underline;
   }
 }
-
-
-
 img {
   width: 100%;
-
 }
 p img {
   margin-left: -1.5em;
@@ -221,191 +180,115 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-
 td {
   padding: 5px;
   text-align: center;
-
   ~ td {
     border-left: 4px $darkGrey
  solid;
   }
 }
-
 th {
-  ~ th {
-    border-left: 4px $darkGrey
- solid;
-  }
-
-  border-bottom: 4px $darkGrey
- solid;
+  border-bottom: 4px $darkGrey solid;
   padding: 5px;
+  ~ th {
+    border-left: 4px $darkGrey solid;
+  }
 }
-
 tr:nth-child(even) {
   background-color: $lightGrey;
-
 }
 tfoot th {
-  border-top: 4px $darkGrey solid;
   border-bottom: 0;
+  border-top: 4px $darkGrey solid;
 }
 @media screen and (max-width: 700px) {
   body {
     margin-left: 2em;
     margin-right: 2em;
   }
-
   p {
     text-indent: 0;
   }
 }
-
 .n, .na, .nb, .nc, .no, .nd, .ni, .ne, .nf, .nl, .nn, .nx, .py, .nt, .nv, .vc, .vg, .vi, .bp {
   color: $space;
 }
-
 .c, .cm, .cp, .c1, .cs {
   font-style: italic;
 }
-
 .k, .kc, .kd, .kn, .kp, .kr, .kt {
   font-weight: bold;
 }
-
 .card {
-  padding-top: 15px;
-  width: 180px;
   margin: 0 30px 5px 0;
+  padding-top: 15px;
   text-align: center;
-
+  width: 180px;
   img {
     border-radius: 4.75% / 3.5%;
   }
 }
-
 @media screen and (max-width: 700px) {
   .card {
     width: calc(50% - 15px);
   }
 }
-
 @media screen and (max-width: 700px) {
   .card:nth-child(2n) {
     margin: 0 0 5px 0;
   }
 }
-
 @media only screen and (min-width: 700px) {
   .card:nth-child(3n) {
     margin: 0 0 5px 0;
   }
 }
-
 .cardList {
   display: flex;
   flex-flow: row wrap;
 }
-
 .imgHolder {
   background-color: $lightGrey;
-  padding: 10px;
   border-radius: 4px;
+  padding: 10px;
 }
-
 .up {
   transform: translateY(-5px);
 }
-
 .ball {
-  height: 32px;
-  width: 32px;
-  top: 5px;
-  left: 5px;
   display: block;
+  height: 32px;
+  left: 5px;
   margin-bottom: -32px;
-  z-index: 1;
   position: relative;
+  top: 5px;
+  width: 32px;
+  z-index: 1;
 }
-
 .gist {
   .gist-file {
     border: none !important;
     border-radius: 4px !important;
   }
-
   .gist-meta {
     background-color: $lightGrey !important;
   }
 }
-
 mark {
   background-color: $space-highlighter;
-  padding: 0 5px;
-}
-fieldset {
-  border-radius: 4px;
-  border: 4px solid $mediumGrey;
-}
-legend {
-  font-weight: bold;
-  padding: 0 4px;
+  margin: 0 -2.5px;
+  padding: 0 2.5px;
 }
 kbd {
-  vertical-align: middle;
   background-color: #fafbfc;
   border: 1px solid #d1d5da;
   border-radius: 4px;
-  padding: 3px 5px;
+  border-radius: 4px;
   box-shadow: inset 0 -1px 0 #d1d5da;
-  font-family: "Source Code Pro",monospace;
   color: $code-text;
-  border-radius: 4px;
+  font-family: "Source Code Pro",monospace;
   font-size: 85%;
-}
-
-
-input {
-  border-radius: 4px;
-  border: 1px solid black;
-}
-
-button {
-  padding: 5px 15px;
-  background-color: $space;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: all .3s;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-
-}
-
-button:hover {
-  background-color: #784bb7;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-}
-
-button:active {
-  background-color: #ab7eea;
-}
-
-button:disabled, input:disabled, textarea:disabled {
-  background-color: $lightGrey;
-  color: #0000004d;
-  border: 0;
-  cursor: default;
-  box-shadow: none;
-}
-
-textarea {
-    overflow: auto;
-    resize: vertical;
-    border-radius: 4px;
-    padding: 15px;
-    border: 4px solid $mediumGrey;
-    border-bottom-right-radius: 40px;
-    max-width: 100%;
+  padding: 3px 5px;
+  vertical-align: middle;
 }

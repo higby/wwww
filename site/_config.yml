@@ -32,7 +32,7 @@ plugins:
   - jekyll-target-blank
 
 sass:
-    style: expanded
+    style: compact
     sourcemap: never
     sass_dir: assets/css/_sass
 
