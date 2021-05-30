@@ -168,18 +168,22 @@ $(document).on("click", ".pageUpdate", function () {
 $(document).on("click", "nav ul li span", function () {
   if ($(this).next().next().is(":hidden")) {
     $(this).next().next().slideDown("fast", "easeOutQuad");
-    $(this)
-      .children()
-      .replaceWith(
-        '<svg height="24" viewBox="0 -5 24 24" width="24" aria-hidden="true" fill="#4b4b4b"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg>'
-      );
+    var arrow = $(this).children();
+    console.log(arrow);
+    anime({
+      targets: this.children,
+      rotateZ: 90,
+      duration: 100,
+      easing: 'easeOutQuad'
+    });
   } else {
     $(this).next().next().slideUp("fast", "easeOutQuad");
-    $(this)
-      .children()
-      .replaceWith(
-        '<svg height="24" viewBox="0 -5 24 24" width="24" aria-hidden="true" fill="#4b4b4b"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg>'
-      );
+    anime({
+      targets: this.children,
+      rotateZ: 0,
+      duration: 100,
+      easing: 'easeOutQuad'
+    });
   }
 });
 
@@ -189,14 +193,14 @@ $(document).on("click", ".subtitle", function () {
     $(this)
       .children()
       .replaceWith(
-        '<svg height="24" viewBox="0 -5 24 24" width="24" aria-hidden="true" fill="#4b4b4b"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg>'
+        '<svg height="24" viewBox="0 0 0 0" width="24" aria-hidden="true" fill="#4b4b4b"><path d="M11.646 15.146L5.854 9.354a.5.5 0 01.353-.854h11.586a.5.5 0 01.353.854l-5.793 5.792a.5.5 0 01-.707 0z"></path>/svg>'
       );
   } else {
     $(this).next().slideUp("fast", "easeOutQuad");
     $(this)
       .children()
       .replaceWith(
-        '<svg height="24" viewBox="0 -5 24 24" width="24" aria-hidden="true" fill="#4b4b4b"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg>'
+        '<svg height="24" viewBox="0 0 0 0" width="24" aria-hidden="true" fill="#4b4b4b"><path d="M15.146 12.354l-5.792 5.792a.5.5 0 01-.854-.353V6.207a.5.5 0 01.854-.353l5.792 5.792a.5.5 0 010 .708z"></path></svg>'
       );
   }
 });

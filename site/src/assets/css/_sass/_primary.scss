@@ -3,7 +3,6 @@ $space: #965ee5;
 $space-highlighter: #965ee573;
 $primary-font: "Open Sans", sans-serif;
 $mono-font: "Source Code Pro", monospace;
-
 /*
 --------------------------------
 Site Theme
@@ -76,6 +75,7 @@ nav ul, details {
   padding-left: 20px;
   a {
     color: $primary-text;
+
     &:hover {
       color: $space;
       text-decoration: none;
@@ -93,13 +93,20 @@ nav ul, details {
     ul {
       border-left: 4px solid $mediumGrey;
       display: none;
-      padding-left: 1em;
+      overflow: hidden;
+    }
+    li {
+      padding-left: 9.5px;
     }
   }
   ul {
     list-style-type: none;
     margin-left: 0;
-    overflow: hidden;
+  }
+  svg {
+    vertical-align:text-top;
+    margin-left: -14.75px;
+    margin-right: 14.75px;
   }
 }
 footer {
