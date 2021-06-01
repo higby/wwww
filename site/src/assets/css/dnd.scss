@@ -157,14 +157,11 @@ b {
   font-family: "Bookinsanity Bold";
 }
 
-footer address a {
-  font-family: "Bookinsanity";
-}
-
 footer {
   code {
     a {
       color: $gold;
+      font-family: "Bookinsanity";
     }
   }
 }

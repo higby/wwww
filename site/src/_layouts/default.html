@@ -18,14 +18,14 @@
     {% else %}
     <link rel="stylesheet" href="/assets/css/main.css"/>
     {% endif %}
-    <noscript><link rel="stylesheet" href="/assets/css/noscript.css"/></noscript>
+ <noscript><link rel="stylesheet" href="/assets/css/noscript.css"/></noscript>
     <script src="/assets/js/core.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
     <title>{{ page.title }}</title>
   </head>
   <body>
     <header>
-      <h1><a {% unless page.setup.style%}class="pageUpdate" {% endunless %}href="/">Branden <i>Higby</i></a></h1>
+      <h1><a href="/" {% unless page.setup.style%}class="internal" {% endunless %}>Branden <i class="higby">Higby</i></a></h1>
     </header>
     <main>
       {{content}}

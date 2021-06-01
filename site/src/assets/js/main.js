@@ -28,7 +28,7 @@ function fancyName() {
   if ($.type( headerClass ) === "undefined") {
     $("header h1 a").attr("class", "animating");
   } else {
-    $("header h1 a").attr("class", "animating pageUpdate");
+    $("header h1 a").attr("class", "animating internal");
   }
   // Turn header into a fuck ton of spans323232
   const header = new Letterize({
@@ -65,7 +65,7 @@ function fancyName() {
         $("header h1 i").css("color", "#965ee5");
         header.deletterize();
         if ($.type( headerClass ) !== "undefined") {
-          $("header h1 a").attr("class", "pageUpdate");
+          $("header h1 a").attr("class", "internal");
         } else {
           $("header h1 a").removeAttr("class");
         }
@@ -155,7 +155,7 @@ window.addEventListener("popstate", (event) => {
   contentUpdate();
 });
 
-$(document).on("click", ".pageUpdate", function () {
+$(document).on("click", ".internal", function () {
   var a = $(this).attr("href").split(".html");
   if (a.length > 1) {
     a.pop();

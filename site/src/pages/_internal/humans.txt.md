@@ -7,7 +7,7 @@ setup:
 tag: programming
 ---
 {%- assign generation_date = "%F, %T %Z" -%}
-### /* ME */
+### Me
 
 Email: {{ site.email }}
 
@@ -26,9 +26,9 @@ Favorite TV Shows:
 - Gravity Falls
 - Adventure Time
 
-Favorite Number: <span style="color:#965ee5;font-weight:bold;">65</span>
+Favorite Number: <i class="65">65</i>
 
-### /* THANKS */
+### Thanks
 
 [MDN Web Docs](https://developer.mozilla.org/en-US/) - the best reference
 
@@ -38,7 +38,7 @@ Favorite Number: <span style="color:#965ee5;font-weight:bold;">65</span>
 
 [Spotify](https://open.spotify.com/playlist/1u6D5NJ3MOzLeXZU3B6MU1?si=8ef03bee2c48407b) - ~99,342 minutes listened (updated 12/1/2020)
 
-### /* SITE */
+### Site
 
 Inital Commit: `2020-04-10, 17:57:00 PDT`
 

@@ -1,6 +1,7 @@
-@import "normalize";
+@import "light";
 $space: #965ee5;
 $space-highlighter: #965ee573;
+$b-radius: 4px;
 $primary-font: "Open Sans", sans-serif;
 $mono-font: "Source Code Pro", monospace;
 /*
@@ -8,6 +9,15 @@ $mono-font: "Source Code Pro", monospace;
 Site Theme
 --------------------------------
 */
+* {
+  box-sizing: border-box;
+  &::before, &::after {
+    box-sizing: border-box;
+  }
+}
+::selection {
+  background-color: $space-highlighter;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -23,90 +33,58 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: $header-text;
 }
-a {
-  color: $space;
-  text-decoration: none;
-  transition: color .5s;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-p {
-  text-indent: 1.5em;
-}
-ol, ul {
-  margin-left: 1.5em;
-}
-ol ol, ul ul {
-  margin-left: 0;
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 header {
   text-align: center;
-  h1 {
-    a {
-      color: $header-text;
-      line-height: 90px;
-      &:hover {
-        color: $space;
-        text-decoration: none;
-      }
-    }
-    i {
-      color: $header-text;
-      font-style: normal;
-    }
-  }
   a {
     color: $header-text;
-    line-height: 3em;
     &:hover {
       color: $space;
       text-decoration: none;
     }
   }
-  time {
-    font-weight: bold;
+  h1 {
+    padding-top: 20px;
   }
 }
-nav ul, details {
-  border-left: 4px $space solid;
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 20px;
+nav {
   a {
-    color: $primary-text;
-
+    color: $header-text;
     &:hover {
       color: $space;
       text-decoration: none;
     }
   }
-  &:nth-of-type(even) {
+  ul, ol {
+    border-left: 4px $space solid;
+    list-style: none;
+    padding: 0 10px 0 10px;
+  }
+  ul:nth-of-type(even), ol:nth-of-type(even) {
     border-left: none;
     border-right: 4px $space solid;
-    padding-right: 20px;
     text-align: right;
   }
-  li {
-    list-style-type: none;
-    margin-bottom: 5px;
-    ul {
-      border-left: 4px solid $mediumGrey;
-      display: none;
-      overflow: hidden;
-    }
-    li {
-      padding-left: 9.5px;
-    }
+  h2:nth-of-type(even) {
+    text-align: right;
   }
-  ul {
-    list-style-type: none;
-    margin-left: 0;
+  ul ul {
+    border-left: 4px solid $mediumGrey;
+    display: none;
+    margin-left: 14.5px;
+    padding-left: 14.9px;
+  }
+  li {
+    margin-bottom: 5px;
+    &::before {
+      content: "​";
+    }
   }
   svg {
-    vertical-align:text-top;
-    margin-left: -14.75px;
-    margin-right: 14.75px;
+    vertical-align: text-top;
   }
 }
 footer {
@@ -121,7 +99,6 @@ footer {
   }
   code {
     background-color: inherit;
-    font-family: $mono-font;
     font-size: 100%;
     a {
       color: $pgp-text;
@@ -132,94 +109,103 @@ footer {
     }
   }
 }
-hr {
-  border: 1px solid $darkGrey;
+pre {
+  background-color: $lightGrey;
+  border-radius: $b-radius;
+  line-height: 1.5;
+  overflow: auto;
+  padding: 15px 1.5em;
+  code {
+    background-color: inherit;
+    font-size: inherit;
+    overflow-x: auto;
+    padding: 0;
+  }
 }
-time {
-  color: $code-text;
+p code {
+  padding: .2em .4em;
 }
-kbd, pre, code {
-  font-family: $mono-font;
+blockquote, details p, caption {
+  border-left: 4px solid $mediumGrey;
+  color: $quote-text;
+  margin: 0;
+  margin-top: 1em;
+  padding: 0 0 0 1em;
+  text-align: left;
 }
-kbd {
-  border: 1px solid $mediumGrey;
-  border-radius: 4px;
-  box-shadow: inset 0 -1px 0 $mediumGrey;
-  color: $code-text;
-  font-size: 85%;
-  padding: 3px 5px;
-  vertical-align: middle;
+hr {  border-bottom: 2px $darkGrey solid;
+}
+a {
+  color: $space;
+  text-decoration: none;
+  transition: color .5s;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 mark {
   background-color: $space-highlighter;
   margin: 0 -2.5px;
   padding: 0 2.5px;
 }
-pre {
-  background-color: $lightGrey;
-  border-radius: 4px;
-  line-height: 2;
-  overflow-x: auto;
-  padding: 15px 1.5em;
-  vertical-align: middle;
-}
-p code {
-  padding: .2em .4em;
+code, kbd, pre {
+  font-family: $mono-font;
+  font-size: 85%;
 }
 code {
   background-color: $lightGrey;
-  border-radius: 4px;
+  border-radius: $b-radius;
   color: $code-text;
-  font-size: 85%;
 }
-blockquote {
-  border-left: 4px solid $mediumGrey;
-  color: $quote-text;
-  margin: 18px 0;
-  padding: 0 0 0 1em;
-  p {
-    text-indent: 0;
-  }
+kbd {
+  border: 1px solid $mediumGrey;
+  border-radius: $b-radius;
+  box-shadow: inset 0 -1px 0 $mediumGrey;
+  color: $code-text;
+  padding: 3px 5px;
+  vertical-align: middle;
 }
-img {
-  width: 100%;
+time {
+  color: $code-text;
 }
-p img {
-  margin-left: -1.5em;
+img, video, canvas, audio, object {
+  border-radius: $b-radius;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  width: 90%;
 }
 table {
   border-collapse: collapse;
-  width: 100%;
-}
-td {
-  padding: 5px;
+  caption-side: bottom;
   text-align: center;
-  ~ td {
-    border-left: 4px $darkGrey
- solid;
+  width: 100%;
+  td {
+    padding: 2.5px;
+    text-align: center;
+    ~ td {
+      border-left: 2px $darkGrey solid;
+    }
   }
-}
-th {
-  border-bottom: 4px $darkGrey solid;
-  padding: 5px;
-  ~ th {
-    border-left: 4px $darkGrey solid;
+  th {
+    border-bottom: 2px $darkGrey solid;
+    padding: 2.5px;
+    ~ th {
+      border-left: 2px $darkGrey solid;
+    }
   }
-}
-tr:nth-child(even) {
-  background-color: $lightGrey;
-}
-tfoot th {
-  border-bottom: 0;
-  border-top: 4px $darkGrey solid;
+  tr:nth-child(even) {
+    background-color: $lightGrey;
+  }
+  tfoot th {
+    border-bottom: 0;
+    border-top: 2px $darkGrey solid;
+  }
 }
 @media screen and (max-width: 700px) {
   body {
     margin-left: 2em;
     margin-right: 2em;
-  }
-  p {
-    text-indent: 0;
   }
 }
 /*
@@ -227,17 +213,29 @@ tfoot th {
 Specific Use
 --------------------------------
 */
-.postTitle:nth-of-type(even) {
-  text-align: right;
+.higby {
+  color: $space;
+  font-style: normal;
 }
 .animating:hover {
   color: $primary-text;
+}
+.github {
+  font-weight: normal;
+}
+i[class="65"] {
+  color: $space;
+  font-style: normal;
+  font-weight: bold;
 }
 .card,.box {
   margin: 0 30px 5px 0;
   padding-top: 15px;
   text-align: center;
   width: 180px;
+  img {
+    width: 100%;
+  }
 }
 .card {
   img {
@@ -265,20 +263,16 @@ Specific Use
 }
 .imgHolder {
   background-color: $lightGrey;
-  border-radius: 4px;
+  border-radius: $b-radius;
   padding: 10px;
-}
-.up {
-  transform: translateY(-5px);
 }
 .ball {
   display: block;
-  height: 32px;
   left: 5px;
-  margin-bottom: -32px;
+  margin: 0 0 -32px 0;
   position: relative;
   top: 5px;
-  width: 32px;
+  width: 32px !important;
   z-index: 1;
 }
 /*

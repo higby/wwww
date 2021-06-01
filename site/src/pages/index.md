@@ -11,12 +11,12 @@ permalink: /index.html
 {% for tag in site.tags %}
 {% if tag[0] == heading %}
 
-  <h2 class="postTitle">{{ tag[0] | capitalize }}</h2>
-  <ul class="posts">
+  <h2>{{ tag[0] | capitalize }}</h2>
+  <ul>
     {% for post in tag[1] %}
       {% unless post.category %}
         <li>
-          <a {% unless post.setup.style %}class="pageUpdate" {% endunless %}href="{{ post.url | relative_url | remove: ".html" }}">{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time>
+          <a href="{{ post.url | relative_url | remove: ".html" }}" {% unless post.setup.style %}class="internal" {% endunless %}>{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time>
         </li>
       {% endunless %}
     {% endfor %}
@@ -30,7 +30,7 @@ permalink: /index.html
           <ul class="subposts">
           {% for post in subposts %}
             <li>
-              <a {% unless post.setup.style %}class="pageUpdate" {% endunless %}href="{{ post.url | relative_url | remove: ".html" }}">{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time>
+              <a href="{{ post.url | relative_url | remove: ".html" }} {% unless post.setup.style %}class="internal" {% endunless %}">{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time>
             </li>
           {% endfor %}
           </ul>
