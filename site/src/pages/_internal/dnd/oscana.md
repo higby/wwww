@@ -4,7 +4,6 @@ date: 2020-10-28 00:05:00 -0800
 description: "Oscana: The World Without Stars"
 setup:
   style: dnd
-sitemap: false
 ---
 
 Welcome to Oscana, the world without Stars, this guide is here to help you create your characters, below it lists every race, sub-race, class, and subclass that is allowed in this world. There are also extra things that each character has involving their birthdays, and backgrounds. Have fun, and if need, you can always ask me about anything you don’t understand.

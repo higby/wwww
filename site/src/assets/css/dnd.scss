@@ -1,6 +1,8 @@
 ---
 ---
-@import "light";
+@import "primary";
+@import "parchment";
+
 $velvet: #9d0a0e;
 $gold: #c9ad6a;
 $tea: #e0e5c1;
@@ -9,8 +11,6 @@ $tealeaf: #43443a;
 $primary-text: #302e29;
 $header-text: #302e29;
 $dnd-background-color: #eee5ce;
-@import "primary";
-@import "parchment";
 
 /*
 --------------------------------
@@ -55,7 +55,9 @@ DnD CSS
     format("opentype");
   font-weight: normal;
 }
-
+body, h1, h2, h3, h4, h5, h6 {
+  color: $primary-text;
+}
 a {
   color: $velvet;
 }
@@ -113,20 +115,22 @@ blockquote {
 
 table {
   font-family: "Scala Sans";
-}
+  td {
+    ~ td {
+      border-left: 0;
+    }
+  }
+  th {
+    border-bottom: 0;
+    font-family: "Scala Sans Caps";
+    ~ th {
+      border-left: 0;
+    }
+  }
+  tr:nth-child(even) {
+    background-color: $tea;
+  }
 
-td ~ td,
-th ~ th {
-  border-left: 0;
-}
-
-th {
-  border-bottom: 0;
-  font-family: "Scala Sans Caps";
-}
-
-tr:nth-child(even) {
-  background-color: $tea;
 }
 
 nav ul {

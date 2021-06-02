@@ -4,7 +4,6 @@ date: 2021-05-26 00:05:00 -0800
 description: "DnD Adventure In an Underwater Amusement Park"
 setup:
   style: dnd
-sitemap: false
 ---
 
 ## Background
@@ -148,4 +147,9 @@ Following each wave of The Vedalkens will be more troops to stay on the ground a
 
 ### Pumpkin
 
-15 Cannons, 10 Lightning Wielding Sorcerers, and 10 Frost Wielding Sorcerers, followed by a small boat equipped with cannons brought down the river, then grown to match the size of Pumpkin. The Vedalkens are going to have difficulty however as they are not aware of The Pumpkin Staff, and how it gives strength to Pumpkin.
+- 15 Cannons
+- 10 Lightning Wielding Sorcerers
+- 10 Frost Wielding Sorcerers
+- A small boat equipped with cannons
+
+All brought down the river, then grown to match the size of Pumpkin. The Vedalkens are going to have difficulty however as they are not aware of The Pumpkin Staff, and how it gives strength to Pumpkin.
