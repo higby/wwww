@@ -10,8 +10,8 @@ tags: collections
 {% for pokemon in site.data.pokemon %}
   <div id="{{pokemon.name | downcase}}" class="box">
     <div class="imgHolder">
-    <img class="ball" src="../assets/images/pokemon/balls/{{pokemon.ball | slugify }}.png">
-      <img class="poke" id="{{ pokemon.name | slugify }}" src="../assets/images/pokemon/{{pokemon.name | slugify }}.png">
+    <img width="32" height="32" class="ball" src="../assets/images/pokemon/balls/{{pokemon.ball | slugify }}.png">
+      <img width="512" height="512" class="poke" id="{{ pokemon.name | slugify }}" src="../assets/images/pokemon/{{pokemon.name | slugify }}.png">
     </div>
     <span><b>{{pokemon.name}}</b> - <i>{{pokemon.species}}</i></span>
     <span>Caught: <i>{{pokemon.original_game}}</i></span>
