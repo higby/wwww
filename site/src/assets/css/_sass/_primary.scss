@@ -186,6 +186,7 @@ time {
 }
 img, video, canvas, audio, object {
   border-radius: $b-radius;
+  //box-shadow: 0 2px 4px 0 hsla(198, 45%, 10%, 0.12);
   display: block;
   height: auto;
   margin: 0 auto;
