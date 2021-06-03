@@ -149,7 +149,9 @@ blockquote, details p, caption {
   padding: 0 0 0 1em;
   text-align: left;
 }
-hr {  border-bottom: 2px $darkGrey solid;
+hr {  
+  border: 0;
+  border-bottom: 2px $darkGrey solid;
 }
 a {
   color: $space;
