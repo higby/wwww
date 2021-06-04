@@ -16,7 +16,11 @@ permalink: /index.html
     {% for post in tag[1] %}
       {% unless post.category %}
         <li>
-          <span><a href="{{ post.url | relative_url | remove: ".html" }}" {% unless post.setup.style %}class="internal" {% endunless %}>{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time></span>
+          {% if post.collection == "internal" %}
+            <span><a href="{{ post.url | relative_url | remove: ".html" }}" {% unless post.setup.style %}class="internal" {% endunless %}>{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time></span>
+          {% else %}
+            <span><a href="{{ post.link }}">{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time></span>
+          {% endif %}
         </li>
       {% endunless %}
     {% endfor %}
