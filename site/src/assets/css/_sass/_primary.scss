@@ -213,6 +213,9 @@ table {
       border-left: 2px $darkGrey solid;
     }
   }
+  tr {
+    color: $header-text;
+  }
   tr:nth-child(even) {
     background-color: $lightGrey;
   }
