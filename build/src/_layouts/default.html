@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
+    {% if page.setup.noindex %}
+    <meta name="robots" content="noindex"/>
+    {% endif %}
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="author" href="/humans.txt"/>
+    <link rel="icon" type="image/ico" href="/assets/favicon.ico"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    {% if page.setup.style %}
+    <link rel="stylesheet" href="/assets/css/{{page.setup.style}}.css"/>
+    {% else %}
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    {% endif %}
+ <noscript><link rel="stylesheet" href="/assets/css/noscript.css"/></noscript>
+    <script src="/assets/js/core.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="/" {% unless page.setup.style%}class="internal" {% endunless %}>Branden <i class="higby">Higby</i></a></h1>
+    </header>
+    <main>
+      {{content}}
+      <footer>
+        <a href="https://instagram.com/{{ site.instagram_username }}">instagram</a><br/>
+        <a href="https://github.com/{{ site.github_username }}">github</a><br/>
+        <code><a href="https://github.com/higby/pgp">9668 ECE1 5152 8A07</a></code>
+      </footer>
+    </main>
+  </body>
+  {% include higby.html %}
+  </html>

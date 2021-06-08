@@ -3,7 +3,7 @@ layout: index
 title: Branden Higby
 permalink: /index.html
 ---
-
+{%- assign date_format = "%b %-d, %Y" -%}
 {% capture order %}essays,poetry,collections,programming,misc{% endcapture %}
 {% assign order = order | split: "," %}
 
@@ -17,9 +17,9 @@ permalink: /index.html
       {% unless post.category %}
         <li>
           {% if post.collection == "internal" %}
-            <span><a href="{{ post.url | relative_url | remove: ".html" }}" {% unless post.setup.style %}class="internal" {% endunless %}>{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time></span>
+            <span><a href="{{ post.url | relative_url | remove: ".html" }}" {% unless post.setup.style %}class="internal" {% endunless %}>{{ post.title | escape }}</a> <time> / {{ post.date | date: date_format }}</time></span>
           {% else %}
-            <span><a href="{{ post.link }}">{{ post.title | escape }}</a> <time> {%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time></span>
+            <span><a href="{{ post.link }}">{{ post.title | escape }}</a> <time> / {{ post.date | date: date_format }}</time></span>
           {% endif %}
         </li>
       {% endunless %}
@@ -38,7 +38,7 @@ permalink: /index.html
           <p>{{ category[0] | capitalize }}</p>
           <ul>
             {% for post in subposts %}
-              <li><span><a href="{{ post.url | relative_url | remove: ".html" }}" {% unless post.setup.style %}class="internal"{% endunless %}>{{ post.title | escape }}</a> <time>{%- assign date_format = "%b %-d, %Y" -%} {{ post.date | date: date_format }}</time></span></li>
+              <li><span><a href="{{ post.url | relative_url | remove: ".html" }}" {% unless post.setup.style %}class="internal"{% endunless %}>{{ post.title | escape }}</a> <time> / {{ post.date | date: date_format }}</time></span></li>
             {% endfor %}
           </ul>
         </li>
