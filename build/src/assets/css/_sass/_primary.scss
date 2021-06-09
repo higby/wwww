@@ -191,16 +191,13 @@ time {
   color: $code-text;
 }
 img, video, canvas, audio, object {
+  background-image: linear-gradient(65deg, $space 25%, $lightGrey 25%, $lightGrey 50%, $space 50%, $space 75%, $lightGrey 75%, $lightGrey 100%);
+  background-size: 35.31px 75.72px;
   border-radius: .25rem;
-  //box-shadow: 0 .125rem .25rem 0 hsla(198, 45%, 10%, 0.12);
   display: block;
   height: auto;
   margin: 0 auto;
   width: 90%;
-}
-.small {
-  margin: 0;
-  width: 50%;
 }
 table {
   border-collapse: collapse;
@@ -266,6 +263,11 @@ i[class="65"] {
     border-radius: 4.75% / 3.5%;
   }
 }
+.box {
+  img {
+    background-image: none;
+  }
+}
 @media screen and (max-width: 700px) {
   .card,.box {
     width: calc(50% - 15px);
@@ -312,68 +314,4 @@ Syntax Highlighting
 }
 .k, .kc, .kd, .kn, .kp, .kr, .kt {
   font-weight: bold;
-}
-/*
---------------------------------
-Forms
---------------------------------
-*/
-button, input {
-  border: none;
-  border-radius: .25rem;
-  font-family: inherit;
-  font-size: 100%;
-  height: 2rem;
-  line-height: 1.15;
-  margin: 0;
-  margin: .25rem;
-}
-fieldset {
-  background-color: #f1dffd;
-  border: none;
-  border-radius: .25rem;
-  margin: 0;
-  padding: .75rem;
-}
-
-form {
-  background-color: #fff;
-  border-radius: .25rem;
-  display: flex;
-}
-fieldset h2 {
-  margin: 1rem 0;
-}
-input {
-  flex-grow: 1;
-}
-
-button,
-input[type="submit"],
-input[type="reset"] {
-  background-color: #965ee5;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-weight: 700;
-  min-width: 8rem;
-  transition: all .3s;
-}
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover  {
-  background-color: #7444c4;
-}
-button:active,
-input[type="submit"]:active,
-input[type="reset"]:active  {
-  background-color: #b585ef;
-}
-button:disabled,
-input[type="submit"]:disabled,
-input[type="reset"]:disabled {
-  background-color: #eee;
-  color: #b6b6b6;
-  cursor: default;
-  font-weight: normal;
 }

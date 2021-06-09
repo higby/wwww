@@ -1,7 +1,6 @@
 ---
 ---
 @import "primary";
-@import "parchment";
 
 $velvet: #9d0a0e;
 $gold: #c9ad6a;
@@ -15,6 +14,8 @@ $dnd-background-color: #eee5ce;
 /*
 --------------------------------
 DnD CSS
+Colors and Background Image Source:
+https://github.com/naturalcrit/homebrewery/
 --------------------------------
 */
 
@@ -54,6 +55,10 @@ DnD CSS
   src: url("../fonts/Solbera Imitation/Solbera Imitation.otf")
     format("opentype");
   font-weight: normal;
+}
+body {
+  font-family: "Bookinsanity";
+  background: #eee5ce url(/assets/images/dnd.jpg);
 }
 body, h1, h2, h3, h4, h5, h6 {
   color: $primary-text;
@@ -116,16 +121,10 @@ blockquote {
 table {
   font-family: "Scala Sans";
   td {
-    ~ td {
-      border-left: 0;
-    }
   }
   th {
     border-bottom: 0;
     font-family: "Scala Sans Caps";
-    ~ th {
-      border-left: 0;
-    }
   }
   tr:nth-child(even) {
     background-color: $tea;
@@ -168,15 +167,4 @@ footer {
       font-family: "Bookinsanity";
     }
   }
-}
-/*
---------------------------------
-The terrifying beast of a background
-Source: https://github.com/naturalcrit/homebrewery/
---------------------------------
-*/
-body {
-  background-color: #eee5ce;
-  font-family: "Bookinsanity";
-  background-image: $parchment;
 }

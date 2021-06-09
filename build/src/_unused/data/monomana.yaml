@@ -1,0 +1,181 @@
+- name: Rhys the Redeemed
+  type: Creature
+  supertype: Commander
+- name: Llanowar Elves
+  type: Creature
+- name: Birds of Paradise
+  type: Creature
+- name: Elvish Mystic
+  type: Creature
+- name: Fyndhorn Elves
+  type: Creature
+- name: Arbor Elf
+  type: Creature
+- name: Avacyn's Pilgrim
+  type: Creature
+- name: Mother of Runes
+  type: Creature
+- name: Sakura-Tribe Scout
+  type: Creature
+- name: Universal Automaton
+  type: Creature
+- name: Gilded Goose
+  type: Creature
+- name: Copperhorn Scout
+  type: Creature
+- name: Scute Mob
+  type: Creature
+- name: Gingerbrute
+  type: Creature
+- name: Heritage Druid
+  type: Creature
+- name: Veteran Explorer
+  type: Creature
+- name: Soul Warden
+  type: Creature
+- name: Boreal Druid
+  type: Creature
+- name: Serra Ascendant
+  type: Creature
+- name: Spore Frog
+  type: Creature
+- name: Elvish Reclaimer
+  type: Creature
+- name: Soul's Attendant
+  type: Creature
+- name: Giver of Runes
+  type: Creature
+- name: Joraga Treespeaker
+  type: Creature
+- name: Ulvenwald Tracker
+  type: Creature
+- name: Essence Warden
+  type: Creature
+- name: Wirewood Symbiote
+  type: Creature
+- name: Quirion Ranger
+  type: Creature
+- name: Swords to Plowshares
+  type: Instant
+- name: Path to Exile
+  type: Instant
+- name: Nature's Claim
+  type: Instant
+- name: Crop Rotation
+  type: Instant
+- name: Noxious Revival
+  type: Instant
+- name: Silence
+  type: Instant
+- name: Gods Willing
+  type: Instant
+- name: Condemn
+  type: Instant
+- name: Reclaim
+  type: Instant
+- name: Blossoming Defense
+  type: Instant
+- name: Fog
+  type: Instant
+- name: Mana Tithe
+  type: Instant
+- name: Defiant Strike
+  type: Instant
+- name: Ephemerate
+  type: Instant
+- name: Cloudshift
+  type: Instant
+- name: Angel's Grace
+  type: Instant
+- name: Sol Ring
+  type: Artifact
+- name: Skullclamp
+  type: Artifact
+- name: Wayfarer's Bauble
+  type: Artifact
+- name: Expedition Map
+  type: Artifact
+- name: Shadowspear
+  type: Artifact
+- name: Elixir of Immortality
+  type: Artifact
+- name: The Ozolith
+  type: Artifact
+- name: Commander's Plate
+  type: Artifact
+- name: Explorer's Scope
+  type: Artifact
+- name: Bloodforged Battle-Axe
+  type: Artifact
+- name: Meekstone
+  type: Artifact
+- name: Masterwork of Ingenuity
+  type: Artifact
+- name: Blade of the Bloodchief
+  type: Artifact
+- name: Stoneforge Masterwork
+  type: Artifact
+- name: Chromatic Star
+  type: Artifact
+- name: Chromatic Sphere
+  type: Artifact
+- name: Helm of the Gods
+  type: Artifact
+- name: Basilisk Collar
+  type: Artifact
+- name: Altar of the Brood
+  type: Artifact
+- name: Manifold Key
+  type: Artifact
+- name: Soul-Guide Lantern
+  type: Artifact
+- name: Colossus Hammer
+  type: Artifact
+- name: Springleaf Drum
+  type: Artifact
+- name: Traveler's Amulet
+  type: Artifact
+- name: Wild Growth
+  type: Enchantment
+- name: Exploration
+  type: Enchantment
+- name: Burgeoning
+  type: Enchantment
+- name: Authority of the Consuls
+  type: Enchantment
+- name: Hyena Umbra
+  type: Enchantment
+- name: Reconnaissance
+  type: Enchantment
+- name: Ajani's Welcome
+  type: Enchantment
+- name: Sigarda's Aid
+  type: Enchantment
+- name: Rancor
+  type: Enchantment
+- name: Ethereal Armor
+  type: Enchantment
+- name: Command Tower
+  type: Land
+- name: Sunpetal Grove
+  type: Land
+- name: Canopy Vista
+  type: Land
+- name: Selesnya Sanctuary
+  type: Land
+- name: Fortified Village
+  type: Land
+- name: Wooded Bastion
+  type: Land
+- name: Evolving Wilds
+  type: Land
+- name: Sungrass Prairie
+  type: Land
+- name: Forest
+  type: Land
+  supertype: Basic
+  amount: '7'
+- name: Plains
+  type: Land
+  supertype: Basic
+  amount: '7'
