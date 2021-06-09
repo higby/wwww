@@ -13,7 +13,7 @@ Email: {{ site.email }}
 
 Location: 🌧 ️Oregon
 
-Favorite Pokemon: <a class="pageUpdate" href="/pokemon">Metroid</a>, my shiny Araquanid
+Favorite Pokemon: <a class="internal" href="/pokemon">Metroid</a>, my shiny Araquanid
 
 Favorite Book: Dune by Frank Herbert
 
