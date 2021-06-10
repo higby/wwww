@@ -3,7 +3,9 @@
 NoScript CSS
 --------------------------------
 */
-
+header .higby {
+  color: #965ee5;
+}
 nav ul li ul,.subposts {
   display: block;
 }
