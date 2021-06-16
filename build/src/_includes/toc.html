@@ -21,12 +21,9 @@
     {% assign minHeader = include.h_min | default: 1 %}
     {% assign maxHeader = include.h_max | default: 6 %}
     {% assign nodes = include.html | strip | split: '<h' %}
-    {% capture arrowhead %}
-    <span>
-              <svg height="24" viewBox="0 0 24 24" width="24" aria-hidden="true" fill="#4b4b4b">
+    {% capture arrowhead %}&#x200B;<span><svg height="24" viewBox="0 0 24 24" width="24" aria-hidden="true" fill="#4b4b4b">
                 <path fill-rule="evenodd" d="M8.72 18.78a.75.75 0 001.06 0l6.25-6.25a.75.75 0 000-1.06L9.78 5.22a.75.75 0 00-1.06 1.06L14.44 12l-5.72 5.72a.75.75 0 000 1.06z"></path>
-            </svg>
-          </span>{% endcapture %}
+            </svg></span>{% endcapture %}
     {% assign firstHeader = true %}
     {% assign currLevel = 0 %}
     {% assign lastLevel = 0 %}

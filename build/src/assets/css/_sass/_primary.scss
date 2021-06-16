@@ -17,15 +17,13 @@ $primary-font: "Open Sans", sans-serif;
 $mono-font: "Source Code Pro", monospace;
 
 * {
-  box-sizing: border-box;
-  &::before, &::after {
-    box-sizing: border-box;
-  }
+  box-sizing: inherit;
 }
 ::selection {
   background-color: $space-highlighter;
 }
 html {
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 body {
@@ -34,7 +32,7 @@ body {
   font-family: $primary-font;
   font-size: 1.125rem;
   line-height: 1.5;
-  margin: 0 auto;
+  margin: 1rem auto;
   max-width: 600px;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -58,10 +56,8 @@ header {
       text-decoration: none;
     }
   }
-  h1 {
-    padding-top: 1rem;
-  }
 }
+
 nav {
   a {
     color: $header-text;
@@ -73,28 +69,24 @@ nav {
   ul, ol {
     border-left: .25rem $space solid;
     list-style: none;
-    padding: 0 .5rem 0 .5rem;
-  }
-  ul:nth-of-type(even), ol:nth-of-type(even) {
-    border-left: none;
-    border-right: .25rem $space solid;
-    text-align: right;
-  }
-  h2:nth-of-type(even) {
-    text-align: right;
+    padding: 0 .5rem 0 .5rem
   }
   ul ul {
     border-left: .25rem solid $mediumGrey;
     display: none;
-    margin-left: 14.5px;
-    padding-left: 14.9px;
+    margin-left: 10px;
+
   }
-  li {
-    margin-bottom: .25rem;
-    &::before {
-      content: "​";
-    }
+  ul:nth-of-type(even), ol:nth-of-type(even) {
+  border-left: none;
+  border-right: .25rem $space solid;
+  text-align: right;
   }
+  h3:nth-of-type(even) {
+  text-align: right;
+  }
+
+  
   svg {
     vertical-align: text-top;
   }
@@ -102,9 +94,13 @@ nav {
     display: inline;
   }
 }
+p {
+  margin: 1rem 0;
+}
+
 footer {
   font-size: 1.25rem;
-  margin: 1.25rem 0;
+  margin: 1rem 0;
   a {
     color: $primary-text;
     &:hover {
@@ -128,6 +124,7 @@ pre {
   background-color: $lightGrey;
   border-radius: .25rem;
   line-height: 1.5;
+  margin: 1rem 0;
   overflow: auto;
   padding: 1rem 1.5em;
   code {
@@ -143,8 +140,7 @@ p code {
 blockquote, details p, caption {
   border-left: .25rem solid $mediumGrey;
   color: $quote-text;
-  margin: 0;
-  margin-top: 1rem;
+  margin: 1rem 0;
   padding: 0 0 0 1rem;
   text-align: left;
 }
@@ -182,7 +178,7 @@ kbd {
   padding: .125rem .25rem;
   vertical-align: middle;
 }
-time {
+nav time {
   color: $code-text;
 }
 img, video, canvas, audio, object {
