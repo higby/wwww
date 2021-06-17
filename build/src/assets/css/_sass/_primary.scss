@@ -34,7 +34,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.5;
   margin: 1rem auto;
-  max-width: 648px; //page width (96px * 6(1.5in margins)) * <p> text size (1.125)
+  max-width: 600px; //page width (96px * 5.5(1.5in margins)) * <p> text size (1.125) rounded up
 }
 h1, h2, h3, h4, h5, h6 {
   color: $header-text;
@@ -74,7 +74,8 @@ nav {
     ul, ol {
       border-left: .25rem solid $mediumGrey;
       display: none;
-      margin: 0 12px;
+      margin: 0 10px;
+      padding-left: calc(.5rem + 2px);
     }
   }
   h2:nth-of-type(even) {
@@ -167,8 +168,8 @@ code {
   color: $code-text;
   a {
     background-color: $background-color;
-    font-size: 1.25rem;
     color: $pgp-text;
+    font-size: 1.25rem;
     &:hover {
       color: $space;
       text-decoration: none;
