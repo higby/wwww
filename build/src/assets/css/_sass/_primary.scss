@@ -14,9 +14,10 @@ $quote-text:  #727272;
 $pgp-text: #b6b6b6;
 
 $primary-font: "Open Sans", sans-serif;
+$primary-font1: 'IBM Plex Mono', monospace;
 $mono-font: "Source Code Pro", monospace;
 
-* {
+*, *::before, *::after {
   box-sizing: inherit;
 }
 ::selection {
@@ -33,7 +34,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.5;
   margin: 1rem auto;
-  max-width: 600px;
+  max-width: 648px; //page width (96px * 6(1.5in margins)) * <p> text size (1.125)
 }
 h1, h2, h3, h4, h5, h6 {
   color: $header-text;
@@ -47,6 +48,9 @@ h2 {
 h3 {
   font-size: 1.4174rem;
 }
+h4 {}
+h5 {}
+h6 {}
 header {
   text-align: center;
   a {
@@ -57,8 +61,28 @@ header {
     }
   }
 }
-
 nav {
+  ul, ol {
+    border-left: .25rem $space solid;
+    list-style: none;
+    padding: 0 .5rem 0 .5rem;
+    &:nth-of-type(even) {
+      border-left: none;
+      border-right: .25rem $space solid;
+      text-align: right;
+    }
+    ul, ol {
+      border-left: .25rem solid $mediumGrey;
+      display: none;
+      margin: 0 12px;
+    }
+  }
+  h2:nth-of-type(even) {
+  text-align: right;
+  }
+  p {
+    display: inline;
+  }
   a {
     color: $header-text;
     &:hover {
@@ -66,38 +90,17 @@ nav {
       text-decoration: none;
     }
   }
-  ul, ol {
-    border-left: .25rem $space solid;
-    list-style: none;
-    padding: 0 .5rem 0 .5rem
+  .internal {
+      color: $space;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
   }
-  ul ul {
-    border-left: .25rem solid $mediumGrey;
-    display: none;
-    margin-left: 10px;
-
-  }
-  ul:nth-of-type(even), ol:nth-of-type(even) {
-  border-left: none;
-  border-right: .25rem $space solid;
-  text-align: right;
-  }
-  h3:nth-of-type(even) {
-  text-align: right;
-  }
-
-  
   svg {
     vertical-align: text-top;
   }
-  p {
-    display: inline;
-  }
 }
-p {
-  margin: 1rem 0;
-}
-
 footer {
   font-size: 1.25rem;
   margin: 1rem 0;
@@ -108,23 +111,24 @@ footer {
       text-decoration: none;
     }
   }
-  code {
-    background-color: inherit;
-    font-size: 1.25rem;
-    a {
-      color: $pgp-text;
-      &:hover {
-        color: $space;
-        text-decoration: none;
-      }
-    }
-  }
+}
+p, ol, ul, pre, blockquote, figure, hr, dl {
+  margin: 1rem 0;
+}
+p code {
+  padding: .2em .4em;
+}
+.indent > p {
+  text-indent: 2rem;
+}
+pre, code, kbd {
+  font-family: $mono-font;
+  font-size: .95rem;
 }
 pre {
   background-color: $lightGrey;
   border-radius: .25rem;
   line-height: 1.5;
-  margin: 1rem 0;
   overflow: auto;
   padding: 1rem 1.5em;
   code {
@@ -134,13 +138,9 @@ pre {
     padding: 0;
   }
 }
-p code {
-  padding: .2em .4em;
-}
 blockquote, details p, caption {
   border-left: .25rem solid $mediumGrey;
   color: $quote-text;
-  margin: 1rem 0;
   padding: 0 0 0 1rem;
   text-align: left;
 }
@@ -161,14 +161,19 @@ mark {
   margin: 0 -.125rem;
   padding: 0 .125rem;
 }
-code, kbd, pre {
-  font-family: $mono-font;
-  font-size: .95rem;
-}
 code {
   background-color: $lightGrey;
   border-radius: .25rem;
   color: $code-text;
+  a {
+    background-color: $background-color;
+    font-size: 1.25rem;
+    color: $pgp-text;
+    &:hover {
+      color: $space;
+      text-decoration: none;
+    }
+  }
 }
 kbd {
   border: 1px solid $mediumGrey;
@@ -178,9 +183,6 @@ kbd {
   padding: .125rem .25rem;
   vertical-align: middle;
 }
-nav time {
-  color: $code-text;
-}
 img, video, canvas, audio, object {
   background-image: linear-gradient(65deg, $space 25%, $lightGrey 25%, $lightGrey 50%, $space 50%, $space 75%, $lightGrey 75%, $lightGrey 100%);
   background-size: 35.31px 75.72px;
@@ -188,7 +190,7 @@ img, video, canvas, audio, object {
   display: block;
   height: auto;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
 }
 table {
   border-collapse: collapse;
@@ -209,17 +211,14 @@ table {
   tr:nth-child(even) {
     background-color: $lightGrey;
   }
-  tfoot th {
-    border-bottom: 0;
-    border-top: .125rem $darkGrey solid;
-  }
 }
 @media screen and (max-width: 700px) {
   body {
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
+
 @import "syntax";
 @import "specific";
 @import "print";

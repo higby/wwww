@@ -13,6 +13,6 @@ layout: default
 {% unless page.setup.table == "hidden" %}
 {% include toc.html html=content %}
 {% endunless %}
-<article>
+<article{% if page.setup.indent %} class="indent"{% endif %}>
 {{ content }}
 </article>

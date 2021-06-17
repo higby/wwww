@@ -3,6 +3,8 @@ title:  "Paleontology, Jobs, and Other Rambling Thoughts"
 date: 2020-04-12 00:05:00 -0800
 description: "An Essay Concerned With The Future"
 tag: essays
+setup:
+  indent: true
 ---
 
 Paleontologists are the first graders of the professional world. Remember the dinosaur kids back in elementary school? Reading time, they had the dinosaur encyclopedia, lunch, dinosaur lunchbox. And at sleepovers they busted out the dinosaur pajamas, and you got to watch Land Before Time. And if we go back to career day, back when every first grader was thinking about job security, and whether or not they’ll be able to stay on track with paying their mortgage, y’know since, kids are so intrinsically aware of the housing market, we’ll see veterinarians, painters, basketball players. And of course the dinosaur kid: boots, pink button down, khaki shorts, and accompanied with their T-rex plush best friend. Yeah, that kid grew up to be exactly what he wanted to be: a dinosaur hunter. Although it is a bit different in the real world. So today, I’m going to be digging into what makes a professional first grader, why it’s a good thing, and then explore the overall effects of not loving what you do everyday.

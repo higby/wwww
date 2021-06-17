@@ -3,6 +3,8 @@ title:  "The Definition of OCD"
 date: 2020-04-22 00:05:00 -0800
 description: "The Definition of OCD"
 tag: poetry
+setup:
+  indent: true
 ---
 **obsessive-compulsive disorder** *noun.*
 

@@ -113,7 +113,7 @@
 
         {% if rootAttributes %}
             {% assign nodes = jekyll_toc | split: '>' %}
-            {% capture jekyll_toc %}<nav><{{ listModifier }}{{ rootAttributes }}>{{ nodes | shift | join: '>' }}></nav>{% endcapture %}
+            {% capture jekyll_toc %}<nav><h3>Table of Contents</h3><{{ listModifier }}{{ rootAttributes }}>{{ nodes | shift | join: '>' }}></nav>{% endcapture %}
         {% endif %}
     {% endif %}
 {% endcapture %}{% assign tocWorkspace = '' %}{{ deprecation_warnings }}{{ jekyll_toc }}

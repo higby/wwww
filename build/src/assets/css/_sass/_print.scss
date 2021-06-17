@@ -2,177 +2,117 @@
 --------------------------------
 Print Styles
 (They're gross, don't look)
---------------------------------
+------
 */
-
 @media print {
   * {
     background: #fff !important;
     color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
-
     &::before, &::after {
       background: #fff !important;
       color: #000 !important;
       box-shadow: none !important;
       text-shadow: none !important;
-    }
-
-    &::before, &::after {
       font-family: "Open Sans", sans-serif;
       font-size: .85rem;
     }
   }
-
-  body, footer {
+  body, footer, code {
     font-size: 1rem;
   }
-
-  body > *:not(main) {
-    display: none;
+  h1, h2, h3, h4, h5, h6 {}
+  h1 {
+    font-size: 2rem;
   }
-
-  nav {
+  h2 {
+    font-size: 1.5874rem;
+  }
+  h3 {
+    font-size: 1.2599rem;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+  h2, h3, p {
+    orphans: 3;
+    widows: 3;
+  }
+  header {
+    text-align: left;
     a {
       color: #000 !important;
     }
-
+    .higby {
+      color: #965ee5 !important;
+    }
+    h1 a {
+      font-size: 1.25rem;
+    }
+  }
+  header a, nav a, footer a {
+    text-decoration: none;
+  }
+  nav {
+    ul, ol {
+      ul, ol {
+        display: block;
+        border-left: 0.25rem solid #bdbdbd;
+      }
+    }
+    a {
+      color: #000 !important;
+    }
     svg {
       display: none;
     }
   }
-
   footer {
-    font-size: 1rem;
     border-top: 0.125rem #bdbdbd solid;
     padding-top: .5rem;
     page-break-inside: avoid;
-
-    code {
+    code a {
       font-size: 1.125rem;
     }
   }
-
-  header {
-    text-align: left;
+  p code {
+    margin: 0;
+    padding: 0;
   }
-
-  a {
-    color: #965ee5 !important;
-    text-decoration: underline;
-
-    &[href]::after {
-      content: " (" attr(href) ")";
-      text-decoration: none;
-    }
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  a {
-    &[href^="#"]::after, &[href^="/"]::after, &[href^="/*"]::after, &[href^="javascript:"]::after {
-      content: "";
-      text-decoration: none;
-    }
-  }
-
-  code {
-    font-family: "Source Code Pro", monospace;
-    font-size: 1rem;
-  }
-
   pre {
     white-space: pre-wrap !important;
     border: 2px solid #bdbdbd;
     border-radius: .25rem;
     page-break-inside: avoid;
   }
-
-  footer a, header a, nav a {
-    text-decoration: none;
-  }
-
-  p code {
-    margin: 0;
-    padding: 0;
-  }
-
   blockquote {
     page-break-inside: avoid;
     border-left: 0.25rem solid #bdbdbd;
   }
-
-  nav ul ul {
-    border-left: 0.25rem solid #bdbdbd;
+  a {
+    color: #965ee5 !important;
+    text-decoration: underline;
+    &[href]::after {
+      content: " (" attr(href) ")";
+      text-decoration: none;
+    }
+    &[href^="#"]::after, &[href^="/"]::after, &[href^="/*"]::after, &[href^="javascript:"]::after {
+      content: "";
+      text-decoration: none;
+    }
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
   }
 
   thead {
     display: table-header-group;
   }
-
   tr, img {
     page-break-inside: avoid;
   }
-
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2, h3 {
-    page-break-after: avoid;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.5874em;
-  }
-
-  h3 {
-    font-size: 1.2599em;
-  }
-
-  header {
-    a {
-      color: #000 !important;
-    }
-
-    .higby {
-      color: #965ee5 !important;
-    }
-  }
-
-  nav ul li ul, .subposts {
-    display: block;
-    margin-left: .5rem;
-    padding-left: .5rem;
-  }
-
   tr:not(:first-of-type) {
     border-top: 0.125rem #bdbdbd solid;
-  }
-
-  header h1:after {
-    content: "\AWritten by Branden Higby @ higby.io";
-    white-space: pre;
-    font-size: 1rem;
-  }
-
-  nav svg {
-    transform: rotate(90deg);
-  }
-
-  fieldset {
-    display: none;
-  }
-
-  img {
-    width: 50%;
   }
 }
