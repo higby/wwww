@@ -6,4 +6,4 @@ tag: programming
 repo: shera.gay
 ---
 
-<img width="1280" height="720" src="https://shera.gay/gay.jpg">
+<a href="https://www.shera.gay/"><img width="1280" height="720" src="https://shera.gay/gay.jpg"></a>

@@ -66,37 +66,22 @@ nav {
     border-left: .25rem $space solid;
     list-style: none;
     padding: 0 .5rem 0 .5rem;
-    &:nth-of-type(even) {
-      border-left: none;
-      border-right: .25rem $space solid;
-      text-align: right;
-    }
     ul, ol {
       border-left: .25rem solid $mediumGrey;
       display: none;
       margin: 0 10px;
       padding-left: calc(.5rem + 2px);
     }
-  }
-  h2:nth-of-type(even) {
-  text-align: right;
+    a {
+      color: $header-text;
+      &:hover {
+        color: $space;
+        text-decoration: none;
+      }
+    }
   }
   p {
     display: inline;
-  }
-  a {
-    color: $header-text;
-    &:hover {
-      color: $space;
-      text-decoration: none;
-    }
-  }
-  .internal {
-      color: $space;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
   }
   svg {
     vertical-align: text-top;
@@ -121,6 +106,9 @@ p code {
 }
 .indent > p {
   text-indent: 2rem;
+}
+ol, ul {
+  padding: 0 1.125rem;
 }
 pre, code, kbd {
   font-family: $mono-font;
@@ -211,6 +199,40 @@ table {
   }
   tr:nth-child(even) {
     background-color: $lightGrey;
+  }
+}
+.index {
+  th, td {
+    border: none;
+    padding: .25rem;
+    text-align: left;
+    vertical-align: text-top;
+  }
+  td:first-of-type {
+    text-align: right;
+    white-space: nowrap;
+  }
+  tr:nth-child(even) {
+    background-color: inherit;
+  }
+  time {
+    color: $quote-text;
+    &:after {
+      content: " // ";
+    }
+  }
+}
+.footnotes {
+  border-top: .125rem $darkGrey solid;
+  color: $quote-text;
+  font-size: 1rem;
+}
+.footnote {
+  &:before {
+    content: '{';
+  }
+  &:after {
+    content: '}';
   }
 }
 @media screen and (max-width: 700px) {

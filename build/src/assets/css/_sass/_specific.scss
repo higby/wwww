@@ -30,16 +30,15 @@ i[class="65"] {
   }
 }
 .cardList,.boxList {
+  grid-gap: 1.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.5rem;
   justify-content: space-between;
   text-align: center;
 }
 @media screen and (max-width: 700px) {
   .cardList,.boxList {
     grid-template-columns: repeat(2, 1fr);
-
   }
 }
 .imgHolder {

@@ -25,6 +25,8 @@ collections:
   external:
     output: false
 
+kramdown:
+  footnote_backlink: "^"
 plugins:
   - jekyll-tidy
   - jekyll-tagories
