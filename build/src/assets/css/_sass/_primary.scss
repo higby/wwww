@@ -98,6 +98,9 @@ footer {
       text-decoration: none;
     }
   }
+  code {
+    background-color: inherit;
+  }
 }
 p, ol, ul, pre, blockquote, figure, hr, dl {
   margin: 1rem 0;
@@ -159,7 +162,6 @@ code {
   border-radius: .25rem;
   color: $code-text;
   a {
-    background-color: $background-color;
     color: $pgp-text;
     font-size: 1.25rem;
     &:hover {
