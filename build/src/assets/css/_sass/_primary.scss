@@ -65,6 +65,7 @@ nav {
   ul, ol {
     border-left: .25rem $space solid;
     list-style: none;
+    margin: 0;
     padding: 0 .5rem 0 .5rem;
     ul, ol {
       border-left: .25rem solid $mediumGrey;
@@ -108,7 +109,8 @@ p code {
   text-indent: 2rem;
 }
 ol, ul {
-  padding: 0 1.125rem;
+  margin-left: 1.125rem;
+  padding: 0;
 }
 pre, code, kbd {
   font-family: $mono-font;
@@ -127,11 +129,13 @@ pre {
     padding: 0;
   }
 }
-blockquote, details p, caption {
-  border-left: .25rem solid $mediumGrey;
+blockquote {
   color: $quote-text;
+  display:list-item;
+  list-style-position: outside;
+  list-style-type: ">";
+  margin-left: .65rem;
   padding: 0 0 0 1rem;
-  text-align: left;
 }
 hr {
   border: 0;
