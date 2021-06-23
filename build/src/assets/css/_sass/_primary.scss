@@ -105,15 +105,15 @@ footer {
 p, ol, ul, pre, blockquote, figure, hr, dl {
   margin: 1rem 0;
 }
-p code {
-  padding: .2em .4em;
-}
 .indent > p {
   text-indent: 2rem;
 }
 ol, ul {
   margin-left: 1.125rem;
   padding: 0;
+  ol, ul {
+    margin: 0 1rem;
+  }
 }
 pre, code, kbd {
   font-family: $mono-font;
@@ -161,6 +161,7 @@ code {
   background-color: $lightGrey;
   border-radius: .25rem;
   color: $code-text;
+  padding: .2em .4em;
   a {
     color: $pgp-text;
     font-size: 1.25rem;
@@ -210,7 +211,7 @@ table {
 .index {
   th, td {
     border: none;
-    padding: .25rem;
+    padding: .25rem 0;
     text-align: left;
     vertical-align: text-top;
   }
@@ -224,7 +225,8 @@ table {
   time {
     color: $quote-text;
     &:after {
-      content: " // ";
+      content: "//";
+      margin: 0 .45rem;
     }
   }
 }
