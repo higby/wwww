@@ -24,6 +24,8 @@ collections:
     permalink: /:path.html
   external:
     output: false
+  years:
+    output: false
 
 kramdown:
   footnote_backlink: "^"

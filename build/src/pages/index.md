@@ -17,7 +17,9 @@ permalink: /index.html
 </th>
 </tr>
 {% for post in tag[1] %}
-  {% unless post.category %}
+  {% unless jekyll.environment == "production" and post.draft == "true" %}
+
+
 <tr>
   <td>
     <time>{{ post.date | date: date_format }}</time>
@@ -25,7 +27,13 @@ permalink: /index.html
   <td>
     <a href="{{ post.url | relative_url | remove: ".html" }}" {% unless post.setup.style %}class="internal" {% endunless %}>{{ post.title | escape }}</a>
   </td></tr>
+
+
 {% endunless %}
+
+
+
+
 {% endfor %}
 </tbody>
 {% endif %}
