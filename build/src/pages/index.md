@@ -17,7 +17,7 @@ permalink: /index.html
 </th>
 </tr>
 {% for post in tag[1] %}
-  {% unless jekyll.environment == "production" and post.draft == "true" %}
+  {% unless post.draft %}
 
 
 <tr>
