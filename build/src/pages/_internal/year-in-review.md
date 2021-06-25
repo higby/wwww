@@ -13,3 +13,9 @@ setup:
 <hr>
 {% endif %}
 {% endfor %}
+
+<style>
+img {
+  width: 75%;
+}
+</style>
