@@ -19,6 +19,7 @@ The original solution for building a Jekyll-based short URL service was to use t
 ```
 
 > Some unnecessary lines removed
+{: .note}
 
 The primary issue with this for me is that the redirects weren’t instant (as in they weren’t proper `301` redirects) and if an individual were to have Javascript disabled they would be sat at a page telling them to click a link.
 
@@ -57,6 +58,7 @@ collections:
 ```
 
 > Place this into the config file aswell
+{: .note}
 
 What’s important about the above is that where you place the files should match the second line, in this example and the GitHub repository linked above, I place the files in a folder name `_directory`.
 
@@ -98,6 +100,7 @@ redirect_to: https://www.higby.io/404
 ```
 
 > 404.md
+{: .note}
 
 One last piece I needed was to add this to the bottom:
 

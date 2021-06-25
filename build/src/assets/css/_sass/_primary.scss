@@ -135,16 +135,19 @@ pre {
 }
 blockquote {
   color: $quote-text;
+  padding: 0 0 0 1rem;
+  border-left: .25rem solid $mediumGrey;
+  font-size: 1.125rem;
+  font-style: normal;
+}
+.note {
+  border: none;
   display:list-item;
   list-style-position: outside;
   list-style-type: ">";
-  margin-left: .65rem;
-  padding: 0 0 0 1rem;
-}
-.quote {
-  display: block;
-  margin: 0;
-  border-left: .25rem solid $mediumGrey;
+  margin-left: .5rem;
+  font-size: 1rem;
+  font-style: italic;
 }
 hr {
   border: 0;
