@@ -4,6 +4,7 @@ description: "The Many Tools That Helped Me Make This"
 setup:
   table: hidden
   date: hidden
+permalink: /humans.txt
 tag: programming
 ---
 {%- assign generation_date = "%F, %T %Z" -%}
