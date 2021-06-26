@@ -16,6 +16,6 @@ setup:
 
 <style>
 img {
-  width: 75%;
+  width: 65%;
 }
 </style>
