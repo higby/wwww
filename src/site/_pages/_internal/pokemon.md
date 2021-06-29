@@ -1,11 +1,12 @@
 ---
-title:  "Pokemon"
+title: "Pokemon"
 date: 2021-04-06 00:18:46 -0800
 description: "Branden Higby's Wonderful Pokemon Collection"
 setup:
   date: hidden
 tags: collections
 ---
+
 <div class="boxList">
 {% for pokemon in site.data.pokemon %}
   <div id="{{pokemon.name | downcase}}" class="box">

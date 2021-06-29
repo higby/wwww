@@ -4,10 +4,11 @@ description: "The Many Tools That Helped Me Make This"
 setup:
   table: hidden
   date: hidden
-permalink: /humans.txt
 tag: programming
 ---
+
 {%- assign generation_date = "%F, %T %Z" -%}
+
 ### Me
 
 Email: {{ site.email }}
@@ -21,6 +22,7 @@ Favorite Book: Dune by Frank Herbert
 Favorite Movie: Back To The Future
 
 Favorite TV Shows:
+
 - Avatar: TLA
 - Arrested Development
 - She-Ra And The Princesses Of Power
@@ -48,16 +50,19 @@ Last updated: `{{ site.time | date: generation_date }}`
 Built with [Jekyll](https://github.com/jekyll/jekyll) and hosted on [Netlify](https://www.netlify.com/)
 
 Fonts:
-- [Open Sans](https://fonts.google.com/specimen/Open+Sans) -  hosted via Google Fonts
-- [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) -  hosted via Google Fonts
+
+- [Open Sans](https://fonts.google.com/specimen/Open+Sans) - hosted via Google Fonts
+- [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) - hosted via Google Fonts
 - [Solbera's DND5e fonts](https://github.com/jonathonf/solbera-dnd-fonts)
 
 Images:
+
 - [Scryfall](https://scryfall.com/) - Magic: The Gathering Cards
 - [PokéSprite](https://github.com/msikma/pokesprite) - Pokemon Ribbons
 - [Pokémon Image rips by TehPerson](https://bulbapedia.bulbagarden.net/wiki/User:TehPerson)
 
 Libraries:
+
 - [particles.js](https://github.com/VincentGarreau/particles.js/)
 - [jQuery](https://github.com/jquery/jquery/)
 - [jQuery UI](https://github.com/jquery/jquery-ui/) - only the effects core
@@ -68,6 +73,7 @@ Libraries:
 - [Homebrewery](https://github.com/naturalcrit/homebrewery/) - DnD background & colors
 
 Jekyll Plugins:
+
 - [Jekyll TOC](https://github.com/allejo/jekyll-toc)
 - [jekyll Tidy](https://github.com/apsislabs/jekyll-tidy/)
 - [Jekyll Tagories](https://github.com/ashmaroli/jekyll-tagories/)
@@ -75,4 +81,5 @@ Jekyll Plugins:
 - [Jekyll Target Blank](https://github.com/keithmifsud/jekyll-target-blank/)
 
 Software:
+
 - Atom
