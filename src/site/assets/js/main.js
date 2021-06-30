@@ -1,78 +1,88 @@
 $(document).ready(function () {
+  onReload();
   oldValue = "";
   oldValue = window.location.pathname.split(".html");
-  //Easter Eggs
   tinykeys(window, {
     "ArrowUp ArrowUp ArrowDown ArrowDown ArrowLeft ArrowRight ArrowLeft ArrowRight B A": () => {
-      location = "https://www.youtube.com/watch?v=KBjhAqXg8MY";
-    },
-    "h i g b y": () => {
-      fancyName();
-    },
-  });
+      location="https://www.youtube.com/watch?v=KBjhAqXg8MY";
+  },
+  "h i g b y": () => {
+    fancyName();
+  }
+})
 });
 
 //Page Transition
 $(document).on("click", ".internal", function () {
-  event.preventDefault();
   var a = $(this).attr("href").split(".html");
   if (a.length > 1) {
     a.pop();
   }
-  current = window.location.pathname.split(".html");
-  if (a != current[0]) {
-    history.pushState({}, "", a);
-    contentUpdate();
-  }
+  history.pushState({}, "", a);
+  event.preventDefault();
+  contentUpdate();
 });
 window.addEventListener("popstate", (event) => {
   contentUpdate();
 });
 function contentUpdate() {
+
   newValue = window.location.pathname.split(".html");
-  h = true;
-  $("main").fadeOut("fast", function () {
-    if (h == true) {
-      h = false;
-      var location = window.location.pathname;
-      //Loads Title Bar
-      $("title").load(location + " title", function (response, status, xhr) {
-        if (status != "error") {
+  if (newValue[0] != oldValue[0]) {
+    h = true;
+    g = true;
+    $("main").fadeOut("fast", function () {
+      if (h == true) {
+        h = false;
+        var location = window.location.pathname;
+        //Loads Title Bar
+        $("main").load(location + " main", function (response, status, xhr) {
+          if ( status == "error" ) {
+            $("main").load("/404" + " main", function () {
+              if (g == true) {
+                g = false;
+                $("main main").hide();
+                $("main main").unwrap();
+                $("main").fadeIn("fast");
+                onReload();
+              }
+            });
+            $("title").load("/404" + " title", function() {
+              $("title title").unwrap();
+            });
+          }
+          else if (g == true) {
+              g = false;
+              $("main main").hide();
+              $("main main").unwrap();
+              $("main").fadeIn("fast");
+              onReload();
+            }
+        });
+        //Loads Page Conent
+        $("title").load(location + " title", function() {
           $("title title").unwrap();
-        } else {
-          $("title").load("/404" + " title", function () {
-            $("title title").unwrap();
-          });
-        }
-      });
-      //Loads Page Conent
-      $("main").load(location + " main", function (response, status, xhr) {
-        if (status != "error") {
-          $("main main").hide();
-          $("main main").unwrap();
-          $("main").fadeIn("fast");
-        } else {
-          $("main").load("/404" + " main", function () {
-            $("main main").hide();
-            $("main main").unwrap();
-            $("main").fadeIn("fast");
-          });
-        }
-      });
-    }
-  });
+        });
+      }
+    });
+  }
   oldValue[0] = newValue[0];
+}
+function onReload() {
+  pokeHop();
 }
 
 //Fancy Name
-$("header h1 a").ready(function () {
-  setTimeout(function () {
-    fancyName();
-  }, 250);
-});
+$("header h1 a").ready(function() {
+  setTimeout(
+    function() {
+      fancyName();
+    }, 250);
+})
 function fancyName() {
   var headerClass = $("header h1 a").attr("class");
-  if ($.type(headerClass) === "undefined") {
+  var headerColor = $('header h1').css("color");
+  if ($.type( headerClass ) === "undefined") {
     $("header h1 a").attr("class", "animating");
   } else {
     $("header h1 a").attr("class", "animating internal");
@@ -94,7 +104,7 @@ function fancyName() {
     .add({
       color: [
         {
-          value: "#323232",
+          value: headerColor,
         },
         {
           value: "#965ee5",
@@ -105,13 +115,13 @@ function fancyName() {
       targets: "#branden",
       color: [
         {
-          value: "#323232",
+          value: headerColor,
         },
       ],
       complete: function () {
         $("header h1 i").css("color", "#965ee5");
         header.deletterize();
-        if ($.type(headerClass) !== "undefined") {
+        if ($.type( headerClass ) !== "undefined") {
           $("header h1 a").attr("class", "internal");
         } else {
           $("header h1 a").removeAttr("class");
@@ -125,12 +135,11 @@ $(document).on("click", "nav ul li span", function () {
   if ($(this).next().next().is(":hidden")) {
     $(this).next().next().slideDown("fast", "easeOutQuad");
     var arrow = $(this).children();
-    console.log(arrow);
     anime({
       targets: this.children,
       rotateZ: 90,
       duration: 100,
-      easing: "easeOutQuad",
+      easing: 'easeOutQuad'
     });
   } else {
     $(this).next().next().slideUp("fast", "easeOutQuad");
@@ -138,16 +147,15 @@ $(document).on("click", "nav ul li span", function () {
       targets: this.children,
       rotateZ: 0,
       duration: 100,
-      easing: "easeOutQuad",
+      easing: 'easeOutQuad'
     });
   }
 });
 
+//Page Scripts
 
-I'm going to want to change this and give each page it's own script functionality.
-
-//Pokehop
-$(".poke").ready(function () {
+//Pokemon
+function pokeHop() {
   list = $(".imgHolder .poke");
   list2 = $(".imgHolder .poke");
   loop = $(".imgHolder .poke");
@@ -170,17 +178,15 @@ $(".poke").ready(function () {
     });
     list2[i] = $("#.imgHolder .poke")[i].id;
   }
-});
-
-$(".imgHolder .poke").hover(
-  function () {
-    console.log("test");
-    var hovered = $(this).attr("id");
-    q = $.inArray(hovered, list2);
-    list[q].play();
-    loop[q] = true;
-  },
-  function () {
-    loop[q] = false;
-  }
-);
+  $(".imgHolder .poke").hover(
+    function () {
+      var hovered = $(this).attr("id");
+      q = $.inArray(hovered, list2);
+      list[q].play();
+      loop[q] = true;
+    },
+    function () {
+      loop[q] = false;
+    }
+  );
+}

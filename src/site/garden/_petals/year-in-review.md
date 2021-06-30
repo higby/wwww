@@ -4,6 +4,7 @@ date: 2020-04-12 00:05:00 -0800
 description: "A Collection of My Yearly Reviews"
 setup:
   date: hidden
+tags: essays
 ---
 
 {% for year in site.years reversed %}

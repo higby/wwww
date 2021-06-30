@@ -1,5 +1,4 @@
----
----
+
 @import "primary";
 
 $velvet: #9d0a0e;
@@ -20,45 +19,45 @@ https://github.com/naturalcrit/homebrewery/
 */
 
 @font-face {
-  font-family: "Bookinsanity";
   src: url("../fonts/Bookinsanity/Bookinsanity.otf") format("opentype");
+  font-family: "Bookinsanity";
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Bookinsanity Bold";
   src: url("../fonts/Bookinsanity/Bookinsanity Bold.otf") format("opentype");
-  font-weight: bold;
+  font-family: "Bookinsanity Bold";
   font-style: normal;
+  font-weight: bold;
 }
 
 @font-face {
-  font-family: "Mr Eaves Small Caps";
   src: url("../fonts/Mr Eaves/Mr Eaves Small Caps.otf") format("opentype");
+  font-family: "Mr Eaves Small Caps";
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Scala Sans Caps";
   src: url("../fonts/Scaly Sans Caps/Scaly Sans Caps.otf") format("opentype");
+  font-family: "Scala Sans Caps";
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Scala Sans";
   src: url("../fonts/Scaly Sans/Scaly Sans.otf") format("opentype");
+  font-family: "Scala Sans";
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Solbera Imitation";
   src: url("../fonts/Solbera Imitation/Solbera Imitation.otf")
     format("opentype");
+  font-family: "Solbera Imitation";
   font-weight: normal;
 }
 body {
-  font-family: "Bookinsanity";
   background: #eee5ce url(/assets/images/dnd.jpg);
+  font-family: "Bookinsanity";
 }
 body, h1, h2, h3, h4, h5, h6 {
   color: $primary-text;
@@ -106,12 +105,12 @@ strong {
 
 blockquote {
   background-color: $tea;
-  color: $tealeaf;
   border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAMAAADG+c2+AAAANlBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHL6OuAAAAEXRSTlMABAwYJDRIXHSLo7fL2+fz+6go4VUAAAB6SURBVHgB7dg5DsJQAANRZ9+Xuf9lQUKKEHT5LlL4HWB6W5d61m1zrT/dhm5j6/RjPCkJco761ixQFoSl0aXfKQ+y9/qoJnAEYar01q64gqytNBz4ghyDMPMHnyYiIiIiIgIzYeYfj/Z56x3g7ovAf2L4bxb/EWS/ql7LZCDx/Ry3RwAAAABJRU5ErkJggg==)
     11;
   border-image-outset: 9px 0;
   border-style: solid;
   border-width: 11px;
+  color: $tealeaf;
   display: block;
   margin: 1rem 0;
 }

@@ -18,18 +18,17 @@ defaults:
     values:
       layout: "page" # All pages use page layout unless otherwise told
 
-collections_dir: _pages
+collections_dir: garden
 collections:
-  internal:
+  petals:
     output: true
     permalink: /:path.html
-  external:
-    output: false
   years:
     output: false
 
 kramdown:
   footnote_backlink: "^"
+
 plugins:
   - jekyll-tidy
   - jekyll-tagories

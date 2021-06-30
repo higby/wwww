@@ -5,17 +5,17 @@ Specific Use
 --------------------------------
 */
 .higby {
-  color: $space;
+  color: var(--space);
   font-style: normal;
 }
 header .higby {
-  color: $header-text; //Only during animation
+  color: var(--header-text); //Only during animation
 }
 .animating:hover {
-  color: $primary-text;
+  color: var(--primary-text);
 }
 i[class="65"] {
-  color: $space;
+  color: var(--space);
   font-style: normal;
   font-weight: bold;
 }
@@ -42,7 +42,7 @@ i[class="65"] {
   }
 }
 .imgHolder {
-  background-color: $lightGrey;
+  background-color: var(--lightGrey);
   border-radius: .25rem;
   padding: .5rem;
 }
