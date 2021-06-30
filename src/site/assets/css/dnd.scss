@@ -1,16 +1,5 @@
 ---
 ---
-@import "primary";
-
-$velvet: #9d0a0e;
-$gold: #c9ad6a;
-$tea: #e0e5c1;
-$tealeaf: #43443a;
-
-$primary-text: #302e29;
-$header-text: #302e29;
-$dnd-background-color: #eee5ce;
-
 /*
 --------------------------------
 DnD CSS
@@ -18,6 +7,27 @@ Colors and Background Image Source:
 https://github.com/naturalcrit/homebrewery/
 --------------------------------
 */
+@import "variables";
+
+$velvet: #9d0a0e;
+$gold: #c9ad6a;
+$tea: #e0e5c1;
+$tealeaf: #43443a;
+
+$background-color: #eee5ce;
+$lightGrey: $tea;
+$mediumGrey: $gold;
+$darkGrey: #bdbdbd;
+
+$primary-text: #302e29;
+$header-text: $velvet;
+$code-text:  #5f5f5f;
+$quote-text:  #727272;
+$pgp-text: $gold;
+
+$primary-font: "Bookinsanity";
+$mono-font: "Bookinsanity";
+@import "primary";
 
 @font-face {
   src: url("../fonts/Bookinsanity/Bookinsanity.otf") format("opentype");
@@ -57,60 +67,43 @@ https://github.com/naturalcrit/homebrewery/
   font-weight: normal;
 }
 body {
-  background: #eee5ce url(/assets/images/dnd.jpg);
-  font-family: "Bookinsanity";
+  background: $background-color url(/assets/images/dnd.jpg);
+  font-family: $primary-font;
 }
-body, h1, h2, h3, h4, h5, h6 {
-  color: $primary-text;
-}
-a {
-  color: $velvet;
-}
-
-a:hover {
-  color: $velvet;
-}
-header a {
-  color: $header-text;
-  &:hover {
-    color: $header-text;
-
-  }
-}
-.animated:hover {
-  color: $space;
-}
-h1,
-h2,
-h3 {
-  color: $velvet;
+h1, h2, h3, h4, h5, h6 {
   font-family: "Mr Eaves Small Caps";
 }
-
 h3 {
   border-bottom: 2px solid $gold;
 }
-
-h3 a:hover {
-  text-decoration: none;
+h4 time {
+  color: $primary-text;
+  font-family: $primary-font;
 }
-
-h3 a:hover {
-  color: $space;
+body > header h1 a {
+  color: $primary-text;
 }
-
-p:first-of-type img {
-  margin-left: 0;
+nav {
+  ul, ol {
+    border-left: .25rem $velvet solid;
+    ul, ol {
+      border-left: .25rem solid $mediumGrey;
+    }
+    a {
+      color: $primary-text;
+      &:hover {
+        color: $velvet;
+      }
+    }
+  }
 }
-
-p strong:first-of-type {
-  margin-left: -50px;
+article > p:first-of-type:first-letter {
+  float: left;
+  font-family: "Solbera Imitation";
+  font-size: 10em;
+  line-height: 0.8em;
+  overflow: visible;
 }
-
-strong {
-  font-family: "Bookinsanity Bold";
-}
-
 blockquote {
   background-color: $tea;
   border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAMAAADG+c2+AAAANlBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHL6OuAAAAEXRSTlMABAwYJDRIXHSLo7fL2+fz+6go4VUAAAB6SURBVHgB7dg5DsJQAANRZ9+Xuf9lQUKKEHT5LlL4HWB6W5d61m1zrT/dhm5j6/RjPCkJco761ixQFoSl0aXfKQ+y9/qoJnAEYar01q64gqytNBz4ghyDMPMHnyYiIiIiIgIzYeYfj/Z56x3g7ovAf2L4bxb/EWS/ql7LZCDx/Ry3RwAAAABJRU5ErkJggg==)
@@ -119,57 +112,20 @@ blockquote {
   border-style: solid;
   border-width: 11px;
   color: $tealeaf;
-  display: block;
-  margin: 1rem 0;
 }
-
+a {
+  color: $velvet;
+}
+strong, b {
+  font-family: "Bookinsanity Bold";
+}
 table {
   font-family: "Scala Sans";
-  td {
-  }
   th {
     border-bottom: 0;
     font-family: "Scala Sans Caps";
   }
-  tr:nth-child(even) {
-    background-color: $tea;
-  }
-
-}
-
-nav ul {
-  border-left: 4px $velvet solid;
-}
-
-nav ul + p {
-  padding-top: 19.2px;
-}
-
-nav ul a:hover {
-  color: $velvet;
-}
-
-nav ul li ul {
-  border-left: 4px solid $gold;
-}
-
-article > p:first-of-type:first-letter {
-  float: left;
-  font-family: "Solbera Imitation";
-  font-size: 10em;
-  line-height: 0.8em;
-  overflow: visible;
-}
-
-b {
-  font-family: "Bookinsanity Bold";
-}
-
-footer {
-  code {
-    a {
-      color: $gold;
-      font-family: "Bookinsanity";
-    }
+  tr {
+    color: $primary-text;
   }
 }
