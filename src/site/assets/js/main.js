@@ -14,13 +14,16 @@ $(document).ready(function () {
 
 //Page Transition
 $(document).on("click", ".internal", function () {
+  event.preventDefault();
   var a = $(this).attr("href").split(".html");
+  var current = window.location.pathname.split(".html");
   if (a.length > 1) {
     a.pop();
   }
-  history.pushState({}, "", a);
-  event.preventDefault();
-  contentUpdate();
+  if (a != current[0]) {
+    history.pushState({}, "", a);
+    contentUpdate();
+  }
 });
 window.addEventListener("popstate", (event) => {
   contentUpdate();
@@ -31,37 +34,50 @@ function contentUpdate() {
   if (newValue[0] != oldValue[0]) {
     h = true;
     g = true;
+    b = true;
     $("main").fadeOut("fast", function () {
       if (h == true) {
         h = false;
+        //Updates URL
         var location = window.location.pathname;
+
         //Loads Title Bar
+        $("title").load(location + " title", function (response, status, xhr) {
+          if ( status == "error" ) {
+            $("title").load("/404" + " title", function () {
+              if (g == true) {
+                g = false;
+                $("title title").unwrap();
+
+              }
+            });
+          }
+          else if (g == true) {
+              g = false;
+              $("title title").unwrap();
+            }
+        });
+
+        //Loads Page Conent
         $("main").load(location + " main", function (response, status, xhr) {
           if ( status == "error" ) {
             $("main").load("/404" + " main", function () {
-              if (g == true) {
-                g = false;
+              if (b == true) {
+                b = false;
                 $("main main").hide();
                 $("main main").unwrap();
                 $("main").fadeIn("fast");
                 onReload();
               }
             });
-            $("title").load("/404" + " title", function() {
-              $("title title").unwrap();
-            });
           }
-          else if (g == true) {
-              g = false;
+          else if (b == true) {
+              b = false;
               $("main main").hide();
               $("main main").unwrap();
               $("main").fadeIn("fast");
               onReload();
             }
-        });
-        //Loads Page Conent
-        $("title").load(location + " title", function() {
-          $("title title").unwrap();
         });
       }
     });
