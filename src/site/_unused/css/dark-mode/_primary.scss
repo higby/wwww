@@ -1,36 +1,49 @@
-$space: #965ee5;
-$space-highlighter-old: #965ee573;
-$space-highlighter: #cdb4f1;
-
-$background-color: #fafafa;
-$lightGrey: #eeeeee;
-$mediumGrey: #dedede;
-$darkGrey: #bdbdbd;
-
-$primary-text: #4b4b4b;
-$header-text: #323232;
-$code-text:  #5f5f5f;
-$quote-text:  #727272;
-$pgp-text: #b6b6b6;
-
 $primary-font: "Open Sans", sans-serif;
 $primary-font1: 'IBM Plex Mono', monospace;
 $mono-font: "Source Code Pro", monospace;
 
 *, *::before, *::after {
   box-sizing: inherit;
+  transition: color .5s, background-color .5s;
+
 }
 ::selection {
-  background-color: $space-highlighter;
+  background-color:  var(--space-highlighter);
   color: #000;
+}
+:root {
+  --space: #965ee5;
+  --space-highlighter: #cdb4f1;
+  --background-color: #fafafa;
+  --lightGrey: #eeeeee;
+  --mediumGrey: #dedede;
+  --darkGrey: #bdbdbd;
+  --primary-text: #4b4b4b;
+  --header-text: #323232;
+  --code-text: #5f5f5f;
+  --quote-text: #727272;
+  --pgp-text: #b6b6b6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #111010;
+    --lightGrey: #212121;
+    --mediumGrey: #616161;
+    --darkGrey: #424242;
+    --primary-text: #b4b4b4;
+    --header-text: #CDCDCD;
+    --code-text: #a0a0a0;
+    --quote-text: #898989;
+    --pgp-text: #494949;
+  }
 }
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 body {
-  background-color: $background-color;
-  color: $primary-text;
+  background-color: var(--background-color);
+  color: var(--primary-text);
   font-family: $primary-font;
   font-size: 1.125rem;
   line-height: 1.5;
@@ -38,7 +51,7 @@ body {
   max-width: 600px; //page width (96px * 5.5(1.5in margins)) * <p> text size (1.125) rounded up
 }
 h1, h2, h3, h4, h5, h6 {
-  color: $header-text;
+  color: var(--header-text);
 }
 h1 {
   font-size: 2.25rem;
@@ -55,29 +68,29 @@ h6 {}
 header {
   text-align: center;
   a {
-    color: $header-text;
+    color: var(--header-text);
     &:hover {
-      color: $space;
+      color: var(--space);
       text-decoration: none;
     }
   }
 }
 nav {
   ul, ol {
-    border-left: .25rem $space solid;
+    border-left: .25rem var(--space) solid;
     list-style: none;
     margin: 0;
     padding: 0 .5rem 0 .5rem;
     ul, ol {
-      border-left: .25rem solid $mediumGrey;
+      border-left: .25rem solid var(--mediumGrey);
       display: none;
       margin: 0 10px;
       padding-left: calc(.5rem + 2px);
     }
     a {
-      color: $header-text;
+      color: var(--header-text);
       &:hover {
-        color: $space;
+        color: var(--space);
         text-decoration: none;
       }
     }
@@ -93,9 +106,9 @@ footer {
   font-size: 1.25rem;
   margin: 1rem 0;
   a {
-    color: $primary-text;
+    color: var(--primary-text);
     &:hover {
-      color: $space;
+      color: var(--space);
       text-decoration: none;
     }
   }
@@ -122,7 +135,7 @@ pre, code, kbd {
   font-size: .95rem;
 }
 pre {
-  background-color: $lightGrey;
+  background-color: var(--lightGrey);
   border-radius: .25rem;
   line-height: 1.5;
   overflow: auto;
@@ -135,8 +148,8 @@ pre {
   }
 }
 blockquote {
-  border-left: .25rem solid $mediumGrey;
-  color: $quote-text;
+  border-left: .25rem solid var(--mediumGrey);
+  color: var(--quote-text);
   font-size: 1.125rem;
   font-style: normal;
   padding: 0 0 0 1rem;
@@ -152,10 +165,10 @@ blockquote {
 }
 hr {
   border: 0;
-  border-bottom: .125rem $darkGrey solid;
+  border-bottom: .125rem var(--darkGrey) solid;
 }
 a {
-  color: $space;
+  color: var(--space);
   text-decoration: none;
   transition: color .5s;
   &:hover {
@@ -163,34 +176,34 @@ a {
   }
 }
 mark {
-  background-color: $space-highlighter;
+  background-color:  var(--space-highlighter);
   margin: 0 -.125rem;
   padding: 0 .125rem;
 }
 code {
-  background-color: $lightGrey;
+  background-color: var(--lightGrey);
   border-radius: .25rem;
-  color: $code-text;
+  color: var(--code-text);
   padding: .2em .4em;
   a {
-    color: $pgp-text;
+    color: var(--pgp-text);
     font-size: 1.25rem;
     &:hover {
-      color: $space;
+      color: var(--space);
       text-decoration: none;
     }
   }
 }
 kbd {
-  border: 1px solid $mediumGrey;
+  border: 1px solid var(--mediumGrey);
   border-radius: .25rem;
-  box-shadow: inset 0 -1px 0 $mediumGrey;
-  color: $code-text;
+  box-shadow: inset 0 -1px 0 var(--mediumGrey);
+  color: var(--code-text);
   padding: .125rem .25rem;
   vertical-align: middle;
 }
 img, video, canvas, audio, object {
-  background-image: linear-gradient(65deg, $space 25%, $lightGrey 25%, $lightGrey 50%, $space 50%, $space 75%, $lightGrey 75%, $lightGrey 100%);
+  background-image: linear-gradient(65deg, var(--space) 25%, var(--lightGrey) 25%, var(--lightGrey) 50%, var(--space) 50%, var(--space) 75%, var(--lightGrey) 75%, var(--lightGrey) 100%);
   background-size: 35.31px 75.72px;
   border-radius: .25rem;
   display: block;
@@ -208,14 +221,14 @@ table {
     text-align: center;
   }
   th {
-    border-bottom: .125rem $darkGrey solid;
+    border-bottom: .125rem var(--darkGrey) solid;
     padding: .125rem;
   }
   tr {
-    color: $header-text;
+    color: var(--header-text);
   }
   tr:nth-child(even) {
-    background-color: $lightGrey;
+    background-color: var(--lightGrey);
   }
 }
 .index {
@@ -233,7 +246,7 @@ table {
     background-color: inherit;
   }
   time {
-    color: $quote-text;
+    color: var(--quote-text);
     &:after {
       content: "//";
       margin: 0 .45rem;
@@ -241,8 +254,8 @@ table {
   }
 }
 .footnotes {
-  border-top: .125rem $darkGrey solid;
-  color: $quote-text;
+  border-top: .125rem var(--darkGrey) solid;
+  color: var(--quote-text);
   font-size: 1rem;
 }
 .footnote {

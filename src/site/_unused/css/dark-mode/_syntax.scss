@@ -4,7 +4,7 @@ Syntax Highlighting
 --------------------------------
 */
 .n, .na, .nb, .nc, .no, .nd, .ni, .ne, .nf, .nl, .nn, .nx, .py, .nt, .nv, .vc, .vg, .vi, .bp {
-  color: $space;
+  color: var(--space);
 }
 .c, .cm, .cp, .c1, .cs {
   font-style: italic;
