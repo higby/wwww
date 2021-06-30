@@ -97,13 +97,8 @@ $("header h1 a").ready(function() {
 })
 function fancyName() {
   var headerClass = $("header h1 a").attr("class");
-  var headerColor = $('header h1').css("color");
-  if ($.type( headerClass ) === "undefined") {
-    $("header h1 a").attr("class", "animating");
-  } else {
-    $("header h1 a").attr("class", "animating internal");
-  }
-  // Turn header into a fuck ton of spans323232
+
+  // Turn header into a fuck ton of spans
   const header = new Letterize({
     targets: "header h1 a",
   });
@@ -120,7 +115,7 @@ function fancyName() {
     .add({
       color: [
         {
-          value: headerColor,
+          value: "#323232",
         },
         {
           value: "#965ee5",
@@ -131,16 +126,18 @@ function fancyName() {
       targets: "#branden",
       color: [
         {
-          value: headerColor,
+          value: "#323232",
         },
       ],
       complete: function () {
         $("header h1 i").css("color", "#965ee5");
         header.deletterize();
         if ($.type( headerClass ) !== "undefined") {
-          $("header h1 a").attr("class", "internal");
+          $("header h1 a").attr("class", "internal animated");
         } else {
           $("header h1 a").removeAttr("class");
+          $("header h1 a").attr("class", "animated");
+
         }
       },
     });

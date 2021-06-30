@@ -11,8 +11,8 @@ Specific Use
 header .higby {
   color: $header-text; //Only during animation
 }
-.animating:hover {
-  color: $primary-text;
+.animated:hover {
+  color: $space;
 }
 i[class="65"] {
   color: $space;
