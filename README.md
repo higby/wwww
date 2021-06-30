@@ -1,7 +1,7 @@
 # higby.io `version 2`
 [![Visits Badge](https://badges.pufler.dev/visits/higby/higby.io)](https://badges.pufler.dev)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/15ac8df8-fa28-4f87-a29b-5c0286ba7a07/deploy-status)](https://app.netlify.com/sites/higby/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/19d59a21-19b3-40fa-a103-9c8f8d36b3f4/deploy-status)](https://app.netlify.com/sites/higby/deploys)
 
 I made this for me because I like making things
 
