@@ -97,7 +97,11 @@ $("header h1 a").ready(function() {
 })
 function fancyName() {
   var headerClass = $("header h1 a").attr("class");
-
+  if ($.type( headerClass ) === "undefined") {
+    $("header h1 a").attr("class", "animating");
+  } else {
+    $("header h1 a").attr("class", "animating internal");
+  }
   // Turn header into a fuck ton of spans
   const header = new Letterize({
     targets: "header h1 a",
@@ -133,11 +137,9 @@ function fancyName() {
         $("header h1 i").css("color", "#965ee5");
         header.deletterize();
         if ($.type( headerClass ) !== "undefined") {
-          $("header h1 a").attr("class", "internal animated");
+          $("header h1 a").attr("class", "internal");
         } else {
           $("header h1 a").removeAttr("class");
-          $("header h1 a").attr("class", "animated");
-
         }
       },
     });
@@ -146,7 +148,7 @@ function fancyName() {
 //Table Of Contents
 $(document).on("click", "nav ul li span", function () {
   if ($(this).next().next().is(":hidden")) {
-    $(this).next().next().slideDown("fast", "easeOutQuad");
+    $(this).next().next().slideDown("fast");
     var arrow = $(this).children();
     anime({
       targets: this.children,
@@ -155,7 +157,7 @@ $(document).on("click", "nav ul li span", function () {
       easing: 'easeOutQuad'
     });
   } else {
-    $(this).next().next().slideUp("fast", "easeOutQuad");
+    $(this).next().next().slideUp("fast");
     anime({
       targets: this.children,
       rotateZ: 0,
@@ -189,7 +191,7 @@ function pokeHop() {
         }
       },
     });
-    list2[i] = $("#.imgHolder .poke")[i].id;
+    list2[i] = $(".imgHolder .poke")[i].id;
   }
   $(".imgHolder .poke").hover(
     function () {

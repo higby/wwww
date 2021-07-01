@@ -36,11 +36,17 @@ header {
     color: $header-text;
     &:hover {
       color: $space;
-      text-decoration: none;
     }
     .higby {
       color: $space;
     }
+  }
+  h1 a:hover {
+    text-decoration: none;
+  }
+  p {
+    color: $header-text;
+    margin: 1.5rem 0;
   }
 }
 nav {
@@ -59,12 +65,12 @@ nav {
       color: $header-text;
       &:hover {
         color: $space;
-        text-decoration: none;
       }
     }
   }
   p {
-    display: inline;
+    margin: .5rem 0;
+    color: $header-text;
   }
   svg {
     vertical-align: text-top;
@@ -77,7 +83,6 @@ footer {
     color: $primary-text;
     &:hover {
       color: $space;
-      text-decoration: none;
     }
   }
   code {
@@ -155,7 +160,6 @@ code {
     font-size: 1.25rem;
     &:hover {
       color: $space;
-      text-decoration: none;
     }
   }
 }

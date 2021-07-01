@@ -4,7 +4,7 @@ layout: default
 <header>
 <h1>{{ page.title | escape }}</h1>
 {% unless page.setup.date == "hidden" %}
-<h4><time datetime="{{ page.date | date_to_xmlschema }}">{%- assign date_format = "%b %-d, %Y" -%} {{ page.date | date: date_format }}</time></h4>
+<p><strong><time datetime="{{ page.date | date_to_xmlschema }}">{%- assign date_format = "%b %-d, %Y" -%} {{ page.date | date: date_format }}</time></strong></p>
 {% endunless %}
 {% if page.repo %}
 {% include github_repo.html %}
