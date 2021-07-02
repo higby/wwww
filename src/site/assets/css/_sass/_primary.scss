@@ -61,6 +61,9 @@ nav {
       margin: 0 10px;
       padding-left: calc(.5rem + 2px);
     }
+    li {
+      margin: 0;
+    }
     a {
       color: $header-text;
       &:hover {
@@ -94,10 +97,10 @@ p, ol, ul, pre, blockquote, figure, hr, dl {
   margin: 1rem 0;
 }
 ol, ul {
-  margin-left: 1.125rem;
+  margin: 0 0 0 1.125rem;
   padding: 0;
-  ol, ul {
-    margin: 0 1rem;
+  li {
+    margin: 1rem 0;
   }
 }
 pre, code, kbd {
@@ -131,7 +134,7 @@ blockquote {
   font-style: italic;
   list-style-position: outside;
   list-style-type: ">";
-  margin-left: .5rem;
+  margin-left: .65rem;
 }
 hr {
   border: 0;
