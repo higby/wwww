@@ -2,7 +2,7 @@
   box-sizing: inherit;
 }
 ::selection {
-  background-color: $space-highlighter;
+  background-color: $highlight;
   color: #000;
 }
 html {
@@ -121,13 +121,14 @@ pre {
   }
 }
 blockquote {
-  border-left: .25rem solid $mediumGrey;
   color: $quote-text;
+  border-left: .25rem solid $darkGrey;
   font-size: 1.125rem;
   font-style: normal;
   padding: 0 0 0 1rem;
 }
 .note {
+  color: $note-text;
   border: none;
   display:list-item;
   font-size: 1rem;
@@ -147,9 +148,12 @@ a {
   &:hover {
     text-decoration: underline;
   }
+  &:focus {
+    outline: 0.125rem dashed $primary-text;
+  }
 }
 mark {
-  background-color: $space-highlighter;
+  background-color: $mark;
   margin: 0 -.125rem;
   padding: 0 .125rem;
 }
@@ -159,7 +163,7 @@ code {
   color: $code-text;
   padding: .2em .4em;
   a {
-    color: $pgp-text;
+    color: $darkGrey;
     font-size: 1.25rem;
     &:hover {
       color: $space;
@@ -218,7 +222,7 @@ table {
     background-color: inherit;
   }
   time {
-    color: $quote-text;
+    color: $note-text;
     &:after {
       content: "//";
       margin: 0 .45rem;
@@ -227,15 +231,15 @@ table {
 }
 .footnotes {
   border-top: .125rem $darkGrey solid;
-  color: $quote-text;
+  color: $note-text;
   font-size: 1rem;
 }
 .footnote {
   &:before {
-    content: '{';
+    content: "{";
   }
   &:after {
-    content: '}';
+    content: "}";
   }
 }
 @media screen and (max-width: 700px) {

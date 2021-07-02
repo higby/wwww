@@ -34,7 +34,7 @@ function contentUpdate() {
   if (newValue[0] != oldValue[0]) {
     h = true;
     g = true;
-    b = true;
+    p = true;
     $("main").fadeOut("fast", function () {
       if (h == true) {
         h = false;
@@ -62,8 +62,8 @@ function contentUpdate() {
         $("main").load(location + " main", function (response, status, xhr) {
           if ( status == "error" ) {
             $("main").load("/404" + " main", function () {
-              if (b == true) {
-                b = false;
+              if (p == true) {
+                p = false;
                 $("main main").hide();
                 $("main main").unwrap();
                 $("main").fadeIn("fast");
@@ -71,8 +71,8 @@ function contentUpdate() {
               }
             });
           }
-          else if (b == true) {
-              b = false;
+          else if (p == true) {
+              p = false;
               $("main main").hide();
               $("main main").unwrap();
               $("main").fadeIn("fast");
