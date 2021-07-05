@@ -7,5 +7,6 @@ setup:
   style: dnd
 sitemap: false
 ---
-
-![clot sliver](/assets/images/clot-sliver.jpg)
+<figure>
+  <img width="626" height="453" src="/assets/images/clot-sliver.jpg" alt="clot silver">
+</figure>
