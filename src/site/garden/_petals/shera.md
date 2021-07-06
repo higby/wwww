@@ -5,8 +5,4 @@ description: "Making A Short URL Service With Jekyll & Netlify"
 tag: programming
 repo: shera.gay
 ---
-<figure>
-  <a href="https://www.shera.gay/">
-    <img width="1280" height="720" src="https://shera.gay/gay.jpg" alt="shera">
-  </a>
-</figure>
+{% include image.html src="https://shera.gay/gay.jpg" href="https://www.shera.gay/" alt="Shera is Gay" w="1280" h="720" %}

@@ -6,6 +6,10 @@ tag: poetry
 setup:
   indent: true
 ---
+
+{% for year in site.years %}{{ year.content }}
+{% endfor %}
+
 **obsessive-compulsive disorder** *noun.*
 
 aggressive impulses to order

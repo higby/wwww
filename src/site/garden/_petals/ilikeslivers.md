@@ -7,6 +7,4 @@ setup:
   style: dnd
 sitemap: false
 ---
-<figure>
-  <img width="626" height="453" src="/assets/images/clot-sliver.jpg" alt="clot silver">
-</figure>
+{% include image.html src="/assets/images/clot-sliver.jpg" alt="Clot Sliver" w="626" h="453" %}

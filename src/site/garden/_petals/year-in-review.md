@@ -19,3 +19,5 @@ img {
   width: 65%;
 }
 </style>
+
+{% include image.html src="https://shera.gay/gay.jpg" alt="Shera is Gay" w="1366" h="768" %}
