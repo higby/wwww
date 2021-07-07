@@ -4,7 +4,6 @@ title: Branden Higby
 permalink: /index.html
 ---
 {%- assign date_format = "%b %-d, %Y" -%}
-{{ jekyll.environment }}
 {% capture order %}essays,poetry,collections,programming,misc{% endcapture %}
 {% assign order = order | split: "," %}
 <table class="index">
