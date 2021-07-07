@@ -3,7 +3,6 @@ title: "Resin B Mitchell"
 date: 2021-07-02 07:44:00 -0800
 setup:
   style: dnd
-tag: misc
 ---
 
 The Archaeologist

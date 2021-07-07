@@ -4,6 +4,7 @@ title: Branden Higby
 permalink: /index.html
 ---
 {%- assign date_format = "%b %-d, %Y" -%}
+{{ jekyll.environment }}
 {% capture order %}essays,poetry,collections,programming,misc{% endcapture %}
 {% assign order = order | split: "," %}
 <table class="index">
@@ -17,23 +18,15 @@ permalink: /index.html
 </th>
 </tr>
 {% for post in tag[1] %}
-  {% unless post.draft %}
-
-
+  {% unless post.draft and jekyll.environment == "production" %}
 <tr>
   <td>
     <time>{{ post.date | date: date_format }}</time>
   </td>
   <td>
-    <a href="{{ post.url | relative_url | remove: ".html" }}" {% unless post.setup.style %}class="internal" {% endunless %}>{{ post.title | escape }}</a>
+    <a href="{{ post.url | relative_url | remove: ".html" }}" {% unless post.setup.style %}class="internal{% if post.draft %} draft{% endif %}" {% else %} {% if post.draft %} class="draft"{% endif %}{% endunless %}>{{ post.title | escape }}</a>
   </td></tr>
-
-
 {% endunless %}
-
-
-
-
 {% endfor %}
 </tbody>
 {% endif %}

@@ -3,8 +3,6 @@ title:  "Paleontology, Jobs, and Other Rambling Thoughts"
 date: 2020-04-12 00:05:00 -0800
 description: "An Essay Concerned With The Future"
 tag: essays
-setup:
-indent: true
 ---
 
 > **Note:** This was originally written for a Speech and Debate tournament and is in an early/ draft form. Please ignore any strange tenses or references to tournaments/ competitions.

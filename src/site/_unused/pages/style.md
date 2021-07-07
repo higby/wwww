@@ -21,7 +21,8 @@ permalink: /style.html
 > Uses The Musical Tritonic Scale
 
 ## Colors
-<img class="small" width="256px" height="256px" src="/assets/images/colors.svg">
+
+{% include image.html src="/assets/images/colors.svg" w="256" h="256" width="small" %}
 
 ## Elements
 
@@ -135,11 +136,12 @@ permalink: /style.html
 
 #### Wide
 
-<img width="1366" height="768" src="https://shera.gay/gay.jpg">
+{% include image.html src="https://shera.gay/gay.jpg" alt="Shera is Gay" w="1366" h="768" %}
+
 
 #### Small
 
-<img class="small" width="1366" height="768" src="https://shera.gay/gay.jpg">
+{% include image.html src="https://shera.gay/gay.jpg" alt="Shera is Gay" w="1366" h="768" width="small" %}
 
 ## Forms
 

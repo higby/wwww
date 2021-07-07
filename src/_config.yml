@@ -30,10 +30,15 @@ kramdown:
   footnote_backlink: "^"
 
 plugins:
-  - jekyll-tidy
+  - jekyll-liquify
   - jekyll-tagories
-  - jekyll-sitemap
   - jekyll-target-blank
+  - jekyll-tidy
+
+jekyll_tidy:
+  exclude:
+    - robots.txt
+    - _redirects
 
 sass:
     style: compact

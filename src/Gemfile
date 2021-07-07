@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.1.1"
-gem 'jekyll-tagories'
-gem 'jekyll-sitemap'
-gem 'jekyll-target-blank'
+gem "jekyll-liquify"
+gem "jekyll-tagories"
+gem "jekyll-target-blank"
 gem "jekyll-tidy"
 
 gem "webrick", "~> 1.7"

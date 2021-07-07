@@ -11,6 +11,16 @@ Specific Use
 header .higby {
   color: $header-text; //Only during animation
 }
+.draft {
+  &:after {
+    color: $header-text;
+    content: " [draft]";
+    font-size: .88rem;
+    font-style: normal;
+    font-weight: bold;
+    vertical-align: text-top;
+  }
+}
 .animating:hover {
   color: $header-text;
 }

@@ -60,12 +60,3 @@ input[type="reset"]:disabled {
   cursor: default;
   font-weight: normal;
 }
-
-
-input[type='checkbox']:active,
-input[type='radio']:active,
-input[type='submit']:active,
-input[type='button']:active,
-button:active {
-  transform: translateY(2px);
-}
