@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<!--
-
-(c) {{ 'now' | date: "%Y" }} Branden Higby
-Released under the MIT license
-https://github.com/higby/higby.io/
-
--->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -35,7 +28,7 @@ https://github.com/higby/higby.io/
   </head>
   <body>
     <header>
-      <h1><a href="/" {% unless page.setup.style%}class="internal" {% endunless %}>Branden <i class="higby">Higby</i></a></h1>
+      <h1><a href="/" {% unless page.setup.style %}class="internal" {% endunless %}>Branden <i class="higby">Higby</i></a></h1>
     </header>
     <main>
       {{content}}

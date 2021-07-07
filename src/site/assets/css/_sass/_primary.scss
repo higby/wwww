@@ -138,6 +138,14 @@ blockquote {
   list-style-type: ">";
   margin-left: .65rem;
 }
+cite {
+  color: $note-text;
+  font-style: normal;
+  &:before {
+    content: "— ";
+    font-size: 1rem;
+  }
+}
 hr {
   border: 0;
   border-bottom: .125rem $darkGrey solid;
