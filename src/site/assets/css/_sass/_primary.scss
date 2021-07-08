@@ -139,7 +139,6 @@ blockquote {
   margin-left: .65rem;
 }
 cite {
-  color: $note-text;
   font-style: normal;
   &:before {
     content: "— ";
@@ -156,9 +155,6 @@ a {
   transition: color .5s;
   &:hover {
     text-decoration: underline;
-  }
-  &:focus {
-    outline: 0.125rem dashed $primary-text;
   }
 }
 mark {

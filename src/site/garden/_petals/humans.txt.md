@@ -61,24 +61,37 @@ Images:
 - [PokéSprite](https://github.com/msikma/pokesprite) - Pokemon Ribbons
 - [Pokémon Image rips by TehPerson](https://bulbapedia.bulbagarden.net/wiki/User:TehPerson)
 
-Libraries:
+JS:
 
-- [particles.js](https://github.com/VincentGarreau/particles.js/)
 - [jQuery](https://github.com/jquery/jquery/)
-- [jQuery UI](https://github.com/jquery/jquery-ui/) - only the effects core
 - [anime.js](https://github.com/juliangarnier/anime/)
 - [Letterize.js](https://github.com/WojciechKrakowiak/letterize/)
+- [particles.js](https://github.com/VincentGarreau/particles.js/)
 - [tinykeys](https://github.com/jamiebuilds/tinykeys/)
-- [normalize.css](https://github.com/necolas/normalize.css/)
+
+CSS:
+
+- [SASS](https://sass-lang.com/)
+- [Design Systems](https://leerob.io/blog/style-guides-component-libraries-design-systems/) (source of several of the following links)
+- [Grid System](https://tanzu.vmware.com/content/built-to-adapt/intro-to-the-8-point-grid-system-2/)
 - [Homebrewery](https://github.com/naturalcrit/homebrewery/) - DnD background & colors
+- **[Natural Selection](https://github.com/frontaid/natural-selection/)** - this is perfection, everyone should use this
+- [Print Styles](https://www.matuzo.at/blog/i-totally-forgot-about-print-style-sheets/)
+- [Typographic Scale](https://spencermortensen.com/articles/typographic-scale/)
+- [Built without a reset](https://meiert.com/en/blog/reasons-against-resets/), but still uses bits and snippets from:
+  - [destyle.css](https://github.com/nicolas-cusan/destyle.css/)
+  - [normalize.css](https://github.com/necolas/normalize.css/) *probably*
+  - [reseter.css](https://github.com/krishdevdb/reseter.css/)
+
 
 Jekyll Plugins:
 
-- [Jekyll TOC](https://github.com/allejo/jekyll-toc)
-- [jekyll Tidy](https://github.com/apsislabs/jekyll-tidy/)
+- [Jekyll Liquify](https://github.com/gemfarmer/jekyll-liquify/)
 - [Jekyll Tagories](https://github.com/ashmaroli/jekyll-tagories/)
-- [Jekyll Sitemap](https://github.com/jekyll/jekyll-sitemap/)
 - [Jekyll Target Blank](https://github.com/keithmifsud/jekyll-target-blank/)
+- [jekyll Tidy](https://github.com/apsislabs/jekyll-tidy/)
+- [Jekyll TOC](https://github.com/allejo/jekyll-toc)
+
 
 Software:
 
