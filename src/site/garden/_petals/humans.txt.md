@@ -9,7 +9,7 @@ tag: programming
 
 {%- assign generation_date = "%F, %T %Z" -%}
 
-### Me
+## Me
 
 Email: {{ site.email }}
 
@@ -31,7 +31,7 @@ Favorite TV Shows:
 
 Favorite Number: <i class="65">65</i>
 
-### Thanks
+## Thanks
 
 [MDN Web Docs](https://developer.mozilla.org/en-US/) - the best reference
 
@@ -41,7 +41,7 @@ Favorite Number: <i class="65">65</i>
 
 [Spotify](https://open.spotify.com/playlist/1u6D5NJ3MOzLeXZU3B6MU1?si=8ef03bee2c48407b) - ~99,342 minutes listened (updated 12/1/2020)
 
-### Site
+## Site
 
 Inital Commit: `2020-04-10, 17:57:00 PDT`
 
@@ -49,19 +49,19 @@ Last updated: `{{ site.time | date: generation_date }}`
 
 Built with [Jekyll](https://github.com/jekyll/jekyll) and hosted on [Netlify](https://www.netlify.com/)
 
-Fonts:
+### Fonts:
 
 - [Open Sans](https://fonts.google.com/specimen/Open+Sans) - hosted via Google Fonts
 - [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro) - hosted via Google Fonts
 - [Solbera's DND5e fonts](https://github.com/jonathonf/solbera-dnd-fonts)
 
-Images:
+### Images:
 
 - [Scryfall](https://scryfall.com/) - Magic: The Gathering Cards
 - [PokéSprite](https://github.com/msikma/pokesprite) - Pokemon Ribbons
 - [Pokémon Image rips by TehPerson](https://bulbapedia.bulbagarden.net/wiki/User:TehPerson)
 
-JS:
+### JS:
 
 - [jQuery](https://github.com/jquery/jquery/)
 - [anime.js](https://github.com/juliangarnier/anime/)
@@ -69,7 +69,7 @@ JS:
 - [particles.js](https://github.com/VincentGarreau/particles.js/)
 - [tinykeys](https://github.com/jamiebuilds/tinykeys/)
 
-CSS:
+### CSS:
 
 - [SASS](https://sass-lang.com/)
 - [Design Systems](https://leerob.io/blog/style-guides-component-libraries-design-systems/) (source of several of the following links)
@@ -84,7 +84,7 @@ CSS:
   - [reseter.css](https://github.com/krishdevdb/reseter.css/)
 
 
-Jekyll Plugins:
+### Jekyll Plugins:
 
 - [Jekyll Liquify](https://github.com/gemfarmer/jekyll-liquify/)
 - [Jekyll Tagories](https://github.com/ashmaroli/jekyll-tagories/)
@@ -93,6 +93,6 @@ Jekyll Plugins:
 - [Jekyll TOC](https://github.com/allejo/jekyll-toc)
 
 
-Software:
+### Software:
 
 - Atom
