@@ -1,22 +1,22 @@
 /*
 --------------------------------
-Print Styles
+Print Styling
 (They're gross, don't look)
 --------------------------------
 */
 @media print {
   * {
     background: #fff !important;
-    color: #000 !important;
     box-shadow: none !important;
+    color: #000 !important;
     text-shadow: none !important;
     &::before, &::after {
       background: #fff !important;
-      color: #000 !important;
       box-shadow: none !important;
-      text-shadow: none !important;
+      color: #000 !important;
       font-family: "Open Sans", sans-serif;
       font-size: .85rem;
+      text-shadow: none !important;
     }
   }
   body, footer, code, blockquote {
@@ -45,7 +45,7 @@ Print Styles
       color: #000 !important;
     }
     .higby {
-      color: #965ee5 !important;
+      color: $space !important;
     }
     h1 a {
       font-size: 1.25rem;
@@ -57,8 +57,8 @@ Print Styles
   nav {
     ul, ol {
       ul, ol {
-        display: block;
         border-left: 0.25rem solid #bdbdbd;
+        display: block;
       }
     }
     a {
@@ -81,17 +81,17 @@ Print Styles
     padding: 0;
   }
   pre {
-    white-space: pre-wrap !important;
     border: 2px solid #bdbdbd;
     border-radius: .25rem;
     page-break-inside: avoid;
+    white-space: pre-wrap !important;
   }
   blockquote {
-    page-break-inside: avoid;
     border-left: 0.25rem solid #bdbdbd;
+    page-break-inside: avoid;
   }
   a {
-    color: #965ee5 !important;
+    color: $space !important;
     text-decoration: underline;
     &[href]::after {
       content: " (" attr(href) ")";

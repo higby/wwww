@@ -6,7 +6,8 @@ permalink: /index.html
 {%- assign date_format = "%b %-d, %Y" -%}
 {% capture order %}essays,poetry,collections,programming,misc{% endcapture %}
 {% assign order = order | split: "," %}
-<table class="index">
+<nav>
+<table>
 {% for heading in order %}
 {% for tag in site.tags %}
 {% if tag[0] == heading %}
@@ -32,3 +33,4 @@ permalink: /index.html
 {% endfor %}
 {% endfor %}
 </table>
+</nav>
