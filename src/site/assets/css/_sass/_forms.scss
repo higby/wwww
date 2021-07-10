@@ -18,6 +18,7 @@ form {
     color: $header-text;
     font-size: 1.7858rem;
     font-weight: bold;
+    grid-column: span 4;
   }
   label {
     color: $header-text;
@@ -30,8 +31,6 @@ form {
       margin: 1rem 0;
     }
   }
-  ::placeholder {}
-  :focus::placeholder {}
   input, textarea, select, button {
     background-color: $background-color;
   }
@@ -62,6 +61,7 @@ form {
   input[type="button"],
   input[type="submit"],
   input[type="reset"] {
+    -webkit-appearance: none;
     background-color: $space;
     border: none;
     border-radius: .25rem;
@@ -70,7 +70,7 @@ form {
     font-size: 1.125rem;
     height: 2rem;
     margin: 0;
-    min-width: 8rem;
+    width: 100%;
     transition: background-color .3s;
     &:hover {
       background-color: #7444c4; // make a variable
@@ -84,12 +84,34 @@ form {
       cursor: default;
     }
   }
-  .wide {
+  .wide,
+  .wide[type="button"],
+  .wide[type="submit"],
+  .wide[type="reset"] {
     grid-column: span 2;
   }
   p {
     color: $header-text;
     grid-column: span 4;
     margin: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  form {
+    label {
+      grid-column: span 4;
+    }
+    button,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"] {
+      grid-column: span 2;
+    }
+    .wide,
+    .wide[type="button"],
+    .wide[type="submit"],
+    .wide[type="reset"] {
+      grid-column: span 4;
+    }
   }
 }
