@@ -96,30 +96,25 @@ Definition Title Two
 
 # Forms
 
-<form name="dev" data-netlify="true">
-  <legend>Test Form</legend>
-  <fieldset>
-    <legend>Some 'bout you</legend>
-    <p>This is really just for me, but I decided to leave it up because, eh, why not.</p>
-    <div>
-      <label for="name">Your Name</label>
-      <input name="Name" id="name" type="text" placeholder="Branden" />
-    </div>
-    <div>
-      <label for="animal">Favorite Animal</label>
-      <input name="Animal" id="animal" type="text" placeholder="Puppy" />
-    </div>
-    <div>
-      <label for="color">Favorite Color</label>
-      <input name="Color" id="color" type="text" placeholder="#965ee5" />
-    </div>
-    <div>
-      <label for="url">Do you have your own website?</label>
-      <input name="Site" id="url" type="url" placeholder="https://skeletor.gay" />
-    </div>
-  </fieldset>
-  <input type="submit" value="Disabled" disabled />
-  <input type="submit" value="Submit" class="wide" />
+<form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
 </form>
 
 Made to test [Primitive](https://taniarascia.github.io/primitive/) by [Tania Rascia](https://www.taniarascia.com/)
