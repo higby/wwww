@@ -104,3 +104,20 @@ input[type="reset"] {
     cursor: default;
   }
 }
+@media screen and (max-width: 700px) {
+  form div {
+    grid-column: span 2;
+  }
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    grid-column: span 2;
+  }
+  .wide,
+  .wide[type="button"],
+  .wide[type="submit"],
+  .wide[type="reset"] {
+    grid-column: span 4;
+  }
+}
