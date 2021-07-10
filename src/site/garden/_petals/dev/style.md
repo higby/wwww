@@ -96,7 +96,7 @@ Definition Title Two
 
 # Forms
 
-<form name="dev2" data-netlify="true">
+<form name="dev2" data-netlify="true" action="/shera">
   <legend>Test Form</legend>
   <fieldset>
     <legend>Some 'bout you</legend>
