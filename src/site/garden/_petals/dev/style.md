@@ -96,29 +96,22 @@ Definition Title Two
 
 # Forms
 
-<form>
-  <legend>Legend</legend>
+<form name="dev" data-netlify="true">
+  <legend>Test Form</legend>
   <fieldset>
-    <legend>Who is you?</legend>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue eget arcu dictum varius duis at consectetur lorem. Et magnis dis parturient montes nascetur ridiculus mus. In hac habitasse platea dictumst vestibulum.</p>
+    <legend>Some 'bout you</legend>
+    <p>This is really just for me, but I decided to leave it up because, eh, why not.</p>
     <div>
-      <label for="text">Text Input </label>
-      <input id="text" type="text" placeholder="Text Input" />
+      <label for="animal">Favorite Animal</label>
+      <input id="animal" type="text" placeholder="Puppy" />
     </div>
     <div>
-      <label for="password">Password</label>
-      <input id="password" type="password" placeholder="Password" />
+      <label for="color">Favorite Color</label>
+      <input id="color" type="text" placeholder="#965ee5" />
     </div>
     <div>
-      <label for="url">URL</label>
-      <input id="url" type="url" placeholder="http://www.example.com" />
-    </div>
-  </fieldset>
-  <fieldset>
-    <legend>Message</legend>
-    <div class="wide">
-    <label for="text2">Text Input </label>
-    <textarea id="text2" rows="5" cols="30" placeholder="Message"></textarea>
+      <label for="url">Do you have your own website?</label>
+      <input id="url" type="url" placeholder="https://skeletor.gay" />
     </div>
   </fieldset>
   <input type="submit" value="Disabled" disabled />
