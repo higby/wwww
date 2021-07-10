@@ -1,62 +1,87 @@
-/*
---------------------------------
-Form Styling
---------------------------------
-*/
-button, input {
-  border: none;
-  border-radius: .25rem;
-  font-family: inherit;
-  font-size: 100%;
-  height: 2rem;
-  line-height: 1.15;
-  margin: 0;
-  margin: .25rem;
-}
-fieldset {
-  background-color: #f1dffd;
-  border: none;
-  border-radius: .25rem;
-  margin: 0;
-  padding: .75rem;
-}
 form {
-  background-color: #fff;
-  border-radius: .25rem;
-  display: flex;
+  background-color: #f1dffd;
+  border-radius: .125rem;
+  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
 }
-fieldset h2 {
-  margin: 1rem 0;
+
+input, textarea, select, button {
+  margin:.5rem 0;
 }
-input {
-  flex-grow: 1;
+
+[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
+  background-color: $background-color;
+  border: none;
+  border-radius: .125rem;
+  padding: 0.5rem;
+  outline: none;
+  font-size: .95rem;
+  line-height: 1;
+  font-family: $mono-font;
+  height: 2rem;
+
+  width: 100%;
 }
+
+textarea {
+  overflow: auto;
+  height: auto;
+
+  grid-column: 1/3;
+}
+
+
+
+
+select {
+  line-height: 1;
+}
+
+
+label {
+  font-weight: bold;
+}
+
 button,
+input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-  background-color: #965ee5;
+  font-size: 1.125rem;
   border: none;
+  margin: .5rem 0;
+  border-radius: .125rem;
+  height: 2rem;
+  min-width: 8rem;
+  background-color: $space;
   color: #fff;
   cursor: pointer;
-  font-weight: 700;
-  min-width: 8rem;
-  transition: all .3s;
+  transition: background-color .3s;
+  &:hover {
+    background-color: #7444c4; // make a variable
+  }
+  &:active {
+    background-color: #b585ef; // replzce with a proper animation
+  }
+  &:disabled {
+    background-color: $lightGrey;
+    color: $darkGrey;
+    cursor: default;
+  }
 }
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover  {
-  background-color: #7444c4;
-}
-button:active,
-input[type="submit"]:active,
-input[type="reset"]:active  {
-  background-color: #b585ef;
-}
-button:disabled,
-input[type="submit"]:disabled,
-input[type="reset"]:disabled {
-  background-color: #eee;
-  color: #b6b6b6;
-  cursor: default;
-  font-weight: normal;
+
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  grid-column: 1/3;
+
+  [type="submit"] {
+    color: blue;
+    flex-grow: 1;
+  }
 }
