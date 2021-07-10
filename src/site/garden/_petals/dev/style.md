@@ -103,19 +103,19 @@ Definition Title Two
     <p>This is really just for me, but I decided to leave it up because, eh, why not.</p>
     <div>
       <label for="name">Your Name</label>
-      <input name="dev" id="name" type="text" placeholder="Branden" />
+      <input name="Name" id="name" type="text" placeholder="Branden" />
     </div>
     <div>
       <label for="animal">Favorite Animal</label>
-      <input name="dev" id="animal" type="text" placeholder="Puppy" />
+      <input name="Animal" id="animal" type="text" placeholder="Puppy" />
     </div>
     <div>
       <label for="color">Favorite Color</label>
-      <input name="dev" id="color" type="text" placeholder="#965ee5" />
+      <input name="Color" id="color" type="text" placeholder="#965ee5" />
     </div>
     <div>
       <label for="url">Do you have your own website?</label>
-      <input name="dev" id="url" type="url" placeholder="https://skeletor.gay" />
+      <input name="Site" id="url" type="url" placeholder="https://skeletor.gay" />
     </div>
   </fieldset>
   <input type="submit" value="Disabled" disabled />
