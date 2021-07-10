@@ -1,117 +1,106 @@
-form {
+/*
+--------------------------------
+Form Styles
+--------------------------------
+*/
+fieldset {
+  grid-column: span 4;
   grid-gap: 1rem;
-  background-color: #f1dffd;
-  border-radius: .25rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: space-between;
-  margin: 1rem 0;
-  padding: 1rem;
-  fieldset {
-    border: none;
-    color: $header-text;
-    grid-column: span 4;
-    margin: 0;
-    padding: 0;
+  grid-template-columns: repeat(2, 1fr);
+  border: none;
+  padding: 0;
+  padding: 0;
+  border: none;
+  legend, p {
+    grid-column: span 2;
+    grid-row: span 2;
   }
   legend {
-    color: $header-text;
-    font-size: 1.7858rem;
-    font-weight: bold;
-    grid-column: span 4;
+    font-size: 1.4174rem;
   }
-  label {
-    color: $header-text;
-    font-weight: bold;
-    grid-column: span 2;
-    input {
-      margin-top: 1rem;
-    }
-    textarea {
-      margin: 1rem 0;
-    }
-  }
-  input, textarea, select, button {
-    background-color: $background-color;
-  }
-  [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
-    border: none;
-    border-radius: .25rem;
-    color: $primary-text;
-    font-family: $mono-font;
-    font-size: .95rem;
-    height: 2rem;
-    line-height: 1;
-    outline: none;
-    padding: 0.5rem;
-    width: 100%;
-    &:focus {
-      outline: 0.125rem solid $space;
-    }
-  }
-  textarea {
-    height: auto;
-    overflow: auto;
-    resize: vertical;
-  }
-  select {
-    line-height: 1;
-  }
-  button,
-  input[type="button"],
-  input[type="submit"],
-  input[type="reset"] {
-    -webkit-appearance: none;
-    background-color: $space;
-    border: none;
-    border-radius: .25rem;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1.125rem;
-    height: 2rem;
-    margin: 0;
-    width: 100%;
-    transition: background-color .3s;
-    &:hover {
-      background-color: #7444c4; // make a variable
-    }
-    &:active {
-      background-color: #b585ef; // replzce with a proper animation
-    }
-    &:disabled {
-      background-color: $lightGrey;
-      color: $darkGrey;
-      cursor: default;
-    }
-  }
-  .wide,
-  .wide[type="button"],
-  .wide[type="submit"],
-  .wide[type="reset"] {
-    grid-column: span 2;
-  }
-  p {
-    color: $header-text;
-    grid-column: span 4;
-    margin: 0;
+  div {
+    grid-column: span 1;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
   }
 }
-@media screen and (max-width: 700px) {
-  form {
-    label {
-      grid-column: span 4;
-    }
-    button,
-    input[type="button"],
-    input[type="submit"],
-    input[type="reset"] {
-      grid-column: span 2;
-    }
-    .wide,
-    .wide[type="button"],
-    .wide[type="submit"],
-    .wide[type="reset"] {
-      grid-column: span 4;
-    }
+legend {
+  float: left;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.7858rem;
+}
+legend, p {
+  grid-column: span 4;
+}
+form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: $space-100;
+  border-radius: .25rem;
+  .wide {
+    grid-column: span 2;
+  }
+}
+label {
+  font-weight: bold;
+}
+input, textarea, legend, p, label {
+  padding: 0;
+  margin: 0;
+  color: $header-text;
+}
+[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
+  border: none;
+  border-radius: .25rem;
+  color: $primary-text;
+  font-family: $mono-font;
+  font-size: .95rem;
+  height: 2rem;
+  display: block;
+  line-height: 1;
+  outline: none;
+  padding: 0.5rem;
+  &:focus {
+    outline: 0.125rem solid $space;
+  }
+}
+textarea {
+  height: auto;
+  resize: vertical;
+}
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  -webkit-appearance: none;
+  background-color: $space;
+  border: none;
+  border-radius: .25rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+
+  font-size: 1.125rem;
+  height: 2rem;
+  margin: 0;
+  display: block;
+  transition: background-color .3s;
+  &:hover {
+    background-color: $space-600; // make a variable
+  }
+  &:active {
+    background-color: $space-300; // replzce with a proper animation
+  }
+  &:disabled {
+    background-color: $lightGrey;
+    color: $darkGrey;
+    cursor: default;
   }
 }

@@ -1,0 +1,29 @@
+form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  legend, p {
+    grid-column: span 4;
+  }
+  fieldset {
+    grid-column: span 4;
+    grid-gap: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    legend, p {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    div {
+      grid-column: span 1;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+    }
+  }
+  .wide {
+    grid-column: span 2;
+  }
+}

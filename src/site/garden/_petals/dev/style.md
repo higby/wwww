@@ -97,30 +97,32 @@ Definition Title Two
 # Forms
 
 <form>
-<legend>Legend</legend>
-<p>Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-  <label for="text">Text Input  <input id="text" type="text" placeholder="Text Input" /></label>
-
-  <label for="password">Password  <input id="password" type="password" placeholder="Password" /></label>
-
-  <label for="url">URL   <input id="url" type="url" placeholder="http://www.example.com" /></label>
-
-
+  <legend>Legend</legend>
   <fieldset>
-
-  <label for="textarea">Textarea   <textarea id="textarea" rows="5" cols="30" placeholder="Message"></textarea></label>
-
-
-    <label for="email">Email Address   <input id="email" type="email" placeholder="email@example.com" /></label>
-
-
+    <legend>Who is you?</legend>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue eget arcu dictum varius duis at consectetur lorem. Et magnis dis parturient montes nascetur ridiculus mus. In hac habitasse platea dictumst vestibulum.</p>
+    <div>
+      <label for="text">Text Input </label>
+      <input id="text" type="text" placeholder="Text Input" />
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Password" />
+    </div>
+    <div>
+      <label for="url">URL</label>
+      <input id="url" type="url" placeholder="http://www.example.com" />
+    </div>
   </fieldset>
-  <input type="submit" value="Disabled" disabled/>
-
-
-  <input type="submit" value="Submit" class="wide"/>
-
+  <fieldset>
+    <legend>Message</legend>
+    <div class="wide">
+    <label for="text2">Text Input </label>
+    <textarea id="text2" rows="5" cols="30" placeholder="Message"></textarea>
+    </div>
+  </fieldset>
+  <input type="submit" value="Disabled" disabled />
+  <input type="submit" value="Submit" class="wide" />
 </form>
-
 
 Made to test [Primitive](https://taniarascia.github.io/primitive/) by [Tania Rascia](https://www.taniarascia.com/)
