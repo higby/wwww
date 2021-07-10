@@ -7,27 +7,17 @@ form {
   justify-content: space-between;
   margin: 1rem 0;
   padding: 1rem;
-  input, textarea, select, button {
-    background-color: $background-color;
-  }
-  [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
+  fieldset {
     border: none;
-    border-radius: .25rem;
-    font-family: $mono-font;
-    font-size: .95rem;
-    height: 2rem;
-    line-height: 1;
-    outline: none;
-    padding: 0.5rem;
-    width: 100%;
+    color: $header-text;
+    grid-column: span 4;
+    margin: 0;
+    padding: 0;
   }
-  textarea {
-    height: auto;
-    overflow: auto;
-    resize: vertical;
-  }
-  select {
-    line-height: 1;
+  legend {
+    color: $header-text;
+    font-size: 1.7858rem;
+    font-weight: bold;
   }
   label {
     color: $header-text;
@@ -40,8 +30,33 @@ form {
       margin: 1rem 0;
     }
   }
-  input {
-    margin:  0;
+  ::placeholder {}
+  :focus::placeholder {}
+  input, textarea, select, button {
+    background-color: $background-color;
+  }
+  [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
+    border: none;
+    border-radius: .25rem;
+    color: $primary-text;
+    font-family: $mono-font;
+    font-size: .95rem;
+    height: 2rem;
+    line-height: 1;
+    outline: none;
+    padding: 0.5rem;
+    width: 100%;
+    &:focus {
+      outline: 0.125rem solid $space;
+    }
+  }
+  textarea {
+    height: auto;
+    overflow: auto;
+    resize: vertical;
+  }
+  select {
+    line-height: 1;
   }
   button,
   input[type="button"],
@@ -72,21 +87,9 @@ form {
   .wide {
     grid-column: span 2;
   }
-  legend {
-    color: $header-text;
-    font-size: 1.7858rem;
-    font-weight: bold;
-  }
-  fieldset {
-    border: none;
-    color: $header-text;
-    grid-column: span 5;
-    margin: 0;
-    padding: 0;
-  }
   p {
     color: $header-text;
-    grid-column: span 5;
+    grid-column: span 4;
     margin: 0;
   }
 }
