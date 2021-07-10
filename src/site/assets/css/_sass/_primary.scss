@@ -164,7 +164,9 @@ blockquote {
   font-style: normal;
   padding: 0 0 0 1rem;
   cite {
+    display: block;
     font-style: normal;
+    margin: 1rem 0 0 0;
     &:before {
       content: "— ";
       font-size: 1rem;

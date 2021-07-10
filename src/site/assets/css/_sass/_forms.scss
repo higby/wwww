@@ -1,87 +1,92 @@
 form {
-  background-color: #f1dffd;
-  border-radius: .125rem;
-  padding: 1rem;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
-}
-
-input, textarea, select, button {
-  margin:.5rem 0;
-}
-
-[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
-  background-color: $background-color;
-  border: none;
-  border-radius: .125rem;
-  padding: 0.5rem;
-  outline: none;
-  font-size: .95rem;
-  line-height: 1;
-  font-family: $mono-font;
-  height: 2rem;
-
-  width: 100%;
-}
-
-textarea {
-  overflow: auto;
-  height: auto;
-
-  grid-column: 1/3;
-}
-
-
-
-
-select {
-  line-height: 1;
-}
-
-
-label {
-  font-weight: bold;
-}
-
-button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
-  font-size: 1.125rem;
-  border: none;
-  margin: .5rem 0;
-  border-radius: .125rem;
-  height: 2rem;
-  min-width: 8rem;
-  background-color: $space;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color .3s;
-  &:hover {
-    background-color: #7444c4; // make a variable
+  background-color: #f1dffd;
+  border-radius: .25rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 1rem;
+  input, textarea, select, button {
+    background-color: $background-color;
   }
-  &:active {
-    background-color: #b585ef; // replzce with a proper animation
+  [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
+    border: none;
+    border-radius: .25rem;
+    font-family: $mono-font;
+    font-size: .95rem;
+    height: 2rem;
+    line-height: 1;
+    outline: none;
+    padding: 0.5rem;
+    width: 100%;
   }
-  &:disabled {
-    background-color: $lightGrey;
-    color: $darkGrey;
-    cursor: default;
+  textarea {
+    height: auto;
+    overflow: auto;
+    resize: vertical;
   }
-}
-
-
-fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  grid-column: 1/3;
-
-  [type="submit"] {
-    color: blue;
-    flex-grow: 1;
+  select {
+    line-height: 1;
+  }
+  label {
+    color: $header-text;
+    font-weight: bold;
+    grid-column: span 2;
+    input {
+      margin-top: 1rem;
+    }
+    textarea {
+      margin: 1rem 0;
+    }
+  }
+  input {
+    margin:  0;
+  }
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    background-color: $space;
+    border: none;
+    border-radius: .25rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.125rem;
+    height: 2rem;
+    margin: 0;
+    min-width: 8rem;
+    transition: background-color .3s;
+    &:hover {
+      background-color: #7444c4; // make a variable
+    }
+    &:active {
+      background-color: #b585ef; // replzce with a proper animation
+    }
+    &:disabled {
+      background-color: $lightGrey;
+      color: $darkGrey;
+      cursor: default;
+    }
+  }
+  .wide {
+    grid-column: span 2;
+  }
+  legend {
+    color: $header-text;
+    font-size: 1.7858rem;
+    font-weight: bold;
+  }
+  fieldset {
+    border: none;
+    color: $header-text;
+    grid-column: span 5;
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    color: $header-text;
+    grid-column: span 5;
+    margin: 0;
   }
 }

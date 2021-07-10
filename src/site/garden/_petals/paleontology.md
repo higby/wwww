@@ -8,25 +8,6 @@ tag: essays
 > **Note:** This was originally written for a Speech and Debate tournament and is in an early/ draft form. Please ignore any strange tenses or references to tournaments/ competitions.
 {: .note}
 
-<form>
-  <label for="name">Name</label>
-  <input type="text" id="name" placeholder="First Name">
-  <label for="choose">Select</label>
-  <select id="choose">
-    <option disabled selected>Please select</option>
-    <option value="option-1">Option 1</option>
-    <option value="option-2">Option 2</option>
-  </select>
-  <label for="comments">Additional Comments</label>
-  <textarea id="comments"></textarea>
-  <label>
-    <input type="checkbox">
-    Remember me
-  </label>
-  <button>Button</button>
-  <button disabled>Disabled</button>
-</form>
-
 Paleontologists are the first graders of the professional world.
 
 Remember the dinosaur kids back in elementary school? Reading time, they had the dinosaur encyclopedia, lunch, dinosaur lunchbox. And at sleepovers they busted out the dinosaur pajamas, and you got to watch Land Before Time.

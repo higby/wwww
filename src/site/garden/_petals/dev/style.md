@@ -1,6 +1,5 @@
 ---
 title: "Test"
-tag: programming
 ---
 
 # HTML5 Element Test Page
@@ -24,7 +23,7 @@ You might have need of a <cite>citation</cite>, <q>short quotation</q>, <abbr>ab
 
 ## Blockquote
 
-> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam molestiae et assumenda molestias alias ut saepe doloribus, porro, deleniti neque, harum minus, commodi laudantium quod excepturi nam corrupti odit provident. <cite>- Blockquote Citation</cite>
+> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam molestiae et assumenda molestias alias ut saepe doloribus, porro, deleniti neque, harum minus, commodi laudantium quod excepturi nam corrupti odit provident. <cite>Blockquote Citation</cite>
 
 
 ## Preformatted Text
@@ -98,6 +97,8 @@ Definition Title Two
 # Forms
 
 <form>
+<legend>Legend</legend>
+<p>Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
   <label for="text">Text Input  <input id="text" type="text" placeholder="Text Input" /></label>
 
   <label for="password">Password  <input id="password" type="password" placeholder="Password" /></label>
@@ -112,21 +113,14 @@ Definition Title Two
 
     <label for="email">Email Address   <input id="email" type="email" placeholder="email@example.com" /></label>
 
-    <input type="submit" value="Disabled" disabled/>
 
-    <input type="submit" value="Submit" />
   </fieldset>
+  <input type="submit" value="Disabled" disabled/>
+
+
+  <input type="submit" value="Submit" class="wide"/>
+
 </form>
 
-## Fieldset and Legend
-
-<form>
-  <fieldset>
-    <legend>Legend</legend>
-    <label for="text">Text Input</label>
-    <input id="text" type="text" placeholder="Text Input" />
-    <input type="submit" value="Submit" />
-  </fieldset>
-</form>
 
 Made to test [Primitive](https://taniarascia.github.io/primitive/) by [Tania Rascia](https://www.taniarascia.com/)
