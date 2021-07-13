@@ -38,6 +38,14 @@ form {
       display: inline;
     }
   }
+  input, textarea, legend, p, label {
+    color: $header-text;
+    margin: 0;
+    padding: 0;
+    [readonly]:focus {
+      outline: none;
+    }
+  }
 }
 label {
   display: grid;
@@ -53,14 +61,7 @@ label {
     font-weight: normal;
   }
 }
-input, textarea, legend, p, label {
-  color: $header-text;
-  margin: 0;
-  padding: 0;
-  [readonly]:focus {
-    outline: none;
-  }
-}
+
 [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
   border: none;
   border-radius: .25rem;
