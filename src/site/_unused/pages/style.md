@@ -1,160 +1,110 @@
 ---
-title: Style Guide
-date: 2021-06-08 16:18:00 -0800
-permalink: /style.html
+title: "Test"
 ---
-## Typography
 
-### Fonts
+# HTML5 Element Test Page
 
-<p style="font-family: 'Open Sans', sans-serif"><b>Open Sans</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+Common HTML5 elements for CSS testing purposes.
 
-<p style="font-family: 'Source Code Pro', monospace"><b>Source Code Pro</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+# Formatting
 
-### Sizes
+This sentence is <b>bold</b>. If you like semantics, you might go with **strong** or *emphasized* text. If not, <i>italic</i> is still around. <small>Small</small> text is for fine print. Your copy can also be <sub>subscripted</sub> and <sup>superscripted</sup>, <ins>inserted</ins>, <del>deleted</del>, or <mark>highlighted</mark>. You would use a [hyperlink](#!) to go to a new page.
 
-<p style="font-size: 2.25rem">Lorem ipsum</p>
-<p style="font-size: 1.7858rem">Lorem ipsum</p>
-<p style="font-size: 1.4174rem">Lorem ipsum</p>
-<p style="font-size: 1.125rem">Lorem ipsum</p>
+If you like to write about there are plenty of semantic tags for you. There's the generic `code`, as well as <kbd>keyboard input</kbd>, <samp>computer output</samp>, and <var>variables</var>.
 
-> Uses The Musical Tritonic Scale
+You might have need of a <cite>citation</cite>, <q>short quotation</q>, <abbr>abbreviation</abbr>, or <dfn>definition</dfn>. It might be <time>10:00pm</time>.
 
-## Colors
+<address>
+  <p>
+    123 Fake Street<br/>
+    Springfield, USA
+  </p>
+</address>
 
-{% include image.html src="/assets/images/colors.svg" w="256" h="256" width="small" %}
+## Blockquote
 
-## Elements
+> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam molestiae et assumenda molestias alias ut saepe doloribus, porro, deleniti neque, harum minus, commodi laudantium quod excepturi nam corrupti odit provident. <cite>Blockquote Citation</cite>
 
-### Table
 
-|     Planet    | Mass (1024kg) | Gravity (m/s2) | Length of Day (hours) | Distance from Sun (106 km) |
-|---------|---------------|----------------|-----------------------|----------------------------|
-| Earth   | 5.97          | 9.8            | 24.0                  | 149.6                      |
-| Jupiter | 1898          | 23.1           | 9.9                   | 778.6                      |
-| Moon    | .073          | 1.6            | 708.7                 | .384                       |
+## Preformatted Text
 
-### Blockquote
-
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-### Lists
-
-#### Ordered List
-<ol>
-             <li>List Item 1</li>
-             <li>
-               List Item 2
-               <ol type="A">
-                 <li>List Item 1</li>
-                 <li>
-                   List Item 2
-                   <ol type="a">
-                     <li>List Item 1</li>
-                     <li>
-                       List Item 2
-                       <ol type="I">
-                         <li>List Item 1</li>
-                         <li>
-                           List Item 2
-                           <ol type="i">
-                             <li>List Item 1</li>
-                             <li>List Item 2</li>
-                             <li>List Item 3</li>
-                           </ol>
-                         </li>
-                         <li>List Item 3</li>
-                       </ol>
-                     </li>
-                     <li>List Item 3</li>
-                   </ol>
-                 </li>
-                 <li>List Item 3</li>
-               </ol>
-             </li>
-             <li>List Item 3</li>
-           </ol>
-#### Unordered List
-<ul>
-             <li>List Item 1</li>
-             <li>
-               List Item 2
-               <ul>
-                 <li>List Item 1</li>
-                 <li>
-                   List Item 2
-                   <ul>
-                     <li>List Item 1</li>
-                     <li>
-                       List Item 2
-                       <ul>
-                         <li>List Item 1</li>
-                         <li>
-                           List Item 2
-                           <ul>
-                             <li>List Item 1</li>
-                             <li>List Item 2</li>
-                             <li>List Item 3</li>
-                           </ul>
-                         </li>
-                         <li>List Item 3</li>
-                       </ul>
-                     </li>
-                     <li>List Item 3</li>
-                   </ul>
-                 </li>
-                 <li>List Item 3</li>
-               </ul>
-             </li>
-             <li>List Item 3</li>
-           </ul>
-### Code
-
-**Keyboard Input:** <kbd>Cmd</kbd>
-
-**Inline Code:** `A little bit of code`
-
-**Marked Text:** I am <mark>marked</mark>
-
-**Code Block:**
-
-```html
-<header>
-  <h1>
-    <a href="/">Branden <i class="higby">Higby</i>
-    </a>
-  </h1>
-</header>
+```python
+class Voila {
+public:
+// Voila
+static const string VOILA = "Voila";
+}
 ```
-### Horizontal Line
+
+## Horizontal Line
 
 ---
 
-## Embedded Content
+# Headings
 
-### Images
+# First Heading h1
 
-#### Wide
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea delectus cupiditate minima, magni possimus commodi, eveniet? Rem, adipisci architecto pariatur libero aliquid culpa sunt accusantium. Ipsa error aliquid et! Animi.
 
-{% include image.html src="https://shera.gay/gay.jpg" alt="Shera is Gay" w="1366" h="768" %}
+## Second Heading h2
 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea delectus cupiditate minima, magni possimus commodi, eveniet? Rem, adipisci architecto pariatur libero aliquid culpa sunt accusantium. Ipsa error aliquid et! Animi.
 
-#### Small
+### Third Heading h3
 
-{% include image.html src="https://shera.gay/gay.jpg" alt="Shera is Gay" w="1366" h="768" width="small" %}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea delectus cupiditate minima, magni possimus commodi, eveniet? Rem, adipisci architecto pariatur libero aliquid culpa sunt accusantium. Ipsa error aliquid et! Animi.
 
-## Forms
+#### Fourth Heading h4
 
-<fieldset>
-<h2>Give me a ring!</h2>
-<p>Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-<form>
-  <input type="email" name="email" placeholder="Your email...">
-  <button type="submit">Submit</button>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea delectus cupiditate minima, magni possimus commodi, eveniet? Rem, adipisci architecto pariatur libero aliquid culpa sunt accusantium. Ipsa error aliquid et! Animi.
+
+##### Fifth Heading h5
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea delectus cupiditate minima, magni possimus commodi, eveniet? Rem, adipisci architecto pariatur libero aliquid culpa sunt accusantium. Ipsa error aliquid et! Animi.
+
+# Lists
+
+## Unordered list
+
+- List item one
+  - Nested list item
+- List item two
+- List item three
+
+## Ordered list
+
+1. List item one
+    1. Nested list item
+2. List item two
+3. List item three
+
+## Definition List
+
+Definition Title One
+: First definition description
+
+Definition Title Two
+: Second definition description
+
+# Tables
+
+|     Head 1    |     Head 2    |     Head 3    |
+|:-------------:|:-------------:|:-------------:|
+| Description 1 | Description 2 | Description 3 |
+| Description 1 | Description 2 | Description 3 |
+| Description 1 | Description 2 | Description 3 |
+
+# Forms
+
+<form name="dev2" data-netlify="true" action="/shera">
+  <legend>Test Form</legend>
+  <p>This is really just for me, but I decided to leave it up because, eh, why not.</p>
+  <label for="name">Your Name <input name="Name" id="name" type="text" placeholder="Branden" /></label>
+  <label for="animal">Favorite Animal <input name="Animal" id="animal" type="text" placeholder="Puppy" /></label>
+  <label for="color">Favorite Color <input name="Color" id="color" type="text" placeholder="#965ee5" /></label>
+  <label for="url">Do you have your own website? <input name="Site" id="url" type="url" placeholder="https://skeletor.gay" /></label>
+  <input type="submit" value="Disabled" disabled />
+  <input type="submit" value="Submit" class="wide" />
 </form>
-</fieldset>
 
-### Buttons
-
-<button type="button">Button</button>
-<button disabled>Disabled</button>
+Made to test [Primitive](https://taniarascia.github.io/primitive/) by [Tania Rascia](https://www.taniarascia.com/)

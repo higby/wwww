@@ -4,75 +4,85 @@ Form Styles
 --------------------------------
 */
 fieldset {
-  grid-column: span 4;
   grid-gap: 1rem;
+  border: none;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border: none;
+  grid-template-columns: 1fr;
   padding: 0;
-  padding: 0;
-  border: none;
-  legend, p {
-    grid-column: span 2;
-    grid-row: span 2;
+  legend, fieldset, p {
+    grid-column: span 1;
   }
   legend {
     font-size: 1.4174rem;
   }
-  div {
-    grid-column: span 1;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-  }
 }
 legend {
   float: left;
-  width: 100%;
-  font-weight: bold;
   font-size: 1.7858rem;
+  font-weight: bold;
+  width: 100%;
 }
-legend, p {
+legend, fieldset, p {
   grid-column: span 4;
 }
 form {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
-  padding: 1rem;
-  margin: 1rem 0;
   background-color: $space-100;
   border-radius: .25rem;
-  .wide {
-    grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 1rem 0;
+  padding: 1rem;
+  div {
+    label {
+      display: inline;
+    }
   }
 }
 label {
+  display: grid;
   font-weight: bold;
+
+  grid-column: span 2;
+  grid-template-columns: 1fr;
+  input, textarea {
+    align-self: end;
+    width: 100%;
+  }
+  p {
+    font-weight: normal;
+  }
 }
 input, textarea, legend, p, label {
-  padding: 0;
-  margin: 0;
   color: $header-text;
+  margin: 0;
+  padding: 0;
+  [readonly]:focus {
+    outline: none;
+  }
 }
 [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
   border: none;
   border-radius: .25rem;
   color: $primary-text;
+  display: block;
   font-family: $mono-font;
   font-size: .95rem;
   height: 2rem;
-  display: block;
   line-height: 1;
   outline: none;
   padding: 0.5rem;
   &:focus {
     outline: 0.125rem solid $space;
   }
+  &:disabled {
+    background-color: $lightGrey;
+    color: $darkGrey;
+    cursor: default;
+  }
 }
 textarea {
-  height: auto;
+  min-height: 6rem;
   resize: vertical;
 }
 button,
@@ -85,12 +95,12 @@ input[type="reset"] {
   border-radius: .25rem;
   color: #fff;
   cursor: pointer;
-  font-weight: bold;
-
+  display: block;
   font-size: 1.125rem;
+  font-weight: bold;
   height: 2rem;
   margin: 0;
-  display: block;
+  min-width: 8rem;
   transition: background-color .3s;
   &:hover {
     background-color: $space-600; // make a variable
@@ -105,19 +115,18 @@ input[type="reset"] {
   }
 }
 @media screen and (max-width: 700px) {
-  form div {
-    grid-column: span 2;
+  form {
+    border-radius: 0;
+    margin: 1rem -2rem;
+    padding: 2rem;
+  }
+  label {
+    grid-column: span 4;
   }
   button,
   input[type="button"],
   input[type="submit"],
   input[type="reset"] {
     grid-column: span 2;
-  }
-  .wide,
-  .wide[type="button"],
-  .wide[type="submit"],
-  .wide[type="reset"] {
-    grid-column: span 4;
   }
 }
