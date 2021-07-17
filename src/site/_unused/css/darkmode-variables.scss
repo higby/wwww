@@ -1,0 +1,51 @@
+// Space Gradient
+
+$space-100: #F1DFFD;
+$space-200: #E1C0FC;
+$space-300: #CB9FF7;
+$space-400: #B585EF;
+$space-500: #965EE5;
+$space-600: #7444C4;
+$space-700: #562FA4;
+$space-800: #3B1D84;
+$space-900: #28126D;
+
+// Reusable Colors
+
+$space: $space-500;
+$highlight: #965ee580;
+$mark: #ffe599;
+
+// Light Mode
+
+$background-color: #fafafa;
+$lightGrey: #eeeeee;
+$mediumGrey: #dedede;
+$darkGrey: #bdbdbd;
+
+$pgp-text: rgba(0,0,0,.3);
+$note-text: rgba(0,0,0,.65);
+$quote-text: rgba(0,0,0,.7);
+$code-text: rgba(0,0,0,.7);
+$primary-text: rgba(0,0,0,.8);
+$header-text: rgba(0,0,0,.9);
+
+// Dark Mode
+/*
+$background-color: #111010;
+$lightGrey: #212121;
+$mediumGrey: #616161;
+$darkGrey: #424242;
+
+$pgp-text: rgba(256,256,256,.3);
+$note-text: rgba(256,256,256,.65);
+$quote-text: rgba(256,256,256,.7);
+$code-text: rgba(256,256,256,.7);
+$primary-text: rgba(256,256,256,.8);
+$header-text: rgba(256,256,256,.9);
+*/
+// Fonts
+
+$primary-font: "Open Sans", sans-serif;
+$primary-font1: "IBM Plex Mono", monospace;
+$mono-font: "Source Code Pro", monospace;

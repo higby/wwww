@@ -1,5 +1,5 @@
-<figure {% if include.width %}{% unless include.width != "small" %}class="small"{% else %}style="width:{{ include.width }};"{% endunless %}{% endif %}>
+<figure>
   {% if include.href %}<a href="{{ include.href }}">{% endif %}
-    <img {% if include.w %}width="{{ include.w }}"{% endif %} {% if include.h %}height="{{ include.h }}"{% endif %} src="{{ include.src }}" alt="{{ include.alt | default: "Image" }}">
+    <img src="{{ include.src }}" alt="{{ include.alt | default: "Image" }}">
   {% if include.href %}</a>{% endif %}
 </figure>

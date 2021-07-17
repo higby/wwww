@@ -3,7 +3,7 @@
 }
 ::selection {
   background-color: $highlight;
-  color: #000;
+  color: #fff;
 }
 html {
   box-sizing: border-box;
@@ -90,7 +90,7 @@ nav {
       background-color: inherit;
     }
     time {
-      color: $note-text;
+      color: $quote-text;
       &:after {
         content: "//";
         margin: 0 .45rem;
@@ -108,10 +108,10 @@ footer {
   }
   code {
     background-color: inherit;
-    font-size: 1.25rem;
+    font-size: 1.375rem;
     padding: 0;
     a {
-      color: $darkGrey;
+      color: $pgp-text;
     }
   }
 }
@@ -119,7 +119,7 @@ header, footer, p, pre, blockquote, hr, dl {
   margin: 1rem 0;
 }
 ol, ul {
-  margin: 0 0 0 1.125rem;
+  margin: 0 0 0 1.25rem;
   padding: 0;
   li {
     margin: 1rem 0;
@@ -236,7 +236,6 @@ table {
   width: 100%;
   thead {
     border-bottom: .125rem $darkGrey solid;
-    color: $header-text;
   }
   tfoot {
     border-top: .125rem $darkGrey solid;
@@ -247,36 +246,18 @@ table {
       background-color: $lightGrey;
     }
   }
+  th {
+    color: $header-text;
+  }
   td {
     padding: .125rem;
     text-align: center;
   }
 }
-fieldset {
-  grid-gap: 1rem;
-  border: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 0;
-  legend, fieldset, p {
-    grid-column: span 1;
-  }
-  legend {
-    font-size: 1.4174rem;
-  }
-}
-legend {
-  float: left;
-  font-size: 1.7858rem;
-  font-weight: bold;
-  width: 100%;
-}
-legend, fieldset, p {
-  grid-column: span 4;
-}
+
 form {
   grid-gap: 1rem;
-  background-color: $space-100;
+  background-color: $space-300;
   border-radius: .25rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -295,45 +276,68 @@ form {
       outline: none;
     }
   }
-}
-label {
-  display: grid;
-  font-weight: bold;
-
-  grid-column: span 2;
-  grid-template-columns: 1fr;
-  input, textarea {
-    align-self: end;
+  fieldset {
+    grid-gap: 1rem;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+    legend, fieldset, p {
+      grid-column: span 1;
+    }
+    legend {
+      font-size: 1.4174rem;
+    }
+  }
+  legend {
+    float: left;
+    font-size: 1.7858rem;
+    font-weight: bold;
     width: 100%;
   }
-  p {
-    font-weight: normal;
+  legend, fieldset, p {
+    grid-column: span 4;
+  }
+  [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
+    border: none;
+    border-radius: .25rem;
+    color: $primary-text;
+    display: block;
+    font-family: $mono-font;
+    font-size: .95rem;
+    height: 2rem;
+    line-height: 1;
+    outline: none;
+    padding: 0.5rem;
+    &:focus {
+      outline: 0.125rem solid $space;
+    }
+    &:disabled {
+      background-color: $lightGrey;
+      color: $pgp-text;
+      cursor: default;
+    }
+  }
+  textarea {
+    min-height: 6rem;
+    resize: vertical;
+  }
+  label {
+    display: grid;
+    font-weight: bold;
+
+    grid-column: span 2;
+    grid-template-columns: 1fr;
+    input, textarea {
+      align-self: end;
+      width: 100%;
+    }
+    p {
+      font-weight: normal;
+    }
   }
 }
-[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
-  border: none;
-  border-radius: .25rem;
-  color: $primary-text;
-  display: block;
-  font-family: $mono-font;
-  font-size: .95rem;
-  height: 2rem;
-  line-height: 1;
-  outline: none;
-  padding: 0.5rem;
-  &:focus {
-    outline: 0.125rem solid $space;
-  }
-  &:disabled {
-    background-color: $lightGrey;
-    color: $darkGrey;
-    cursor: default;
-  }
-}
-textarea {
-  min-height: 6rem;
-  resize: vertical;
-}
+
 button,
 input[type="button"],
 input[type="submit"],
@@ -359,7 +363,7 @@ input[type="reset"] {
   }
   &:disabled {
     background-color: $lightGrey;
-    color: $darkGrey;
+    color: $pgp-text;
     cursor: default;
   }
 }

@@ -119,7 +119,7 @@ function fancyName() {
     .add({
       color: [
         {
-          value: "#323232",
+          value: "#f3f3f3",
         },
         {
           value: "#965ee5",
@@ -130,7 +130,7 @@ function fancyName() {
       targets: "#branden",
       color: [
         {
-          value: "#323232",
+          value: "#f3f3f3",
         },
       ],
       complete: function () {

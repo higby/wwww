@@ -7,8 +7,8 @@
     {% if page.setup.noindex %}
     <meta name="robots" content="noindex"/>
     {% endif %}
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <link rel="author" href="/humans.txt"/>
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <link rel="icon" type="image/ico" href="/assets/favicon.ico"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
     {% else %}
     <link rel="stylesheet" href="/assets/css/main.css"/>
     {% endif %}
- <noscript><link rel="stylesheet" href="/assets/css/noscript.css"/></noscript>
+    <noscript><link rel="stylesheet" href="/assets/css/noscript.css"/></noscript>
     <script src="/assets/js/core.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
     <title>{{ page.title }}</title>
