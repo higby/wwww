@@ -94,6 +94,9 @@ nav {
         color: $velvet;
       }
     }
+    svg {
+      fill: $primary-text;
+    }
   }
 }
 article > p:first-of-type:first-letter {

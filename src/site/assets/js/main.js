@@ -97,6 +97,8 @@ $("header h1 a").ready(function() {
 })
 function fancyName() {
   var headerClass = $("header h1 a").attr("class");
+  var headerColor = $("header h1 a").css("color");
+  console.log(headerColor);
   if ($.type( headerClass ) === "undefined") {
     $("header h1 a").attr("class", "animating");
   } else {
@@ -119,7 +121,7 @@ function fancyName() {
     .add({
       color: [
         {
-          value: "#f3f3f3",
+          value: headerColor,
         },
         {
           value: "#965ee5",
@@ -130,7 +132,7 @@ function fancyName() {
       targets: "#branden",
       color: [
         {
-          value: "#f3f3f3",
+          value: headerColor,
         },
       ],
       complete: function () {

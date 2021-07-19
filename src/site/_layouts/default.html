@@ -9,15 +9,18 @@
     {% endif %}
     <link rel="author" href="/humans.txt"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    <link rel="icon" type="image/ico" href="/assets/favicon.ico"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="/favicon.ico"/>
     {% if page.setup.style %}
     <link rel="stylesheet" href="/assets/css/{{page.setup.style}}.css"/>
     {% else %}
     <link rel="stylesheet" href="/assets/css/main.css"/>
     {% endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    {% comment %}
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    {% endcomment %}
     <noscript><link rel="stylesheet" href="/assets/css/noscript.css"/></noscript>
     <script src="/assets/js/core.js" defer></script>
     <script src="/assets/js/main.js" defer></script>

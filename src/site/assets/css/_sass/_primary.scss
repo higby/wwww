@@ -68,6 +68,7 @@ nav {
       }
     }
     svg {
+      fill: #f3f3f3;
       vertical-align: text-top;
     }
   }
@@ -108,7 +109,7 @@ footer {
   }
   code {
     background-color: inherit;
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     padding: 0;
     a {
       color: $pgp-text;
