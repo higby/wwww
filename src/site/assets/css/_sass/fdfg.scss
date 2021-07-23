@@ -1,0 +1,247 @@
+
+::selection {
+  background-color: $highlight;
+  color: #fff;
+}
+
+nav {
+  ul, ol {
+    border-left: .25rem $space solid;
+    list-style: none;
+    margin: 0;
+    padding: 0 .5rem 0 .5rem;
+    ul, ol {
+      border-left: .25rem solid $mediumGrey;
+      display: none;
+      margin: 0 10px;
+      padding-left: calc(.5rem + 2px);
+    }
+    li {
+      margin: 0;
+    }
+    a {
+      color: $header-text;
+      &:hover {
+        color: $space;
+      }
+    }
+    svg {
+      fill: #f3f3f3;
+      vertical-align: text-top;
+    }
+  }
+  p {
+    color: $header-text;
+    margin: .5rem 0;
+  }
+  table {
+    th, td {
+      border: none;
+      padding: .25rem 0;
+      text-align: left;
+      vertical-align: text-top;
+    }
+    td:first-of-type {
+      text-align: right;
+      white-space: nowrap;
+    }
+    tr:nth-child(even) {
+      background-color: inherit;
+    }
+    time {
+      color: $quote-text;
+      &:after {
+        content: "//";
+        margin: 0 .45rem;
+      }
+    }
+  }
+}
+footer {
+  font-size: 1.25rem;
+  a {
+    color: $header-text;
+    &:hover {
+      color: $space;
+    }
+  }
+  code {
+    background-color: inherit;
+    font-size: 1.25rem;
+    padding: 0;
+    a {
+      color: $pgp-text;
+    }
+  }
+}
+ol, ul {
+  li {
+    margin: 1rem 0;
+  }
+}
+
+
+.footnotes {
+  border-top: .125rem $darkGrey solid;
+  color: $note-text;
+  font-size: 1rem;
+}
+.footnote {
+  &:before {
+    content: "{";
+  }
+  &:after {
+    content: "}";
+  }
+}
+
+
+
+
+
+form {
+  grid-gap: 1rem;
+  background-color: $space-300;
+  border-radius: .25rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 1rem 0;
+  padding: 1rem;
+  div {
+    label {
+      display: inline;
+    }
+  }
+  input, textarea, legend, p, label {
+    color: $header-text;
+    margin: 0;
+    padding: 0;
+    [readonly]:focus {
+      outline: none;
+    }
+  }
+  fieldset {
+    grid-gap: 1rem;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+    legend, fieldset, p {
+      grid-column: span 1;
+    }
+    legend {
+      font-size: 1.4174rem;
+    }
+  }
+  legend {
+    float: left;
+    font-size: 1.7858rem;
+    font-weight: bold;
+    width: 100%;
+  }
+  legend, fieldset, p {
+    grid-column: span 4;
+  }
+  [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
+    border: none;
+    border-radius: .25rem;
+    color: $primary-text;
+    display: block;
+    font-family: $mono-font;
+    font-size: .95rem;
+    height: 2rem;
+    line-height: 1;
+    outline: none;
+    padding: 0.5rem;
+    &:focus {
+      outline: 0.125rem solid $space;
+    }
+    &:disabled {
+      background-color: $lightGrey;
+      color: $pgp-text;
+      cursor: default;
+    }
+  }
+  textarea {
+    min-height: 6rem;
+    resize: vertical;
+  }
+  label {
+    display: grid;
+    font-weight: bold;
+
+    grid-column: span 2;
+    grid-template-columns: 1fr;
+    input, textarea {
+      align-self: end;
+      width: 100%;
+    }
+    p {
+      font-weight: normal;
+    }
+  }
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  -webkit-appearance: none;
+  background-color: $space;
+  border: none;
+  border-radius: .25rem;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 1.125rem;
+  font-weight: bold;
+  height: 2rem;
+  margin: 0;
+  min-width: 8rem;
+  transition: background-color .3s;
+  &:hover {
+    background-color: $space-600; // make a variable
+  }
+  &:active {
+    background-color: $space-300; // replzce with a proper animation
+  }
+  &:disabled {
+    background-color: $lightGrey;
+    color: $pgp-text;
+    cursor: default;
+  }
+}
+details {
+  summary {
+    font-weight: bold;
+  }
+  p {
+    border-left: .25rem solid $space;
+    color: $quote-text;
+    padding: 0 0 0 1rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  form {
+    border-radius: 0;
+    margin: 1rem -2rem;
+    padding: 2rem;
+  }
+  label {
+    grid-column: span 4;
+  }
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    grid-column: span 2;
+  }
+}
+
+@import "syntax";
+@import "specific";
+@import "print";

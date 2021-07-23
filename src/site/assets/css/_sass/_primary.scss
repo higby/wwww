@@ -1,26 +1,54 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Universal
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Apply styling to all elements (including their `::before` and `::after`
+pseudo-elements). One common use of this selector is to apply a custom
+`box-sizing`, e.g. as explained here: https://css-tricks.com/?page_id=175473 */
+*:where(:not(iframe, canvas, img, svg, video, input[type="checkbox"], input[type="radio"]):not(svg *)){
+    all: unset;
+    display: revert;
+}
 *, *::before, *::after {
   box-sizing: inherit;
 }
-::selection {
-  background-color: $highlight;
-  color: #fff;
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Root
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+:root {}
+.higby {
+  color: $space;
+  font-style: normal;
 }
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 body {
+  max-width: 650px;
+  margin: 0 auto;
+  font-family: $primary-font;
   background-color: $background-color;
   color: $primary-text;
-  font-family: $primary-font;
   font-size: 1.125rem;
+  padding: 0 25px;
+  outline: 1px solid blue;
   line-height: 1.5;
-  margin: 1rem auto;
-  max-width: 600px;
 }
-h1, h2, h3, h4, h5, h6, header {
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Content sectioning
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+h1, h2, h3, h4, h5, h6 {
   color: $header-text;
+  font-weight: bold;
+  margin: 1rem 0;
 }
+
 h1 {
   font-size: 2.25rem;
 }
@@ -30,122 +58,113 @@ h2 {
 h3 {
   font-size: 1.4174rem;
 }
+h4 {
+  font-size: 1.125rem;
+}
+h5 {
+  font-size: .85rem;
+}
+h6 {
+  font-size: .70rem;
+}
+
 header {
   text-align: center;
-  a {
-    color: $header-text;
-    &:hover {
-      color: $space;
-    }
-    .higby {
-      color: $space;
-      font-style: normal;
-    }
-  }
   h1 a:hover {
     text-decoration: none;
   }
 }
-nav {
-  ul, ol {
-    border-left: .25rem $space solid;
-    list-style: none;
-    margin: 0;
-    padding: 0 .5rem 0 .5rem;
-    ul, ol {
-      border-left: .25rem solid $mediumGrey;
-      display: none;
-      margin: 0 10px;
-      padding-left: calc(.5rem + 2px);
-    }
-    li {
-      margin: 0;
-    }
-    a {
-      color: $header-text;
-      &:hover {
-        color: $space;
-      }
-    }
-    svg {
-      fill: #f3f3f3;
-      vertical-align: text-top;
-    }
-  }
-  p {
-    color: $header-text;
-    margin: .5rem 0;
-  }
-  table {
-    th, td {
-      border: none;
-      padding: .25rem 0;
-      text-align: left;
-      vertical-align: text-top;
-    }
-    td:first-of-type {
-      text-align: right;
-      white-space: nowrap;
-    }
-    tr:nth-child(even) {
-      background-color: inherit;
-    }
-    time {
-      color: $quote-text;
-      &:after {
-        content: "//";
-        margin: 0 .45rem;
-      }
-    }
-  }
-}
-footer {
-  font-size: 1.25rem;
+
+header, nav, footer {
   a {
     color: $header-text;
     &:hover {
       color: $space;
     }
   }
+}
+nav {
+  table {
+    a {
+      color: $space;
+    }
+  }
+}
+nav ul, nav ol {}
+nav li {}
+nav a {}
+nav a:visited {}
+nav a:hover {}
+nav a:active {}
+
+main {}
+
+article {}
+
+section {}
+
+aside {}
+
+footer {
+  font-size: 1.25rem;
   code {
     background-color: inherit;
-    font-size: 1.25rem;
     padding: 0;
+    font-size: 1.25rem;
+
     a {
       color: $pgp-text;
     }
   }
 }
-header, footer, p, pre, blockquote, hr, dl {
-  margin: 1rem 0;
+
+address {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Text block content
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Overall styling, e.g. vertical spacing */
+p, ol, ul, pre, blockquote, figure, hr, dl, table {
+  margin: 1rem auto;
+  outline: 1px solid red;
 }
+
+p {}
+
 ol, ul {
-  margin: 0 0 0 1.25rem;
-  padding: 0;
-  li {
-    margin: 1rem 0;
+  margin-left: 1.5rem;
+  ol ul {
+    margin-left: 0;
   }
 }
+ol {}
+ul {}
+li {}
+ol ol, ol ul, ul ul, ul ol {}
+li li {}
+
 pre {
-  background-color: $lightGrey;
-  border-radius: .25rem;
-  color: $code-text;
-  font-family: $mono-font;
-  font-size: .95rem;
-  line-height: 1.5;
-  overflow: auto;
-  padding: 1rem 1.5rem;
-  code {
-    border-radius: 0;
-    padding: 0;
-  }
+    font-family: $mono-font;
+    white-space: pre;
+    background-color: $lightGrey;
+    padding: 1rem 1.5rem;
+    overflow: auto;
+    border-radius: .25rem;
+    color: $code-text;
+    font-size: .95rem;
+    code {
+      border-radius: 0;
+    }
 }
+pre code {}
+pre samp {}
+
 blockquote {
   border-left: .25rem solid $darkGrey;
   color: $quote-text;
-  font-size: 1.125rem;
-  font-style: normal;
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 1.5rem;
 }
 .note {
   border: none;
@@ -158,78 +177,130 @@ blockquote {
   margin-left: .65rem;
 }
 figure {
-  margin: 1rem auto;
-  padding: 0;
-  width: 100%;
   img {
     background-image: linear-gradient(65deg, $space 25%, $lightGrey 25%, $lightGrey 50%, $space 50%, $space 75%, $lightGrey 75%, $lightGrey 100%);
     background-size: 35.31px 75.72px;
   }
 }
-.small {
-  width: 65%;
-}
+figcaption {}
+
 hr {
+  text-align: center;
   border: 0;
-  border-bottom: .125rem $darkGrey solid;
+  &:before { content: '-----' }
 }
-.footnotes {
-  border-top: .125rem $darkGrey solid;
-  color: $note-text;
-  font-size: 1rem;
-}
-.footnote {
-  &:before {
-    content: "{";
-  }
-  &:after {
-    content: "}";
-  }
-}
+
+dl {}
+dt {}
+dd {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Inline text semantics
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 a {
   color: $space;
+  cursor: pointer;
   text-decoration: none;
   transition: color .5s;
   &:hover {
     text-decoration: underline;
   }
 }
+a:active {}
+
+strong, b {
+  font-weight: bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+q {}
 cite {
   display: block;
-  font-style: normal;
   margin: 1rem 0 0 0;
+
   &:before {
     content: "— ";
     font-size: 1rem;
   }
 }
+
+s {}
+
 mark {
   background-color: $mark;
+
 }
+
+/* If you specify a font size, consider using the `em` unit so that it works
+universally, e.g. for both `h1 small` and `p small` */
+small {}
+sub {}
+sup {}
+
 code {
   background-color: $lightGrey;
-  border-radius: .25rem;
   color: $code-text;
   font-family: $mono-font;
+  border-radius: .25rem;
   font-size: .95rem;
   padding: .2rem .4rem;
 }
+
 kbd {
   border: 1px solid $mediumGrey;
-  border-radius: .25rem;
   box-shadow: inset 0 -1px 0 $mediumGrey;
   color: $code-text;
   font-family: $mono-font;
   font-size: .95rem;
   padding: .125rem .25rem;
+  border-radius: .25rem;
   vertical-align: middle;
 }
+kbd kbd {}
+samp {}
+
+u {}
+
+data {}
+time {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Demarcating edits
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+del {}
+ins {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Embedded content
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 img, video, canvas {
   border-radius: .25rem;
-  display: block;
-  height: auto;
   width: 100%;
+  height: auto;
+  display: block;
 }
+svg {}
+video {}
+canvas {}
+audio {}
+object {}
+
+noscript {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Table content
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 table {
   border-collapse: collapse;
   caption-side: bottom;
@@ -249,156 +320,18 @@ table {
   }
   th {
     color: $header-text;
+    font-weight: bold;
   }
   td {
     padding: .125rem;
     text-align: center;
   }
 }
-
-form {
-  grid-gap: 1rem;
-  background-color: $space-300;
-  border-radius: .25rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 1rem 0;
-  padding: 1rem;
-  div {
-    label {
-      display: inline;
-    }
-  }
-  input, textarea, legend, p, label {
-    color: $header-text;
-    margin: 0;
-    padding: 0;
-    [readonly]:focus {
-      outline: none;
-    }
-  }
-  fieldset {
-    grid-gap: 1rem;
-    border: none;
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 0;
-    legend, fieldset, p {
-      grid-column: span 1;
-    }
-    legend {
-      font-size: 1.4174rem;
-    }
-  }
-  legend {
-    float: left;
-    font-size: 1.7858rem;
-    font-weight: bold;
-    width: 100%;
-  }
-  legend, fieldset, p {
-    grid-column: span 4;
-  }
-  [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
-    border: none;
-    border-radius: .25rem;
-    color: $primary-text;
-    display: block;
-    font-family: $mono-font;
-    font-size: .95rem;
-    height: 2rem;
-    line-height: 1;
-    outline: none;
-    padding: 0.5rem;
-    &:focus {
-      outline: 0.125rem solid $space;
-    }
-    &:disabled {
-      background-color: $lightGrey;
-      color: $pgp-text;
-      cursor: default;
-    }
-  }
-  textarea {
-    min-height: 6rem;
-    resize: vertical;
-  }
-  label {
-    display: grid;
-    font-weight: bold;
-
-    grid-column: span 2;
-    grid-template-columns: 1fr;
-    input, textarea {
-      align-self: end;
-      width: 100%;
-    }
-    p {
-      font-weight: normal;
-    }
-  }
-}
-
-button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
-  -webkit-appearance: none;
-  background-color: $space;
-  border: none;
-  border-radius: .25rem;
-  color: #fff;
-  cursor: pointer;
-  display: block;
-  font-size: 1.125rem;
-  font-weight: bold;
-  height: 2rem;
-  margin: 0;
-  min-width: 8rem;
-  transition: background-color .3s;
-  &:hover {
-    background-color: $space-600; // make a variable
-  }
-  &:active {
-    background-color: $space-300; // replzce with a proper animation
-  }
-  &:disabled {
-    background-color: $lightGrey;
-    color: $pgp-text;
-    cursor: default;
-  }
-}
-details {
-  summary {
-    font-weight: bold;
-  }
-  p {
-    border-left: .25rem solid $space;
-    color: $quote-text;
-    padding: 0 0 0 1rem;
-  }
-}
-@media screen and (max-width: 700px) {
-  body {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-  form {
-    border-radius: 0;
-    margin: 1rem -2rem;
-    padding: 2rem;
-  }
-  label {
-    grid-column: span 4;
-  }
-  button,
-  input[type="button"],
-  input[type="submit"],
-  input[type="reset"] {
-    grid-column: span 2;
-  }
-}
-
-@import "syntax";
-@import "specific";
-@import "print";
+caption {}
+col:first-child {}
+thead {}
+tbody {}
+tfoot {}
+tr {}
+th {}
+td {}
