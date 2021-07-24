@@ -29,7 +29,7 @@ Favorite TV Shows:
 - Gravity Falls
 - Adventure Time
 
-Favorite Number: <i class="65">65</i>
+Favorite Number: <i class="higby">65</i>
 
 ## Thanks
 
