@@ -1,0 +1,32 @@
+.box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sprites {
+  background-color: rgb(32, 34, 36);
+  display: grid;
+  border-radius: 0.25rem;
+  picture {
+    width: 85%;
+    height: auto;
+    margin: 1rem 0;
+    justify-self: center;
+    &:not(:last-of-type) {
+      display: block;
+      justify-self: start;
+      left: 0.25rem;
+      margin: 0 0 -2rem 0;
+      position: relative;
+      top: 0.25rem;
+      width: 32px;
+      z-index: 1;
+      background: none;
+    }
+  }
+}

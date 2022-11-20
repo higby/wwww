@@ -1,9 +1,7 @@
 ---
-title: "The Definition of OCD"
-permalink: "/ocd/"
-date: 2020-04-22 00:05:00
+title: "Definition of OCD"
 description: "A poem written regarding the struggles of OCD."
-tags: poem
+date: 2020-04-22
 ---
 
 **obsessive-compulsive disorder** _noun._

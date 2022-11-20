@@ -1,0 +1,9 @@
+---
+layout: "base.njk"
+---
+{% include 'site-header.njk' %}
+<main>
+  {% include 'page-header.njk' %}
+  <article id="page-content">{{ content | safe}}</article>
+</main>
+{% include 'site-footer.njk' %}

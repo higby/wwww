@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  font-display: swap;
+  font-feature-settings: "calt", "ss01", "zero";
+  src: local('Inter'), url('/Inter.var.woff2') format('woff2');
+}
+
+@font-face{
+  font-family: 'Source Code Pro';
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: local('Source Code Pro'), url('/SourceCodePro.woff2') format('woff2');
+
+}

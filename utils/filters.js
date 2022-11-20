@@ -1,25 +1,6 @@
-const toc = require("@higby/eleventy-plugin-nesting-toc");
-const moment = require("moment-timezone");
+const dayjs = require('dayjs')
 
-module.exports = function (config) {
-  config.addFilter("dateCommon", (date) => {
-    const utc = date.toUTCString();
-    return moment.utc(utc).format("MMM DD, YYYY");
-  });
-
-  // UTC
-  config.addFilter("dateTechnical", (date) => {
-    if (date == "now") {
-      date = Date.now();
-    }
-    return moment(date).toString();
-  });
-
-  config.addPlugin(toc, {
-    wrapper: "details",
-    wrapperClass: "",
-    headingText: "Table of Contents",
-    headingTag: "summary",
-    headingPlacement: "inside",
-  });
-};
+module.exports = eleventyConfig => {
+  eleventyConfig.addFilter('common', date => dayjs(date).format('YYYY-MM-DD'))
+  eleventyConfig.addFilter('formal', date => dayjs(date).format('DD MMM YYYY'))
+}

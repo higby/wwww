@@ -1,0 +1,21 @@
+<footer>
+  <nav>
+    <ul>
+      <li>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </li>
+      <li>
+        <a href="https://keys.openpgp.org/search?q={{ site.pgp | replace(" ", "") }}">{{ site.pgp }}</a>
+      </li>
+      <li>
+        <a href="https://github.com/{{ site.github }}">github</a>
+      </li>
+    </ul>
+    <ul>
+      {% for page in collections.footerPages %}
+        <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+  {% include 'higby.svg' %}
+</footer>

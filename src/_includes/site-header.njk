@@ -1,0 +1,9 @@
+<header id="site-header">
+  <h1><a href='/'>higby</a></h1>
+  <nav>
+    {% for bookmark in collections.headerPages %}
+        <a href='{{ bookmark.url }}' {% if page.url == bookmark.url %}class="active"{% endif %}>{{ bookmark.data.title }}</a>
+      {% if loop.last != true %}<span>//</span>{% endif %}
+    {% endfor %}
+  </nav>
+</header>
