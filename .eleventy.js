@@ -1,10 +1,10 @@
-const collections = require('./utils/collections')
-const filters = require('./utils/filters')
-const images = require('./utils/images')
-const markdown = require('./utils/markdown')
-const sass = require('./utils/sass')
-const shortcodes = require('./utils/shortcodes')
-const transforms = require('./utils/transforms')
+const collections = require('./plugins/collections')
+const filters = require('./plugins/filters')
+const images = require('./plugins/images')
+const markdown = require('./plugins/markdown')
+const sass = require('./plugins/sass')
+const shortcodes = require('./plugins/shortcodes')
+const transforms = require('./plugins/transforms')
 
 module.exports = eleventyConfig => {
   eleventyConfig.setQuietMode(true)
