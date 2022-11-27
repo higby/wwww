@@ -11,4 +11,17 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('footerPages', collectionApi =>
     sortByTitle(filterByValue(collectionApi.getAll(), 'displayInFooter'))
   )
+
+  // wow Branden why do you have this?
+  // it's so that I can have the garden tag not include `/index`
+  // but not remove it from `collections.all`
+  eleventyConfig.addCollection('garden', collectionApi =>
+    collectionApi.getAll().filter(page => {
+      console.log(page.data.tags)
+      return (
+        !('ignoreCollections' in page.data) &&
+        page.data.tags?.includes('garden')
+      )
+    })
+  )
 }

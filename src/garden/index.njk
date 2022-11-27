@@ -1,18 +1,17 @@
 ---
 permalink: "/garden/"
 displayInHeader: true
+ignoreCollections: true
 ---
 
 <ul>
   {% for plant in collections.garden | reverse %}
-    {% if plant.inputPath != page.inputPath %}
-      <li>
-        <a href='{{ plant.url }}'>
-          <span>{{ plant.data.title }}</span>
-          <br>
-          <time>{{ plant.date | formal }}</time>
-        </a>
-      </li>
-    {% endif %}
+    <li>
+      <a href='{{ plant.url }}'>
+        <span>{{ plant.data.title }}</span>
+        <br>
+        <time>{{ plant.date | formal }}</time>
+      </a>
+    </li>
   {% endfor %}
 </ul>
