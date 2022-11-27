@@ -6,6 +6,8 @@ const sass = require('./plugins/sass')
 const shortcodes = require('./plugins/shortcodes')
 const transforms = require('./plugins/transforms')
 
+const pluginRss = require('@11ty/eleventy-plugin-rss')
+
 module.exports = eleventyConfig => {
   eleventyConfig.setQuietMode(true)
 
@@ -19,6 +21,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(sass)
   eleventyConfig.addPlugin(shortcodes)
   eleventyConfig.addPlugin(transforms)
+
+  eleventyConfig.addPlugin(pluginRss)
 
   eleventyConfig.setLibrary('md', markdown)
 
