@@ -31,4 +31,7 @@ main ul {
     color: $text;
     display: block;
   }
+  @media (max-width: $media-query) {
+    grid-template-columns: 1fr;
+  }
 }

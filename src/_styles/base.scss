@@ -22,6 +22,9 @@ body {
   font-family: "Inter";
   line-height: 1.5;
   letter-spacing: 0.025em;
+  @media (max-width: $media-query) {
+    margin: 1rem;
+  }
 }
 
 body > *:not(#site-header) {
@@ -80,6 +83,9 @@ h3 {
   }
   .active {
     color: $space
+  }
+  @media (max-width: $media-query) {
+    padding: 0 0 2rem;
   }
 }
 

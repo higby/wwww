@@ -24,4 +24,7 @@ main ul {
       font-size: 0.875em;
     }
   }
+  @media (max-width: $media-query) {
+    grid-template-columns: 1fr;
+  }
 }
