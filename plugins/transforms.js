@@ -1,5 +1,10 @@
+const autoprefixer = require('autoprefixer')
 const cheerio = require('cheerio')
+const duplicatecss = require('postcss-combine-duplicated-selectors')
+const duplicatemediaquery = require('postcss-combine-media-query')
 const minify = require('html-minifier').minify
+const postcss = require('postcss')
+const purgecss = require('@fullhuman/postcss-purgecss')
 
 const minifyOptions = {
   useShortDoctype: true,
@@ -46,6 +51,39 @@ module.exports = eleventyConfig => {
     const pageHeader = $('header#page-header')
 
     pageHeader.append(headerContent)
+
+    return $.html()
+  })
+
+  eleventyConfig.addTransform('CSS', async (content, outputPath) => {
+    if (!outputPath.endsWith('.html')) return content
+
+    const $ = cheerio.load(content)
+    const styles = $('style').text()
+
+    $('style').text('')
+
+    async function postingTheCss(styles) {
+      return postcss([
+        autoprefixer,
+        duplicatemediaquery, // make sure this is before `duplicatecss`
+        duplicatecss({ removeDuplicatedValues: true }),
+        purgecss({
+          content: [
+            {
+              raw: $.html(),
+              extension: 'html'
+            }
+          ]
+        })
+      ]).process(styles, { from: null })
+    }
+    const result = await postingTheCss(styles)
+
+    if (styles == result.css)
+      throw new Error('There is an issue with the CSS transform again')
+
+    $('style').text(result.css)
 
     return $.html()
   })
