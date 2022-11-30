@@ -12,4 +12,4 @@ There's not a whole lot on here right now but that's alright.
 
 You can find my writing in the [garden](/garden/). And for those curious about the site, you'll want to check out the [colophon](/colophon/).
 
-You can find me on <a href="https://github.com/{{ site.github }}">github</a> and if you wanted to reach out to me you can via <a href="mailto:{{ site.email }}">email</a>. And here's my PGP public fingerprint: <a href="https://keys.openpgp.org/search?q=652B8C7D91BC4895">{{ site.pgp }}</a>.
+You can find me on <a href="https://github.com/{{ site.github }}">github</a> and if you wanted to reach out to me you can via <a href="mailto:{{ site.email }}">email</a>. And here's my PGP public fingerprint: <a href="/pgp.txt" title="HGB's PGP">{{ site.pgp }}</a>.
