@@ -15,3 +15,5 @@ The stylesheet is built from [Natural Selection](https://github.com/frontaid/nat
 You can check out the look of the site over at the [styleguide](/styleguide/).
 
 Each page uses [trailing slashes](https://www.zachleat.com/web/trailing-slash/).
+
+Also I guess I need to [attribute](https://github.com/twitter/twemoji/blob/master/LICENSE-GRAPHICS) Tw*tter for using one of their "[Twemojis](https://github.com/twitter/twemoji)" for my site favicon.
