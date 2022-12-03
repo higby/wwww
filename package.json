@@ -31,6 +31,7 @@
     "autoprefixer": "^10.4.13",
     "cheerio": "^1.0.0-rc.12",
     "dayjs": "^1.11.6",
+    "eleventy-plugin-gen-favicons": "^1.1.1",
     "html-minifier": "^4.0.0",
     "js-beautify": "^1.14.7",
     "markdown-it": "^13.0.1",

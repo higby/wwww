@@ -41,4 +41,6 @@ Object.entries(footnoteRules).forEach(
     })
 )
 
-module.exports = md
+module.exports = eleventyConfig => {
+  eleventyConfig.setLibrary('md', md)
+}

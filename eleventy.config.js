@@ -1,3 +1,6 @@
+const faviconsPlugin = require('eleventy-plugin-gen-favicons')
+const pluginRss = require('@11ty/eleventy-plugin-rss')
+
 const collections = require('./plugins/collections')
 const filters = require('./plugins/filters')
 const images = require('./plugins/images')
@@ -6,8 +9,6 @@ const sass = require('./plugins/sass')
 const shortcodes = require('./plugins/shortcodes')
 const transforms = require('./plugins/transforms')
 
-const pluginRss = require('@11ty/eleventy-plugin-rss')
-
 module.exports = eleventyConfig => {
   eleventyConfig.setQuietMode(true)
 
@@ -15,16 +16,18 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy({ 'src/_assets': '/' })
   eleventyConfig.setServerPassthroughCopyBehavior('copy')
 
+  eleventyConfig.addPlugin(faviconsPlugin, {
+    outputDir: 'build'
+  })
+  eleventyConfig.addPlugin(pluginRss)
+
   eleventyConfig.addPlugin(collections)
   eleventyConfig.addPlugin(filters)
   eleventyConfig.addPlugin(images)
+  eleventyConfig.addPlugin(markdown)
   eleventyConfig.addPlugin(sass)
   eleventyConfig.addPlugin(shortcodes)
   eleventyConfig.addPlugin(transforms)
-
-  eleventyConfig.addPlugin(pluginRss)
-
-  eleventyConfig.setLibrary('md', markdown)
 
   return {
     markdownTemplateEngine: 'njk',
