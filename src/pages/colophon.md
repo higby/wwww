@@ -1,5 +1,5 @@
 ---
-title: "Garden"
+title: "Colophon"
 displayInFooter: true
 ---
 
