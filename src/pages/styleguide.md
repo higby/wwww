@@ -1,4 +1,5 @@
 ---
+title: "Styleguide"
 displayInFooter: true
 ---
 {% headercontent %}

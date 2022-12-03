@@ -12,7 +12,8 @@ module.exports = eleventyConfig => {
 
       const metadata = await Image(imagePath, {
         formats: ['avif', 'webp', 'jpeg'],
-        outputDir: './build/img/',
+        urlPath: '/images',
+        outputDir: './build/images/',
         filenameFormat: (id, src, width, format) =>
           `${path.parse(src).name}.${format}`
       })

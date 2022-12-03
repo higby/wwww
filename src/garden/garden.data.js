@@ -1,6 +1,4 @@
 module.exports = {
-  // layout: "plant.njk",
-  permalink:
-    "{{ page.filePathStem | replace('/garden', '') | replace('/index', '') }}/",
+  layout: 'garden.njk',
   tags: 'garden'
 }
