@@ -1,4 +1,3 @@
-const faviconsPlugin = require('eleventy-plugin-gen-favicons')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 
 const collections = require('./src/plugins/collections')
@@ -16,9 +15,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy({ 'src/public': '/' })
   eleventyConfig.setServerPassthroughCopyBehavior('copy')
 
-  eleventyConfig.addPlugin(faviconsPlugin, {
-    outputDir: 'build'
-  })
   eleventyConfig.addPlugin(pluginRss)
 
   eleventyConfig.addPlugin(collections)
