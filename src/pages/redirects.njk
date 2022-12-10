@@ -1,0 +1,7 @@
+---
+permalink: "_redirects"
+eleventyExcludeFromCollections: true,
+layout: null
+---
+{% for url in netlify.domain_aliases %}https://{{ url }}/*  {{ site.url }}/:splat 301!
+{% endfor %}

@@ -1,5 +1,6 @@
 ---
 title: "Inspiration"
+date: 2022-11-20
 ---
 
 Throughout the many versions of my personal website, I have seen and been inspiried by (and blatantly stole from) many other creator's and their websites.

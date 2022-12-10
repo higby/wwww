@@ -25,6 +25,7 @@
   "homepage": "https://github.com/higby/higby.io#readme",
   "dependencies": {
     "@11ty/eleventy": "^2.0.0-canary.16",
+    "@11ty/eleventy-fetch": "^3.0.0",
     "@11ty/eleventy-img": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@fullhuman/postcss-purgecss": "^5.0.0",
@@ -32,6 +33,7 @@
     "autoprefixer": "^10.4.13",
     "cheerio": "^1.0.0-rc.12",
     "dayjs": "^1.11.6",
+    "dotenv": "^16.0.3",
     "html-minifier": "^4.0.0",
     "js-beautify": "^1.14.7",
     "markdown-it": "^13.0.1",

@@ -1,3 +1,4 @@
 build
-scraps
+.cache
+.env
 node_modules

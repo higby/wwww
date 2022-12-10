@@ -6,7 +6,7 @@ displayInHeader: true
 <ul>
   {% for plant in collections.garden | reverse %}
     <li>
-      <a href='{{ plant.url }}'>
+      <a href='{% if plant.data.href %}{{ plant.data.href }}{% else %}{{ plant.url }}{% endif %}'>
         <span>{{ plant.data.title }}</span>
         <br>
         <time>{{ plant.date | formal }}</time>
