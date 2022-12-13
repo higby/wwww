@@ -11,4 +11,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('footerPages', collectionApi =>
     sortByTitle(filterByValue(collectionApi.getAll(), 'displayInFooter'))
   )
+  eleventyConfig.addCollection('redirects', collectionApi =>
+    filterByValue(collectionApi.getAll(), 'redirects')
+  )
 }

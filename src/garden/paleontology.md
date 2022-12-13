@@ -3,8 +3,11 @@ title: "Paleontology, Jobs, and Other Rambling Thoughts"
 description: "A piece written for my senior year humorous speech and debate tournaments."
 date: 2020-04-12 00:05:00
 ---
+{% headercontent %}
 
 > **Note:** This was originally written for a Speech and Debate tournament and is in an early/ draft form. Please ignore any strange tenses or references to tournaments/ competitions.
+
+{% endheadercontent %}
 
 Paleontologists are the first graders of the professional world.
 

@@ -11,6 +11,8 @@ const transforms = require('./src/plugins/transforms')
 module.exports = eleventyConfig => {
   eleventyConfig.setQuietMode(true)
 
+  eleventyConfig.ignores.add('**/.drafts/')
+
   eleventyConfig.addWatchTarget('src/public/')
   eleventyConfig.addPassthroughCopy({ 'src/public': '/' })
   eleventyConfig.setServerPassthroughCopyBehavior('copy')

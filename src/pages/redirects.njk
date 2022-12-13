@@ -4,4 +4,5 @@ eleventyExcludeFromCollections: true,
 layout: null
 ---
 {% for url in netlify.domain_aliases %}https://{{ url }}/*  {{ site.url }}/:splat 301!
-{% endfor %}
+{% endfor %}{% for page in collections.redirects %}{% for alias in page.data.redirects %}/{{ alias }}/  {{ page.url }} 301!
+{%endfor %}{% endfor %}

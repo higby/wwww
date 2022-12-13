@@ -1,6 +1,7 @@
 ---
-title: "Styleguide"
+title: "Style Guide"
 displayInFooter: true
+redirects: ["styleguide"]
 ---
 {% headercontent %}
 

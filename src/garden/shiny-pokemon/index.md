@@ -2,6 +2,7 @@
 title: "Shiny Pokemon"
 description: "My collection of shiny Pokemon"
 date: 2021-04-06
+redirects: ["pokemon"]
 ---
 
 ## Caught
