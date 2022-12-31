@@ -1,9 +1,0 @@
-@import "vars";
-
-picture {
-  float: right;
-  width: 25%;
-  @media (max-width: $media-query) {
-    width: 50%
-  }
-}

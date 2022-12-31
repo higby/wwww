@@ -1,14 +1,16 @@
 module.exports = {
-  description: data => data.description || `Higby's Garden`,
   permalink: data => {
-    if (data.permalink) return data.permalink
+    if (data.permalink != false) return data.permalink
+    if (data.permalink === false) return false
 
-    let expanded = data.page.filePathStem.split('/')
-    expanded.splice(1, 1)
+    let pathParsed = data.page.filePathStem.split('/')
 
-    if (expanded.at(-1) == 'index') expanded.pop()
-    let joined = expanded.join('/') + '/' || '/'
+    if (pathParsed.length <= 2)
+      throw new Error(`File too early in directory '${data.page.inputPath}'`)
 
-    return `${joined}index.html`
+    if (pathParsed[pathParsed.length - 1] == 'index') pathParsed.pop()
+    pathParsed.splice(0, 2)
+
+    return `${pathParsed.join('/')}/`
   }
 }

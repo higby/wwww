@@ -1,6 +1,4 @@
-const markdownIt = require('markdown-it')
-
-const md = markdownIt({
+const md = require('markdown-it')({
   html: true,
   breaks: true,
   linkify: false
@@ -41,6 +39,4 @@ Object.entries(footnoteRules).forEach(
     })
 )
 
-module.exports = eleventyConfig => {
-  eleventyConfig.setLibrary('md', md)
-}
+module.exports = md

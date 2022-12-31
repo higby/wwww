@@ -1,20 +1,24 @@
-@import "vars";
+@import 'vars';
 
 .box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  margin: 0 -2rem;
+  padding: 0;
   gap: 1rem;
   text-align: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   @media (max-width: $media-query) {
-    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    display: block;
+    li:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }  
   }
 }
 
 .sprites {
-  background-color: rgb(32, 34, 36);
+  background-color: $bg-secondary;
   display: grid;
   border-radius: 0.25rem;
   picture {

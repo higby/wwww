@@ -1,13 +1,10 @@
 ---
-title: "Style Guide"
+title: 'Style Guide'
 displayInFooter: true
-redirects: ["styleguide"]
+redirects: ['styleguide']
 ---
-{% headercontent %}
 
 This page was adopted from the [Poor Man's Styleguide](https://poormansstyleguide.com/).
-
-{% endheadercontent %}
 
 <h1 id="headings">Headings</h1>
 
@@ -44,7 +41,7 @@ This page was adopted from the [Poor Man's Styleguide](https://poormansstyleguid
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <p>Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor.</p>
 
-<p><img alt="Test Image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACHCAAAAAANGYs3AAADvElEQVR4Ae3ZhVbj7BrF8XPVuyl2iru7u4z74FRwKxGa7Mv5Vt6URTNaZkmQ/cf1ya8S/R9fWAILLLDAAgsssMACCyywwAILLPATTWCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggd8g3jUfUhNmHjlY4GLBVIfxgqnE33e0cfuUwbHqsci/tQk4zwEssJPdOSqxXDG7mb8KqgL7R/suw+ydXJF3BTfHlwErcvLHRZ/xaUmCd5oAoGEjMEszjrDMGjmOcue/AI/g2h5OA6k+m5utALBoTM67DgtAesRm1NVoPQBY/Z9/npYMeBFIt3emgbUIAqurNY2Rv4JXmtHUZQHjX1Pp9o408JYk+0NNJgU0Gz+/1AKWMXb9PC0RcBZYdEl3DKljsgjM+GSwnyOd4ifgrFgsBr8Eo+6A9HoAdF6R161oNs+CmX2P9NeAryR5bqEp69Mr9BtwfFoy4B4Mm49uHd6bBTqqYqVlwO/LAuRJ8iNgx35vMfq1+ug/zBpwfFoi4Atgj6YhzJkvP1YJbjN3fAnoZ9gxcMb7hjBJ8hrYYAU4Pi0R8B5QODeNod+ArFWnKvAQTbVYNx8vgRzvG8RUdP8fV4Lj0xIBf8R9IyQLdYA1cVo9+P9l8PXdneduvlmZm8uY3/sM2JXg+LREwOtA/11vzGN82gIwF1QLzsTBN0MWoubNf7dYCY5NS+we9hjv5m0GWPg38HUzrKnPe/lcG5ZIvgO8SnBsWmLP4TP+mDeIGv+fwG+QOmJYL1ajf3BRATbTEgafA+/4U1mgEC2v/TDwEHpp6jbfzgMfaeo3YDMtWTB7kbnljx1Fa9d94Pxh4EHUeQylKfPtUgM6fYbSlAGbaQmD94DWI5LemxWSx8uh8HoEtSWSp8ByQKdYPXgNmDnn7YdaYJkkV4Exm7dbbTDg2LSEwFwCUNvVDFg2uQjUdjaj/Ej0M0BTu7VUPdhpBNAAtH3CtFkBtgBoTcNqNeDYtKTA3GoCgNTICcnNHoRlvtK0mQZQt149mJfDAOoWPdeKgN54GkAmu2jAsWkJnrV0c7vnpbvPT/Z2L3yWs/d3Tnw+KO/40g8/eIzyT/auyRl0xaY9+9O0Qxh7Ueel7Vqsvgxw/tQ8wYeAwssA96Cuo6fJAhb5IsDBoIWwzOfgRYDNWv9gK3sV6GKawAILLPDzSWCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFvg/grmeGCDEU1MAAAAASUVORK5CYII= " title="A title element for this placeholder image."></p>
+![An screenshot from Dreamwork's She-Ra and The Princesses of Power](https://shera.gay/random.jpg)
 
 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem.</p>
 
@@ -57,11 +54,6 @@ This page was adopted from the [Poor Man's Styleguide](https://poormansstyleguid
 <p>This is a standard paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 
 <h2 id="figure-caption">Figure-Caption</h2>
-
-<figure>
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACHCAAAAAANGYs3AAADvElEQVR4Ae3ZhVbj7BrF8XPVuyl2iru7u4z74FRwKxGa7Mv5Vt6URTNaZkmQ/cf1ya8S/R9fWAILLLDAAgsssMACCyywwAILLPATTWCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggd8g3jUfUhNmHjlY4GLBVIfxgqnE33e0cfuUwbHqsci/tQk4zwEssJPdOSqxXDG7mb8KqgL7R/suw+ydXJF3BTfHlwErcvLHRZ/xaUmCd5oAoGEjMEszjrDMGjmOcue/AI/g2h5OA6k+m5utALBoTM67DgtAesRm1NVoPQBY/Z9/npYMeBFIt3emgbUIAqurNY2Rv4JXmtHUZQHjX1Pp9o408JYk+0NNJgU0Gz+/1AKWMXb9PC0RcBZYdEl3DKljsgjM+GSwnyOd4ifgrFgsBr8Eo+6A9HoAdF6R161oNs+CmX2P9NeAryR5bqEp69Mr9BtwfFoy4B4Mm49uHd6bBTqqYqVlwO/LAuRJ8iNgx35vMfq1+ug/zBpwfFoi4Atgj6YhzJkvP1YJbjN3fAnoZ9gxcMb7hjBJ8hrYYAU4Pi0R8B5QODeNod+ArFWnKvAQTbVYNx8vgRzvG8RUdP8fV4Lj0xIBf8R9IyQLdYA1cVo9+P9l8PXdneduvlmZm8uY3/sM2JXg+LREwOtA/11vzGN82gIwF1QLzsTBN0MWoubNf7dYCY5NS+we9hjv5m0GWPg38HUzrKnPe/lcG5ZIvgO8SnBsWmLP4TP+mDeIGv+fwG+QOmJYL1ajf3BRATbTEgafA+/4U1mgEC2v/TDwEHpp6jbfzgMfaeo3YDMtWTB7kbnljx1Fa9d94Pxh4EHUeQylKfPtUgM6fYbSlAGbaQmD94DWI5LemxWSx8uh8HoEtSWSp8ByQKdYPXgNmDnn7YdaYJkkV4Exm7dbbTDg2LSEwFwCUNvVDFg2uQjUdjaj/Ej0M0BTu7VUPdhpBNAAtH3CtFkBtgBoTcNqNeDYtKTA3GoCgNTICcnNHoRlvtK0mQZQt149mJfDAOoWPdeKgN54GkAmu2jAsWkJnrV0c7vnpbvPT/Z2L3yWs/d3Tnw+KO/40g8/eIzyT/auyRl0xaY9+9O0Qxh7Ueel7Vqsvgxw/tQ8wYeAwssA96Cuo6fJAhb5IsDBoIWwzOfgRYDNWv9gK3sV6GKawAILLPDzSWCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFlhggQUWWGCBBRZYYIEFFvg/grmeGCDEU1MAAAAASUVORK5CYII= " alt="A placeholder figure image." />
-  <figcaption>The figcaption element example</figcaption>
-</figure>
 
 <h2 id="details-summary">Details-Summary</h2>
 
@@ -108,8 +100,9 @@ This page was adopted from the [Poor Man's Styleguide](https://poormansstyleguid
 var divs = document.querySelectorAll('div'), i;
 
 for (i = 0; i < divs.length; ++i) {
-  divs[i].style.color = "green";
+divs[i].style.color = "green";
 }</code></pre>
+
 <p>Monospace Text wrapped in "pre" tags</p>
 <pre><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p></pre>
 
@@ -382,7 +375,7 @@ for (i = 0; i < divs.length; ++i) {
 
     <h3>HTML5-specific Form Elements</h3>
 
-    <p><label for="email">Email:</label><br />
+    <p><label for="email"`>Email:</label><br />
       <input type="email" id="email" />
     </p>
 
@@ -447,6 +440,7 @@ for (i = 0; i < divs.length; ++i) {
       <input class="button" type="reset" value="Clear" />
       <input class="button" type="submit" value="Submit" />
     </p>
+
   </form>
 
 </fieldset>

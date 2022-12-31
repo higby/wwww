@@ -1,17 +1,21 @@
-const sortByTitle = content =>
-  content.sort((a, b) => a.data.title.localeCompare(b.data.title))
+function sortByTitle(content) {
+  return content.sort((a, b) => a.data.title.localeCompare(b.data.title))
+}
 
-const filterByValue = (content, value) =>
-  content.filter(page => value in page.data)
+function filterByValue(content, value) {
+  return content.filter(page => value in page.data)
+}
 
-module.exports = eleventyConfig => {
-  eleventyConfig.addCollection('headerPages', collectionApi =>
+module.exports = config => {
+  config.addCollection('headerPages', collectionApi =>
     sortByTitle(filterByValue(collectionApi.getAll(), 'displayInHeader'))
   )
-  eleventyConfig.addCollection('footerPages', collectionApi =>
+
+  config.addCollection('footerPages', collectionApi =>
     sortByTitle(filterByValue(collectionApi.getAll(), 'displayInFooter'))
   )
-  eleventyConfig.addCollection('redirects', collectionApi =>
+
+  config.addCollection('redirects', collectionApi =>
     filterByValue(collectionApi.getAll(), 'redirects')
   )
 }

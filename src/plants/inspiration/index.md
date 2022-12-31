@@ -1,5 +1,5 @@
 ---
-title: "Inspiration"
+title: 'Inspiration'
 date: 2022-11-20
 ---
 
@@ -13,7 +13,7 @@ Moral is that you should check these people out:
 
 (And I want to be very clear that there is no particular order, it is literally just thrown on here!)
 
-<ul>
+<ul class="constellation">
   {% for person in inspiration %}
   <li>
     <a href="{{ person.url }}">

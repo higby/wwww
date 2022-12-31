@@ -1,6 +1,6 @@
 ---
 title: Short URL Service with Jekyll & Netlify
-description: "Making A Short URL Service With Jekyll & Netlify"
+description: 'Making A Short URL Service With Jekyll & Netlify'
 date: 2021-05-18
 ---
 
@@ -11,7 +11,7 @@ The original solution for building a Jekyll-based short URL service was to use t
 ```html
 <html>
   <script>
-    location = "/address";
+    location = '/address'
   </script>
   <meta http-equiv="refresh" content="0; url=/address" />
   <a href="/address">Click here.</a>
@@ -79,15 +79,16 @@ Where the left is the link that gets forwarded to the right.
 
 Here's my working redirect file
 
-````md{% raw %}
+```md
 ---
----
+
+---{% raw %}
 {% for post in site.directory %}
 
-/{{ post.title | downcase }}     {{ post.redirect_to }}
+/{{ post.title | downcase }} {{ post.redirect_to }}
 
-{% endfor %}
-{% endraw %}```
+{% endfor %}{% endraw %}
+```
 
 This will generate a working `_redirects` file when the files in the Jekyll site specify a redirect_to in the YAML header, and the title in my config being the files name ie:
 
@@ -96,7 +97,7 @@ This will generate a working `_redirects` file when the files in the Jekyll site
 title: '404'
 redirect_to: https://www.higby.io/404
 ---
-````
+```
 
 > 404.md
 

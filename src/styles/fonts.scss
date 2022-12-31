@@ -1,16 +1,16 @@
 @font-face {
-  font-family: 'Inter';
-  font-style: oblique 0deg 10deg;
-  font-weight: 100 900;
-  font-feature-settings: "calt";
-  src: local('Inter'), url('/Inter.woff2') format('woff2');
+  font-family: "Apfel Grotezk";
+  src: url("/fonts/ApfelGrotezk.woff2") format("woff2"),
+       url("/fonts/ApfelGrotezk.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Apfel Grotezk Fett";
+  src: url("/fonts/ApfelGrotezk-Fett.woff2") format("woff2"),
+       url("/fonts/ApfelGrotezk-Fett.woff") format("woff");
 }
 
 @font-face{
-  font-family: 'Source Code Pro';
-  font-weight: 200 900;
-  font-style: normal;
-  font-stretch: normal;
-  src: local('Source Code Pro'), url('/SourceCodePro.woff2') format('woff2');
-
-}
+  font-family: 'JetBrains Mono';
+  src: url("/fonts/JetBrainsMono.woff2") format("woff2"),
+       url("/fonts/JetBrainsMono.woff") format("woff");}

@@ -1,5 +1,5 @@
 ---
-title: "Colophon"
+title: 'Colophon'
 displayInFooter: true
 ---
 
@@ -9,7 +9,7 @@ All of the heavy lifting is done by [Eleventy](https://www.11ty.dev/), whose out
 
 The look, feel, and content of this site has been inspired by very _very_ many people, so many so that I made a whole page just for my [inspirations](/inspiration/).
 
-The primary font used is [Inter](https://rsms.me/inter/) and the monospaced font is [Source Code Pro](https://adobe-fonts.github.io/source-code-pro/).
+The primary font used is [Apfel Grotezk](https://www.collletttivo.it/) and the monospaced font is [JetBrains Mono](https://www.jetbrains.com/lp/mono/).
 
 The stylesheet is built from [Natural Selection](https://github.com/frontaid/natural-selection/), and adheres to the [8 Point Grid System](https://tanzu.vmware.com/content/built-to-adapt/intro-to-the-8-point-grid-system-2/) (kinda). Heading sizes were calculated using the [Typographic Scale Tool](https://spencermortensen.com/articles/typographic-scale/).
 
@@ -17,4 +17,4 @@ You can check out the look of the site over at the [styleguide](/styleguide/).
 
 Each page uses [trailing slashes](https://www.zachleat.com/web/trailing-slash/).
 
-Also I guess I need to [attribute](https://github.com/twitter/twemoji/blob/master/LICENSE-GRAPHICS) Tw*tter for using one of their "[Twemojis](https://github.com/twitter/twemoji)" for my site favicon.
+Also I guess I need to [attribute](https://github.com/twitter/twemoji/blob/master/LICENSE-GRAPHICS) Tw\*tter for using one of their "[Twemojis](https://github.com/twitter/twemoji)" for my site favicon.

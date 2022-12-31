@@ -1,25 +1,18 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Universal
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'syntax';
 
-/* Apply styling to all elements (including their `::before` and `::after`
-pseudo-elements). One common use of this selector is to apply a custom
-`box-sizing`. */
-*, *::before, *::after {}
+svg.higby {
+  fill: $tattoo;
+}
 
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Root
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-:root {}
-html {}
 body {
-  max-width: $site-width;
-  margin: 0 auto;
+  margin: 2rem 3rem;
+  font-family: "Apfel Grotezk";
+  font-size: 18px;
+  background-color: $bg-primary;
   color: $text;
-  background-color: $background-color;
-  font-family: "Inter";
   line-height: 1.5;
   letter-spacing: 0.025em;
   @media (max-width: $media-query) {
@@ -27,91 +20,33 @@ body {
   }
 }
 
-body > *:not(#site-header) {
-  animation: fadeIn 650ms;
+main {
+  max-width: 650px;
+  margin: 4rem auto 6rem;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Content sectioning
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-h1,
-h2,
-h3 {
+h1, h2, h3 {
+  font-family: "Apfel Grotezk Fett";
   color: $text-emphasis;
-  font-weight: 600;
-}
-h1 {
-  font-size: 1.75em;
-}
-h2 {
-  font-size: 1.4522em;
-}
-h3 {
-  font-size: 1.2051em;
 }
 
 #site-header {
-  padding: 2rem 0;
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr);
   h1 {
-    font-size: 1.25em;
+    font-size: 1em;
   }
   nav {
     justify-self: end;
     align-self: center;
   }
-  span {
-    user-select: none;
-  }
-  a {
-    color: $text;
-    &:hover {
-      color: $space;
-      text-decoration: none;
-    }
-  }
-  .active {
-    color: $space
-  }
-  @media (max-width: $media-query) {
-    padding: 0 0 2rem;
-  }
 }
 
-#page-header {
-  padding-bottom: 2rem;
-}
-
-nav {}
-nav ul, nav ol {}
-nav li {}
-nav a {}
-nav a:visited {}
-nav a:hover {}
-nav a:active {}
-
-main {}
-
-article {}
-
-section {}
-
-aside {}
-
-footer {
-  padding: 4rem 0;
+#site-footer  {
+  margin: 0 auto;
   display: grid;
+  max-width: 850px;
+  font-size: 16px;
   nav {
     display: grid;
     grid-template-columns: min-content auto;
@@ -137,310 +72,60 @@ footer {
   }
 }
 
-address {}
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Text block content
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-/* Overall styling, e.g. vertical spacing */
-p, ol, ul, pre, blockquote, figure, hr, dl {
-  margin: 1rem 0;
+b, em {
+  font-family: "Apfel Grotezk Fett";
 }
-
-p {}
-
-ol, ul {}
-ol {}
-ul {}
-li {}
-ol ol, ol ul, ul ul, ul ol {}
-li li {}
-
-code,
-pre {
-  color: $text-emphasis;
-  font-family: $mono-font;
-  background-color: $dark-grey;
-}
-code:not(pre *) {
-  border-radius: 0.25rem;
-  padding: 0.2rem 0.4rem;
-  font-size: 0.85em;
-}
-pre {
-  overflow: auto;
-  padding: 0.75rem 1.5rem;
-  white-space: pre;
-  border-radius: 0.25rem;
-  font-size: 0.85em;
-}
-
-kbd {
-  border: 1px solid $medium-grey;
-  border-radius: 0.25rem;
-  box-shadow: inset 0 -1px 0 $medium-grey;
-  color: $text-emphasis;
-  font-family: $mono-font;
-  font-size: 0.95em;
-  padding: 0.125rem 0.25rem;
-  vertical-align: middle;
-}
-
-blockquote {}
-
-figure {}
-figcaption {}
-
-hr {}
-
-dl {}
-dt {}
-dd {}
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Inline text semantics
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 a {
   color: $space;
-  cursor: pointer;
   text-decoration: none;
-  transition: all 0.5s;
+  cursor: pointer;
   &:hover {
     text-decoration: underline;
   }
 }
 
-strong {}
-b {}
+pre, code, kbd {
+  font-family: "JetBrains Mono";
+}
 
-em {}
-i {}
+pre:has(code), code:not(pre *) {
+  background-color: $bg-secondary;
+  color: $text-emphasis;
+  font-size: 0.75em;
+  border-radius: 0.25rem;
+  overflow: auto;
+}
 
-q {}
-cite {}
+pre:has(code) {
+  padding: 0.75rem;
+  margin: 2rem -2rem;
+  @media (max-width: $media-query) {
+    margin: 2rem 0;
+  }
+}
 
-s {}
+code:not(pre *) {
+  padding: 0.2rem 0.4rem;
+}
 
-mark {}
-
-/* If you specify a font size, consider using the `em` unit so that it works
-universally, e.g. for both `h1 small` and `p small` */
-small {}
-sub {}
-sup {}
-
-code {}
-
-dfn {}
-abbr {}
-abbr[title] {}
-
-var {}
-kbd {}
-kbd kbd {}
-samp {}
-
-u {}
-
-data {}
-time {}
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Demarcating edits
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-del {}
-ins {}
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Embedded content
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+figure {
+  margin: 2rem -2rem;
+  &:has(.inline) {
+    margin: 0;
+    float: right;
+    width: 25%;
+    @media (max-width: $media-query) {
+      margin: 0 auto;
+      float: none;
+      width: 50%;
+    }
+  }
+  @media (max-width: $media-query) {
+    margin: 2rem 0;
+  }
+}
 
 img {
   border-radius: .25rem;
-  background-color: $dark-grey;
-
 }
-svg {}
-svg.higby {
-  fill: $tattoo;
-}
-img, picture, audio, video, iframe, canvas, object {
-  width: 100%;
-}
-video {}
-canvas {}
-audio {}
-object {}
-
-noscript {}
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Table content
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-table {}
-caption {}
-col:first-child {}
-thead {}
-tbody {}
-tfoot {}
-tr {}
-th {}
-td {}
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Forms
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-fieldset {}
-fieldset:disabled {}
-legend {}
-
-form {}
-
-label {}
-
-::placeholder {}
-:focus::placeholder {}
-
-/* Overall styling, e.g. vertical spacing */
-input, textarea, select, button {}
-
-/* `textarea` and `input` elements that share a similar look and similar styling
-capabilities */
-/* - common styling */
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-input[type="search"],
-input[type="url"],
-input[type="date"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="time"] {}
-/* - individual styling */
-textarea {}
-input[type="text"] {}
-input[type="password"] {}
-input[type="email"] {}
-input[type="tel"] {}
-input[type="number"] {}
-input[type="search"] {}
-input[type="url"] {}
-input[type="date"] {}
-input[type="datetime-local"] {}
-input[type="month"] {}
-input[type="week"] {}
-input[type="time"] {}
-/* Tick boxes */
-input[type="checkbox"], input[type="radio"] {}
-input[type="checkbox"]:checked, input[type="radio"]:checked {}
-input[type="checkbox"] {}
-input[type="checkbox"]:checked {}
-input[type="radio"] {}
-input[type="radio"]:checked {}
-/* Other input fields, some with limited styling capabilities */
-input[type="file"] {}
-input[type="color"] {}
-input[type="range"] {}
-
-select {}
-optgroup {}
-option {}
-option:checked {}
-datalist {}
-
-button,
-input[type="submit"] {}
-button:disabled,
-input[type="submit"]:disabled {}
-button.secondary {}
-button.secondary:disabled {}
-
-/* This matches forms or form elements that are invalid *and* have been
-interacted with. Note that:
-1) You may need to add the `interacted` class to forms yourself
-2) You may need to add the `touched` class to form fields yourself
-3) `:user-invalid` is a working draft and not yet supported by most browsers
-4) `:-moz-ui-invalid` is non-standard and only works in Firefox
-Form validation error messages will appear (in capable browsers) regardless of
-this styling. You can omit 1) and 2) and still have working forms. Perfect
-example of progressive enhancement. */
-/* Applies to invalid forms */
-form.interacted:invalid {}
-/* Applies to invalid form fields. You would need to repeat your declarations
-for the following three groups of selectors individually. Browsers completely
-ignore any rule that contains a selector they do not know. */
-form.interacted :invalid, form .touched:invalid {}
-:user-invalid {}
-:-moz-ui-invalid {}
-
-output {}
-
-progress {}
-meter {}
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Interactive elements
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-details {}
-details[open] {}
-summary {}
-details[open] summary {}
-
-dialog {}
-dialog::backdrop {}
-
-/* Some form fields, `details`, elements with `tabindex`, and possibly other
-elements can be focussed. You should use `:focus-visible` instead of `:focus`
-whenever possible. As the former is not yet widely supported, you need to do it
-as follows:
-1) Set styling on focus
-2) If browser supports `:focus-visible`, revert/unset the styling from 1)
-3) If the element matches `:focus-visible`, apply the styling again */
-:focus {}
-:focus:not(:focus-visible) {}
-:focus-visible {}
-
-[inert], [inert] * {}
-
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Media queries
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-@media (prefers-reduced-motion: reduce) {
-}
-
-@media (prefers-color-scheme: dark) {
-}
-
-@media (orientation: portrait) {
-}
-
-@media (orientation: landscape) {
-}
-
-@media print {
-}
-
-
-/*
-This file evolved from Natural Selection:
-https://github.com/frontaid/natural-selection
-*/

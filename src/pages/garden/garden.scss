@@ -1,37 +1,39 @@
-@import "vars";
+@import 'vars';
 
-main ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.lattice {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  margin: 0 -2rem;
+  padding: 0;
   gap: 1rem;
   grid-template-rows: masonry;
   align-tracks: stretch;
   a {
     display: block;
     height: 100%;
-    background-color: $dark-grey;
-    border-radius: 0.25rem;
+    background-color: $bg-secondary;
+    border-radius: .25rem;
     padding: 0.75rem 1rem;
-    //color: $text-emphasis;
+    transition: background-color 0.5s;
     &:hover {
-      //color: $space;
       text-decoration: none;
-      background-color: $hover;
+      background-color: $bg-hover;
     }
   }
   span {
-    font-weight: 500;
+    font-family: "Apfel Grotezk Fett";
   }
   time {
     margin-top: 0.25rem;
     font-size: 0.875em;
     color: $text;
-    display: block;
   }
   @media (max-width: $media-query) {
-    grid-template-columns: 1fr;
+    margin: 0;
+    display: block;
+    li:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
   }
 }

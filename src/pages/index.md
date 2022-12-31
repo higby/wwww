@@ -2,7 +2,7 @@
 description: Branden Higby's ramblings thoughts
 ---
 
-{% image 'glitch.png', 'A corrupted picture of myself posing atop a sewer grate' %}
+![A corrupted picture of myself posing atop a sewer grate](/glitch.png){.inline}
 
 Hi, I'm Branden Higby, a writer, programmer, and cartoon watcher based in Oregon.
 

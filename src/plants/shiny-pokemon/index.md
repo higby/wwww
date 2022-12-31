@@ -1,8 +1,8 @@
 ---
-title: "Shiny Pokemon"
-description: "My collection of shiny Pokemon"
+title: 'Shiny Pokemon'
+description: 'My collection of shiny Pokemon'
 date: 2021-04-06
-redirects: ["pokemon"]
+redirects: ['pokemon']
 ---
 
 ## Caught
@@ -11,8 +11,8 @@ redirects: ["pokemon"]
   {% for pokemon in caught %}
   <li class="pokemon">
     <div class="sprites">
-      {% image ['pokemon/balls/',pokemon.stats.ball | slug,'.png'] | join, 'Pokeball' %}
-      {% image ['pokemon/',pokemon.name | slug,'.png'] | join, 'Pokeball' %}
+      <img src='/pokemon/balls/{{ pokemon.stats.ball | slugify }}.png' alt='Pokeball'>
+      <img src='/pokemon/{{ pokemon.name | slugify }}.png' alt='Pokemon'>
     </div>
     <span><b>{{ pokemon.name }}</b> the {{ pokemon.species }}</span>
     <br>
@@ -27,7 +27,7 @@ redirects: ["pokemon"]
   {% for pokemon in hunting %}
   <li class="pokemon">
     <div class="sprites">
-      {% image ['pokemon/',pokemon.name | slug,'.png'] | join, 'Pokeball' %}
+      <img src='/pokemon/{{ pokemon.name | slugify }}.png' alt='Pokemon'>
     </div>
     <span><b>{{ pokemon.name }}</b> the {{ pokemon.species }}</span>
     <br>
