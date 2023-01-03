@@ -8,7 +8,6 @@ displayInHeader: true
     <li>
       <a href='{% if plant.data.href %}{{ plant.data.href }}{% else %}{{ plant.url }}{% endif %}'>
         <span>{{ plant.data.title }}</span>
-        <br>
         <time>{{ plant.date | formal }}</time>
       </a>
     </li>

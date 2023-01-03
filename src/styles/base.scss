@@ -1,14 +1,10 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'syntax';
-
 svg.higby {
   fill: $tattoo;
 }
 
 body {
-  margin: 2rem 3rem;
+  margin: 2rem auto;
+  max-width: calc(650px + 4rem);
   font-family: "Apfel Grotezk";
   font-size: 18px;
   background-color: $bg-primary;
@@ -43,9 +39,7 @@ h1, h2, h3 {
 }
 
 #site-footer  {
-  margin: 0 auto;
   display: grid;
-  max-width: 850px;
   font-size: 16px;
   nav {
     display: grid;
@@ -72,6 +66,17 @@ h1, h2, h3 {
   }
 }
 
+#page-header {
+  hr {
+    margin: 2rem 0;
+  }
+}
+
+hr {
+  border: 0;
+  border-bottom: 0.125rem solid $light-grey;
+}
+
 b, em {
   font-family: "Apfel Grotezk Fett";
 }
@@ -82,22 +87,21 @@ a {
   cursor: pointer;
   &:hover {
     text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1.5px;
   }
 }
 
 pre, code, kbd {
   font-family: "JetBrains Mono";
-}
-
-pre:has(code), code:not(pre *) {
-  background-color: $bg-secondary;
   color: $text-emphasis;
-  font-size: 0.75em;
-  border-radius: 0.25rem;
+  font-size: 0.85em;
   overflow: auto;
+  background-color: $bg-secondary;
+  border-radius: 0.25rem;
 }
 
-pre:has(code) {
+pre {
   padding: 0.75rem;
   margin: 2rem -2rem;
   @media (max-width: $media-query) {
@@ -109,10 +113,23 @@ code:not(pre *) {
   padding: 0.2rem 0.4rem;
 }
 
+kbd {
+  border: 1px solid $medium-grey;
+  box-shadow: inset 0 -1px 0 $medium-grey;
+  padding: 0.125rem 0.25rem;
+  vertical-align: middle;
+}
+
+time {
+  margin: 0.5rem 0;
+  display: block;
+  color: $text-subtle;
+}
+
 figure {
   margin: 2rem -2rem;
   &:has(.inline) {
-    margin: 0;
+    margin: 0.5rem;
     float: right;
     width: 25%;
     @media (max-width: $media-query) {
@@ -128,4 +145,52 @@ figure {
 
 img {
   border-radius: .25rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  overflow: scroll;
+}
+thead {
+  border-bottom: 3px solid $medium-grey;
+}
+tfoot {
+  border-top: 3px solid $medium-grey;
+}
+th, td {
+  color: $text-emphasis;
+  &:not(:last-of-type) {
+    border-right: 3px solid $medium-grey;
+  }
+}
+th {
+  font-family: "Apfel Grotezk Fett";
+}
+tr {
+  &:nth-child(even) {
+    background-color: $bg-secondary;
+  }
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline;
+    &:not(:last-of-type) {
+      margin-right: 1rem
+    }
+  }
+}
+
+.note {
+  background-color: rgba(255, 102, 140, .25);
+  margin: 1rem 0;
+  padding: .5rem .75rem;
+  border-radius: .25rem .25rem 0 .25rem;
+  outline: 2px solid rgb(255, 102, 140);
+  color: $text-emphasis;
 }

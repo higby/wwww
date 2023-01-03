@@ -20,8 +20,7 @@ module.exports = config => {
   config.addPlugin(require('@11ty/eleventy-plugin-rss'))
   config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
   config.addPlugin(require('eleventy-plugin-inline-sass'), {
-    globalPath: `./src/styles/base.scss`,
-    compile: {
+    compiler: {
       loadPaths: [`./src/styles/`]
     }
   })

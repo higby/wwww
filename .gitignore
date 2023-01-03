@@ -1,4 +1,5 @@
 build/
 .cache/
+stash/
 .env
 node_modules/
