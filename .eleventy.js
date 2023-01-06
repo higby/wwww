@@ -5,8 +5,8 @@ module.exports = config => {
   config.setServerPassthroughCopyBehavior('copy')
 
   // ------------ Public Folder ------------
-  config.addPassthroughCopy({ [`src/public/`]: '/' })
-  config.addWatchTarget(`src/public/`)
+  config.addPassthroughCopy({ [`src/assets/public/`]: '/' })
+  config.addWatchTarget(`src/assets/public/`)
 
   // ------------ Markdown ------------
   config.setLibrary('md', require('./src/plugins/markdown'))
@@ -21,7 +21,7 @@ module.exports = config => {
   config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
   config.addPlugin(require('eleventy-plugin-inline-sass'), {
     compiler: {
-      loadPaths: [`./src/styles/`]
+      loadPaths: [`./src/assets/styles/`]
     }
   })
 
@@ -31,7 +31,7 @@ module.exports = config => {
       data: 'data',
       includes: 'components',
       input: 'src',
-      layouts: 'templates',
+      layouts: 'components/templates',
       output: 'build'
     }
   }

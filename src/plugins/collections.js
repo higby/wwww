@@ -18,4 +18,9 @@ module.exports = config => {
   config.addCollection('redirects', collectionApi =>
     filterByValue(collectionApi.getAll(), 'redirects')
   )
+
+  config.addCollection('garden', collectionApi =>
+    // ignores `.drafts` automatically
+    collectionApi.getFilteredByGlob('./src/pages/plants/**')
+  )
 }

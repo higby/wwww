@@ -13,14 +13,11 @@ Moral is that you should check these people out:
 
 (And I want to be very clear that there is no particular order, it is literally just thrown on here!)
 
-<ul class="constellation">
+<ul class='deck' style='grid-template-columns: repeat(2, 1fr)'>
   {% for person in inspiration %}
-  <li>
-    <a href="{{ person.url }}">
-      <span>{{ person.name }}</span>
-      <br>
-      <span>{{ person.url | replace("https://", "") }}</span>
-    </a>
+  <li class='card'>
+    <a href="{{ person.url }}">{{ person.name }}</a>
+    <span>{{ person.url | replace("https://", "") }}</span>
   </li>
   {% endfor %}
 </ul>

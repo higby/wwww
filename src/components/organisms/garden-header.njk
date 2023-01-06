@@ -1,0 +1,13 @@
+<header id="page-header">
+  <h1>{{ title }}</h1>
+  <time>{{ plant.date | formal }}</time>
+
+  {% include 'molecules/tag-list.njk' %}
+
+  {% if note %}
+    <div class="note">
+      <span>{{ note }}</span>
+    </div>
+  {% endif %}
+  <hr>
+</header>

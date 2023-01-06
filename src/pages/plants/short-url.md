@@ -2,6 +2,7 @@
 title: Short URL Service with Jekyll & Netlify
 description: 'Making A Short URL Service With Jekyll & Netlify'
 date: 2021-05-18
+tags: ['writing', 'programming']
 ---
 
 ## Original Solution

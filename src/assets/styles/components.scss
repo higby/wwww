@@ -1,0 +1,94 @@
+
+
+.note {
+  background-color: rgba(255, 102, 140, .25);
+  margin: 1rem 0;
+  padding: .5rem .75rem;
+  border-radius: .25rem .25rem 0 .25rem;
+  outline: 2px solid rgb(255, 102, 140);
+  color: $text-emphasis;
+}
+
+
+/*
+.deck {
+  margin-left: (-$wide-margins);
+  margin-right: (-$wide-margins);
+}
+
+.card {
+  &:has(a) {
+    > a {
+      display: block;
+    height: 100%;
+    background-color: $bg-secondary;
+    border-radius: .25rem;
+    padding: 0.75rem 1rem;
+    transition: background-color 0.5s;
+    &:hover {
+      text-decoration: none;
+      background-color: $bg-hover;
+    }
+    }
+  }
+}
+
+.tag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: .75rem;
+}
+
+.tag {
+  display: inline;
+  //background-color: rgba(138, 100, 255, .5);
+  //outline: 2px solid $space;
+  font-size: .875em;
+  color: $space;
+}
+
+*/
+
+.deck {
+  margin-left: (-$wide-margins);
+  margin-right: (-$wide-margins);
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.masonry {
+  grid-template-rows: masonry;
+  align-tracks: stretch;
+  masonry-auto-flow: next;
+}
+
+.card {
+  background-color: $bg-secondary;
+  border-radius: .25rem;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.5s;
+  >* {
+    display: block;
+  }
+  *:not(:first-child) {
+  font-size: .9em;
+    
+  }
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline;
+    &:not(:last-of-type) {
+      margin-right: 0.5rem;
+    }
+  }
+}

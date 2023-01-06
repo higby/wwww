@@ -1,7 +1,8 @@
 ---
-title: "Definition of OCD"
-description: "A poem written regarding the struggles of OCD."
+title: 'Definition of OCD'
+description: 'A poem written regarding the struggles of OCD.'
 date: 2020-04-22
+tags: ['writing']
 ---
 
 **obsessive-compulsive disorder** _noun._

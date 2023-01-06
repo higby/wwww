@@ -4,7 +4,7 @@ svg.higby {
 
 body {
   margin: 2rem auto;
-  max-width: calc(650px + 4rem);
+  max-width: calc($site-width + ($wide-margins * 2));
   font-family: "Apfel Grotezk";
   font-size: 18px;
   background-color: $bg-primary;
@@ -103,7 +103,7 @@ pre, code, kbd {
 
 pre {
   padding: 0.75rem;
-  margin: 2rem -2rem;
+  margin: 2rem (-$wide-margins);
   @media (max-width: $media-query) {
     margin: 2rem 0;
   }
@@ -120,14 +120,21 @@ kbd {
   vertical-align: middle;
 }
 
+
 time {
+  /*
   margin: 0.5rem 0;
   display: block;
+  font-size: 0.875em;
+  color: $text;
   color: $text-subtle;
+*/
+
+
 }
 
 figure {
-  margin: 2rem -2rem;
+  margin: 2rem (-$wide-margins);
   &:has(.inline) {
     margin: 0.5rem;
     float: right;
@@ -172,25 +179,4 @@ tr {
   &:nth-child(even) {
     background-color: $bg-secondary;
   }
-}
-
-.tags {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  li {
-    display: inline;
-    &:not(:last-of-type) {
-      margin-right: 1rem
-    }
-  }
-}
-
-.note {
-  background-color: rgba(255, 102, 140, .25);
-  margin: 1rem 0;
-  padding: .5rem .75rem;
-  border-radius: .25rem .25rem 0 .25rem;
-  outline: 2px solid rgb(255, 102, 140);
-  color: $text-emphasis;
 }

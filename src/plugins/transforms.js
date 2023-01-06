@@ -9,7 +9,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')
 
 module.exports = config => {
   config.addTransform('images', async (content, outputPath) => {
-    if (!outputPath.endsWith('.html')) return content
+    if (outputPath && !outputPath.endsWith('.html')) return content
     const $ = cheerio.load(content)
 
     async function processImage(src) {
@@ -26,7 +26,7 @@ module.exports = config => {
       let img = $($(`img`)[i])
       let src = img.attr('src')
 
-      if (!src.includes('http')) src = `./src/images/${src}`
+      if (!src.includes('http')) src = `./src/assets/images/${src}`
 
       let alt = img.attr('alt')
 
@@ -64,7 +64,7 @@ module.exports = config => {
   })
 
   config.addTransform('CSS', async (content, outputPath) => {
-    if (!outputPath.endsWith('.html')) return content
+    if (outputPath && !outputPath.endsWith('.html')) return content
 
     const $ = cheerio.load(content)
     const styles = $('style').text()
@@ -94,7 +94,7 @@ module.exports = config => {
   })
 
   config.addTransform('safeLinks', (content, outputPath) => {
-    if (!outputPath.endsWith('.html')) return content
+    if (outputPath && !outputPath.endsWith('.html')) return content
 
     const $ = cheerio.load(content)
     const targetElementList = $(`
@@ -117,7 +117,7 @@ module.exports = config => {
 
   // ------------ Final Transform ------------
   config.addTransform('beautify', (content, outputPath) =>
-    outputPath.endsWith('.html')
+    outputPath && outputPath.endsWith('.html')
       ? minify(content, {
           useShortDoctype: true,
           removeComments: true,
