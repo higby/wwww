@@ -4,8 +4,8 @@ require('dotenv').config()
 
 const url = `https://api.netlify.com/api/v1/sites/${process.env.NETLIFY_SITE_ID}`
 
-module.exports = async function () {
-  return EleventyFetch(url, {
+module.exports = async () =>
+  EleventyFetch(url, {
     duration: '*',
     type: 'json',
     fetchOptions: {
@@ -14,4 +14,3 @@ module.exports = async function () {
       }
     }
   })
-}

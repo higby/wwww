@@ -1,5 +1,3 @@
-
-
 .note {
   background-color: rgba(255, 102, 140, .25);
   margin: 1rem 0;
@@ -9,48 +7,6 @@
   color: $text-emphasis;
 }
 
-
-/*
-.deck {
-  margin-left: (-$wide-margins);
-  margin-right: (-$wide-margins);
-}
-
-.card {
-  &:has(a) {
-    > a {
-      display: block;
-    height: 100%;
-    background-color: $bg-secondary;
-    border-radius: .25rem;
-    padding: 0.75rem 1rem;
-    transition: background-color 0.5s;
-    &:hover {
-      text-decoration: none;
-      background-color: $bg-hover;
-    }
-    }
-  }
-}
-
-.tag-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: .75rem;
-}
-
-.tag {
-  display: inline;
-  //background-color: rgba(138, 100, 255, .5);
-  //outline: 2px solid $space;
-  font-size: .875em;
-  color: $space;
-}
-
-*/
-
 .deck {
   margin-left: (-$wide-margins);
   margin-right: (-$wide-margins);
@@ -59,6 +15,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  @media (max-width: $media-query) {
+    margin: 2rem 0;
+    grid-template-columns: 1fr !important;
+  }
 }
 
 .masonry {
@@ -72,12 +32,14 @@
   border-radius: .25rem;
   padding: 0.75rem 1rem;
   transition: background-color 0.5s;
-  >* {
-    display: block;
+  display: grid;
+  grid-template-rows: min-content;
+  gap: .5rem;
+  >*:first-child {
+    font-weight: 600;
   }
   *:not(:first-child) {
-  font-size: .9em;
-    
+    font-size: 0.875em;
   }
 }
 

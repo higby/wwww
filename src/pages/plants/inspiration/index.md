@@ -1,6 +1,7 @@
 ---
 title: 'Inspiration'
 date: 2022-11-20
+tags: ['list']
 ---
 
 Throughout the many versions of my personal website, I have seen and been inspiried by (and blatantly stole from) many other creator's and their websites.
