@@ -4,7 +4,7 @@ date: 2022-11-20
 tags: ['list']
 ---
 
-Throughout the many versions of my personal website, I have seen and been inspiried by (and blatantly stole from) many other creator's and their websites.
+Throughout the many versions of my personal website, I have seen and been inspired by (and blatantly stole from) many other creator's and their websites.
 
 I suppose this is more of a sort of blog roll - or even just a list of cool websites and even cooler people.
 
