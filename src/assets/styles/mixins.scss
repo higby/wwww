@@ -1,0 +1,17 @@
+// ------------ Mixins ------------
+@mixin outline($color: var(--space), $width: 1px) {
+  outline: $width solid $color;
+}
+
+@mixin full-margins {
+  margin-left: -#{$content-margins};
+  margin-right: -#{$content-margins};
+  max-width: $body-width;
+  width: 100vw;
+}
+
+@mixin collapsing-border-radius {
+  @media (min-width: calc(#{$body-width} + 1px)) {
+      border-radius: $border-radius;
+  }
+}

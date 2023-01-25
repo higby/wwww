@@ -1,26 +1,25 @@
 @import 'vars';
 
-.box {
+ul.box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  list-style: none;
-  margin: 0 -2rem;
-  padding: 0;
   gap: 1rem;
+  margin: 0 -#{$mobile-margins};
   text-align: center;
-  @media (max-width: $media-query) {
+  @media (max-width: $site-width) {
+    grid-template-columns: 1fr;
     margin: 0;
-    display: block;
-    li:not(:last-of-type) {
-      margin-bottom: 1rem;
-    }  
+  }
+  img {
+    width: 100%;
+    margin: 0;
   }
 }
 
 .sprites {
-  background-color: $bg-secondary;
+  background-color: var(--bg-secondary);
   display: grid;
-  border-radius: 0.25rem;
+  border-radius: $border-radius;
   picture {
     width: 85%;
     height: auto;

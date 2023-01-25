@@ -10,9 +10,8 @@ pagination:
     - redirects
     - garden
 permalink: /tags/{{ tag }}/
+title: #{{ tag }}
 ---
-
-<h1>#{{ tag }}</h1>
 
 <ol class='deck masonry'>
   {% set taglist = collections[ tag ] %}

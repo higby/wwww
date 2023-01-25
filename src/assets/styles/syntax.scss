@@ -1,7 +1,5 @@
-pre[class*="language-"],
-code[class*="language-"] {
-  color: $text-emphasis;
-}
+// ------------ Syntax Highlighting ------------
+
 @media print {
   pre[class*="language-"],
   code[class*="language-"] {
@@ -9,7 +7,7 @@ code[class*="language-"] {
   }
 }
 pre[class*="language-"] {
-  background: $bg-secondary;
+  background: var(--bg-secondary);
 }
 :not(pre) > code[class*="language-"] {
   color: #db4c69;
@@ -19,10 +17,10 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: $text-subtle;
+  color: var(--text-subtle);
 }
 .token.punctuation {
-  color: $text;
+  color: var(--text-primary);
 }
 .token.property,
 .token.tag,
@@ -47,7 +45,7 @@ pre[class*="language-"] {
   color: #66a6ff;
 }
 .token.function {
-  color: $space;
+  color: var(--space);
 }
 .token.regex,
 .token.important,

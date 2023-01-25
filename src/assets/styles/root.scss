@@ -1,0 +1,46 @@
+// ------------ Root ------------
+ 
+:root {
+  color-scheme: dark;
+  
+  --space: #8a64ff;
+  --mark: #5337c9;
+
+  --bg-primary: #141618;
+  --bg-secondary: #202224;
+  --bg-tertiary: #292b2e;
+  
+  --text-primary: #96a1af;
+  --text-subtle: #77818D;
+  --text-emphasis: #b4c1d2;
+
+  --text-hidden: rgba(255, 255, 255, .2);
+
+  --tattoo: #565c64;
+
+  --font-family: 'Inter', sans-serif;
+  --font-family-bold: 'Inter', sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+
+    --space: #794DFF;
+    --mark: #CAABFF;
+
+    --bg-primary: #FBFAFC;
+    --bg-secondary: #EBE9EF;
+    --bg-tertiary: #dbdbdb;
+
+   
+    --text-primary: #68686F;
+    --text-subtle: #8D8C93;
+    --text-emphasis: #44444B;
+
+    --text-hidden: rgba(0, 0, 0, .2);
+
+  }
+}

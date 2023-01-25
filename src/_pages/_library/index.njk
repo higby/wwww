@@ -1,11 +1,9 @@
 ---
-title: "Garden"
-displayInHeader: true
-redirects: ['tags']
+title: 'library'
 ---
 
 <ol class='deck masonry'>
-  {% for plant in collections.garden | reverse %}
+  {% for plant in collections.library | reverse %}
     <li class='card'>
       <a href='{% if plant.data.href %}{{ plant.data.href }}{% else %}{{ plant.url }}{% endif %}'>{{ plant.data.title }}</a>
       <time>{{ plant.date | formal }}</time>

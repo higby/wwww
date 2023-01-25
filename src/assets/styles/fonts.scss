@@ -1,3 +1,14 @@
+// ------------ Fonts ------------
+
+@font-face {
+  font-family: 'Inter';
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  font-display: swap;
+  font-feature-settings: "calt", "ss01", "zero";
+  src: local('Inter'), url('/fonts/Inter.var.woff2') format('woff2');
+}
+
 @font-face {
   font-family: "Apfel Grotezk";
   src: url("/fonts/ApfelGrotezk.woff2") format("woff2"),
@@ -13,4 +24,5 @@
 @font-face{
   font-family: 'JetBrains Mono';
   src: url("/fonts/JetBrainsMono.woff2") format("woff2"),
-       url("/fonts/JetBrainsMono.woff") format("woff");}
+       url("/fonts/JetBrainsMono.woff") format("woff");
+}

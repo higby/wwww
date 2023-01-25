@@ -1,0 +1,16 @@
+---
+title: 'garden'
+layout: 'page.njk'
+redirects: ['tags']
+---
+
+<ol role='list'>
+  {% for plant in collections.garden | reverse %}
+    <li class='card'>
+      <time>{{ plant.date | formal }}</time>
+      <strong><a href='{% if plant.data.href %}{{ plant.data.href }}{% else %}{{ plant.url }}{% endif %}'>{{ plant.data.title }}</a></strong>
+      {% set tags = plant.data.tags %}
+      {% include 'molecules/tag-list.njk' %}
+    </li>
+  {% endfor %}
+</ol>

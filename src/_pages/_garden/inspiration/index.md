@@ -14,11 +14,13 @@ Moral is that you should check these people out:
 
 (And I want to be very clear that there is no particular order, it is literally just thrown on here!)
 
-<ul class='deck' style='grid-template-columns: repeat(2, 1fr)'>
+<ul class='inspiration' role='list'>
   {% for person in inspiration %}
   <li class='card'>
-    <a href="{{ person.url }}">{{ person.name }}</a>
-    <span>{{ person.url | replace("https://", "") }}</span>
+    <a href="{{ person.url }}">
+      <span class='name'>{{ person.name }}</span>
+      <span class='website'>{{ person.url | replace("https://", "") }}</span>
+    </a>
   </li>
   {% endfor %}
 </ul>

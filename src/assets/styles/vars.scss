@@ -1,0 +1,13 @@
+// ------------ Vars ------------
+
+$content-width: 650px;
+$content-margins: 2rem;
+$mobile-margins: 2rem;
+$body-width: calc(#{$content-width} + (#{$content-margins} * 2));
+$site-width: calc(#{$body-width} + (#{$mobile-margins} * 2));
+
+$font-size-primary: 16px;
+$font-size-medium: 0.9375em;
+$font-size-small: 0.875em;
+
+$border-radius: .25rem;

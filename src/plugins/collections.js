@@ -1,26 +1,17 @@
-function sortByTitle(content) {
-  return content.sort((a, b) => a.data.title.localeCompare(b.data.title))
-}
-
-function filterByValue(content, value) {
-  return content.filter(page => value in page.data)
-}
-
 module.exports = config => {
-  config.addCollection('headerPages', collectionApi =>
-    sortByTitle(filterByValue(collectionApi.getAll(), 'displayInHeader'))
-  )
-
-  config.addCollection('footerPages', collectionApi =>
-    sortByTitle(filterByValue(collectionApi.getAll(), 'displayInFooter'))
-  )
-
   config.addCollection('redirects', collectionApi =>
-    filterByValue(collectionApi.getAll(), 'redirects')
+    collectionApi.getAll().filter(page => 'redirects' in page.data)
   )
 
   config.addCollection('garden', collectionApi =>
-    // ignores `.drafts` automatically
-    collectionApi.getFilteredByGlob('./src/pages/plants/**')
+    collectionApi
+      .getFilteredByGlob('./src/_pages/_garden/**')
+      .filter(page => page.data.page.url != '/garden/')
+  )
+
+  config.addCollection('library', collectionApi =>
+    collectionApi
+      .getFilteredByGlob('./src/_pages/_library/**')
+      .filter(page => page.data.page.url != '/library/')
   )
 }

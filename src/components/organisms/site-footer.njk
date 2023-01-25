@@ -1,23 +1,14 @@
 <footer id="site-footer">
   <nav>
-    <ul>
-      <li>
-        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-      </li>
-      <li>
-        <a href="/pgp.txt">{{ site.pgp }}</a>
-      </li>
-      <li>
-        <a href="https://indieweb.social/@higby">mastodon</a>
-      </li>
-      <li>
-        <a href="https://github.com/{{ site.github }}">github</a>
-      </li>
+    <ul role='list'>
+      <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      <li><a href="/pgp.txt">{{ site.pgp }}</a></li>
+      <li><a href="https://social.webcoven.com/@higby">mastodon</a></li>
+      <li><a href="https://github.com/{{ site.github }}">github</a></li>
     </ul>
-    <ul>
-      {% for page in collections.footerPages %}
-        <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
-      {% endfor %}
+    <ul role="list">
+      <li><a href="/colophon/">Colophon</a></li>
+      <li><a href="/style-guide/">Style Guide</a></li>
     </ul>
   </nav>
   {% include 'atoms/higby.svg' %}

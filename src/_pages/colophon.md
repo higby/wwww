@@ -1,6 +1,5 @@
 ---
 title: 'Colophon'
-displayInFooter: true
 ---
 
 This website was built by parsing [Nunjucks](https://mozilla.github.io/nunjucks/) templated [Markdown](https://daringfireball.net/projects/markdown/) into HTML with [markdown-it](https://markdown-it.github.io/). Styling is handled via [Sass](https://sass-lang.com/)-extended CSS.
