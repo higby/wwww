@@ -1,0 +1,21 @@
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>{{ title | default: author.name }}</title>
+  <meta name='description' content=''>
+  {% if page.url == '/404.html' %}<meta name='robots' content='noindex'>{% endif -%}
+
+  <meta name='author' content='{{ author.name }}'>
+  <meta name='generator' content='{{ eleventy.generator }}'>
+  <link rel='canonical' href='{{ netlify.url }}{{ page.url }}'>
+
+  <link rel='icon' href='/favicon.ico' sizes='any'>
+  <link rel='icon' href='data:image/svg+xml,{% include 'partials/favicon' %}' type='image/svg+xml'>
+  <link rel='apple-touch-icon' href='/apple-touch-icon.png'>
+  <link rel='manifest' href='/site.webmanifest'>
+  <meta name='theme-color' content='#fb8500'>
+
+  <link rel='preload' href='/fonts/Inter.woff2' as='font' type='font/woff2' crossorigin>
+  <style>{{ styles }}{% getBundle "stylesheet" %}</style>
+</head>

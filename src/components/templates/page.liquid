@@ -1,0 +1,40 @@
+---
+layout: 'base'
+---
+
+{% if layout == 'garden' %}{% assign garden = true %}{% endif %}
+
+{% include 'partials/site-header' %}
+<main>
+  <header {% if garden %}id="garden-header"{% endif %}>
+    <h1>{{ title }}</h1>
+    {% if garden %}
+      {% include 'partials/tag-list' %}
+      <time>{{ date | date_formal }}</time>
+    {% endif %}
+  </header>
+  <article>
+    {{ content }}
+  </article>
+</main>
+{% include 'partials/site-footer' %}
+
+{% stylesheet %}
+#garden-header {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: end;
+  margin-bottom: 4rem;
+  h1 {
+    grid-column: span 2;
+    align-self: start;
+    margin: 0 0 1rem;
+    padding-bottom: 8rem;
+    border-bottom: 1px solid var(--hover);
+  }
+  time {
+    justify-self: flex-end;
+    white-space: nowrap;
+  }
+}
+{% endstylesheet %}

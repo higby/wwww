@@ -1,17 +1,10 @@
-// ------------ Mixins ------------
-@mixin outline($color: var(--space), $width: 1px) {
-  outline: $width solid $color;
-}
-
 @mixin full-margins {
-  margin-left: -#{$content-margins};
-  margin-right: -#{$content-margins};
-  max-width: $body-width;
+  margin-left: -#{$full-margins};
+  margin-right: -#{$full-margins};
   width: 100vw;
-}
-
-@mixin collapsing-border-radius {
-  @media (min-width: calc(#{$body-width} + 1px)) {
-      border-radius: $border-radius;
+  max-width: calc($body-width + calc($full-margins * 2));
+  border-radius: 0.25rem;
+  @media (max-width: $mobile-breakpoint) {
+    border-radius: 0;
   }
 }

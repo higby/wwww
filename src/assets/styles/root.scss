@@ -1,46 +1,40 @@
-// ------------ Root ------------
- 
+$body-width: 650px;
+$mobile-margins: 2rem;
+$mobile-breakpoint: calc($body-width + ($mobile-margins * 2));
+$full-margins: 2rem;
+
 :root {
+  --font-family: "Inter", sans-serif;
+	--font-family-mono: "JetBrains Mono", monospace;
+
   color-scheme: dark;
-  
+
   --space: #8a64ff;
-  --mark: #5337c9;
 
-  --bg-primary: #141618;
-  --bg-secondary: #202224;
-  --bg-tertiary: #292b2e;
-  
-  --text-primary: #96a1af;
-  --text-subtle: #77818D;
   --text-emphasis: #b4c1d2;
+  --text-primary: #96a1af;
+  --text-subtle: #67707b;
 
-  --text-hidden: rgba(255, 255, 255, .2);
+  --background: #15181d;
+  --foreground: #202224;
+  --hover: #292b2e;
 
-  --tattoo: #565c64;
-
-  --font-family: 'Inter', sans-serif;
-  --font-family-bold: 'Inter', sans-serif;
-  --font-family-mono: 'JetBrains Mono', monospace;
-
+  --tattoo: var(--text-subtle);
 }
 
 @media (prefers-color-scheme: light) {
+
   :root {
     color-scheme: light;
 
     --space: #794DFF;
-    --mark: #CAABFF;
 
-    --bg-primary: #FBFAFC;
-    --bg-secondary: #EBE9EF;
-    --bg-tertiary: #dbdbdb;
-
-   
-    --text-primary: #68686F;
-    --text-subtle: #8D8C93;
-    --text-emphasis: #44444B;
-
-    --text-hidden: rgba(0, 0, 0, .2);
-
+    --text-emphasis: #404040;
+    --text-primary: #606060;
+    --text-subtle: #988f84;
+  
+    --background: #eae7e2;
+    --foreground: #DFDDDB;
+    --hover: #d6d4d1;
   }
 }

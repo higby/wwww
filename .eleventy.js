@@ -1,38 +1,22 @@
 module.exports = config => {
-  // ------------ Eleventy Settings ------------
   config.setQuietMode(true)
+
   config.setDataFileSuffixes(['.data', ''])
-  config.setServerPassthroughCopyBehavior('copy')
 
-  // ------------ Public Folder ------------
+  config.addWatchTarget(`src/assets/`)
   config.addPassthroughCopy({ [`src/assets/public/`]: '/' })
-  config.addWatchTarget(`src/assets/public/`)
 
-  // ------------ Markdown ------------
-  config.setLibrary('md', require('./src/plugins/markdown'))
-
-  // ------------ Internal Plugins ------------
-  config.addPlugin(require(`./src/plugins/collections`))
-  config.addPlugin(require(`./src/plugins/filters`))
-  config.addPlugin(require(`./src/plugins/transforms`))
-
-  // ------------ External Plugins ------------
-  config.addPlugin(require('@11ty/eleventy-plugin-rss'))
-  config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
-  config.addPlugin(require('eleventy-plugin-inline-sass'), {
-    compiler: {
-      loadPaths: [`./src/assets/styles/`]
-    }
-  })
+  config.addPlugin(require(`./src/plugins`))
 
   return {
-    markdownTemplateEngine: 'njk',
+    markdownTemplateEngine: 'liquid',
+    htmlTemplateEngine: 'liquid',
     dir: {
-      data: 'data',
-      includes: 'components',
-      input: 'src',
-      layouts: 'components/templates',
-      output: 'build'
+      data: '../data',
+      includes: '../components',
+      input: 'src/pages',
+      layouts: '../components/templates',
+      output: './build'
     }
   }
 }

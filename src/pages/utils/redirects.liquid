@@ -1,0 +1,13 @@
+---
+permalink: "_redirects"
+eleventyExcludeFromCollections: true
+layout: null
+---
+/.env    https://www.youtube.com/watch?v=qOFOT5TNGo4 301!
+{% for url in netlify.domain_aliases -%}
+  https://{{ url }}/* {{ site.url }}/:splat 301!
+{% endfor %}
+
+{%- for page in collections.redirects -%}
+  {{ page.url }} /{{ page.data.redirect }} 301!
+{% endfor %}

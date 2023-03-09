@@ -1,0 +1,49 @@
+<footer id="site-footer">
+  <nav>
+    <ul role="list">
+      <li>
+        <a href="mailto:{{ author.email }}">{{ author.email }}</a>
+      </li>
+      <li>
+        <a href="/pgp.txt">{{ author.pgp }}</a>
+      </li>
+      <li>
+        <a href="{{ author.mastodon }}">mastodon</a>
+      </li>
+      <li>
+        <a href="{{ author.github }}">github</a>
+      </li>
+    </ul>
+    <ul role="list">
+      <li>
+        <a href="/colophon/">colophon</a>
+      </li>
+      <li>
+        <a href="/style-guide/">style guide</a>
+      </li>
+      <li>
+        <a href="/feed.xml">rss feed</a>
+      </li>
+    </ul>
+  </nav>
+  {% include 'icons/higby.svg' %}
+</footer>
+
+{% stylesheet %}
+#site-footer {
+  margin-top: 3rem;
+  animation: fadeIn 650ms;
+  font-size: .95em;
+  nav {
+    display: flex;
+    gap: 2rem;
+  }
+  a {
+    color: var(--text-subtle);
+    &:hover {
+      text-decoration: none;
+      color: var(--space);
+    }
+  }
+}
+{% endstylesheet %}

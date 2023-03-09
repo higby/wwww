@@ -1,0 +1,62 @@
+<header id="site-header">
+  <h1>
+    <a href="/"{% if page.url == '/' %} aria-current="page"{% endif %}>Branden <i>Higby</i></a>
+  </h1>
+  <nav>
+    <ul role="list">
+      <li>
+        <a href="/garden/"{% if page.url == '/garden/' %} aria-current="page"{% endif %}>Garden</a>
+      </li>
+      <li>
+        <a href="/library/"{% if page.url == '/library/' %} aria-current="page"{% endif %}>Library</a>
+      </li>
+      <li>
+        <a href="/about/"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+{% stylesheet %}
+#site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  h1 {
+    font-size: 1.65em;
+    margin: 0;
+  }
+  i {
+    color: var(--space);
+    font-style: normal;
+  }
+  nav ul {
+    display: flex;
+    gap: .5rem;
+  }
+  li {
+    display: flex;
+    gap: .5rem;
+    &:not(:last-of-type)::after {
+      content: '//';
+      color: var(--text-subtle);
+    }
+  }
+  a {
+    color: var(--text-emphasis);
+    &:hover {
+      text-decoration: none;
+      color: var(--space);
+    }
+    &[aria-current ="page"] {
+      color: var(--space);
+    }
+  }
+  @media (max-width: $body-width) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+{% endstylesheet %}
