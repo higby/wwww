@@ -9,5 +9,5 @@ layout: null
 {% endfor %}
 
 {%- for page in collections.redirects -%}
-  {{ page.url }} /{{ page.data.redirect }} 301!
+  /{{ page.data.redirect }} {{ page.url }} 301!
 {% endfor %}
