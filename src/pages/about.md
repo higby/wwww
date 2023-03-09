@@ -11,4 +11,4 @@ There's not a whole lot on here right now but that's alright.
 
 You can find my writing in the [garden](/garden/). And for those curious about the site, you'll want to check out the [colophon](/colophon/).
 
-You can find me on <a href="{{ author.github }}">github</a> and <a href="{{ author.mastodon }}">mastodon</a>. You can also reach me via <a href="mailto:{{ site.email }}">email</a>; here's my PGP public fingerprint: <a href="/pgp.txt" title="HGB's PGP">{{ author.pgp }}</a>.
+You can find me on <a href="{{ author.github }}">github</a> and <a href="{{ author.mastodon }}">mastodon</a>. You can also reach me via <a href="mailto:{{ author.email }}">email</a>; here's my PGP public fingerprint: <a href="/pgp.txt" title="HGB's PGP">{{ author.pgp }}</a>.
