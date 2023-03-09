@@ -1,5 +1,5 @@
 <ol role='list' class='lattice'>
-  {% for plant in lattice %}
+  {% for plant in lattice reversed %}
   <li>
     <a href='{% if plant.data.href %}{{ plant.data.href }}{% else %}{{ plant.url }}{% endif %}'>
       <strong>{{ plant.data.title }}</strong>
