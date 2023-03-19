@@ -11,8 +11,8 @@ redirect: 'pokemon'
 <ul class="box" role="list">
   {% for pokemon in caught %}
     <li>
-      <img class="pokeball" src='pokemon/balls/{{ pokemon.stats.ball | slugify }}.png' alt='Pokeball'>
-      <img class="pokemon" src='pokemon/{{ pokemon.name | slugify }}.png' alt='Pokemon'>
+      <img class="pokeball" src='pokemon/balls/{{ pokemon.stats.ball | slugify }}.png' alt='Sprite of a {% if pokemon.stats.ball == "regular" %}Poke{% else %}{{ pokemon.stats.ball | capitalize }}{% endif %} Ball from Pokemon'>
+      <img class="pokemon" src='pokemon/{{ pokemon.name | slugify }}.png' alt='Shiny sprite of the Pokemon {{ pokemon.species | capitalize }}'>
       <hr>
       <p>
         <strong>{{ pokemon.name }}</strong> the {{ pokemon.species }}
@@ -28,7 +28,7 @@ redirect: 'pokemon'
 <ul class="box" role="list">
   {% for pokemon in hunting %}
     <li>
-      <img class="pokemon" src='pokemon/{{ pokemon.name | slugify }}.png' alt='Pokemon'>
+      <img class="pokemon" src='pokemon/{{ pokemon.name | slugify }}.png' alt='Shiny sprite of the Pokemon {{ pokemon.species | capitalize }}'>
       <hr>
       <p>
         <strong>{{ pokemon.name }}</strong> the {{ pokemon.species }}
