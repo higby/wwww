@@ -17,6 +17,10 @@
   <link rel='manifest' href='/site.webmanifest'>
   <meta name='theme-color' content='#8a64ff'>
 
+  <link rel="me" href="mailto:{{ author.email }}">
+  <link rel="me" href="{{ author.mastodon }}">
+  <link rel="me" href="{{ author.github }}">
+
   <link rel='preload' href='/fonts/Inter.woff2' as='font' type='font/woff2' crossorigin>
   <style>{{ styles }}{% getBundle "stylesheet" %}</style>
 </head>
