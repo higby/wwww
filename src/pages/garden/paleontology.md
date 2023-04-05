@@ -1,5 +1,5 @@
 ---
-title: 'Paleontology, Jobs, and Other Rambling Thoughts'
+title: 'Paleontology, Jobs, & Other Rambling Thoughts'
 description: 'A piece written for my senior year humorous speech and debate tournaments.'
 date: 2020-04-12 00:05:00
 callout:

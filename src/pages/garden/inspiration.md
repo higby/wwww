@@ -19,7 +19,7 @@ Moral is that you should check these people out:
   {% for person in inspiration %}
   <li class='card'>
     <a href="{{ person.url }}">
-      <span class='name'>{{ person.name }}</span>
+      <strong class='name'>{{ person.name }}</strong>
       <span class='website'>{{ person.url | replace: "https://", "" }}</span>
     </a>
   </li>

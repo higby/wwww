@@ -45,6 +45,10 @@ This is a standard paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscin
 
 _Note: the [Figure-Figcaption](https://html5doctor.com/the-figure-figcaption-elements/) and [Details-Summary](https://html5doctor.com/the-details-and-summary-elements/) elements are not currently supported in markdown._
 
+## Footnotes
+
+Here is an inline note.^[Inlines notes are easier to write, since you don't have to pick an identifier and move down to type the note.]
+
 ---
 
 # Text Elements

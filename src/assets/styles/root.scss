@@ -4,8 +4,8 @@ $mobile-breakpoint: calc($body-width + ($mobile-margins * 2));
 $full-margins: 2rem;
 
 :root {
-  --font-family: "Inter", sans-serif;
-	--font-family-mono: "JetBrains Mono", monospace;
+  --font-family: "IBM Plex Sans", sans-serif;
+	--font-family-mono: "IBM Plex Mono", monospace;
 
   color-scheme: dark;
 

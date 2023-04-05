@@ -1,20 +1,76 @@
+// Mono Regular
 @font-face {
-  font-family: 'Inter';
-  font-style: oblique 0deg 10deg;
-  font-weight: 100 900;
-  font-display: swap;
-  font-feature-settings: "calt", "ss01", "zero";
-  src: local('Inter'), url('/fonts/Inter.woff2') format('woff2');
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: local("IBM Plex Mono"),
+       local("IBMPlexMono"),
+       url("/fonts/IBMPlexMono-Regular.woff2") format("woff2"), 
+       url("./fonts/IBMPlexMono-Regular.woff") format("woff");
 }
 
-@font-face{
-  font-family: 'JetBrains Mono';
-  src: url("/fonts/JetBrainsMono.woff2") format("woff2"),
-       url("/fonts/JetBrainsMono.woff") format("woff");
+// Mono Bold
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: local("IBM Plex Mono"),
+       local("IBMPlexMono"),
+       url("/fonts/IBMPlexMono-Bold.woff2") format("woff2"), 
+       url("./fonts/IBMPlexMono-Bold.woff") format("woff");
 }
 
+// Mono Italic
 @font-face {
-  font-family: "Apfel Grotezk";
-  src: url("/fonts/ApfelGrotezk.woff2") format("woff2"),
-       url("/fonts/ApfelGrotezk.woff") format("woff");
+  font-family: "IBM Plex Mono";
+  font-style: italic;
+  font-weight: 400;
+  src: local("IBM Plex Mono"),
+       local("IBMPlexMono-Italic"),
+       url("/fonts/IBMPlexMono-Italic.woff2") format("woff2"), 
+       url("./fonts/IBMPlexMono-Italic.woff") format("woff");
+}
+
+// Sans Regular
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("IBM Plex Sans"), 
+       local("IBMPlexSans"), 
+       url("/fonts/IBMPlexSans-Regular.woff2") format("woff2"), 
+       url("/fonts/IBMPlexSans-Regular.woff") format("woff");
+}
+
+// Sans Bold
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("IBM Plex Sans Bold"), 
+       local("IBMPlexSans-Bold"), 
+       url("/fonts/IBMPlexSans-Bold.woff2") format("woff2"),
+       url("/fonts/IBMPlexSans-Bold.woff") format("woff");
+}
+
+// Sans Italic
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: local("IBM Plex Sans Italic"), 
+       local("IBMPlexSans-Italic"), 
+       url("/fonts/IBMPlexSans-Italic.woff2") format("woff2"), 
+       url("/fonts/IBMPlexSans-Italic.woff") format("woff");
+}
+
+// Sans Bold Italic
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: local("IBM Plex Sans Bold"), 
+       local("IBMPlexSans-BoldItalic"), 
+       url("/fonts/IBMPlexSans-BoldItalic.woff2") format("woff2"), 
+       url("/fonts/IBMPlexSans-BoldItalic.woff") format("woff");
 }
