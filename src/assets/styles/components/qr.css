@@ -1,0 +1,9 @@
+.qr {
+  all: revert;
+  inset: 0 0 auto auto;
+  position: absolute;
+  width: 1in;
+  path:first-of-type {
+    display: none;
+  }
+}

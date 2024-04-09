@@ -1,0 +1,17 @@
+---
+title: hypertext garden
+styles: garden
+---
+
+{% for group in collections.garden %}
+  <h2>{{ group[0] }}</h2>
+
+  <ol class="lattice" role="list">
+  {% for page in group[1] reversed %}
+    <li>
+      <div class="title"><a href="{{ page.data.url | default: page.url }}">{{ page.data.title }}</a></div>
+      <time>{{ page.data.date | formatDate: 'MMM DD' }}</time>
+    </li>
+  {% endfor %}
+  </ol>
+{% endfor %}

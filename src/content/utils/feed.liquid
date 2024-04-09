@@ -1,0 +1,34 @@
+---
+description: The feed of higby.io
+permalink: feed.xml
+eleventyExcludeFromCollections: true
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ site.url }}" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>{{ author.name }}</title>
+  <description>{{ site.description }}</description>
+  <link>{{ site.url }}</link><atom:link href="{{ page.url | absoluteURL }}" rel="self" type="application/rss+xml"/>
+  <lastBuildDate>{{ site.timestamp | toRFC822 }}</lastBuildDate>
+  <pubDate>{{ collections.published[0].data.published | default: collections.published[0].data.date | toRFC822 }}</pubDate>
+  <generator>{{ eleventy.generator }}</generator>
+  
+  {%- for page in collections.published %}
+  <item>
+    <title>{{ page.data.title | escape }}</title>
+    <link>{{ page.url | absoluteURL }}</link>
+    <guid>{{ page.url | absoluteURL }}</guid>
+    <pubDate>{{ page.data.published | default: page.data.date | toRFC822 }}</pubDate>
+    <description>
+      {% if page.data.url %}
+        <a href="{{ page.data.url }}">{{ page.data.title }}</a>   
+      {% else %}   
+        {{ page.content | htmlAbsoluteURL | escape }}
+      {% endif %}
+    </description>
+  </item>
+  {% endfor %}
+
+  </channel>
+</rss>

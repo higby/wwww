@@ -1,0 +1,3 @@
+#site-footer {
+  padding-block: calc(var(--gap) * 4) calc(var(--gap) * 6);
+}

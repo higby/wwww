@@ -1,0 +1,18 @@
+---
+layout: base
+---
+
+<article class="prose">
+  <header>
+    <h1>{{ heading | default: title }}</h1>
+    {% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
+
+    {%- if updated %}
+      <p>Published <time>{{ published | formatDate: "MMMM D, YYYY" }}</time></p>
+      <p>Updated <time>{{ date | formatDate: "MMMM D, YYYY" }}</time></p>
+    {% else %}
+      <p><time>{{ date | formatDate: "MMMM D, YYYY" }}</time></p>
+    {% endif %}
+  </header>
+  {{ content }}
+</article>

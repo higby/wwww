@@ -1,0 +1,33 @@
+.lattice {
+  a {
+    text-decoration: none;
+    width: fit-content;
+    &:hover {
+      text-decoration: underline .1em;
+    }
+  }
+  @media (width > 444px) {
+    & {
+      display: grid;
+      grid-template-columns: max-content auto;
+      gap: calc(var(--gap) * .5) var(--gap);
+      li {
+        display: grid;
+        grid-column: 1 / 3;
+        grid-template-areas: 'time title';
+        grid-template-columns: subgrid;
+      }
+      .title {
+        grid-area: title;
+      }
+      time {
+        grid-area: time;
+      }
+    }
+  }
+  @media (width <= 445px) {
+    & li {
+      margin-block-end: var(--gap);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+:root {
+  color-scheme: light;
+  --gap: 16px;
+  --shadow-color: 46deg 6% 56%;
+  --galaxy: oklch(0.527 0.2414 287.96);
+
+  --text: rgba(0,0,0,.65);
+  --text-emphasis: rgba(0,0,0,.75);
+  --text-subtle: rgba(0,0,0,.5);
+
+  --background: #eae7e2;
+  --foreground: #d8d5d0;
+  --foreground-subtle: rgba(0,0,0,.25);
+
+  @media (prefers-color-scheme: dark) {
+    & {
+      color-scheme: dark;
+  
+      --galaxy: oklch(0.625 0.2414 287.96);
+      
+      --text: #b0bac3;
+      --text-emphasis: #CCD7E1;
+      --text-subtle: #8a959f;
+    
+      --background: oklch(0.2081 0.011 260.67);
+      --foreground: #2b2e33;
+      --foreground-subtle: rgba(176, 186, 195, .35);
+    }
+  }
+}

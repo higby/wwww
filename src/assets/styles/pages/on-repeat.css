@@ -1,0 +1,48 @@
+.on-repeat {
+  display: grid;
+  row-gap: calc(var(--gap) * 2);
+  grid-template-columns: minmax(auto, 150px) auto;
+  li {
+    background-color: var(--foreground);
+    border-radius: calc(var(--gap) * .25);
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    @media (width <= 500px) {
+      display: block;
+      img {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: calc(var(--gap) * .25);
+      }
+    }
+  }
+  picture {
+    grid-row: span 2;
+  }
+  img {
+    border-radius: 0;
+    border-bottom-left-radius: calc(var(--gap) * .25);
+    border-top-left-radius: calc(var(--gap) * .25);
+  }
+}
+
+.metadata {
+  display: grid;
+  padding: var(--gap);
+}
+
+.playcount {
+  align-self: flex-end;
+  justify-self: end;
+}
+
+.bar {
+  align-self: flex-end;
+  background-color: var(--galaxy);
+  height: var(--gap);
+  opacity: .8;
+}
+
+.full {
+  border-bottom-right-radius: calc(var(--gap) * .25);
+}

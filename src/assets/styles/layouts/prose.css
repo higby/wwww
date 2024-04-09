@@ -1,0 +1,30 @@
+.prose {
+  > * {
+    margin-block-start: calc(var(--gap) * 1.5);
+  }
+  > h1 {
+    max-width: 30ch;
+  }
+  > h2 { 
+    margin-block-start: calc(var(--gap) * 4); 
+  }
+  > header {
+    margin-block: calc(var(--gap) * 5);
+  }
+  > blockquote, > figure.quote { 
+    margin-block: calc(var(--gap) * 3); 
+  }
+  > pre, > picture { 
+    margin-inline: calc(var(--gap) * -2);
+    margin-block: calc(var(--gap) * 2);
+  }
+  /* `calc()` isn't supported in media queries
+  * calc(var(--main-width) + (var(--gap) * 4))
+  */
+  @media (width <= 714px) {
+    > pre, > img {
+      border-radius: 0;
+    }
+  }
+}
+

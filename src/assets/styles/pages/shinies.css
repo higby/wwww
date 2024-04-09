@@ -1,0 +1,26 @@
+.pokebox {
+  display: grid;
+  row-gap: calc(var(--gap) * 2);
+  grid-template-columns: minmax(auto, 200px) auto;
+  li {
+    border-radius: calc(var(--gap) * .25);
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    outline: 4px solid var(--foreground);
+    @media (width <= 500px) {
+      display: block;
+    }
+  }
+  picture {
+    background-color: var(--foreground);
+    padding: var(--gap);
+  }
+}
+
+.metadata {
+  padding: var(--gap);
+  dl {
+    margin-block: auto;
+  }
+}

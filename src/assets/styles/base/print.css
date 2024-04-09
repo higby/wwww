@@ -1,0 +1,40 @@
+*, *::before, *::after {
+  background: #fff !important;
+  box-shadow: none !important;
+  color: #000 !important;
+  text-shadow: none !important;
+}
+
+html {
+  font-size: 1em;
+}
+
+body {
+  max-width: 7in;
+  position: relative;
+}
+
+#site-header, #main-content, #site-footer {
+  max-width: none;
+}
+
+#site-header {
+  padding-block-start: 0;
+  nav {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: underline;
+  &[href]:not(&[href^="#"], &[href^="/"], &[href^="/*"], &[href^="javascript:"])::after {
+    content: " (" attr(href) ")";
+    text-decoration: none;
+  }
+}
+
+.prose {
+  pre, picture {
+    margin-inline: 0;
+  }
+}

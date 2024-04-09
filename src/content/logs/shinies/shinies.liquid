@@ -1,0 +1,35 @@
+---
+title: 'Shinies'
+date: 2021-04-06
+eleventyComputed:
+  date: '{{ caught[0].catch_date }}'
+styles: shinies
+---
+
+<h2>Caught</h2>
+
+<ul class="pokebox" role="list">
+  {% for pokemon in caught %}
+    <li>
+      {% capture src %}/pokemon/{{ pokemon.name | slugify }}.png{% endcapture %}
+      {% capture alt %}Shiny sprite of the Pokemon {{ pokemon.species | capitalize }}{% endcapture %}
+      {% image src, alt, "pokemon" %}
+      <div class="metadata">
+        <dl>
+          <dt>Name</dt>
+          <dd>{{ pokemon.name }}</dd>
+
+          <dt>Species</dt>
+          <dd>{{ pokemon.species }}</dd>
+
+          <dt>Caught</dt>
+          <dd>{{ pokemon.capture_date | formatDate: "MMM D, YYYY" }}</dd>
+
+          <dt>Original Game</dt>
+          <dd>{{ pokemon.stats.original_game }}</dd>
+        </dl>
+      </div>
+    </p>
+  {% endfor %}
+</ul>
+

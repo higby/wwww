@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  main {
+    margin-block: auto;
+  }
+  footer {
+    margin-block-start: var(--gap);
+  }
+}

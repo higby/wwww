@@ -1,0 +1,9 @@
+body {
+  inline-size: calc(100vw - (var(--gap) * 4));
+  margin-inline: auto;
+}
+
+main {
+  margin-inline: auto;
+  max-width: 650px;
+}

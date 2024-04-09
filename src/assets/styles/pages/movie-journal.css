@@ -1,0 +1,34 @@
+.entry {
+  margin-block-start: calc(var(--gap) * 3);
+  h3 {
+    font-size: 1em;
+    grid-area: title;
+  }
+  time {
+    grid-area: date;
+  }
+  @media (width > 444px) {
+    & {
+      display: grid;
+      column-gap: calc(var(--gap) * 2);
+      grid-template-areas: 
+        'date title'
+        'date rating'
+        'date review';
+      grid-template-columns: max-content auto;
+    }
+  }
+}
+
+.rating {
+  grid-area: rating;
+}
+
+.review {
+  grid-area: review;
+  margin-block-start: var(--gap);
+}
+
+.twoThumbsUp {
+  color: var(--galaxy);
+}

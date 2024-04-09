@@ -1,8 +1,8 @@
-module.exports = {
+export default {
   name: 'Branden Higby',
   email: 'branden@higby.io',
-  url: 'https://www.higby.io',
-  github: 'https://github.com/higby',
-  mastodon: 'https://social.webcoven.com/@higby',
-  pgp: '652B 8C7D 91BC 4895'
+  codeberg: 'https://codeberg.org/higby/',
+  mastodon: 'https://indieweb.social/@higby',
+  youtube: 'https://www.youtube.com/@higby',
+  letterboxd: 'https://letterboxd.com/higby_/'
 }

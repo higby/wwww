@@ -1,0 +1,30 @@
+{%- capture title_tag %}{% if title %}{{ title }} // {% endif %}{{ site.title }}{% endcapture -%}
+{%- capture description_tag %}{{ description | default: site.description }}{% endcapture -%}
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ title_tag }}</title>    
+  <meta name="description" content="{{ description_tag }}">
+
+  <meta name='author' content='{{ author.name }}'>
+  <meta name='generator' content='{{ eleventy.generator }}'>
+  <link rel='canonical' href='{{ page.url | absoluteURL }}'>
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for Higby's Garden" href="{{ 'feed.xml' | absoluteURL }}">
+
+  <link rel="me" href="mailto:{{ author.email }}">
+  <link rel="me" href="{{ author.mastodon }}">
+  <link rel="me" href="{{ author.github }}">
+  <link rel="webmention" href="https://webmention.io/higby.io/webmention">
+  
+  <link rel='preload' href='/fonts/IBMPlexSans-Regular.woff2' as='font' type='font/woff2' crossorigin>
+
+  <style>{% styles styles %}</style>
+
+  <link rel='icon' href='/favicon.ico' sizes='any'>
+  <link rel='icon' href='data:image/svg+xml,{% capture favicon %}{% include 'bee.svg' %}{% endcapture %}{{ favicon | encodeURI }}' type='image/svg+xml'>
+  <link rel='apple-touch-icon' href='/apple-touch-icon.png'>
+  <link rel='manifest' href='/site.webmanifest'>
+  <meta name="theme-color" content="#8a64ff">
+</head>

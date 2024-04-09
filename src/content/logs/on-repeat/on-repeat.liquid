@@ -1,0 +1,25 @@
+---
+title: 'On Repeat'
+subtitle: 'What I’ve been listening to this week'
+date: 2023-03-09
+eleventyComputed:
+  date: '{{ site.timestamp }}'
+styles: 'on-repeat'
+pinned: true
+---
+
+
+<ol class="on-repeat" role="list">
+{% for track in tracks limit:10 %}
+  <li>
+    {% capture AltText %}{{ track.name }} Album Art{% endcapture %}
+    {% image track.image AltText %}
+    <div class="metadata">
+      <p>{{ track.name }}</p>
+      <p><i>{{ track.artist }}</i></p>
+      <p class="playcount">{{ track.playcount }} plays</p>
+    </div>
+    <div class="bar {% if forloop.first %}full{% endif %}" style="width: {{ track.playCountPercentage }}%"></div>
+  </li>
+{% endfor %}
+</ol>
