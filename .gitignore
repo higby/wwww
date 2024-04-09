@@ -3,6 +3,7 @@ build/
 
 node_modules/
 package-lock.json
+bun.lockb
 
 .env
 
