@@ -1,5 +1,6 @@
 ---
 title: about
+subtitle: <code>npx higby</code>
 heading: hello world
 ---
 
