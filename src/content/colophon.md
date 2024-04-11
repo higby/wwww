@@ -6,7 +6,7 @@ pinned: true
 ---
 
 Code Hosting
-: Codeberg
+: GitHub
 
 Site Hosting
 : Netlify
