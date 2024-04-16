@@ -5,7 +5,7 @@ const handler = async function (event, context) {
   try {
     axios({
       method: 'post',
-      url: process.env.deploy_url
+      url: process.env.NETLIFY_DEPLOY_URL
     })
   } catch (err) {
     console.log(err)
