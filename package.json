@@ -33,6 +33,5 @@
     "@netlify/functions": "^2.6.0",
     "axios": "^1.6.8",
     "netlify-plugin-cache": "^1.0.3"
-  },
-  "": {}
+  }
 }
