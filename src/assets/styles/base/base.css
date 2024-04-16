@@ -65,7 +65,6 @@ dd {
 
 blockquote {
   font-style: italic;
-  padding-inline-start: calc(var(--gap) * 2);
   > * { 
     margin-block-end: var(--gap);
   }
