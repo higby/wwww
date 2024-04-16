@@ -2,14 +2,14 @@
 title: 'Shinies'
 date: 2021-04-06
 eleventyComputed:
-  date: '{{ caught[0].catch_date }}'
+  date: '{{ shinies.caught[0].catch_date }}'
 styles: shinies
 ---
 
 <h2>Caught</h2>
 
 <ul class="pokebox" role="list">
-  {% for pokemon in caught %}
+  {% for pokemon in shinies.caught %}
     <li>
       {% capture src %}/pokemon/{{ pokemon.name | slugify }}.png{% endcapture %}
       {% capture alt %}Shiny sprite of the Pokemon {{ pokemon.species | capitalize }}{% endcapture %}

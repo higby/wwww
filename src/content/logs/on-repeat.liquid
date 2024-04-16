@@ -10,7 +10,7 @@ pinned: true
 
 
 <ol class="on-repeat" role="list">
-{% for track in tracks limit:10 %}
+{% for track in music limit:10 %}
   <li>
     {% capture AltText %}{{ track.name }} Album Art{% endcapture %}
     {% image track.image AltText %}

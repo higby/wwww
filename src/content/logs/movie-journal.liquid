@@ -4,14 +4,14 @@ subtitle: '<a href="https://letterboxd.com/higby_/">Letterboxd</a>'
 ddate: 2023-03-09
 laydout: page
 eleventyComputed:
-  date: '{{ letterboxd[0][1][1].date }}'
+  date: '{{ movies[0][1][1].date }}'
 pinned: true
 class: movie-journal
 category: log
 styles: 'movie-journal'
 ---
 
-{% for year in letterboxd %}
+{% for year in movies %}
   <h2>{{ year[0] }}</h2>
 
   {% for entry in year[1] %}

@@ -5,9 +5,9 @@ import EleventyFetch from '@11ty/eleventy-fetch'
 
 const parser = new XMLParser()
 
-export async function letterboxd() {
+export default async function () {
   const cache = await EleventyFetch('https://letterboxd.com/higby_/rss/', {
-    duration: '*',
+    duration: '0s',
     type: 'text'
   })
 

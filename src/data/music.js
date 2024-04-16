@@ -34,7 +34,7 @@ async function searchForTrack(title, artist) {
   return await EleventyFetch(
     `https://api.spotify.com/v1/search?type=track&q=track:${title} artist:${artist}&limit=1`,
     {
-      duration: '*',
+      duration: '1w',
       type: 'json',
       fetchOptions: {
         headers: {
@@ -49,13 +49,13 @@ async function fetchTopTracks() {
   return await EleventyFetch(
     `https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=hugabee&api_key=${auth_key}&format=json&period=7day&limit=25`,
     {
-      duration: '*',
+      duration: '1w',
       type: 'json'
     }
   )
 }
 
-export async function tracks() {
+export default async function () {
   let tracks = await fetchTopTracks()
 
   tracks = await tracks.toptracks.track
