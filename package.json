@@ -29,6 +29,10 @@
     "posthtml": "^0.16.6",
     "posthtml-urls": "^1.0.0",
     "qrcode": "^1.5.3",
-    "qs": "^6.11.2"
-  }
+    "qs": "^6.11.2",
+    "@netlify/functions": "^2.6.0",
+    "axios": "^1.6.8",
+    "netlify-plugin-cache": "^1.0.3"
+  },
+  "": {}
 }
