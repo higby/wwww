@@ -25,7 +25,7 @@ export default eleventyConfig => {
     markdownTemplateEngine: 'liquid',
 
     dir: {
-      input: 'src/content',
+      input: 'src/pages',
       includes: '../templates/includes',
       layouts: '../templates/layouts',
       data: '../data',

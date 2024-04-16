@@ -1,7 +1,7 @@
 import Image from '@11ty/eleventy-img'
 
 export default eleventyConfig => {
-  eleventyConfig.addShortcode('image', async (src, alt) => {
+  eleventyConfig.addShortcode('image', async (src, alt, imgClass) => {
     if (!alt) throw new Error(`Missing \`alt\` on image from: ${src}`)
 
     if (!src.startsWith('http')) src = `./src/assets/images${src.startsWith('/') ? src : `/${src}`}`
@@ -12,7 +12,7 @@ export default eleventyConfig => {
       outputDir: './build/images/'
     })
 
-    return `<picture>
+    return `<picture ${imgClass ? `class="${imgClass}"` : ''}>
       <source
         type="${metadata['avif'][0].sourceType}"
         srcset="${metadata['avif'][0].srcset}"

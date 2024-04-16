@@ -9,6 +9,7 @@
 @import "layouts/site-footer.css";
 @import "layouts/prose.css";
 
+@import "components/inline-image.css";
 @import "components/sigil.css";
 @import "components/qr.css" print;
 
